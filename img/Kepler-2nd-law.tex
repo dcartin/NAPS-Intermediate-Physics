@@ -1,0 +1,82 @@
+% https://tex.stackexchange.com/questions/291627/draw-an-animated-gif-of-trigonometry-function
+
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+\usepackage{pgfplotstable, filecontents}
+
+\begin{document}
+
+% Define and set angle counter for animation;
+% here, mean anomaly is used as counter
+
+\newcounter{M}
+\setcounter{M}{0}
+
+% Other definitions
+
+\def\semiMajor{1.5}	% Horizontal distance for ellipse
+\def\semiMinor{1}		% Vertical distance for ellipse
+\def\R{3} 			% Object size (in pt)
+
+% IMPORTANT NOTE: This animation uses the two files ``area.dat'' and
+% ``eccentric.dat'', which must be available to the complier.
+
+% I computed this data in MS Excel using Newton's method
+% three times (see Wikipedia article on Kepler's equation);
+% spreadsheet available as ``Kepler's 2nd law calculations.xlsx''
+
+% Convert inputted data into Tikz-readable format
+
+\pgfplotstableread{eccentric.dat}{\Etable}
+\pgfplotstableread{area.dat}{\Eftable}
+
+\begin{center}
+
+\foreach \M in {0, 1, ..., 360}
+{
+	\begin{tikzpicture}[scale = 0.5]
+		
+		% Bounding box
+		
+		\useasboundingbox (-1.2 * \semiMajor, - 1.2 * \semiMinor) rectangle (1.2 * \semiMajor, 1.2 * \semiMinor);
+		
+		% Find E value of particular frame for planet
+		
+		\pgfplotstablegetelem{\M}{[index] 0}\of{\Etable}
+		\let\E\pgfplotsretval
+		
+		% Find E value for area swept out by planet
+		
+		\pgfplotstablegetelem{\M}{[index] 0}\of{\Eftable}
+		\let\Ef\pgfplotsretval
+		
+		% Plot boundaries of area slices beforehand
+		
+		\foreach \Ebd in {0, 70.2275829, 101.8118571, 124.9878875, 144.6862244, 162.6997767, 180, 197.3002233, 215.3137756, 235.0121125,
+			258.1881429, 289.7724171}
+			\draw [thin, gray] ({sqrt(\semiMajor * \semiMajor - \semiMinor * \semiMinor)}, 0) -- ({\semiMajor * cos(\Ebd)}, {\semiMinor * sin(\Ebd)});
+		
+		% Area swept out by planet
+		
+		\filldraw [green!30] ({sqrt(\semiMajor * \semiMajor - \semiMinor * \semiMinor)}, 0) -- ({\semiMajor * cos(\E)}, {\semiMinor * sin(\E)})
+			arc [x radius = \semiMajor, y radius = \semiMinor, end angle = \Ef,
+			start angle = \E] -- cycle;
+		
+		% Elliptical orbit
+		
+		\draw [thick] (0, 0) ellipse [x radius = \semiMajor, y radius = \semiMinor];
+		
+		% Sun at right focus
+		
+		\shade [ball color = yellow] ({sqrt(\semiMajor * \semiMajor - \semiMinor * \semiMinor)}, 0) circle (2 * \R pt);
+		
+		% Planet
+		
+		\shade [ball color = blue!50] ({\semiMajor * cos(\E)}, {\semiMinor * sin(\E)}) circle (\R pt);
+	
+	\end{tikzpicture}
+}
+\end{center}
+
+\end{document}
