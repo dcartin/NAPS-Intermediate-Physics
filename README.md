@@ -7,11 +7,10 @@ This repository contains the lectures for NAPS intermediate physics in the form 
 >
 > [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master)
 
-## Marking period 1 notebooks
-
-## Marking period 2 notebooks
-
-### [Lesson XX](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/INT_AY21_MP2_LXX%20Scalar%20product.ipynb): Scalar product
-### [Lesson XX](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/INT_AY21_MP2_LXX%20Inclined%20planes%20without%20friction.ipynb): Inclined planes
-
-## Marking period 3 notebooks
+### [Lesson 01](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L01 Introduction to Python.ipynb): Introduction to Python
+### [Lesson 02](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L02 Units and velocity.ipynb): Units and velocity
+### [Lesson 03](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L03 Introduction to vectors.ipynb): Introduction to vectors
+### [Lesson 04](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L04 Acceleration and free-fall.ipynb): Acceleration and free-fall
+### [Lesson 05](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L05 Kinematic equations.ipynb): Kinematic equations
+### [Lesson 06](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L06 Vector magnitude and direction.ipynb): Vector magnitude and direction
+### [Lesson 07](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L07 Projectile motion.ipynb): Projectile motion
