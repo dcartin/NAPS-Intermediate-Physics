@@ -10,10 +10,10 @@ Here are two ways to access these notebooks:
 
 1. If you click on the links below, you will be taken to a non-interactive version of the notebook; you will be able to read the text, but you cannot run the code.
 
-### [Lesson 01](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L01_Introduction_to_Python.ipynb): Introduction to Python
-### [Lesson 02](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L02_Units_and_velocity.ipynb): Units and velocity
-### [Lesson 03](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L03_Introduction_to_vectors.ipynb): Introduction to vectors
-### [Lesson 04](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L04_Acceleration_and_free-fall.ipynb): Acceleration and free-fall
-### [Lesson 05](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L05_Kinematic_equations.ipynb): Kinematic equations
-### [Lesson 06](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L06_Vector_magnitude_and_direction.ipynb): Vector magnitude and direction
-### [Lesson 07](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/lessons/L07_Projectile_motion.ipynb): Projectile motion
+### [Lesson 01](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L01_Introduction_to_Python.ipynb): Introduction to Python
+### [Lesson 02](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L02_Units_and_velocity.ipynb): Units and velocity
+### [Lesson 03](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L03_Introduction_to_vectors.ipynb): Introduction to vectors
+### [Lesson 04](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L04_Acceleration_and_free-fall.ipynb): Acceleration and free-fall
+### [Lesson 05](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L05_Kinematic_equations.ipynb): Kinematic equations
+### [Lesson 06](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L06_Vector_magnitude_and_direction.ipynb): Vector magnitude and direction
+### [Lesson 07](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L07_Projectile_motion.ipynb): Projectile motion
