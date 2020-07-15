@@ -4,10 +4,7 @@ This repository contains the lectures for NAPS intermediate physics in the form 
 
 Here are two ways to access these notebooks:
 
-1.  Get an interactive session in [MyBinder.org](https://mybinder.org/) with these course materials by clicking on the button below. This will allow you to modify and run the code in the notebook. Select the folder `notebooks` to access the lessons of this course as fully executable Jupyter notebooks.
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master)
-
+1.  Get an interactive session in [MyBinder.org](https://mybinder.org/) with these course materials by clicking on the button [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master). This will allow you to modify and run the code in the notebook. Select the folder `notebooks` to access the lessons of this course as fully executable Jupyter notebooks.
 1. If you click on the links below, you will be taken to a non-interactive version of the notebook; you will be able to read the text, but you cannot run the code.
 
 #### [Lesson 01](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L01_Introduction_to_Python.ipynb): Introduction to Python
