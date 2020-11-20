@@ -17,6 +17,16 @@ Here are two ways to access these notebooks:
 #### [Lesson 08](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L08_Linear_momentum_and_Newton's_laws_of_motion.ipynb): Linear momentum and Newton's laws of motion
 #### [Lesson 09](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L09_Center_of_mass_and_collisions.ipynb): Center of mass and collisions
 #### [Lesson 10](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L10_Relative_motion.ipynb): Relative motion
+#### [Lesson 11](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L11_Scalar_product.ipynb): Scalar product
+#### [Lesson 12](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L12_2D_collisions.ipynb): Two-dimensional collisions
+#### [Lesson 13](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L13_Solving_force_problems.ipynb): Solving force problems
+#### [Lesson 14](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L14_Inclined_planes.ipynb): Inclined planes
+#### [Lesson 15](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L15_Friction.ipynb): Friction
+#### [Lesson 16](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L16_Inclined_planes_w_friction.ipynb): Inclined planes with friction
+#### [Lesson 17](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L17_Fluids.ipynb): Fluids
+#### [Lesson 18](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L18_Circular_motion.ipynb): Circular motion
+#### [Lesson 19](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L19_Vector_product_and_torque.ipynb): Vector product and torque
+#### [Lesson 20](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L20_Angular_momentum.ipynb): Angular momentum
 
 ---
 
