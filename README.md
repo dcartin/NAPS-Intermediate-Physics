@@ -29,7 +29,7 @@ Here are two ways to access these notebooks:
 #### [Lesson 20](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L20_Angular_momentum.ipynb): Angular momentum
 #### [Lesson 21](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L21_Rotational_kinematics.ipynb): Rotational kinematics
 #### [Lesson 22](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L22_Rotational_dynamics.ipynb): Rotational dynamics
-#### [Lesson 23](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L23_Work_and_energy  .ipynb): Work and energy
+#### [Lesson 23](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L23_Work_and_energy.ipynb): Work and energy
 #### [Lesson 24](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L24_Conservation_of_energy.ipynb): Conservation of energy
 
 ---
