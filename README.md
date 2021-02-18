@@ -31,6 +31,15 @@ Here are two ways to access these notebooks:
 #### [Lesson 22](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L22_Rotational_dynamics.ipynb): Rotational dynamics
 #### [Lesson 23](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L23_Work_and_energy.ipynb): Work and energy
 #### [Lesson 24](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L24_Conservation_of_energy.ipynb): Conservation of energy
+#### [Lesson 25](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L25_Universal_gravitation.ipynb): Universal gravitation
+#### [Lesson 26](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L26_Gravitational_potential_energy.ipynb): Gravitational potential energy
+#### [Lesson 27](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L27_Kepler's_laws.ipynb): Kepler's laws
+#### [Lesson 28](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L28_Coulomb's_law.ipynb): Coulomb's law
+#### [Lesson 29](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L29_Electric_fields.ipynb): Electric fields
+#### [Lesson 30](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L30_Circuit_concepts.ipynb): Circuit concepts
+#### [Lesson 31](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L31_Resistor_circuits.ipynb): Resistor circuits
+#### [Lesson 32](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L32_Complex_circuits.ipynb): Complex circuits
+#### [Lesson 33](https://nbviewer.jupyter.org/github/dcartin/NAPS-Intermediate-Physics/blob/master/notebooks/L33_Capacitor_circuits.ipynb): Capacitor circuits
 
 ---
 
