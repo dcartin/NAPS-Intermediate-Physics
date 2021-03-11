@@ -1,7 +1,9 @@
 - file: README
+  title: NAPS Intermediate Physics
   numbered: true
+  
 - file: notebooks\L01_Introduction_to_Python
-  title: Introduction to (v)Python
+  title: Introduction to Python
 - file: notebooks\L02_Units_and_velocity
   title: Units and velocity
 - file: notebooks\L03_Introduction_to_vectors
