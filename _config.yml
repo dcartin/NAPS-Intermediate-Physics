@@ -1,0 +1,23 @@
+# Book settings
+
+title: "NAPS Intermediate Physics"
+author: Daniel Cartin
+
+only_build_toc_files: true
+
+# Execution settings
+
+execute:
+  execute_notebooks : false
+
+# Book repository on GitHub
+
+repository:
+  url: https://github.com/dcartin/NAPS-Intermediate-Physics
+  branch: master
+
+# Add buttons to HTML files
+
+html:
+  use_repository_button: true
+  use_edit_page_button: true

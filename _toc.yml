@@ -1,0 +1,70 @@
+- file: README
+  numbered: true
+- file: notebooks\L01_Introduction_to_Python
+  title: Introduction to (v)Python
+- file: notebooks\L02_Units_and_velocity
+  title: Units and velocity
+- file: notebooks\L03_Introduction_to_vectors
+  title: Introduction to vectors
+- file: notebooks\L04_Acceleration_and_free_fall
+  title: Acceleration and free fall
+- file: notebooks\L05_Kinematic_equations
+  title: Kinematic equations
+- file: notebooks\L06_Vector_magnitude_and_direction
+  title: Vector magnitude and direction
+- file: notebooks\L07_Projectile_motion
+  title: Projectile motion
+- file: notebooks\L08_Linear_momentum_and_Newton's_laws_of_motion
+  title: Linear momentum and Newton's laws of motion
+- file: notebooks\L09_Center_of_mass_and_collisions
+  title: Center of mass and collisions
+- file: notebooks\L10_Relative_motion
+  title: Relative motion
+- file: notebooks\L11_Scalar_product
+  title: Scalar product
+- file: notebooks\L12_2D_collisions
+  title: Two-dimensional collisions
+- file: notebooks\L13_Solving_force_problems
+  title: Solving force problems
+- file: notebooks\L14_Inclined_planes
+  title: Inclined planes
+- file: notebooks\L15_Friction
+  title: Friction
+- file: notebooks\L16_Inclined_planes_w_friction
+  title: Inclined planes with friction
+- file: notebooks\L17_Fluids
+  title: Fluids
+- file: notebooks\L18_Circular_motion
+  title: Circular motion
+- file: notebooks\L19_Vector_product_and_torque
+  title: Vector product and torque
+- file: notebooks\L20_Angular_momentum
+  title: Angular momentum
+- file: notebooks\L21_Rotational_kinematics
+  title: Rotational kinematics
+- file: notebooks\L22_Rotational_dynamics
+  title: Rotational dynamics
+- file: notebooks\L23_Work_and_energy
+  title: Work and energy
+- file: notebooks\L24_Conservation_of_energy
+  title: Conservation of energy
+- file: notebooks\L25_Universal_gravitation
+  title: Universal gravitation
+- file: notebooks\L26_Gravitational_potential_energy
+  title: Gravitational potential energy
+- file: notebooks\L27_Kepler's_laws
+  title: Kepler's laws
+- file: notebooks\L28_Coulomb's_law
+  title: Coulomb's law
+- file: notebooks\L29_Electric_fields
+  title: Electric fields
+- file: notebooks\L29A_Gauss_law
+  title: Gauss' law
+- file: notebooks\L30_Circuit_concepts
+  title: Circuit concepts
+- file: notebooks\L31_Resistor_circuits
+  title: Resistor circuits
+- file: notebooks\L32_Complex_circuits
+  title: Complex circuits
+- file: notebooks\L33_Capacitor_circuits
+  title: Capacitor circuits
