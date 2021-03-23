@@ -1,4 +1,4 @@
-# NAPS-Intermediate-Physics
+# NAPS Intermediate Physics
 
 This repository contains the lectures for NAPS intermediate physics in the form of Jupyter notebooks. The latest version of these notebooks will be located here.
 
