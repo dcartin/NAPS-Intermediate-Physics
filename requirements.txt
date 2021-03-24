@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+=======
+Python >= 3.6
+>>>>>>> 627fef2e7955ebb627243610bff74dae013bdb0b
 jupytext>=0.16
