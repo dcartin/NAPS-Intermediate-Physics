@@ -1,1 +1,2 @@
-vpython
+Python >= 3.6
+jupytext>=0.16
