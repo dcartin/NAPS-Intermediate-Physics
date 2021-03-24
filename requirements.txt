@@ -1,1 +1,1 @@
-vpython
+jupytext>=0.16
