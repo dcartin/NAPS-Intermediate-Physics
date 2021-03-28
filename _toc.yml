@@ -4,10 +4,10 @@
 
 - file: notebooks\L01_Introduction_to_Python
   title: Introduction to Python
-- file: notebooks\L02_Units_and_velocity
-  title: Units, velocity, and vPython
-- file: notebooks\L03_Introduction_to_vectors
-  title: Introduction to vectors
+- file: notebooks\L02_Vectors_and_vPython
+  title: Vectors and vPython
+- file: notebooks\L03_Units_and_velocity
+  title: Units and velocity
 - file: notebooks\L04_Acceleration_and_free_fall
   title: Acceleration and free fall
 - file: notebooks\L05_Kinematic_equations
