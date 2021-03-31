@@ -1,0 +1,46 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_L09_Fig01_I-V-graphs.png
+
+\begin{tikzpicture}
+
+	% Definition
+	
+	\def\L{1.5}
+	
+	% Matrix of graphs
+
+	\matrix[column sep = 0.25 cm, ampersand replacement = \&]{
+	
+	\draw (0, \L) node [above] {$I$} -- (0, 0) -- (\L, 0) node [right] {$V$};
+	\draw [red, thick] (0.1 * \L, 0.9 * \L) parabola [bend at end] (0.9 * \L, 0.1 * \L);
+	\node [blue] at (0.5 * \L, -0.25 * \L) {$A.$};
+	
+	\&
+	
+	\draw (0, \L) node [above] {$I$} -- (0, 0) -- (\L, 0) node [right] {$V$};
+	\draw [red, thick] (0, 0.8 * \L) -- (0.9 * \L, 0.8 *\L);
+	\node [blue] at (0.5 * \L, -0.25 * \L) {$B.$};
+	
+	\&
+	
+	\draw (0, \L) node [above] {$I$} -- (0, 0) -- (\L, 0) node [right] {$V$};
+	\draw [red, thick] (0, 0) parabola (0.9 * \L, 0.9 * \L);
+	\node [blue] at (0.5 * \L, -0.25 * \L) {$C.$};
+	
+	\&
+	
+	\draw (0, \L) node [above] {$I$} -- (0, 0) -- (\L, 0) node [right] {$V$};
+	\draw [red, thick] (0, 0) -- (0.9 * \L, 0.9 * \L);
+	\node [blue] at (0.5 * \L, -0.25 * \L) {$D.$};
+	
+	\\
+	};
+
+\end{tikzpicture}
+
+\end{document}

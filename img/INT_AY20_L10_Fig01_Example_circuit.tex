@@ -1,0 +1,21 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_L10_Fig01_Example_circuit.png
+
+\begin{circuitikz}[voltage dir = old]
+
+	\ctikzset { bipoles/length = 1 cm}
+	
+	\draw (0, 0) to [R, l = $R_1$] (0, 1.5) to [R, l = $R_2$] (0, 3) node [above] {$A$} to [short, *-*] (1.5, 3) node [above] {$B$}
+		to [short, -*] (3, 3) node [above] {$C$} to [battery1, -*] (3, 1.5) node [right] {$E$} to [battery1, -*] (3, 0) node [below] {$H$}
+		to [short, -*] (1.5, 0) node [below] {$G$} to [short, -*] (0, 0) node [below] {$F$}
+		(3, 1.5) to [R, l = $R_4$, -*] (1.5, 1.5) node [left] {$D$}
+		(1.5, 3) to [R, l_ = $R_3$, -*] (1.5, 1.5) to [R, l_ = $R_5$] (1.5, 0);
+
+\end{circuitikz}
+
+\end{document}

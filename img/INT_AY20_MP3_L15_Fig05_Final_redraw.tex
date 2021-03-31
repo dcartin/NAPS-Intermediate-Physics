@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L15_Fig05_Final_redraw.png
+
+\begin{circuitikz}
+
+	% Front matter
+
+	\def\d{0.75}
+	\ctikzset{bipoles/length = \d cm}
+		
+	% Combine C12 and C34
+	
+	\draw (0, 0) to [battery1, l = $V$] (0, 1.5 * \d) -- (2 * \d, 1.5 * \d) to [C, l = $C_{1234}$] (2 * \d, 0) -- (0, 0);
+
+\end{circuitikz}
+
+\end{document}

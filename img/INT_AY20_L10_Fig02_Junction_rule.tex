@@ -1,0 +1,30 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_L10_Fig02_Junction_rule.png
+
+\begin{circuitikz}[voltage dir = old]
+
+	% Circuit portion
+
+	\draw [thick] (0, 0) to [short, -*] (1.5, 0) -- (1.5, 1.5)
+		(1.5, 0) -- (4.5, 0) to [short, -*] (4.5, -1) -- (6, -1)
+		(4.5, -1) -- (4.5, -2.5);
+		
+	% Current arrows
+	
+	\begin{scope}[->, > = latex, very thick, blue]
+	
+		\draw (1.65, 1.25) -- node [midway, right] {5.00 A} (1.65, 0.25);
+		\draw (2.5, -0.15) -- node [midway, below] {8.00 A} (3.5, -0.15);
+		\draw (4.35, -1.25) -- node [midway, left] {2.00 A} (4.35, -2.25);
+		\draw (4.75, -0.85) -- node [midway, above] {$I = $ ?} (5.75, -0.85);
+	
+	\end{scope}
+
+\end{circuitikz}
+
+\end{document}

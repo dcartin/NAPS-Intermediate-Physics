@@ -1,0 +1,46 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L30_Fig03_Missing_curr_volt.png
+
+\begin{tikzpicture}
+
+	% Circuit elements
+	
+	\begin{scope}[gray!50, draw = black]
+	
+		\filldraw (-1.5, -0.25) rectangle (-0.5, 0.25);
+		\filldraw (0.5, 0.75) rectangle (1.5, 0.25);
+		\filldraw (0.5, -0.75) rectangle (1.5, -0.25);
+	
+	\end{scope}
+	
+	\node at (-1, 0) {1};
+	\node at (1, 0.5) {2};
+	\node at (1, -0.5) {3};
+	
+	% Wires
+	
+	\begin{scope}[very thick]
+		
+		\draw (-1.5, 0) -- (-2, 0);
+		\draw (-0.5, 0) -- (0, 0) -- (0, 0.5) -- (0.5, 0.5);
+		\draw (0, 0) -- (0, -0.5) -- (0.5, -0.5);
+		\draw (1.5, 0.5) -- (2, 0.5) -- (2, 0) -- (2.5, 0);
+		\draw (1.5, -0.5) -- (2, -0.5) -- (2, 0);
+	
+	\end{scope}
+	
+	% Given currents, voltages
+	
+	\node [right] at (2.5, 0) {$I_{tot} = 3.50$ A};
+	\node [above] at (-1, 0.25) {$V_1 = 2.25$ V};
+	\node [above] at (1, 0.75) {$V_2 = 1.25$ V};
+	\node [below] at (1, -0.75) {$I_3 = 1.50$ A};
+
+\end{tikzpicture}
+
+\end{document}

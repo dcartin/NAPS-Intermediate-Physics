@@ -1,5 +1,8 @@
-# Jupyter notebook
+# Jupyter notebooks
 .ipynb_checkpoints
 
-# Jupyter notebook
+# Jupyter Book
 _build
+
+# PDF files for img
+img/*.pdf

@@ -1,0 +1,19 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L33_Fig06_Capacitor_circuit.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 1 cm}
+	
+	\draw (0.5, 1.5) -- ++ (30 : 0.5);
+	\draw (0, 0) to [C, l = $C_1$] (0, 1.5) to [short, -o] (0.5, 1.5)
+		(1, 1.5) to [short, o-] (1.5, 1.5) to [C, l = $C_2$] (1.5, 0) -- (0, 0);
+
+\end{circuitikz}
+
+\end{document}

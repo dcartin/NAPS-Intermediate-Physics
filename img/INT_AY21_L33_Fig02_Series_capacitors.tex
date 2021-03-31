@@ -1,0 +1,31 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L33_Fig02_Series_capacitors.png
+
+\begin{circuitikz}[> = latex]
+
+	\ctikzset { bipoles/length = 1 cm}
+	
+	\draw (0, 0) to [C, l = $C_1$] (1.5, 0) to [C, l = $C_2$] (3, 0) to [C, l = $C_3$] (4.5, 0);
+	
+	\draw (6.5, 0) to [C, l = $C_{eq}$] (8, 0);
+	
+	\begin{scope}[->]
+	
+		\draw (-0.25, -0.25) -- node [below] {$I_1$} (0.25, -0.25);
+		\draw (1.25, -0.25) -- node [below] {$I_2$} (1.75, -0.25);
+		\draw (2.75, -0.25) -- node [below] {$I_3$} (3.25, -0.25);
+		
+		\draw [thick] (5, 0) -- (6, 0);
+		
+		\draw (6.25, -0.25) -- node [below] {$I$} (6.75, -0.25);
+	
+	\end{scope}
+
+\end{circuitikz}
+
+\end{document}

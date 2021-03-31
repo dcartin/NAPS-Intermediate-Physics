@@ -1,0 +1,43 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L18_Fig01_Discharging_RC_circuit.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 0.75 cm}
+	
+	\matrix[column sep = 1 cm]{
+
+	% Open switch circuit
+	
+	\draw (0.25, 1) -- ++ (30: 0.5);
+	\draw (0.75, 1) to [short, o-] (1, 1) to [R, l = $R$] (2, 1) to [C, l = $C$] (2, 0) -- (0, 0) -- (0, 1) to [short, -o] (0.25, 1);
+	
+	% Time label
+	
+	\node at (1, 2) {$t < 0$};
+	
+	&
+
+	% Closed switch circuit
+	
+	\draw (0.25, 1) -- (0.75, 1) to [short, o-] (1, 1) to [R, l = $R$] (2, 1) to [C, l = $C$] (2, 0)
+		-- (0, 0) --  (0, 1) to [short, -o] (0.25, 1);
+		
+	% Current arrow
+	
+	\draw [->, > = latex, very thick, blue] (1.75, -0.25) -- node [midway, below] {$I$} (0.75, -0.25);
+	
+	% Time label
+	
+	\node at (1, 2) {$t \ge 0$};
+	
+	\\
+	};
+
+\end{circuitikz}
+\end{document}

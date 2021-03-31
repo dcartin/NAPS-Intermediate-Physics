@@ -1,0 +1,24 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L15_Fig03_First_redraw.png
+
+\begin{circuitikz}
+
+	% Front matter
+
+	\def\d{0.75}
+	\ctikzset{bipoles/length = \d cm}
+	
+	% Combine C1 and C2
+	
+	\draw (0, 0) -- (0, -0.25 * \d) -- (-2 * \d, -0.25 * \d) to [battery1, l = $V$] (-2 * \d, 3.25 * \d) -- (0, 3.25 * \d) -- (0, 3 * \d)
+		(0, 0) -- (-\d, 0) to [C, l_ = $C_{12}$] (-\d, 3 * \d) -- (\d, 3 * \d)
+		(\d, 3 * \d) to [C, l = $C_3$] (\d, 1.5 * \d) to [C, l = $C_4$] (\d, 0) -- (0, 0);
+
+\end{circuitikz}
+
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L19_Fig02_Indep_eqns_example.png
+
+\begin{circuitikz}
+
+	\ctikzset { bipoles/length = 0.75 cm}
+	
+	% Actual circuit
+
+	\draw (0, 0) to [R] (0, 3) -- (1.5, 3) node [above] {$D$} to [R, *-] (1.5, 1.5) to [R, -*] (1.5, 0) node [below] {$F$} to [battery1] (0, 0)
+		(1.5, 0) to [battery1] (4, 0) to [R, -*] (4, 3) node [above right] {$E$} -- (1.5, 3)
+		(1.5, 0) to [R] (4, 3);
+		
+	% Current arrows and labels
+	
+	\begin{scope}[->, > = latex, very thick, blue]
+	
+		\draw (-0.375, 1) -- node [midway, left] {$I_1$} (-0.375, 2);
+		\draw (1.125, 1) -- node [midway, left] {$I_2$} (1.125, 2);
+		\draw (2.25, 3.15) -- node [midway, above] {$I_3$} (3.25, 3.15);
+		\draw (3.25, 1.5) -- node [midway, below right] {$I_4$} ++ ({180 + atan(3/2.5)} : 1);
+		\draw (4.375, 2) -- node [midway, right] {$I_5$} (4.375, 1);
+	
+	\end{scope}
+
+\end{circuitikz}
+
+\end{document}

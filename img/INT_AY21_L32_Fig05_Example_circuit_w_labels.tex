@@ -1,0 +1,34 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L32_Fig05_Example_circuit_w_labels.png
+
+\begin{circuitikz}[american voltages]
+
+	\ctikzset { bipoles/length = 0.75 cm}
+	
+	% Actual circuit
+	
+	\draw (0, 0) node [left] {$A$} to [R, *-*, v^> = $R_3$] (2.5, 0) node [below] {$C$} to [battery1, -*, v^> = $V_1$] (5, 0) node [right] {$D$}
+		-- (2.5, 2.5) node [above] {$B$} to [R, *-*, v> = $R_1$] (0, 0) to [R, v_> = $R_4$] (2.5, -2.5) to [battery1, v_> = $V_2$] (5, 0)
+		(2.5, 2.5) to [R, v^>= $R_2$] (2.5, 0);
+		
+	% Circuit arrows and labels
+	
+	\begin{scope}[->, > = latex, very thick, blue]
+
+		\draw (1, 2.25) -- node [above left] {$I_1$} (0.25, 1.5);
+		\draw (2.25, 1.75) -- node [left] {$I_2$} (2.25, 0.75);
+		\draw (3.5, 2) -- node [above right] {$I_3$} (4.25, 1.25);
+		\draw (0.75, -0.25) -- node [below] {$I_4$} (1.75, -0.25);
+		\draw (4.25, -0.5) -- node [below] {$I_5$} (3.25, -0.5);
+		\draw (0.25, -1.5) -- node [below left] {$I_6$}(1, -2.25);
+		
+	\end{scope}
+
+\end{circuitikz}
+
+\end{document}

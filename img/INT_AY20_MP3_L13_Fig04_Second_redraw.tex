@@ -1,0 +1,24 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L13_Fig04_Second_redraw.png
+
+\begin{circuitikz}
+
+	% Front matter
+
+	\def\d{0.75}
+	\ctikzset{bipoles/length = \d cm}
+	
+	% Combine R3 and R4
+	
+	\draw (0, 0) -- (0, -0.25 * \d) -- (-2 * \d, -0.25 * \d) to [battery1, l = $V$] (-2 * \d, 1.75 * \d) -- (0, 1.75 * \d) -- (0, 1.5 * \d)
+		(0, 0) -- (-\d, 0) to [resistor, l_ = $R_{12}$] (-\d, 1.5 * \d) -- (\d, 1.5 * \d)
+		(\d, 1.5 * \d) to [resistor, l = $R_{34}$] (\d, 0) -- (0, 0);
+
+\end{circuitikz}
+
+\end{document}

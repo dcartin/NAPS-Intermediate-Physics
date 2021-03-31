@@ -1,0 +1,19 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L32_Fig08_Practice_circuit.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 1 cm}
+
+	\draw (0, 0) node [below left] {$C$} to [R, *-*, l = $R_3$] (2, 2) node [above right] {$B$} to [battery1, -*, l = $V_2$] (2, 0)
+		node [below right] {$D$} to [R, l = $R_2$] (0, 0)
+		(2, 2) to [battery1, -*, l_ = $V_1$] (0, 2) node [above left] {$A$} to [R, l_ = $R_1$] (0, 0);
+		
+\end{circuitikz}
+
+\end{document}

@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L32_Fig01_Wheatstone_bridge.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 0.75 cm}
+	
+	\draw (-1, 0) to [R, l = $R_5$] (1, 0);
+	\draw (-1, 0) to [R, l = $R_1$] (0, 1) to [R, l = $R_3$] (1, 0) to [R, l = $R_4$] (0, -1) to [R, l = $R_2$] (-1, 0);
+	\draw (0, 1) -- (0, 1.5) -- (-2.5, 1.5) to [battery1, l = $V$] (-2.5, -1.5) -- (0, -1.5) -- (0, -1);
+	
+	\filldraw (-1, 0) circle (1 pt) node [left] {$A$};
+	\filldraw (1, 0) circle (1 pt) node [right] {$B$};
+
+\end{circuitikz}
+
+\end{document}
