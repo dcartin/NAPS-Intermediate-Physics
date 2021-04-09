@@ -72,3 +72,9 @@
   title: Complex circuits
 - file: notebooks\L33_Capacitor_circuits
   title: Capacitor circuits
+- file: notebooks\L34_Magnetic_fields_and_forces
+  title: Magnetic fields and forces
+- file: notebooks\L35_Biot-Savart_law
+  title: Biot-Savart law
+- file: notebooks\L36_Faradays_law
+  title: Faraday's law
