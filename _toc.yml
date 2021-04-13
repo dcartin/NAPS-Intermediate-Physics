@@ -44,10 +44,6 @@
   title: Vector product and torque
 - file: notebooks\L20_Angular_momentum
   title: Angular momentum
-- file: notebooks\L21_Rotational_kinematics
-  title: Rotational kinematics
-- file: notebooks\L22_Rotational_dynamics
-  title: Rotational dynamics
 - file: notebooks\L23_Work_and_energy
   title: Work and energy
 - file: notebooks\L24_Conservation_of_energy

@@ -1,0 +1,32 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY20_MP3_L24-Charge-in-field-02.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	%Let's get some regions up in here
+	
+	\draw (0, 0) rectangle (2, 4);
+	\filldraw [fill = red!30] (2, 0) rectangle (4, 4);
+	\filldraw [fill = yellow!30] (4, 0) rectangle (6, 4);
+	\filldraw [fill = green!30] (6, 0) rectangle (8, 4);
+	
+	%Let's give some names to these bad boys
+	
+	\node at (1, 0.25) {\textbf{I}};
+	\node at (3, 0.25) {\textbf{II}};
+	\node at (5, 0.25) {\textbf{III}};
+	\node at (7, 0.25) {\textbf{IV}};
+	
+	%Which way did he go?
+	
+	\draw [ultra thick] (0, 3) -- (2.15, 3) arc (90: 45: {2/cos(45)}) arc (220: 360: 1.5);
+	\draw [ball color = blue!50] (6.8, 3.25) circle (0.15);
+
+\end{tikzpicture}
+\end{document}
