@@ -24,18 +24,12 @@
   title: Center of mass and collisions
 - file: notebooks\L10_Relative_motion
   title: Relative motion
-- file: notebooks\L11_Scalar_product
-  title: Scalar product
-- file: notebooks\L12_2D_collisions
-  title: Two-dimensional collisions
 - file: notebooks\L13_Solving_force_problems
   title: Solving force problems
+- file: notebooks\L11_Scalar_product
+  title: Scalar product
 - file: notebooks\L14_Inclined_planes
   title: Inclined planes
-- file: notebooks\L15_Friction
-  title: Friction
-- file: notebooks\L16_Inclined_planes_w_friction
-  title: Inclined planes with friction
 - file: notebooks\L17_Fluids
   title: Fluids
 - file: notebooks\L18_Circular_motion
@@ -45,7 +39,7 @@
 - file: notebooks\L20_Angular_momentum
   title: Angular momentum
 - file: notebooks\L23_Work_and_energy
-  title: Work and energy
+  title: Work and kinetic energy
 - file: notebooks\L24_Conservation_of_energy
   title: Conservation of energy
 - file: notebooks\L25_Universal_gravitation
