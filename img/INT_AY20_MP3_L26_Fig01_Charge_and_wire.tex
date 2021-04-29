@@ -1,0 +1,35 @@
+\documentclass[tikz]{standalone}
+
+\standaloneconfig{convert}
+
+% INT_AY20_MP3_L26_Fig01_Charge_and_wire.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+	
+	% Current wire with direction
+	
+	\draw [double = brown, double distance = 2 pt] (0, -1.5) -- (0, 1.5);
+	\filldraw [brown] (1 pt, 1.5) arc (0 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\filldraw [white] (1 pt, -1.5) arc (360 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\draw (1 pt, 1.5 cm) arc (0 : 180 : 1 pt and 0.5 pt);
+	\draw (0, -1.5) ellipse (1 pt and 0.5 pt);
+	
+	\draw [->, very thick] (-0.2, -1) node [below] {$I$} -- (-0.2, 0);
+	
+	% Positive charge w/ velocity
+	
+	\draw [->, > = latex, very thick] (-1, -0.5) -- (-1, 0.5) node [left] {${\vec v}$};
+	\draw [ball color = red] (-1, -0.5) circle (4 pt) node [left = 0.25 em] {$q$};
+	
+	% Coordinate axes
+	
+	\begin{scope}[font = \scriptsize]
+	
+		\draw [<->] (-3, -0.5) node [right] {$+y$} -- (-3, -1.5) -- (-2, -1.5) node [above] {$+x$};
+		\draw [->] (-3, -1.5) -- ++ (225 : 0.707) node [right] {$+z$};
+		
+	\end{scope}
+
+\end{tikzpicture}
+\end{document}

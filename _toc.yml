@@ -52,8 +52,6 @@
   title: Coulomb's law
 - file: notebooks\L29_Electric_fields
   title: Electric fields
-- file: notebooks\L29A_Gauss_law
-  title: Gauss' law
 - file: notebooks\L34_Magnetic_fields_and_forces
   title: Magnetic fields and forces
 - file: notebooks\L35_Biot-Savart_law

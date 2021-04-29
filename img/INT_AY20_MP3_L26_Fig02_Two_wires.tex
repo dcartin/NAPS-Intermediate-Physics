@@ -1,0 +1,31 @@
+\documentclass[tikz]{standalone}
+
+\standaloneconfig{convert}
+
+% INT_AY20_MP3_L26_Fig02_Two_wires.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+			
+	% Current wire 1 with direction
+	
+	\draw [double = brown, double distance = 2 pt] (0, -1.5) -- (0, 1.5);
+	\filldraw [brown] (1 pt, 1.5 cm) arc (0 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\filldraw [white] (1 pt, -1.5) arc (360 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\draw (1 pt, 1.5 cm) arc (0 : 180 : 1 pt and 0.5 pt);
+	\draw (0, -1.5) ellipse (1 pt and 0.5 pt);
+	
+	\draw [->, very thick] (0, 1.75) -- node [midway, right] {$I_1$} (0, 2.75);
+	
+	% Current wire 2 with direction
+	
+	\draw [double = blue!30, double distance = 2 pt] (1.5, -1.5) -- (1.5, 1.5);
+	\filldraw [blue!30] ({1.5 cm + 1 pt}, 1.5) arc (0 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\filldraw [white] ({1.5 cm + 1 pt}, -1.5) arc (360 : 180 : 1 pt and 0.5 pt) -- cycle;
+	\draw ({1.5 cm + 1 pt}, 1.5 cm) arc (0 : 180 : 1 pt and 0.5 pt);
+	\draw (1.5 , -1.5) ellipse (1 pt and 0.5 pt);
+	
+	\draw [->, very thick] (1.5, 1.75) -- node [midway, right] {$I_2$} (1.5, 2.75);
+
+\end{tikzpicture}
+\end{document}

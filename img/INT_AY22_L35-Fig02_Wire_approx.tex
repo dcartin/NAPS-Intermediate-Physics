@@ -12,13 +12,13 @@
 	% Definitions
 	
 	\def\L{6}		% Wire length
-	\def\N{12} 		% Number of wire segments
+	\def\N{6} 		% Number of wire segments
 	\def\R{2}		% Distance to observation point
 	
 	% Wire segments
 	
-	\foreach \n in {0, 1, ..., 11}
-		\draw [double = green, double distance = 2 pt] ({\n * \L / \N}, 0) -- ({(\n + 0.9) * \L / \N}, 0);
+	\foreach \n in {0, 1, ..., 5}
+		\draw [double = green, double distance = 2 pt] ({(\n + 0.05) * \L / \N}, 0) -- ({(\n + 0.95) * \L / \N}, 0);
 		
 	% Observation point P
 	
@@ -32,10 +32,6 @@
 	% Length vector
 	
 	\draw [->] ({(\N - 2) * \L / \N}, -0.125) -- node [below] {$I \Delta {\vec \ell}$} ({(\N - 1) * \L / \N}, -0.125);
-	
-	% Angle indicator
-	
-	\draw [thin, gray] ({(\N - 2.5) * \L / \N}, 0) node [above left] {$\theta$} arc (180 : 180 - atan(2 * \R * \N / (\L * (\N - 3))) : {\L / \N});
 
 \end{tikzpicture}
 \end{document}
