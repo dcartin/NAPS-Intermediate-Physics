@@ -3,7 +3,7 @@
 \usepackage{tikz}
 \pagestyle{empty}
 
-% INT_AY22_L03_Fig01_Moving_ball_positions.png
+% INT_AY22_L03_Fig06_Moving_ball_on_graph.png
 
 \begin{document}
 \begin{tikzpicture}[> = latex, font = \scriptsize]
@@ -16,6 +16,10 @@
 	\def\vx{1.5}		% Velocity components
 	\def\vy{-0.5}
 	
+	% Draw graph grid
+	
+	\draw [thin, gray, step = 0.5 cm] (-3, 0) grid (4, 3);
+	
 	% Draw ball
 	
 	\foreach \n in {0, 1, ..., 4}
@@ -24,9 +28,16 @@
 		\draw [->, red] (0, 0) -- node [midway, fill = white] {${\vec r}_\n$} ({\xi + \n * \vx}, {\yi + \n * \vy});
 	}
 	
-	% Draw origin
+	% Draw axes + labels
 	
-	\filldraw (0, 0) circle (1 pt) node [below left] {$O$};
+	\draw [thick, <->] (-3.5, 0) -- (4.5, 0) node [right] {$r_x$ (m)};
+	\draw [thick, ->] (0, 0) -- (0, 3.5) node [above] {$r_y$ (m)};
+	
+	\foreach \x in {-6, -4, ..., 8}
+		\node at (0.5 * \x, -0.25) {\x};
+		
+	\foreach \y in {2, 4, 6}
+		\node [fill = white] at (0, 0.5 * \y) {\y};
 	
 \end{tikzpicture}
 \end{document}
