@@ -1,0 +1,34 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\pagestyle{empty}
+
+% INT_AY22_L08_Fig02_vf_vec_diag.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Vector components
+	
+	\begin{scope}[thick, red, ->]
+	
+		\draw (0, 0) -- node [midway, above] {$v_{f, x}$} (1.5, 0);
+		\draw (1.5, 0) -- node [midway, right] {$v_{f, y}$} (1.5, -2);
+		
+	\end{scope}
+	
+	% Original vector, theta and right angle indicators
+	
+	\draw [thick, ->] (0, 0) -- node [midway, below left] {$v_f$} (1.5, -2);
+	
+	\begin{scope}[thin, gray]
+	
+		\draw (1.2, 0) -- (1.2, -0.3) -- (1.5, -0.3);
+		\draw (0.3, 0) arc (0 : {atan(-4/3)} : 0.3);
+	
+	\end{scope}
+	
+	\node at ({0.5 * atan(-4/3)} : 0.5) {$\theta$};
+
+\end{tikzpicture}
+\end{document}
