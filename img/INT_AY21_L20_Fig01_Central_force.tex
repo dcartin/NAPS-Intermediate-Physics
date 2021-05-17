@@ -1,0 +1,64 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L20_Fig01_Central_force.png
+
+\begin{tikzpicture}[> = latex]
+
+	% Orbit and ball position parameters
+	
+	\def\A{3} 		% Semi-major axis
+	\def\B{1.75}		% Semi-minor axis
+	\def\Q{40}		% Ball position angle
+	
+	\matrix[column sep = 1.5 cm]{
+	
+		% Central point
+		
+		\draw [fill = black] (0, 0) circle (1 pt) node [below] {${\vec r} = {\vec 0}$};
+		
+		% Ball position
+		
+		\draw [ball color = green] ({\A * cos(\Q)}, {\B * sin(\Q)}) circle (4 pt);
+		
+		% Radial vectors
+		
+		\draw [->] (0, 0) -- node [above left] {${\vec r}$} ({\A * cos(\Q)}, {\B * sin(\Q)});
+		\draw [red, ->] ({\A * cos(\Q)}, {\B * sin(\Q)}) -- node [above left] {${\hat r}$} ++ ({atan(\B * tan(\Q) / \A)} : 1);
+		
+		% Legend
+		
+		\node at (0.5 * \A, -1.5 * \B) {Radial vectors};
+	
+	&
+	
+		% Central point
+		
+		\draw [fill = black] (0, 0) circle (1 pt) node [below] {${\vec r} = {\vec 0}$};
+		
+		% Orbit
+		
+		\draw [dashed] (0, -\B) arc (-90 : 90 : \A cm and \B cm);
+		
+		% Ball position
+		
+		\draw [ball color = green] ({\A * cos(\Q)}, {\B * sin(\Q)}) circle (4 pt);
+	
+		% Force and velocity
+		
+		\draw [blue, thick, ->] ({\A * cos(\Q)}, {\B * sin(\Q)}) -- ++ ({180 + atan(\B * tan(\Q) / \A)} : 1.25) node [above left] {${\vec F}_c$};
+		\draw [gray, thick, ->] ({\A * cos(\Q)}, {\B * sin(\Q)}) -- ++ ({0.4 * \A * sin(\Q)}, {-0.4 * \B * cos(\Q)}) node [above right] {${\vec v}$};
+		
+		% Legend
+		
+		\node at (0.5 * \A, -1.5 * \B) {Physical situation};
+	
+	\\	
+	};
+
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY22_L16_Fig01_v_a_rels.png
+
+\begin{tikzpicture}[> = latex]
+
+% Definitions
+
+\def\R{2}
+
+\matrix[column sep = 1 cm]{
+
+	% Circular orbit
+	
+	\draw [dashed] (0, 0) circle (\R cm);
+	
+	% Marked points w/ position vectors
+	
+	\filldraw (90 : \R) circle (1 pt);
+	\draw [->, green] (0, 0) -- node [right] {${\vec r}_n$} (90 : \R);
+	
+	\filldraw (120 : \R) circle (1 pt);
+	\draw [->, green] (0, 0) -- node [left] {${\vec r}_{n + 1}$} (120 : \R);
+	
+	% Velocity vectors
+	
+	\draw [->] (90 : \R) -- node [above] {${\vec v}_n$} ++ (180 : 1);
+	\draw [->] (120 : \R) -- node [above left] {${\vec v}_{n + 1}$} ++ (210 : 1);
+
+&
+
+	\begin{scope}[yshift = 0.5 cm]
+
+		% Velocity vectors
+		
+		\draw [->] (0, 0) -- node [above] {${\vec v}_n$} (180 : 2);
+		\draw [->] (0, 0) -- node [below right] {${\vec v}_{n + 1}$} (210 : 2);
+		
+		% Acceleration vector
+		
+		\draw [->, red] (180 : 2) -- node [left] {${\vec a}_n \Delta t$} (210 : 2);
+	
+	\end{scope}
+	
+	% Label with accel mag
+	
+	\node at (-1, -1.5) {$a_n = \frac{v_n ^2}{r}$};
+
+\\
+};
+	
+\end{tikzpicture}
+
+\end{document}
