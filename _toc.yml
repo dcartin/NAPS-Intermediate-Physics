@@ -58,3 +58,6 @@
   title: Biot-Savart law
 - file: notebooks\L36_Faradays_law
   title: Faraday's law
+  
+- file: notebooks\Glossary
+  title: Glossary
