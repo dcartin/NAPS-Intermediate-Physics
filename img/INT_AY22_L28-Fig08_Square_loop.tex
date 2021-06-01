@@ -1,0 +1,31 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L28-Fig08_Square_loop.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Definitions
+	
+	\def\x{2}
+	\def\y{1.5}
+
+	% Square loop
+	
+	\draw [dashed] (-\x, -\y) -- (-\x, \x) -- (\y, \x) -- (\y, -\y) -- cycle;
+	
+	% Marked corners
+	
+	\filldraw (-\x, -\y) circle (1 pt) node [below left] {$(-\x, -\y)$};
+	\filldraw (\y, \x) circle (1 pt) node [above right] {$(\y, \x)$};
+	
+	% Origin
+	
+%	\draw (0, 0) circle (1 pt);
+
+\end{tikzpicture}
+\end{document}

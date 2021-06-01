@@ -18,8 +18,6 @@
   title: Vector magnitude and direction
 - file: notebooks\L07_Projectile_motion
   title: Projectile motion
-- file: notebooks\L11_Scalar_product
-  title: Scalar product
 - file: notebooks\L10_Relative_motion
   title: Relative motion
 - file: notebooks\L08_Linear_momentum_and_Newton's_laws_of_motion
@@ -28,6 +26,8 @@
   title: Center of mass and collisions
 - file: notebooks\L13_Solving_force_problems
   title: Solving force problems
+- file: notebooks\L11_Scalar_product
+  title: Scalar product
 - file: notebooks\L14_Inclined_planes
   title: Inclined planes
 - file: notebooks\L17_Fluids
@@ -56,8 +56,8 @@
   title: Magnetic fields and forces
 - file: notebooks\L35_Biot-Savart_law
   title: Biot-Savart law
-- file: notebooks\L36_Faradays_law
-  title: Faraday's law
-  
+- file: notebooks\L36_EM_radiation
+  title: Electromagnetic radiation
+
 - file: notebooks\Glossary
   title: Glossary

@@ -1,0 +1,32 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L20-Fig01_U_vs_r_graph.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Definitions
+	
+	\def\ri{2}		% Equilibrium height for spring
+	\def\k{1}		% Spring constant
+	\def\Fg{0.5} 	% Grav. force magnitude
+	
+	% Potential energy graph
+	
+	\draw [red, domain = 0:4, variable = \r] plot (\r, {0.5 * \k * (\r - \ri)^2 + \Fg * \r});
+	
+	% Axes + labels
+	
+	\draw [<->] (0, 4.5) node [above] {$U$} -- (0, 0) -- (4.25, 0) node [right] {$r_y$};
+	
+	\draw [dashed] (\ri, 0) -- (\ri, 2); 
+	\draw (\ri, 0) -- (\ri, -0.125) node [below] {$r_{0, y}$};
+	
+	%\draw ({(\k * \ri - \Fg) / \k}, 0) -- ({(\k * \ri - \Fg) / \k}, -0.125) node [below] {$r_{0, y}$};
+
+\end{tikzpicture}
+\end{document}

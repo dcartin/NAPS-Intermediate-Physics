@@ -34,6 +34,16 @@
 	% Actual circle
 	
 	\draw [dashed] (0, 0) circle (\R);
+	
+	% Angle indicator
+	
+	\draw [dotted] (0, 0) -- (0.5 * \R, 0);
+	\draw [thin, gray] (0.25 * \R, 0) arc (0 : {360 / \N} : 0.25 * \R);
+	\node [gray] at ({180 / \N} : {0.4 * \R}) {$\theta$};
+	
+	% Center of circle
+	
+	\filldraw (0, 0) circle (1 pt) node [below] {$C$};
 
 \end{tikzpicture}
 \end{document}

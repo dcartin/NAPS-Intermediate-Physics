@@ -1,0 +1,43 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L20-Fig02_U_vs_r_graph_w_ME.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Definitions
+	
+	\def\ri{2}		% Equilibrium height for spring
+	\def\k{1}		% Spring constant
+	\def\Fg{0.5} 	% Grav. force magnitude
+	
+	\def\rL{0.5}		% Lowest height for system
+	\def\rH{2.5}		% Highest height for system
+	
+	% Potential energy graph
+	
+	\draw [red, domain = 0:4, variable = \r] plot (\r, {0.5 * \k * (\r - \ri)^2 + \Fg * \r});
+	
+	% Axes + labels
+	
+	\draw [<->] (0, 4.5) node [above] {$U$} -- (0, 0) -- (4.25, 0) node [right] {$r_y$};
+	
+	% Mechanical energy line + label
+	
+	\node (e-label) at (1.25, 0.5) {$E$};
+	\draw [->] (e-label.east) to [out = 0, in = 270] (1.75, 1.375);
+	
+	\draw [dashed] (\rL, {0.5 * \k * (\rL - \ri)^2 + \Fg * \rL}) -- (\rH, {0.5 * \k * (\rH - \ri)^2 + \Fg * \rH});
+	
+	% Marked point for lowest, highest distances
+	
+	\filldraw [gray] (\rL, {0.5 * \k * (\rL - \ri)^2 + \Fg * \rL}) circle (1 pt) node [above right] {$r_{bot}$};
+	\filldraw [gray] (\ri, 1.375) circle (1 pt) node [above] {$r$}; 
+	\filldraw [gray] (\rH, {0.5 * \k * (\rH - \ri)^2 + \Fg * \rH}) circle (1 pt) node [below right] {$r_{top}$};
+
+\end{tikzpicture}
+\end{document}

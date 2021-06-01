@@ -1,0 +1,28 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY20_MP2_L17_Fig03-U_vs_x_graph.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex, font = \tiny]
+
+	% Grid + axes + axis labels
+	
+	\draw [step = 0.25, thin, gray!70] (0, 0) grid (4, 3);
+	\draw [<->] (0, 3.25) node [above] {$U(r_x)$ (mJ)} -- (0, 0) -- (4.25, 0) node [right] {$r_x$ (m)};
+	
+	\foreach \x in {0, 2.00, 4.00, 6.00, 8.00}
+		\draw (0.5 * \x, 0) -- (0.5 *\x, -0.125) node [below] {\x};
+		
+	\foreach \y in {0, 200, 400, 600}
+		\draw (0, 0.005 * \y) -- (-0.125, 0.005 * \y) node [left] {\y};
+	
+	% Energy curves
+	
+	\draw [red, very thick] (0, 1.5) -- (1, 1.5) -- (1.5, 0.75) -- (2.5, 0.75) -- (3, 2.5) -- (4, 2.5); 
+
+\end{tikzpicture}
+\end{document}
