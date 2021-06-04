@@ -1,0 +1,49 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L11_Fig02_Vector_sum_diagram.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Define the ramp angle
+	
+	\def\Q{33}
+	
+	% The dot
+	
+	\filldraw (0, 0) circle (2 pt);
+	
+	% Coordinate axes
+	
+	\draw [dashed] (180 : 2) -- (0 : 2) node [right] {${\hat x}$};
+	\draw [dashed] (90 : 1.5) node [above] {${\hat y}$} -- (270 : 2);
+	
+%	\draw [dashed] (180 + \Q : 2) -- (\Q : 2) node [above right] {${\hat e}_{||}$};
+%	\draw [dashed] (90 + \Q : 2) node [above] {${\hat e}_\perp$} -- (270 + \Q : 2);
+	
+	% Four vectors
+	
+	\begin{scope}[->, thick]
+	
+		\draw (0, 0) -- node [below left] {$A$} (90 + \Q: 1.5);
+		\draw (0, 0) -- node [left] {$B$} (270 : 1.5);
+		\draw (0, 0) -- node [below] {$C$} (0 : 1.5);
+		
+		\draw (0, 0) -- node [above left] {$D$} (\Q : 1.5);
+		
+	\end{scope}
+	
+	% Angle indicator for vectors A, D
+	
+	\draw [gray] (0, 0.75) arc (90 : 90 + \Q: 0.75);
+	\node [gray] at ({90 + 0.5 * \Q} : 1) {$\theta$};
+	
+	\draw [gray] (0.75, 0) arc (0 : \Q: 0.75);
+	\node [gray] at ({0.5 * \Q} : 1) {$\theta$};
+		
+\end{tikzpicture}
+\end{document}

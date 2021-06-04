@@ -1,0 +1,38 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L22-Fig02_Ug_vs_r_graph_w_ME.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Definitions
+	
+	\def\G{1}
+	\def\rc{-0.5}
+	
+	% Potential energy graph
+	
+	\draw [red, domain = 0:4, variable = \r] plot (\r, {-\G / (\r - \rc)});
+	
+	% Axes + labels
+	
+	\draw [<->] (0, -2.5) -- (0, 0) -- (4.25, 0) node [right] {$r$};
+	\draw [->] (0, 0) -- (0, 2) node [above] {$U_g$};
+	
+	% Mechanical energy curves
+	
+	\begin{scope}[font = \scriptsize]
+	
+		\draw [dashed] (0, -0.5) -- node [above] {$E < 0$} (\G / 0.5 + \rc, -0.5);
+		\filldraw (\G / 0.5 + \rc, -0.5) circle (1 pt) node [below right] {$r_{max}$};
+		
+		\draw [dashed] (0, 1) -- node [above] {$E > 0$} (4, 1);
+	
+	\end{scope}
+
+\end{tikzpicture}
+\end{document}
