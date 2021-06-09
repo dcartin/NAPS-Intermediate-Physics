@@ -1,0 +1,59 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L23_Fig03_Hohmann_rendezvous.png
+
+\begin{document}
+
+\begin{tikzpicture}[> = latex]
+
+	% Definitions
+	
+	\def\a{1.5} 		% (Semi-)major axis
+	\def\b{1.25} 	% (Semi-)minor axis
+	\def\Q{-45}		% Mars orbit relative rotation
+	\def\s{2} 		% Ratio of planetary semi-major axes
+	\def\sorb{1.35} 	% Ratio of transfer orbit to Earth orbit
+	
+	% Calculate linear eccentricity
+	
+	\pgfmathparse{sqrt(\a^2 - \b^2)}
+	\let\c\pgfmathresult
+	
+	% Calculate necessary shift to put Sun
+	% at focus of Mars orbit
+	
+	\pgfmathparse{\c * (1 - \s * cos(\Q))}
+	\let\sx\pgfmathresult
+	
+	\pgfmathparse{-\s * \c * sin(\Q)}
+	\let\sy\pgfmathresult
+	
+	% Mars orbit
+
+	\draw [thick, gray, xshift = \sx cm, yshift = \sy cm, rotate = \Q] (-\s * \a, 0) arc [start angle = 180, end angle = 290, x radius = \s * \a, y radius = \s * \b];
+	
+	% Hohmann transfer orbit
+	
+	\draw [dashed] ({-(1 - 0.5 * \sorb) * \a - 0.05}, \sorb * \b) arc [start angle = 90, end angle = 180, x radius = {\sorb * \a}, y radius = {\sorb * \b}];
+	
+	% Velocity vectors
+	
+	\draw [->] ({\a * (1 - 2 * \sorb)}, 0) -- node [below left] {${\vec v}_p$} ({\a * (1 - 2 * \sorb)}, -1.5);
+	\draw [->] ({\a * (1 - 2 * \sorb) - 0.05}, 0) -- node [above right] {${\vec v}_M$} ++ (305 : 1.5) coordinate (v-M);
+	
+	\draw [red, ->] ({\a * (1 - 2 * \sorb)}, -1.5) -- node [below right] {$\Delta {\vec v}$} (v-M);
+	
+	% Place planet
+	
+	\draw [ball color = red!30] ({\a * (1 - 2 * \sorb)}, 0) circle (4 pt) node [ left = 0.5 em] {$M$};
+	
+	% Coordinate system
+	
+	\draw [<->] (-5.5, 0) node [left] {${\hat e}_r$} -- (-4.5, 0) -- (-4.5, -1) node [below] {${\hat e}_\perp$};
+	
+\end{tikzpicture}
+\end{document}
