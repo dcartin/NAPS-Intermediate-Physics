@@ -1,0 +1,26 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY20_MP2_L30_Fig02-Transfer_orbit.png
+
+\begin{document}
+\begin{tikzpicture}
+
+	% Orbits -- planets + transfer
+	
+	\draw (0, 0) circle (1);
+	\draw (0, 0) circle (1.5);
+	
+	\draw [dashed] (0.25, 0) circle (1.25);
+
+	% Sun and planets
+	
+	\shade [ball color = yellow] (0, 0) circle (6 pt);
+	\shade [ball color = brown!50] (-1, 0) circle (3 pt);
+	\shade [ball color = blue] (1.5, 0) circle (3 pt);
+
+\end{tikzpicture}
+\end{document}

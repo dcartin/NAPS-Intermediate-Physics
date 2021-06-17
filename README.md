@@ -1,6 +1,8 @@
 # NAPS Intermediate Physics
 
-"God is not willing to do everything, and thus take away our free will and that share of glory which belongs to us. -- Niccolo Machiavelli"
+"God is not willing to do everything, and thus take away our free will and that share of glory which belongs to us."
+
+-- Niccolo Machiavelli
 
 These lessons are the basis for the intermediate physics course at the Naval Academy Preparatory School for the 2021-2022 academic year. I hope you find them a valuable and fruitful resource as you are going through the class. In particular, the web-based material includes many opportunities to practice your skills in Python programming, which will be a fundamental part of the course.
 

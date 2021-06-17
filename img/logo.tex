@@ -1,0 +1,26 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% logo.png
+
+\begin{document}
+\begin{tikzpicture}
+
+	% Orbits -- planets + transfer
+	
+	\draw (0, 0) circle (1);
+	\draw (0, 0) circle (1.5);
+	
+	\draw [dashed] (0.25, 0) circle (1.25);
+
+	% Sun and planets
+	
+	\shade [ball color = yellow] (0, 0) circle (6 pt) node [right = 0.5 em] {$S$};
+	\shade [ball color = blue] (-1, 0) circle (3 pt) node [left] {$E$};
+	\shade [ball color = brown!50] (1.5, 0) circle (3 pt) node [right] {$M$};
+
+\end{tikzpicture}
+\end{document}
