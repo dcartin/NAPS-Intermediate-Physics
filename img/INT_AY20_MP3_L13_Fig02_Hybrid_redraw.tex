@@ -1,0 +1,47 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L13_Fig02_Hybrid_redraw.png
+
+\begin{circuitikz}
+
+	% Front matter
+
+	\def\d{0.75}
+	\ctikzset{bipoles/length = \d cm}
+	
+	\matrix[column sep = 0.25 cm]{
+	
+	% Actual circuit
+	
+	\begin{scope}[yshift = 0.5 cm]
+	
+	\draw (0, 0) to [battery1, l = $V$] (0, 1.5 * \d)
+		(0, 0) to [resistor, l = $R_2$] (-1.5 * \d, 0) to [resistor, l = $R_1$] (-1.5 * \d, 1.5 * \d) -- (0, 1.5 * \d)
+		(0, 0) -- (1.5 * \d, 0) to [resistor, l_ = $R_4$] (1.5 * \d, 1.5 * \d) to [resistor, l_ = $R_3$] (0, 1.5 * \d);
+		
+	\end{scope}
+		
+	&
+	
+	% Redrawing arrow
+	
+	\draw [<->, > = latex] (0, 1.5 * \d) -- (\d, 1.5 * \d);
+	
+	&
+	
+	% Redrawn circuit
+	
+	\draw (0, 0) -- (0, -0.25 * \d) -- (-2 * \d, -0.25 * \d) to [battery1, l = $V$] (-2 * \d, 3.25 * \d) -- (0, 3.25 * \d) -- (0, 3 * \d)
+		(0, 0) -- (-\d, 0) to [resistor, l_ = $R_2$] (-\d, 1.5 * \d) to [resistor, l_ = $R_1$] (-\d, 3 * \d) -- (\d, 3 * \d)
+		(\d, 3 * \d) to [resistor, l = $R_3$] (\d, 1.5 * \d) to [resistor, l = $R_4$] (\d, 0) -- (0, 0);
+	
+	\\	
+	};
+
+\end{circuitikz}
+
+\end{document}

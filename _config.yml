@@ -2,6 +2,8 @@
 
 title: "NAPS Intermediate Physics"
 author: Daniel Cartin
+copyright: 2020-2021
+logo: img/logo.png
 
 #only_build_toc_files: true
 
@@ -16,8 +18,7 @@ repository:
   url: https://github.com/dcartin/NAPS-Intermediate-Physics
   branch: master
 
-# Add buttons to HTML files
+# Add Google Analytics ID
 
 html:
-  use_repository_button: true
-  use_edit_page_button: true
+  google_analytics_id: UA-192017336-1

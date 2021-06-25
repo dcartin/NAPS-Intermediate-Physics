@@ -1,0 +1,34 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L17_Fig02_Charged_cap_circuit.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 1 cm}
+	
+	% Actual circuit
+	
+	\draw (0, 0) to [battery1, l = $V$] (0, 2) -- (4, 2) to [R, l = $R$] (4, 0) -- (0, 0)
+		(2, 0) to [C, l = $C$] (2, 2);
+		
+	% Current arrows
+	
+	\begin{scope}[very thick, blue, <-, > = latex]
+	
+		\draw [rounded corners] (-0.25, 1.5) -- (-0.25, 2.25) node [above left] {$I_{tot}$} -- (0.5, 2.25);
+		\draw [rounded corners] (3.75, 2.25) -- (4.25, 2.25) node [above right] {$I_{tot}$} -- (4.25, 1.5);
+		\draw [rounded corners] (4.25, 0.5) -- (4.25, -0.25) node [below right] {$I_{tot}$} -- (3.75, -0.25);
+	
+	\end{scope}
+	
+	% Time stamp
+	
+	\node at (8, 1) {$t \to \infty$};
+
+\end{circuitikz}
+
+\end{document}

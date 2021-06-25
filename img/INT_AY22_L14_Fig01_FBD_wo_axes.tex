@@ -1,0 +1,33 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L14_Fig01_FBD_wo_axes.png
+
+% Modified version of INT_AY21_L16_Fig01_FBD.tex
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Define the ramp angle
+	
+	\def\Q{33}
+	
+	% The dot
+	
+	\filldraw (0, 0) circle (2 pt);
+	
+	% Three forces on child
+	
+	\begin{scope}[->, thick]
+	
+		\draw (0, 0) -- (90 + \Q: 1.5) node [below left] {$F_N$};
+		\draw (0, 0) -- node [left] {$F_g$} (270 : 1.5);
+		\draw (0, 0) -- (\Q : 1.5) node [above left] {$F_{fr}$};
+		
+	\end{scope}
+		
+\end{tikzpicture}
+\end{document}

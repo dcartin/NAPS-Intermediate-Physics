@@ -1,0 +1,23 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L30_Fig05_Simple_circuit.png
+
+\begin{circuitikz}
+
+	\ctikzset { bipoles/length = 1 cm}
+	
+	\draw (0, 0) to [R, l_ = $R$] (1.5, 0) -- (1.5, 1.5) to [battery1, l_ = {4.50 V}] (0, 1.5) -- (0, 0);
+	
+	\filldraw (0, 0) circle (1 pt) node [below left] {$A$};
+	\filldraw (0, 1.5) circle (1 pt) node [above left] {$B$};
+	\filldraw (1.5, 1.5) circle (1 pt) node [above right] {$C$};
+	\filldraw (1.5, 0) circle (1 pt) node [below right] {$D$};
+
+\end{circuitikz}
+
+
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L11_Fig01_Vector_sum_diagram.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Define the ramp angle
+	
+	\def\Q{33}
+	
+	% The dot
+	
+	\filldraw (0, 0) circle (2 pt);
+	
+	% Coordinate axes
+	
+	\draw [dashed] (180 : 2) -- (0 : 2) node [right] {${\hat x}$};
+	\draw [dashed] (90 : 1.5) node [above] {${\hat y}$} -- (270 : 2);
+	
+	% Three vectors
+	
+	\begin{scope}[->, thick]
+	
+		\draw (0, 0) -- node [below left] {$A$} (90 + \Q: 1.5);
+		\draw (0, 0) -- node [left] {$B$} (270 : 1.5);
+		\draw (0, 0) -- node [below] {$C$} (0 : 1.5);
+		
+	\end{scope}
+		
+\end{tikzpicture}
+\end{document}

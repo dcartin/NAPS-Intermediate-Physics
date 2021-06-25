@@ -1,0 +1,22 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L12_Fig04_Parallel_example.png
+
+\begin{circuitikz}[font = \scriptsize]
+
+	\ctikzset { bipoles/length = 1 cm}
+	
+	% Actual circuit
+	
+	\draw (2, 0) -- (1, 0) to [battery1, l = \mbox{$V = 90.0$ V}] (1, 1.5) -- (2, 1.5)
+		(4, 0) -- (2, 0) to [resistor, l_ = \mbox{$R_1 = 10.0\ \Omega$}] (2, 1.5) -- (4, 1.5)
+		(6, 0) -- (4, 0) to [resistor, l_ = \mbox{$R_2 = 15.0\ \Omega$}] (4, 1.5) -- (6, 1.5)
+			to [resistor, l = \mbox{$R_3 = 20.0\ \Omega$}] (6, 0);
+
+\end{circuitikz}
+
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY22_L22_Fig01_Field_at_point.png
+
+\begin{tikzpicture}[> = latex]
+
+	% Charge Q
+	
+	\draw [ball color = blue!30] (0, 0) circle (6 pt) node [above right] {$m_j$};
+	
+	% Point P w/ unit vector
+	
+	\filldraw (160 : 2) circle (1 pt) node [below left] {$P$};
+	\draw [red, ->] (160 : 2) -- ++ (160 : 1) node [above] {${\hat r}_{Pj}$};
+	
+	% Distance indicator
+	
+	\draw [dashed, <->] (160 : 0) -- node [above right] {$r_{Pj}$} (160 : 2);
+	
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY22_L11_Fig06_Two_vectors.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+
+	% Define the angles
+	
+	\def\QA{25}
+	\def\QB{15}
+	
+	% Coordinate axes
+	
+	\draw [dashed] (180 : 2) -- (0 : 2) node [right] {${\hat x}$};
+	\draw [dashed] (90 : 1.5) node [above] {${\hat y}$} -- (270 : 2);
+	
+	% Angle indicators
+	
+	\draw [gray] (-0.75, 0) arc (180 : 180 - \QA : 0.75);
+	\node [gray] at ({180 - 0.5 * \QA} : 1) {$\theta_A$};
+	
+	\draw [gray] (0, -1) node [left] {$\theta_B$} arc (270 : 270 + \QB : 1);
+	
+	% Two vectors
+	
+	\begin{scope}[->, thick]
+	
+		\draw (0, 0) -- node [above right] {${\vec A}$} (180 - \QA: 1.5);
+		\draw (0, 0) -- node [above right] {${\vec B}$} (270 + \QB : 1.5);
+		
+	\end{scope}
+		
+\end{tikzpicture}
+\end{document}

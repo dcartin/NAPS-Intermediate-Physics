@@ -1,0 +1,24 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L15_Fig01_Hybrid_example.png
+
+\begin{circuitikz}
+
+	% Front matter
+
+	\def\d{1}
+	\ctikzset{bipoles/length = \d cm}
+	
+	% Actual circuit
+	
+	\draw (0, 0) to [battery1, l = $V$] (0, 1.5 * \d)
+		(0, 0) to [C, l = $C_2$] (-1.5 * \d, 0) to [C, l = $C_1$] (-1.5 * \d, 1.5 * \d) -- (0, 1.5 * \d)
+		(0, 0) -- (1.5 * \d, 0) to [C, l_ = $C_4$] (1.5 * \d, 1.5 * \d) to [C, l_ = $C_3$] (0, 1.5 * \d);
+
+\end{circuitikz}
+
+\end{document}

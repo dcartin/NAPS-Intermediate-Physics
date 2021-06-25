@@ -1,0 +1,46 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L19_Fig04_Battery_volt_change.png
+
+\begin{circuitikz}[> = latex]
+
+	\ctikzset{bipoles/length = 1 cm}
+	
+	\matrix[column sep = 1.5 cm]{
+	
+	% Circuit element
+
+	\draw (2, 0) node [right] {$B$} to [battery1, l_ = $V$, *-*] (0, 0) node [left] {$A$};
+	
+	% Equation for voltage change
+	
+	\node at (1, -0.75) {$\Delta V_{A \to B} = +V$};
+	
+	% Box
+	
+	\draw [gray, thin] (-0.5, -1) rectangle (2.5, 1);
+	
+	&
+	
+	% Circuit element
+
+	\draw (0, 0) node [left] {$A$} to [battery1, l = $V$, *-*] (2, 0) node [right] {$B$};
+	
+	% Equation for voltage change
+	
+	\node at (1, -0.75) {$\Delta V_{A \to B} = -V$};
+	
+	% Box
+	
+	\draw [gray, thin] (-0.5, -1) rectangle (2.5, 1);
+	
+	\\
+	};
+
+\end{circuitikz}
+
+\end{document}

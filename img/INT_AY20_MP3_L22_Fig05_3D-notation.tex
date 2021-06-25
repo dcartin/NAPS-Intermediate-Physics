@@ -1,0 +1,33 @@
+\documentclass[convert]{standalone}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% INT_AY20_MP3_L22_Fig05_3D-notation.tex
+
+\begin{document}
+\begin{tikzpicture}
+
+	% Coordinate axes
+
+	\begin{scope}[<->, > = latex]
+	
+		\draw (1, 0) node [right] {E} -- (-1, 0) node [left] {W};
+		\draw (0, 1) node [above] {N} -- (0, -1) node [below] {S};
+	
+	\end{scope}
+	
+	% 3D markers
+	
+	\draw (45 : 1) coordinate (center) circle (5 pt);
+	\filldraw (45 : 1) circle (1 pt);
+	\node at (center) [right = 0.5 em] {up};
+	
+	\draw (135 : 1) coordinate (center) circle (5 pt);
+	\draw (center) ++ (45 : 5 pt) -- ++ (225: 10 pt);
+	\draw (center) ++ (135 : 5 pt) -- ++ (315: 10 pt);
+	\node at (center) [left = 0.5 em] {down};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L32_Fig06_Example_circuit_w_arrows.png
+
+\begin{circuitikz}
+
+	\ctikzset{bipoles/length = 1 cm}
+	
+	% Actual circuit
+
+	\draw (2, 4) -- (0, 4) to [battery1, l_ = $V_1$] (0, 2) to [R, l_ = $R_1$] (0, 0) -- (2, 0) node [below] {$B$}
+		to [R, *-, l = $R_2$] (2, 2) to [battery1, -*, l = $V_2$] (2, 4) node [above] {$A$}
+		(2, 0) -- (4, 0) to [R, l_ = $R_3$] (4, 2) -- (4, 4) -- (2, 4);
+		
+	% Current arrows
+	
+	\begin{scope}[> = latex, ->, thick, blue]
+	
+		\draw (0.25, 1.5) -- node [right] {$I_1$} (0.25, 2.5);
+		\draw (2.25, 1.5) -- node [right] {$I_2$} (2.25, 2.5);
+		\draw (3.75, 1.5) -- node [left] {$I_3$} (3.75, 2.5);
+	
+	\end{scope}
+	
+\end{circuitikz}
+
+\end{document}

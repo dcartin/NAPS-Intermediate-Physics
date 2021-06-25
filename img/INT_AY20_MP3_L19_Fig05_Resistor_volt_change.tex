@@ -1,0 +1,54 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY20_MP3_L19_Fig05_Resistor_volt_change.png
+
+\begin{circuitikz}[> = latex]
+
+	\ctikzset{bipoles/length = 1 cm}
+	
+	\matrix[column sep = 1.5 cm]{
+	
+	% Circuit element
+
+	\draw (0, 0) node [left] {$A$} to [R, l = $R$, *-*] (2, 0) node [right] {$B$};
+	
+	% Arrow for current direction
+	
+	\draw [->, very thick, blue] (0.5, -0.375) -- node [midway, below] {$I$} (1.5, -0.375);
+	
+	% Equation for voltage change
+	
+	\node at (1, -1.25) {$\Delta V_{A \to B} = - IR$};
+	
+	% Box
+	
+	\draw [gray, thin] (-0.5, -1.5) rectangle (2.5, 0.625);
+	
+	&
+	
+	% Circuit element
+
+	\draw (0, 0) node [left] {$A$} to [R, l = $R$, *-*] (2, 0) node [right] {$B$};
+	
+	% Arrow for current direction
+	
+	\draw [->, very thick, blue] (1.5, -0.375) -- node [midway, below] {$I$} (0.5, -0.375);
+	
+	% Equation for voltage change
+	
+	\node at (1, -1.25) {$\Delta V_{A \to B} = + IR$};
+	
+	% Box
+	
+	\draw [gray, thin] (-0.5, -1.5) rectangle (2.5, 0.625);
+	
+	\\
+	};
+
+\end{circuitikz}
+
+\end{document}

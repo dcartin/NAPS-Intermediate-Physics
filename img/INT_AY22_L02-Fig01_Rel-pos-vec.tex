@@ -1,0 +1,20 @@
+\documentclass[tikz]{standalone}
+
+\standaloneconfig{convert}
+
+% INT_AY22_L02-Fig01_Rel-pos-vec.png
+
+\begin{document}
+\begin{tikzpicture}[> = latex]
+	
+	% Position vectors
+
+	\draw [->, thick] (0, 0) -- node [midway, below left] {${\vec r}_1$} (-2, 1);
+	\draw [->, thick] (0, 0) -- node [midway, right] {${\vec r}_2$} (1, 2);
+
+	% Relative position vector r_12
+	
+	\draw [->, blue] (1, 2) -- node [midway, above] {${\vec r}_{12}$} (-2, 1);
+
+\end{tikzpicture}
+\end{document}

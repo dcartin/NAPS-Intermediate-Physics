@@ -1,0 +1,38 @@
+\documentclass{standalone}
+
+\usepackage{circuitikz}
+
+\begin{document}
+
+% INT_AY21_L31_Fig02_Parallel_resistors.png
+
+\begin{circuitikz}[> = latex]
+
+	\ctikzset { bipoles/length = 1 cm}
+	
+	\draw (0, 1) -- (0, 0.75);
+	\draw (-1.5, 0.75) -- (1.5, 0.75);
+	\draw (-1.5, -0.75) -- (1.5, -0.75);
+	\draw (0, -0.75) -- (0, -1);
+	
+	\draw (-1.5, 0.75) to [R, l = $R_1$] (-1.5, -0.75);
+	\draw (0, 0.75) to [R, l = $R_2$] (0, -0.75);
+	\draw (1.5, 0.75) to [R, l = $R_3$] (1.5, -0.75);
+	
+	\draw (4.5, 1) to [R, l = $R_{eq}$] (4.5, -1);
+	
+	\begin{scope}[->]
+	
+		\draw (-1.75, 0.5) -- node [left] {$I_1$} (-1.75, -0.5);
+		\draw (-0.25, 0.5) -- node [left] {$I_2$} (-0.25, -0.5);
+		\draw (1.25, 0.5) -- node [left] {$I_3$} (1.25, -0.5);
+		
+		\draw [thick] (2.5, 0) -- (3.5, 0);
+		
+		\draw (4.25, 0.5) -- node [left] {$I$} (4.25, -0.5);
+	
+	\end{scope}
+
+\end{circuitikz}
+
+\end{document}
