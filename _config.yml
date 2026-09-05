@@ -20,5 +20,8 @@ repository:
 
 # Add Google Analytics ID
 
-html:
-  google_analytics_id: UA-192017336-1
+#html:
+#  google_analytics_id: UA-192017336-1
+
+baseurl: "/NAPS-Intermediate-Physics" # No trailing slash
+url: "https://dcartin.github.io"
