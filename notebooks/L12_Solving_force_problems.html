@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. Solving force problems &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13. Scalar product" href="L13_Scalar_product.html" />
+    <link rel="prev" title="11. Center of mass and collisions" href="L11_Center_of_mass_and_collisions.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L12_Solving_force_problems.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L12_Solving_force_problems.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   12.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#free-body-diagrams-and-newton-s-2nd-law">
+   12.2. Free body diagrams and Newton’s 2nd law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-tension-force">
+   12.3. The tension force
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-gravitational-force">
+   12.4. The gravitational force
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-hanging-ball">
+   12.5. Example: Hanging ball
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normal-force">
+   12.6. Normal force
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#friction">
+   12.7. Friction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-study-of-friction">
+     12.7.1. The study of friction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#two-types-of-friction">
+     12.7.2. Two types of friction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example-multiple-forces">
+   12.8. An example: Multiple forces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   12.9. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="solving-force-problems">
+<span id="force-prob"></span><h1><span class="section-number">12. </span>Solving force problems<a class="headerlink" href="#solving-force-problems" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">12.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>We have started with the basic definitions of momentum, and used it in Newton’s laws of motion to consider the collision of objects. Hopefully, this gives you a sense of some of the important aspects of forces – forces are due to an interaction between two objects, and over a time interval will change the momentum of each of the objects.</p>
+<p>However, there are many more forces that we have not considered. I am sure that, after a moment’s thought, you can make a long list of forces acting on objects. A few forces we will discuss over the coming lessons are friction, buoyancy, and gravity. Because these forces can have different properties, it is important to develop a standard way of combining these forces together to find the motion of the object they act on. This recipe is what is covered in this lesson. In particular, we will look at <em>free body diagrams</em> (FBDs) as a visual way of finding the correct Newton’s 2nd law equation of a particular system.</p>
+<div class="warning admonition">
+<p class="admonition-title">Newton’s second law is a method</p>
+<p>There is a standard <em>method</em> for solving force problems, but there is not a standard <em>equation</em>. Every time you have forces involved in a situation, you should start with an FBD and Newton’s 2nd law. But the equation you derive from Newton’s 2nd law will be different in each case! This is because the forces may be different, or the directions they act in may change. You will have to think through what is affecting the system, but always using the force equations to do so. This lesson will help to build that intuition within you.</p>
+</div>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Describe how to draw the free body diagram for an object with one or more forces acting on it.</p></li>
+<li><p>Calculate the acceleration or final velocity of an object after it experiences a force over a given time interval.</p></li>
+<li><p>Given the gravitational field at an object’s location, state the gravitational force on that object.</p></li>
+<li><p>State the direction of the tension force acting on an object.</p></li>
+<li><p>Define the normal force.</p></li>
+<li><p>Describe the difference between the static frictional force and the kinetic frictional force.</p></li>
+<li><p>State the relationship between the frictional force and the normal force.</p></li>
+<li><p>State the maximum value of the static frictional force.</p></li>
+<li><p>Given an object moving along a surface with friction, calculate the acceleration of the object.</p></li>
+</ul>
+</div>
+<div class="section" id="free-body-diagrams-and-newton-s-2nd-law">
+<span id="force-prob-fbd"></span><h2><span class="section-number">12.2. </span>Free body diagrams and Newton’s 2nd law<a class="headerlink" href="#free-body-diagrams-and-newton-s-2nd-law" title="Permalink to this headline">¶</a></h2>
+<p>One of the convenient facts about the Universe is that you can solve for the overall motion of a complicated system by considering only a few pieces of information. We have seen this before in previous lessons – for example, how a system of multiple objects can be thought of as a single point, moving along with the center of mass velocity of the system. We will build on this when considering forces.</p>
+<p>Since we can simplify things quite a bit, it makes sense to represent the situation for a system by drawing only those pieces of information that are required. This leads to the idea of a free body diagram. A <strong>free body diagram</strong> (abbreviated FBD) is a picture of the forces acting on a system, a way of succinctly summarizing the forces acting on a system, a single object, or at a single point. We will use these as a thinking aid when solving the equations of Newton’s 2nd law.</p>
+<p>Because we are eliminating any non-essential information in a free body diagram, only the force vectors, and the angles needed to find their components, will be included. This allows for the possibility that a lot of forces are acting on the system at once.</p>
+<div class="warning admonition">
+<p class="admonition-title">Guidelines for drawing an FBD</p>
+<ol class="simple">
+<li><p>Draw the object as a dot; if desired, draw x and y axes with the object at the origin</p></li>
+<li><p>Draw all forces (<em>not</em> their components!) as arrows</p>
+<ul class="simple">
+<li><p>Forces always point <em>away</em> from the object</p></li>
+<li><p>Draw appropriate angles for forces next to the dot</p></li>
+<li><p>Be careful of direction of forces</p></li>
+<li><p>Label forces and angles symbolically (no numbers)</p></li>
+</ul>
+</li>
+<li><p>Do not include other vectors</p>
+<ul class="simple">
+<li><p>No acceleration</p></li>
+<li><p>No velocity</p></li>
+<li><p>No net force</p></li>
+</ul>
+</li>
+<li><p>In <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 19 (work and energy)</span></a>, we will add the displacement vector to FBDs, to help solve for work</p></li>
+</ol>
+</div>
+<p>Below is an example of a physical situation, and its corresponding FBD.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig01-Monkey_and_FBD_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig01-Monkey_and_FBD_small.png" src="../_images/INT_AY20_MP1_L21_Fig01-Monkey_and_FBD_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.1 </span><span class="caption-text">A monkey hanging off of a vine, and the free body diagram at the location of its hand</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here, a monkey hanging off of a vine. Obviously, the force of gravity is acting downward on the monkey, so that means there is a like downward force on the vine at point <span class="math notranslate nohighlight">\(B\)</span>. This bends the vine, so at the monkey’s hand, two tension forces are acting, one each to the left and right. Thus, the hand is where multiple forces are acting at once. The monkey will remain stationary only if these three forces add up to zero as <em>vectors</em>.</p>
+<p>This is represented in the free body diagram to the right of the illustration. Because we are interested in maintaining equilibrium, the FBD is drawn at the point where the monkey’s hand is grabbing the vine. The three forces acting at that point are then represented as vectors, pointing away from the dot indicating the position of the hand. This FBD shows all the information needed to write down the Newton’s 2nd law equations for that position.</p>
+<p>Next, we will formally introduce the two forces from the free body diagram above – the tension force, and the force of gravity.</p>
+</div>
+<div class="section" id="the-tension-force">
+<h2><span class="section-number">12.3. </span>The tension force<a class="headerlink" href="#the-tension-force" title="Permalink to this headline">¶</a></h2>
+<p>If something like a rope or string (or a vine!) is attached to an object, and then pulled on, that object will experience a <strong>tension</strong> force. This force will act at the point of contact between the rope and the object, and point in the direction along the rope at this contact point. So really, this is a type of applied force, and its magnitude can change, depending on how hard the rope is pulled on. You can imagine a tug-of-war, where the winner is determined by who can pull hardest; this can change, depending on who is working the rope.</p>
+<p>This means that there is no set value or equation for the tension force. Assuming the rope is strong enough, it can be any magnitude. This will usually be a given number, but sometimes it may be something you are solving for.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two crewmen pull a raft through a canal lock, with their forces shown in the figure below. One crewman pulls with a force of 130. N at an angle of 34.0<span class="math notranslate nohighlight">\(^\circ\)</span> relative to the forward direction of the raft. The second crewman, on the opposite side of the lock, pulls at an angle of 45.0<span class="math notranslate nohighlight">\(^\circ\)</span>.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig05_Barge_on_canal_small.png"><img alt="../_images/INT_AY21_L13_Fig05_Barge_on_canal_small.png" src="../_images/INT_AY21_L13_Fig05_Barge_on_canal_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.2 </span><span class="caption-text">Raft pulled along a canal</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>With what magnitude of force <span class="math notranslate nohighlight">\(F_2\)</span> (in N) should the second crewman pull so that the net force of the two crewmen is <em>only</em> in the forward direction (if the angle is kept the same)?</p></li>
+<li><p>What is the magnitude of the net force (in N) on the raft (assuming it is being pulled straight forward)?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 103 N; 181 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The first crewman is a bit of a jokester, and likes to change the angle at which he pulls the raft. Help the second crewman by creating a vPython function <code class="docutils literal notranslate"><span class="pre">secondAngle()</span></code>. This function should return the angle (in degrees) that the second crewman should pull the raft, so that the net force on the raft is only in the forward direction, down the canal. The arguments of the function should be the scalars <code class="docutils literal notranslate"><span class="pre">F1</span></code> and <code class="docutils literal notranslate"><span class="pre">F2</span></code>, for the magnitudes of the two crewmen’s given forces <span class="math notranslate nohighlight">\(F_1\)</span> and <span class="math notranslate nohighlight">\(F_2\)</span>, and the angle (in degrees) <code class="docutils literal notranslate"><span class="pre">Q1</span></code> that the first crewman pulls the raft.</p>
+<p>You will need to use the inverse trigonometric functions in vPython. The functions <code class="docutils literal notranslate"><span class="pre">asin()</span></code>, <code class="docutils literal notranslate"><span class="pre">acos()</span></code>, and <code class="docutils literal notranslate"><span class="pre">atan()</span></code> correspond to the functions <span class="math notranslate nohighlight">\(\sin^{-1}(), \cos^{-1}()\)</span>, and <span class="math notranslate nohighlight">\(\tan^{-1}()\)</span>, respectively. These functions will return values in radians, not degrees, so you need to convert back!</p>
+<p><strong>Note:</strong> There are certain values of these arguments where there is no angle at which the second crewman to pull, so that the net force is in the right direction! Your function should print out <code class="docutils literal notranslate"><span class="pre">Impossible</span> <span class="pre">situation</span></code> if this is true, and return the value -1.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is an example function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">secondAngle</span><span class="p">(</span><span class="n">F1</span><span class="p">,</span> <span class="n">F2</span><span class="p">,</span> <span class="n">Q1</span><span class="p">):</span>
+
+    <span class="c1"># Find the x and y components of the</span>
+    <span class="c1"># force due to the first crewman;</span>
+    <span class="c1"># remember to convert first to radians!</span>
+    
+    <span class="n">F1x</span> <span class="o">=</span> <span class="n">F1</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q1</span><span class="p">))</span>
+    <span class="n">F1y</span> <span class="o">=</span> <span class="n">F1</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q1</span><span class="p">))</span>
+    
+    <span class="c1"># If F1y is greater than the magnitude</span>
+    <span class="c1"># F2, then the situation is impossible</span>
+    
+    <span class="k">if</span> <span class="n">F1y</span> <span class="o">&gt;</span> <span class="n">F2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Impossible situation&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        
+    <span class="c1"># If the situation is possible, then</span>
+    <span class="c1"># the y components of the two forces</span>
+    <span class="c1"># must be equal and opposite, so that</span>
+    <span class="c1"># F2 sin(Q2) = F1y. This can be solved</span>
+    <span class="c1"># using the inverse sine function, or</span>
+    <span class="c1"># asin()</span>
+
+    <span class="k">return</span> <span class="n">degrees</span><span class="p">(</span><span class="n">asin</span><span class="p">(</span><span class="n">F1y</span> <span class="o">/</span> <span class="n">F2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-gravitational-force">
+<h2><span class="section-number">12.4. </span>The gravitational force<a class="headerlink" href="#the-gravitational-force" title="Permalink to this headline">¶</a></h2>
+<p>Before we talk about how to calculate the gravitational force <span class="math notranslate nohighlight">\({\vec F}_g\)</span>, it is important to talk first about terminology. On Earth, we frequently use the terms “mass” and “weight” interchangeably, and this is not too far off. Since the gravitational field is roughly constant everywhere on the surface of the Earth, then the mass and weight of an object will always be proportional.</p>
+<p>But there is an important conceptual distinction that this glosses over. When we say <strong>mass</strong>, we are referring to the amount of “stuff” an object has. This is a fixed property, as long as the object is not split into pieces. Another way to say this is that mass is the measure of inertia – as we saw with Newton’s 2nd law, for the <em>same</em> net force, an object with larger mass will have a <em>smaller</em> resulting acceleration. More massive objects are harder to move.</p>
+<p>This is different that the weight of an object. <strong>Weight</strong> is the gravitational force on an object. So, unlike mass (which is a scalar), weight is a vector quantity, with both magnitude and direction. On the Earth’s surface, the weight is always acting towards the center of the Earth, which is why we usually don’t mention it when state our weight. As we will see shortly, it depends on the object’s mass, but it also depends on the gravitational field. Since weight is a force, we will use the symbol <span class="math notranslate nohighlight">\({\vec F}_g\)</span> for it. I will use “weight” and “gravitational force” as synonyms, so remember that weight is a vector, not a scalar.</p>
+<p>Back in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05 (acceleration and free fall)</span></a>, the gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span> was described as the strength of the gravitational influence of an object on everything around it. Now that we are talking about forces, we can be more explicit in what this means. Once you know what <span class="math notranslate nohighlight">\({\vec g}\)</span> is at the location of an object with mass <span class="math notranslate nohighlight">\(m\)</span>, then the gravitational force <span class="math notranslate nohighlight">\({\vec F}_g\)</span> on that object is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_g = m {\vec g}
+\]</div>
+<p>Thus, this now explains something else said in Lesson 05: if gravity is the only force acting on the object, then its acceleration is the same as the gravitational field. You can see this by using Newton’s 2nd law. Since the mass <span class="math notranslate nohighlight">\(m\)</span> is in free fall, then the sum of the force is just <span class="math notranslate nohighlight">\({\vec F}_g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F} = m {\vec g}
+\]</div>
+<p>Newton’s 2nd law says that the sum of the forces on <span class="math notranslate nohighlight">\(m\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F} = m {\vec a}
+\]</div>
+<p>so we can see that the object’s acceleration <span class="math notranslate nohighlight">\({\vec a} = {\vec g}\)</span>.</p>
+<p>However, in general, there are multiple forces acting on an object, so <span class="math notranslate nohighlight">\({\vec g}\)</span> will <em>not</em> be the object’s acceleration. This is why we describe it as a measure of gravitational influence. In <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21 (gravitational force)</span></a>, we will see how to calculate <span class="math notranslate nohighlight">\({\vec g}\)</span> in general. This will include not only how to find <span class="math notranslate nohighlight">\({\vec g}\)</span> near the surface of the Earth, but also when there are multiple sizable objects present.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>One way to lose weight is to go to another planet! Suppose an 80.0 kg person weighs themself on the Earth, then travels to the Moon, where <span class="math notranslate nohighlight">\(g = 1.63\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>, and they weigh themselves again. How much weight (in N) did they “lose” by going to the Moon?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 654 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python procedure <code class="docutils literal notranslate"><span class="pre">surfaceWeight()</span></code> that prints out the values of the weights for an object on various planets and satellites in the Solar System; remember to include the appropriate units. The procedure takes as an argument <code class="docutils literal notranslate"><span class="pre">mass</span></code> the mass of the object. Use the gravitational field magnitudes listed in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Location</p></th>
+<th class="head"><p>Field (m/s^2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>3.70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Venus</p></td>
+<td><p>8.87</p></td>
+</tr>
+<tr class="row-even"><td><p>Mars</p></td>
+<td><p>3.71</p></td>
+</tr>
+<tr class="row-odd"><td><p>Europa</p></td>
+<td><p>1.62</p></td>
+</tr>
+<tr class="row-even"><td><p>Pluto</p></td>
+<td><p>0.620</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> One possible procedure is given below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">surfaceWeight</span><span class="p">(</span><span class="n">mass</span><span class="p">):</span>
+
+    <span class="c1"># Define gravitational field magnitudes</span>
+    <span class="c1"># (all in m/s ** 2)</span>
+
+    <span class="n">gMer</span> <span class="o">=</span> <span class="mf">3.70</span>
+    <span class="n">gVen</span> <span class="o">=</span> <span class="mf">8.87</span>
+    <span class="n">gMars</span> <span class="o">=</span> <span class="mf">3.71</span>
+    <span class="n">gEur</span> <span class="o">=</span> <span class="mf">1.62</span>
+    <span class="n">gPlu</span> <span class="o">=</span> <span class="mf">0.620</span>
+
+    <span class="c1"># Print out weight magnitudes</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight on Mercury: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gMer</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight on Venus: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gVen</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight on Mars: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gMars</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight on Europa: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gEur</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight on Pluto: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">gPlu</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-hanging-ball">
+<h2><span class="section-number">12.5. </span>Example: Hanging ball<a class="headerlink" href="#example-hanging-ball" title="Permalink to this headline">¶</a></h2>
+<p>Let’s work through an example problem and see how to find the magnitude of two tension forces acting on an object. Here, you will see how to draw an FBD for the problem, then write down the appropriate force equations, using Newton’s 2nd law.</p>
+<p>Here is the situation to consider. A ball of mass 100. g is attached to both the wall and ceiling, as shown.  String 1 is completely horizontal and string 2 makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> of 60.0<span class="math notranslate nohighlight">\(^\circ\)</span> with the ceiling. We are going to calculate the sizes <span class="math notranslate nohighlight">\(F_{T1}\)</span> and <span class="math notranslate nohighlight">\(F_{T2}\)</span> of the tension forces acting on the ball. The physical situation is shown in the picture below.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig01_Hanging_ball_small.png"><img alt="../_images/INT_AY21_L13_Fig01_Hanging_ball_small.png" src="../_images/INT_AY21_L13_Fig01_Hanging_ball_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.3 </span><span class="caption-text">A ball held in place by two strings</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>The tension <span class="math notranslate nohighlight">\({\vec F}_{T1}\)</span> is acting on the ball along string 1, and similarly for <span class="math notranslate nohighlight">\({\vec F}_{T2}\)</span>. Notice that there is also a gravitational force acting on the ball, which is why the ball’s mass will be important.</p>
+<p>Our first step will be to draw the FBD for the ball. Why are we choosing the ball as the system to consider? Well, this is the object on which all the forces of interest are acting on. By Newton’s zeroth law (see <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton-zero"><span class="std std-ref">Lesson 10</span></a>), the forces acting directly on the ball are the two tension forces and the ball’s weight. We know enough to calculate the weight, and we want to find the tensions, so this is everything we want! Now, let’s draw the FBD for the ball. Remember to draw the arrows away from the dot representing the ball, in the same direction as the actual forces. This gives the FBD below for the ball.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig02_Hanging_ball_FBD_small.png"><img alt="../_images/INT_AY21_L13_Fig02_Hanging_ball_FBD_small.png" src="../_images/INT_AY21_L13_Fig02_Hanging_ball_FBD_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.4 </span><span class="caption-text">The FBD for the hanging ball</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice I have moved the angle, so that it is next to the origin of the diagram. The angle here is the same as the angle shown in the physical diagram, because of alternate interior angles.</p>
+<p>Now that we have our FBD, we can use it to write down the Newton’s 2nd law equations for this situation. If I write this down as a vector equation, I get</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F}_{ball} = {\vec F}_{T1} + {\vec F}_{T2} + {\vec F}_g = m_{ball} {\vec a}
+\]</div>
+<p>This is a <em>vector</em> equation, so the directions are “inside” the vectors. Thus, there are no minus signs just yet; these will come in when we write down the <em>components</em> of each vector, which will be our next step. But first, since the ball is not moving, it is definitely not acceleration, so we can say <span class="math notranslate nohighlight">\({\vec a} = {\vec 0}\)</span>.</p>
+<p>The next step is to find the components of each force, in terms of their magnitudes. This will be useful in getting equations to solve for each tension magnitude. We are still doing algebra here, so only symbols, no numbers just yet. Two of the forces are along the coordinate axes, so they are simple:</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{T1} = (-F_{T1}) {\hat x} \qquad
+    {\vec F}_g = (-F_g) {\hat y}
+\]</div>
+<p>As always, the vector is written with the arrow sign, while the magnitude is written without. The directions of each force component is shown by the negative signs and the unit vectors <span class="math notranslate nohighlight">\({\hat x}, {\hat y}\)</span>. For the last vector <span class="math notranslate nohighlight">\({\vec F}_{T2}\)</span>, we need to find the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components, so we draw a vector diagram to help.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig03_Tension_vec_diag_small.png"><img alt="../_images/INT_AY21_L13_Fig03_Tension_vec_diag_small.png" src="../_images/INT_AY21_L13_Fig03_Tension_vec_diag_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.5 </span><span class="caption-text">Vector diagram for tension <span class="math notranslate nohighlight">\({\vec F}_{T2}\)</span></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>This gives that the second tension force vector is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{T2} = (F_{T2} \cos \theta) {\hat x} + (F_{T2} \sin \theta) {\hat y}
+\]</div>
+<p>These are now combined into Newton’s second law. We take the vector version of it, given above, and write down separately the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of the equation. In <a class="reference internal" href="L13_Scalar_product.html#scal-prod"><span class="std std-ref">Lesson 13 (scalar product)</span></a>, we will see how to do this more formally. For now, though, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{ball, x} = -F_{T1} + F_{T2} \cos \theta = m_{ball} a_x = 0
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{ball, y} = F_{T2} \sin \theta - F_g = m_{ball} a_y = 0
+\]</div>
+<p>Remember these net force components are equal to zero, since <span class="math notranslate nohighlight">\({\vec a} = {\vec 0}\)</span>. We now have two equations we can solve for the magnitude <span class="math notranslate nohighlight">\(F_{T1}\)</span> and <span class="math notranslate nohighlight">\(F_{T2}\)</span>, in terms of the angle <span class="math notranslate nohighlight">\(\theta\)</span> and the gravitational force <span class="math notranslate nohighlight">\(F_g\)</span>. But we have to be careful how we solve these! The <span class="math notranslate nohighlight">\(x\)</span> equation has both unknowns in it, so we need to solve the <span class="math notranslate nohighlight">\(y\)</span> equation first, resulting in</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{T2} = \frac{F_g}{\sin \theta} = \frac{m_{ball} g}{\sin \theta}
+\]</div>
+<p>In the second step, we used the fact that the magnitude <span class="math notranslate nohighlight">\(F_g\)</span> of the ball’s weight is <span class="math notranslate nohighlight">\(m_{ball} g\)</span>. This equation can be substituted into the <span class="math notranslate nohighlight">\(x\)</span> equation to find <span class="math notranslate nohighlight">\(F_{T1}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{T1} = F_{T2} \cos \theta = \frac{m_{ball} g \cos \theta}{\sin \theta} = \frac{m_{ball} g}{\tan \theta}
+\]</div>
+<p>The last step here uses the definition of <span class="math notranslate nohighlight">\(\tan \theta\)</span> as the ratio of <span class="math notranslate nohighlight">\(\sin \theta\)</span> and <span class="math notranslate nohighlight">\(\cos \theta\)</span>. Plugging in the givens into these equations gives</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{T1} = \frac{(0.100 \textrm{ kg})(9.81 \textrm{m/s}^2)}{\tan 60.0^\circ} = 0.566 \textrm{ N} \qquad
+    F_{T2} = \frac{(0.100 \textrm{ kg})(9.81 \textrm{m/s}^2)}{\sin 60.0^\circ} = 1.13 \textrm{ N} 
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(F_{T1} = F_{T2} \cos \theta\)</span>, and <span class="math notranslate nohighlight">\(\cos 60.0^\circ = 0.500\)</span>, then <span class="math notranslate nohighlight">\(F_{T1}\)</span> is exactly half the size of <span class="math notranslate nohighlight">\(F_{T2}\)</span>. This would <em>not</em> be true for any other angle <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 124 N stop light hangs at rest from two cables as shown below, where <span class="math notranslate nohighlight">\(\theta_1=30.0^\circ\)</span> and <span class="math notranslate nohighlight">\(\theta_2=50.0^\circ\)</span>. Solve for the magnitudes of the tensions <span class="math notranslate nohighlight">\(F_{T1}\)</span> (left rope) and <span class="math notranslate nohighlight">\(F_{T2}\)</span> in the two ropes (in N). <em>Hint:</em> The Newton’s 2nd law equations will have both unknown magnitudes in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> equations, so you will have to use the techniques of simultaneous equations (as I did in the example above) to find these values.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig04_Gatelys_small.png"><img alt="../_images/INT_AY21_L13_Fig04_Gatelys_small.png" src="../_images/INT_AY21_L13_Fig04_Gatelys_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.6 </span><span class="caption-text">A hanging stoplight</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(F_{T1} = 80.9\)</span> N; <span class="math notranslate nohighlight">\(F_{T2} = 109\)</span> N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>As an employee of the City of Newport, your job is to hang up streetlights. However, you are concerned that the ropes used are not strong enough when the streetlights are hung at certain angles.</p>
+<ol class="simple">
+<li><p>Based on your work for the previous problem, write down equations for the tension values <span class="math notranslate nohighlight">\(F_{T1}\)</span> and <span class="math notranslate nohighlight">\(F_{T2}\)</span> in each rope, using the variables <span class="math notranslate nohighlight">\(m\)</span> (streetlight mass), and <span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span> (the two rope angles). <em>Hint:</em> Your equations will simplify quite a bit if you use a trigonometric identity!</p></li>
+<li><p>Suppose that <span class="math notranslate nohighlight">\(\theta_1 &gt; \theta_2\)</span>. Which tension value will then be the larger one?</p></li>
+<li><p>Write a vPython procedure <code class="docutils literal notranslate"><span class="pre">checkTension()</span></code> that checks whether the tension values in the ropes exceeds the maximum safety value. The arguments of the procedure should be <code class="docutils literal notranslate"><span class="pre">m</span></code> for the streetlight mass, <code class="docutils literal notranslate"><span class="pre">Q1</span></code> and <code class="docutils literal notranslate"><span class="pre">Q2</span></code> for the angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span>, respectively, and <code class="docutils literal notranslate"><span class="pre">F_MAX</span></code> for the maximum safe value of the rope tension magnitude. If the situation is safe, have the procedure print out <code class="docutils literal notranslate"><span class="pre">OK</span></code>; otherwise, the procedure should print out <code class="docutils literal notranslate"><span class="pre">Unsafe</span> <span class="pre">situation</span></code>.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> The equations for the two tension magnitudes are given by <span class="math notranslate nohighlight">\(F_{T1} = \frac{mg \cos \theta_2}{\sin(\theta_1 + \theta_2)}\)</span> and <span class="math notranslate nohighlight">\(F_{T2} = \frac{mg \cos \theta_1}{\sin(\theta_1 + \theta_2)}\)</span>. Since <span class="math notranslate nohighlight">\(\theta_1 &gt; \theta_2\)</span> implies that <span class="math notranslate nohighlight">\(\cos \theta_1 &lt; \cos \theta_2\)</span>, then <span class="math notranslate nohighlight">\(F_{T1}\)</span> would be the larger magnitude. This makes physical sense, because whichever rope has the larger angle will be supporting more of the streetlight’s weight.</p>
+<p>Here is a possible procedure for checking whether the situation is safe.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">checkTension</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Q1</span><span class="p">,</span> <span class="n">Q2</span><span class="p">,</span> <span class="n">F_MAX</span><span class="p">):</span>
+    
+    <span class="c1"># Define grav field magnitude</span>
+    
+    <span class="n">g</span> <span class="o">=</span> <span class="mf">9.81</span>          <span class="c1"># in m/s^2</span>
+    
+    <span class="c1"># Check which angle is larger,</span>
+    <span class="c1"># to know which tension value</span>
+    <span class="c1"># is larger</span>
+    
+    <span class="k">if</span> <span class="n">Q1</span> <span class="o">&gt;</span> <span class="n">Q2</span><span class="p">:</span>       <span class="c1"># check F_T1</span>
+    
+        <span class="n">F_T1</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">Q2</span><span class="p">))</span> <span class="o">/</span> <span class="n">sin</span><span class="p">(</span><span class="n">Q1</span> <span class="o">+</span> <span class="n">Q2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">F_T1</span> <span class="o">&gt;</span> <span class="n">F_MAX</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unsafe situation&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">)</span>
+            
+    <span class="k">else</span><span class="p">:</span>             <span class="c1"># Q1 &lt; Q2, check F_T2</span>
+    
+        <span class="n">F_T2</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span> <span class="o">*</span> <span class="n">g</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">Q1</span><span class="p">))</span> <span class="o">/</span> <span class="n">sin</span><span class="p">(</span><span class="n">Q1</span> <span class="o">+</span> <span class="n">Q2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">F_T2</span> <span class="o">&gt;</span> <span class="n">F_MAX</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unsafe situation&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="normal-force">
+<h2><span class="section-number">12.6. </span>Normal force<a class="headerlink" href="#normal-force" title="Permalink to this headline">¶</a></h2>
+<p>The best way to think about the normal force is that it is the force that prevents one object from passing through another. When you sit on a chair, or lean against a wall, these objects exert a normal force on you, so you do not fall through the chair or wall. The normal force is known as a <em>constraint force</em>, since it constrains objects from occupying the same location!</p>
+<p>Notice that the normal force can change, depending on the situation. If you think of yourself leaning against the wall, with your feet still on the floor, both the wall and floor exert normal forces on you. If you change your angle relative to the horizontal (your “lean”), then the sizes of the two normal forces will shift. When you are almost vertical, the floor acts on you with the larger normal force; if you move your feet away from the wall, the angle with the horizontal will decrease, and the wall exerts a normal force with increasing size. The important point is that these forces constrain you, so that you don’t accelerate through the wall or floor!</p>
+<p>Each of these forces prevent you from passing through the floor or wall, so they must be perpendicular to these surfaces – you don’t start sliding sideways, just because you are standing on the floor! Similarly with the wall, where you may slide down the wall, but that is due to gravity, not the force of the wall on you. These forces also point away from the surface (floor or wall).</p>
+<div class="warning admonition">
+<p class="admonition-title">Properties of the normal force</p>
+<p>The <strong>normal force</strong> is a force that a surface exerts on an object. The normal force on the object always points perpendicular to (and away from) the surface. The magnitude of the normal force is whatever amount is required to prevent the object from accelerating <em>through</em> the surface. There is no direct relationship between the magnitudes of the normal force and the weight!</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the correct direction for the normal force given that the object is resting on an inclined surface, as shown below?</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L22-Fig01-Normal-block-on-ramp_small.png"><img alt="../_images/INT_AY20_MP1_L22-Fig01-Normal-block-on-ramp_small.png" src="../_images/INT_AY20_MP1_L22-Fig01-Normal-block-on-ramp_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.7 </span><span class="caption-text">Find the correct direction for the normal force on a block sitting on a ramp</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The normal force points up and to the left.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the correct direction for the normal force on an object pressed against a horizontal surface?</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L22-Fig02-Normal-block-on-ceiling_small.png"><img alt="../_images/INT_AY20_MP1_L22-Fig02-Normal-block-on-ceiling_small.png" src="../_images/INT_AY20_MP1_L22-Fig02-Normal-block-on-ceiling_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.8 </span><span class="caption-text">Find the correct direction for the normal force on the block on the ceiling</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The normal force points downward.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the correct direction for the normal force given that the object is hanging by a string above a horizontal surface?</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L22-Fig03-Normal-hanging-block_small.png"><img alt="../_images/INT_AY20_MP1_L22-Fig03-Normal-hanging-block_small.png" src="../_images/INT_AY20_MP1_L22-Fig03-Normal-hanging-block_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.9 </span><span class="caption-text">Find the correct direction for the normal force on the hanging block</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The block is not on a surface, so there is no normal force.</p>
+</div>
+<p>Let’s go through an example, to see how this works in a calculation. A 1.50 kg object  is pushed up a frictionless vertical wall with a force <span class="math notranslate nohighlight">\(F\)</span> at an angle of 35.0<span class="math notranslate nohighlight">\(^\circ\)</span> above the horizontal. Starting from rest, the block is moving with an upward velocity of 11.0 m/s after two seconds. We will find the magnitude of the applied force <span class="math notranslate nohighlight">\(F\)</span>, and the magnitude of the normal force <span class="math notranslate nohighlight">\(F_N\)</span>.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L24_Fig03-Block-pushed-up-wall_small.png"><img alt="../_images/INT_AY20_MP1_L24_Fig03-Block-pushed-up-wall_small.png" src="../_images/INT_AY20_MP1_L24_Fig03-Block-pushed-up-wall_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.10 </span><span class="caption-text">A block pushed up the wall</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>First, we draw an FBD for this situation. Notice that, since the normal force is <em>away</em> from the surface and perpendicular to it, then <span class="math notranslate nohighlight">\({\vec F}_N\)</span> points to the left.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L13_Fig06_FBD_small.png"><img alt="../_images/INT_AY21_L13_Fig06_FBD_small.png" src="../_images/INT_AY21_L13_Fig06_FBD_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.11 </span><span class="caption-text">The FBD for the block pushed up the wall</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>Writing down the sum of the forces acting on the wall, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F} = {\vec F}_N + {\vec F} + {\vec F}_g
+\]</div>
+<p>Now, we find the force vector component equations along each coordinate axis. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_x = -F_N + F_x = ma_x\qquad
+    \sum F_y = \sum F_y = F_y - F_g = ma_y
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(F_x\)</span> and <span class="math notranslate nohighlight">\(F_y\)</span> are the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of the applied force <span class="math notranslate nohighlight">\({\vec F}\)</span>. The block is accelerating upwards, since its velocity is increasing in that direction. However, horizontally the block is not moving, so <span class="math notranslate nohighlight">\(a_x = 0\)</span>. This means we can solve first for the relation between the normal force magnitude <span class="math notranslate nohighlight">\(F_N\)</span> and the size of the applied force <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    -F_N + F_x = 0 \Rightarrow -F_N + F \cos \theta = 0 \Rightarrow F_N = F \cos \theta
+\]</div>
+<p>This makes sense – the normal force is canceling out the piece of the applied force that is directly into the wall; it is not affected by the vertical component of the applied force. This latter part <em>will</em> change the acceleration in the <span class="math notranslate nohighlight">\(y\)</span> direction, so let’s look at that now. By definition,</p>
+<div class="math notranslate nohighlight">
+\[
+    a_y = \frac{\Delta v_y}{\Delta t}
+\]</div>
+<p>and with <span class="math notranslate nohighlight">\(v_{i, y} = 0\)</span>, then the force equation in the <span class="math notranslate nohighlight">\(y\)</span> direction becomes</p>
+<div class="math notranslate nohighlight">
+\[
+    F \sin \theta - mg = \frac{mv_{f, y}}{t}
+\]</div>
+<p>Solving this for the applied force magnitude <span class="math notranslate nohighlight">\(F\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+    F = \frac{m(g + v_{f, y} / t)}{\sin \theta}
+\]</div>
+<p>and a value of <span class="math notranslate nohighlight">\(F = 40.0\)</span> N. Using this in the equation solved above for the normal force gives <span class="math notranslate nohighlight">\(F_N = 32.8\)</span> N.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 7.85 kN telephone pole is shown in the figure. Assume that the normal force on the telephone pole is vertically upwards with a value of 21.0 kN, and the angles are <span class="math notranslate nohighlight">\(\theta = 30.0^\circ\)</span> and <span class="math notranslate nohighlight">\(\phi = 40.0^\circ\)</span>.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L24_Fig04-Telephone-pole_small.png"><img alt="../_images/INT_AY20_MP1_L24_Fig04-Telephone-pole_small.png" src="../_images/INT_AY20_MP1_L24_Fig04-Telephone-pole_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.12 </span><span class="caption-text">A telephone pole held in place with two cables</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the magnitude of the tension <span class="math notranslate nohighlight">\(F_{T1}\)</span> (in kN)?</p></li>
+<li><p>What is the magnitude of the tension <span class="math notranslate nohighlight">\(F_{T2}\)</span> (in kN)?</p></li>
+</ol>
+<p><em>Hint</em>: The Newton’s 2nd law equations will have both unknown magnitudes in both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> equations, so you will have to use the techniques of simultaneous equations to find these values.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(F_{T1} = 1.07\)</span> kN; <span class="math notranslate nohighlight">\(F_{T2} = 1.21\)</span> kN</p>
+</div>
+</div>
+<div class="section" id="friction">
+<h2><span class="section-number">12.7. </span>Friction<a class="headerlink" href="#friction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-study-of-friction">
+<h3><span class="section-number">12.7.1. </span>The study of friction<a class="headerlink" href="#the-study-of-friction" title="Permalink to this headline">¶</a></h3>
+<p>If you have some discomfort with Newton’s first law of motion, it’s probably because of the widespread presence of frictional forces in our everyday lives. Whenever we roll a ball along a table, the ball will eventually stop, not because that is the “natural” motion of all objects, but because of friction between the ball and the table. This was one of the difficult mental leaps that had to be made to go from the thoughts of Aristotle and the ancient Greeks, to the modern viewpoint on physics: motion stops because there are forces present that cause this stop, <em>not</em> because the “natural state” of an object is always at rest. This flip between viewpoints allows us to describe in detail the forces that cause motion to change, rather than throwing up our hands and saying it’s the way things are.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig01-Leonardo_da_Vinci_small.png"><img alt="../_images/INT_AY20_MP2_L04_Fig01-Leonardo_da_Vinci_small.png" src="../_images/INT_AY20_MP2_L04_Fig01-Leonardo_da_Vinci_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.13 </span><span class="caption-text">A self-portrait of Leonardo da Vinci from his notebooks</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>This leads us into the specific force of friction as our next topic. Leonardo da Vinci was one of the first people to systematically examine the size of the frictional force. In a series of experiments, he showed that friction does not depend on the contact area between the two surfaces, and that increasing the load on an object will increase the frictional force proportionally. However, although his discoveries were written into his notebooks, these were not publicly known until hundreds of years later.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig02-Guillaume_Amontons_small.png"><img alt="../_images/INT_AY20_MP2_L04_Fig02-Guillaume_Amontons_small.png" src="../_images/INT_AY20_MP2_L04_Fig02-Guillaume_Amontons_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.14 </span><span class="caption-text">Guillaume Amontons showing the Dauphin of France his method to transmit message by optical telegraphy</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>da Vinci’s laws of friction were rediscovered by the French instrument maker and physicist Guillaume Amontons around 1700, and hence are often called “Amontons’ laws”. These rules were verified by Charles-Augustin de Coulomb (whom we will see later with the electrostatic force in <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force"><span class="std std-ref">Lesson 24</span></a>) about eight decades later.</p>
+<p>The frictional force is a complicated area of study, and researchers are continuing to look into its properties. This is because, not only is it interesting, but it has obvious industrial and engineering applications. We will examine only a simple model of friction here.</p>
+</div>
+<div class="section" id="two-types-of-friction">
+<h3><span class="section-number">12.7.2. </span>Two types of friction<a class="headerlink" href="#two-types-of-friction" title="Permalink to this headline">¶</a></h3>
+<p>Suppose you are rearranging the furniture in your living room, and decide you want to move your couch. You give it a push to slide it along the carpet in the room. To make things definite, let’s make it a couch with a weight of 2.00 kN, and you start out by applying a force of 200. N to the couch. It doesn’t move, so you push harder with 400. N. It still doesn’t move, so you push with 600. N. Still doesn’t move. You activate those honed muscles of yours and push with 800. N, which is finally enough to get the couch to move. Not only does it move, but it starts accelerating across the living room! So, you push with only 600. N, and (unlike before), the couch now moves at a constant velocity.</p>
+<p>I’m sure you can think of some situation like this, where you have to apply a force to get something to start moving. Once you do get it moving, you need less force to <em>keep</em> it moving. This shows that there are two separate types of frictional force. The <strong>static frictional force</strong> acts on an object when it is stationary relative to the surface it is sitting on. Notice that they may be moving together – think of a crate in the flatbed of a pickup truck, for example. The <strong>kinetic frictional force</strong> acts on an object moving relative to the surface it is on. This may be due to the object moving on a stationary surface, or the other way around. The magnitude of the kinetic frictional force is usally less than that of the static frictional force.</p>
+<p>Once the couch in the example above starts moving, then only the kinetic frictional force is acting on it. Before that, however, your applied force is opposed by the <em>static</em> frictional force. Note how the type of frictional force changed! As you increased the applied force, the static frictional force matches it, at least up to a point. Beyond that maximum, though, friction was not strong enough to prevent the couch from moving, and now the kinetic friction was involved.</p>
+<p>As mentioned above, da Vinci, Amontons, Coulomb, and others started a detailed study of the properties of the friction force. Their model of friction, described in this lesson, has two basic properties.</p>
+<div class="warning admonition">
+<p class="admonition-title">Properties of the frictional force</p>
+<ol class="simple">
+<li><p>The direction of the frictional force <span class="math notranslate nohighlight">\({\vec F}_{fr}\)</span> is always opposing the motion of an object, or the potential motion, if the object is at rest.</p></li>
+<li><p>The magnitude <span class="math notranslate nohighlight">\(F_{fr}\)</span> of the frictional force on an object on a surface is proportional to the normal force due to the surface, acting on the object. The constant of proportionality is known as the coefficient of friction, and given by the symbol <span class="math notranslate nohighlight">\(mu\)</span> (“mu”).</p></li>
+</ol>
+</div>
+<p>Let’s talk about these in more detail, starting with the direction. Think again to the example mentioned earlier of a crate in a flatbed truck. As the truck drives along, if the flatbed’s surface were completely smooth, the crate would have no horizontal force on it, and it would slide backwards. To keep the crate in place, the static frictional force acts opposite to this motion, in the direction the truck is moving. This is what I mean by opposing the potential motion of the object. Thus, it is actually the frictional force moving the crate forward!</p>
+<p>For the magnitude, since the force of friction is always proportional to the normal force, then it makes sense to look at the ratio of the frictional and normal forces; this will be the constant <span class="math notranslate nohighlight">\(\mu\)</span> mentioned above. Thus, the coefficient <span class="math notranslate nohighlight">\(\mu\)</span> is the ratio of the two magnitudes, or</p>
+<div class="math notranslate nohighlight">
+\[
+    \mu = \frac{F_{fr}}{F_N}
+\]</div>
+<p>Notice that, since <span class="math notranslate nohighlight">\(\mu\)</span> is the ratio of two forces, it has no units! This constant is roughly the same for a given type of friction (static or kinetic) with any pair of surfaces, e.g. rubber on carpet, for someone walking in their house with shoes on. There will be a <strong>coefficient of static friction</strong> <span class="math notranslate nohighlight">\(\mu_s\)</span> and a <strong>coefficient of kinetic friction</strong> <span class="math notranslate nohighlight">\(\mu_k\)</span> for each such surface pair. These coefficients must be measured experimentally, by going into the lab and moving the two surfaces against each other.</p>
+<p>Let’s now get specific about the relationship between the normal and friction forces. Remember the example we had above, with the couch. Specfically, the static frictional force would change, since you altered your applied force. Thus, the force of static friction will actually have a <em>range</em> of values, up to some maximum static frictional force. To show this, the magnitude of <span class="math notranslate nohighlight">\(F_{fr, s}\)</span> is given by an inequality; the static frictional force is limited by its largest magnitude. Mathematically, this is</p>
+<div class="math notranslate nohighlight">
+\[
+			F_{fr, s} \le \mu_s F_N
+\]</div>
+<p>where, as before, <span class="math notranslate nohighlight">\(F_{fr, s}\)</span> is the force of static friction, <span class="math notranslate nohighlight">\(\mu_s\)</span> is the coefficient of static friction, and <span class="math notranslate nohighlight">\(F_N\)</span> is the normal force. On the other hand, the kinetic frictional force is constant, so it is a straight equality:</p>
+<div class="math notranslate nohighlight">
+\[
+			F_{fr, k} = \mu_k F_N
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(F_k\)</span> is the force of kinetic friction, and <span class="math notranslate nohighlight">\(\mu_k\)</span> is the coefficient of kinetic friction.</p>
+<p>The PhET application linked below allows you to play around with the force of friction, especially if you select the “Friction” portion of the app.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Use the “Friction” part of the PhET to answer the following questions.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the default values in the PhET, what is the coefficient of static friction between the crate and the ground? What is the coefficient of kinetic friction? Does it matter if you change the object you are pushing, or add mass on top of it?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The crate has a mass of 50 kg, so the gravitational force on it is 490. N. By steadily increasing the applied force when the crate is at rest, you find that the maximum static frictional force is 125 N. This gives <span class="math notranslate nohighlight">\(\mu_s\)</span> to be around 0.26. Once the crate is moving, there is a kinetic frictional force of 94 N, giving <span class="math notranslate nohighlight">\(\mu_k\)</span> to be around 0.19. These coefficients appear to be the same for all objects, which you can test by finding the necessary force to get each object to start moving.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Find the value of the unknown mass for the gift-wrapped box.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> By increasing the applied force from zero, while the box is at rest, the maximum static frictional force is 125 N. When the box is moving, there is a constant kinetic frictional force of 94 N. Using the same coefficients of friction obtained in the last problem, this suggests the box has a mass of 50 kg. You can confirm this by adding objects with known mass, and verifying the frictional force changes as expected.</p>
+</div>
+<p>As another demonstration of the frictional force, let’s make a table of the applied forces on the couch. We assume that your applied force and the force of friction are the only horizontal forces.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Let the coefficient of static friction <span class="math notranslate nohighlight">\(\mu_s\)</span> be 0.375, and the coefficient of kinetic friction <span class="math notranslate nohighlight">\(\mu_k\)</span> be 0.250. Remember that the couch has a weight of 2.00 kN. If the living room floor is flat, use this to calculate the values of the maximum static frictional force, and the kinetic frictional force, and fill in the values of the frictional force in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(F_{app}\)</span> (N)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(F_{fr}\)</span> (N)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>400.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>600.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>800.</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> For this problem, you first need to find the normal force of the floor acting on the couch. Since the floor is flat, the magnitude of the normal force is equal to the value of the couch’s weight, or 2.00 kN. This means the maximum magnitude of the static frictional force is <span class="math notranslate nohighlight">\(\mu_s F_N = (0.375)(2000 \textrm{ N}) = 750.\)</span> N, while the constant value of the kinetic frictional force is <span class="math notranslate nohighlight">\(\mu_k F_N = (0.250)(2000 \textrm{ N}) = 500.\)</span> N. Then, the completed table of frictional forces should look like the one given below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(F_{app}\)</span> (N)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(F_{fr}\)</span> (N)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200.</p></td>
+<td><p>200.</p></td>
+</tr>
+<tr class="row-odd"><td><p>400.</p></td>
+<td><p>400.</p></td>
+</tr>
+<tr class="row-even"><td><p>600.</p></td>
+<td><p>600.</p></td>
+</tr>
+<tr class="row-odd"><td><p>800.</p></td>
+<td><p>500.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>After the couch starts moving, and you apply a force of 600. N on it, what is the frictional force value between the floor and the couch?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Once the couch is moving, the frictional force is kinetic, so the force of friction has a magnitude of 500. N.</p>
+</div>
+</div>
+</div>
+<div class="section" id="an-example-multiple-forces">
+<span id="force-prob-mult"></span><h2><span class="section-number">12.8. </span>An example: Multiple forces<a class="headerlink" href="#an-example-multiple-forces" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have a model of the frictional force, let’s see how it interacts with some of the other forces we have dealt with. I will work through the following example. A block with a mass of 5.00 kg is moving because of a 20.0 N applied acting at an angle of 15.0<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal.  The coefficient of kinetic friction between the block and the horizontal surface is 0.200. Determine the horizontal acceleration (magnitude in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the block.</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig05.png"><img alt="../_images/INT_AY20_MP2_L04_Fig05.png" src="../_images/INT_AY20_MP2_L04_Fig05.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.15 </span><span class="caption-text">Sliding a crate</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>As always, the first step should be to draw a FBD for the block. This will include not only the frictional force, but also the gravitational, normal, and applied forces. The FBD of the block is shown below.</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L15_Fig01_FBD_small.png"><img alt="../_images/INT_AY21_L15_Fig01_FBD_small.png" src="../_images/INT_AY21_L15_Fig01_FBD_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.16 </span><span class="caption-text">FBD for crate sliding on floor</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>You might think we only need to find the horizontal forces on the block, but since the friction force depends on the normal force, we need to solve for the vertical forces as well. In addition, the downward acting applied force will change the normal force, so we need to look out for that. If we write down the net force on the block, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F} = {\vec F}_{fr} + {\vec F}_N + {\vec F}_{app} + {\vec F}_g
+\]</div>
+<p>Taking the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components, then</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_x = -F_{fr} + F_{app} \cos \theta = ma_x
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = F_N - F_{app} \sin \theta - F_g = ma_y
+\]</div>
+<p>We solve first for the normal force magnitude <span class="math notranslate nohighlight">\(F_N\)</span>, using the fact that <span class="math notranslate nohighlight">\(a_y = 0\)</span> (the block is not accelerating vertically). Then,</p>
+<div class="math notranslate nohighlight">
+\[
+    F_N = F_{app} \sin \theta + mg 
+\]</div>
+<p>We know the block is moving, so the frictional force is kinetic; substituting the normal force into the kinetic friction force equation, the <span class="math notranslate nohighlight">\(x\)</span> force equation becomes</p>
+<div class="math notranslate nohighlight">
+\[
+    -\mu_k (F_{app} \sin \theta + mg) + F_{app} \cos \theta = ma_x
+\]</div>
+<p>With a little rearranging, this gives the size <span class="math notranslate nohighlight">\(a_x\)</span> of the acceleration to be</p>
+<div class="math notranslate nohighlight">
+\[
+    a_x = -\mu_k g + \frac{F_{app} (\cos \theta - \mu_k \sin \theta)}{m}
+\]</div>
+<p>Plugging in the given values results in an acceleration of 1.69 m/s<span class="math notranslate nohighlight">\(^2\)</span> to the right.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 500. N crate starts at rest on the concrete floor of a warehouse. You exert a horizontal applied force of 350. N. The coefficient of static friction is 0.735, and the coefficient of kinetic friction is 0.580.</p>
+<ol class="simple">
+<li><p>What is the acceleration of the crate?</p></li>
+<li><p>What force is necessary to get the crate moving?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 0.00 m/s<span class="math notranslate nohighlight">\(^2\)</span>; 368 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An applied force <span class="math notranslate nohighlight">\(F_{app}\)</span> exerted horizontally starts to act on a 125 N block initially at rest. Below is shown a graph of the frictional force <span class="math notranslate nohighlight">\(F_{fr}\)</span> on the block from the floor, as a function of the applied force as it increases in size from zero newtons. Use this graph to find the values of the coefficients of static and kinetic friction.</p>
+<div class="figure align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig07_small.png"><img alt="../_images/INT_AY20_MP2_L04_Fig07_small.png" src="../_images/INT_AY20_MP2_L04_Fig07_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.17 </span><span class="caption-text">Frictional force vs. applied force graph for sliding block</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(\mu_s = 0.640\)</span>, <span class="math notranslate nohighlight">\(\mu_k = 0.400\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A NAPSter, crazed by the latest victory of the football team, uses a force <span class="math notranslate nohighlight">\({\vec F_{app}}\)</span> of magnitude 90.0 N to push a 4.00 kg block across the ceiling of their room, as shown below. The coefficient of kinetic friction between the block and the ceiling’s surface is 0.400. Find the magnitude of the block’s acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>).</p>
+<div class="figure align-default" id="id18">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig06_small.png"><img alt="../_images/INT_AY20_MP2_L04_Fig06_small.png" src="../_images/INT_AY20_MP2_L04_Fig06_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12.18 </span><span class="caption-text">Sliding a block on the ceiling</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 3.16 m/s<span class="math notranslate nohighlight">\(^2\)</span></p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">12.9. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We are now beginning to use force methods to solve problems. This lesson introduced this technique, and started with the tension, gravitational, normal, and frictional forces as examples to see how it works. Over the course of the next few lessons, we will add on additional forces, thus allowing us to look at more complicated situations. The basic ideas from this lesson will hold: the basic technique is to start with an FBD, and derive the appropriate force equations using Newton’s 2nd law. This should be your standard practice!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Draw the FBD of a system for any given physical situation</p></li>
+<li><p>Using the FBD, write down the appropriate Newton’s 2nd law equations</p></li>
+<li><p>Find the gravitational force on an object in a gravitational field</p></li>
+<li><p>Solve for the normal force acting on an object</p></li>
+<li><p>Describe what type of friction is appropriate for a given situation</p></li>
+<li><p>Explain how much static frictional force is present when other forces are applied to a stationary object</p></li>
+<li><p>Use a knowledge of forces and Newton’s second law to write down the appropriate mathematical relationship between the forces and the object’s acceleration.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L11_Center_of_mass_and_collisions.html" title="previous page"><span class="section-number">11. </span>Center of mass and collisions</a>
+    <a class='right-next' id="next-link" href="L13_Scalar_product.html" title="next page"><span class="section-number">13. </span>Scalar product</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

@@ -1,0 +1,1127 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20. Conservation of energy &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="21. Universal gravitation" href="L21_Universal_gravitation.html" />
+    <link rel="prev" title="19. Work and energy" href="L19_Work_and_energy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L20_Conservation_of_energy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L20_Conservation_of_energy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   20.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conservative-vs-non-conservative-forces">
+   20.2. Conservative vs. non-conservative forces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gravitational-and-spring-potential-energy">
+   20.3. Gravitational and spring potential energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   20.4. Conservation of energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example-a-block-on-a-spring">
+   20.5. An example: A block on a spring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-conservative-forces-and-mechanical-energy">
+   20.6. Non-conservative forces and mechanical energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-graphs">
+   20.7. Energy graphs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-effective-potential-energy">
+   20.8. The effective potential energy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constant-central-force">
+     20.8.1. Constant central force
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-spring-force">
+     20.8.2. The spring force
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding-the-stable-equilibrium">
+     20.8.3. Finding the stable equilibrium
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   20.9. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="conservation-of-energy">
+<span id="energy"></span><h1><span class="section-number">20. </span>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">20.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#centr-force-ueff"><span class="std std-ref">Effective potential energy for a constant central force</span></a></p></li>
+<li><p><a class="reference internal" href="#spring-force-ueff"><span class="std std-ref">Effective potential energy for the spring force</span></a></p></li>
+</ol>
+<p>In the last lesson, we found the work done by any generic force, as the system it acts on undergoes a displacement. This force could be constant (such as the force of gravity near the surface of the Earth) or changing (like the spring force). However, this is not the best way to divide forces, at least when talking about work. Instead, we will see that it is best to focus on those forces where the work done by the force leads to a scalar uniquely defined at every state of the system. This scalar will be known as a <em>potential energy</em> of the force, and the force will be known as a <em>conservative force</em>. The reason to do this is that if we can associate a specific scalar – the <em>mechanical energy</em> of the system – based on both kinetic and potential energies, then a constant mechanical energy allows us to predict the evolution of the system.</p>
+<p>So our gameplan for this lesson is the following. First, we discuss which forces we can define potential energies for. There are a limited number of such forces, but they will be very helpful to use. This means we need to specify the difference between a conservative force and a non-conservative force; a potential energy can only be defined for a conservative force. Then we can add up the kinetic energy and all the potential energies of the system to get the system’s mechanical energy. If only conservative forces act on the system, then the mechanical energy is conserved, according to the work-energy theorem of the last lesson. However, if we have non-conservative forces as well, we need to take these into account. That will be the final portion of this lesson.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define potential energy, and describe its relation to the force done by a conservative force.</p></li>
+<li><p>Define mechanical energy, and explain when mechanical energy is conserved for a system.</p></li>
+<li><p>Use the conservation of energy equation to solve for an unknown quantity in a system.</p></li>
+<li><p>Describe the relationship between mechanical energy and the work done by non-conservative forces.</p></li>
+<li><p>Use the conservation of energy equation to solve for an unknown quantity in a system, when non-conservative forces are present.</p></li>
+<li><p>Given an energy graph for an object, describe the motion of the object.</p></li>
+</ul>
+</div>
+<div class="section" id="conservative-vs-non-conservative-forces">
+<h2><span class="section-number">20.2. </span>Conservative vs. non-conservative forces<a class="headerlink" href="#conservative-vs-non-conservative-forces" title="Permalink to this headline">¶</a></h2>
+<p>As outlined in the last section, our first step is to see where we can define a potential energy. Before we do that, let’s motivate why we can do that in the first place! For some forces, the work done by that force can be “stored” in the system. To see what that means, imagine that you have a person skating on a frictionless surface. You can see this by running the PhET app below, selecting “Intro”, and then moving the person onto the ramp and letting go. The skater will then move along the ramp.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>If you watch the motion of the skater, you will see that they will continue moving forever. When they start at the top of the ramp, the gravitational force will pull them along the ramp, and they will speed up until they reach the bottom. At that point, as they start moving up the opposite side, gravity will slow them down, until they reach the same height again. But there is no friction, so this process will repeat itself over and over! There is some physical quantity related to gravity that is lost when the skater moves down the ramp, but is gained back in full when going back up the other side.</p>
+<p>Let’s make this idea more general by considering some unknown force <span class="math notranslate nohighlight">\({\vec F}\)</span> acting on an object. Suppose you take the object and you move it from point <span class="math notranslate nohighlight">\(a\)</span> to point <span class="math notranslate nohighlight">\(b\)</span> in the figure below, using the long path with the green arrow. You find that the unknown force does 60 J of work on the object. Then you use the shorter path (the red arrow) to move the object back from point <span class="math notranslate nohighlight">\(b\)</span> to point <span class="math notranslate nohighlight">\(a\)</span>. In this case, the force does -60 J of work.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L16_Fig01-Path_dependence_of_work_small.png"><img alt="../_images/INT_AY20_MP2_L16_Fig01-Path_dependence_of_work_small.png" src="../_images/INT_AY20_MP2_L16_Fig01-Path_dependence_of_work_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.1 </span><span class="caption-text">The amount of work done by a force may depend on the path taken</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Traveling from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span> you must put 60 J of work into the system due to a force <span class="math notranslate nohighlight">\(F\)</span> (“storage”), while from <span class="math notranslate nohighlight">\(b\)</span> to <span class="math notranslate nohighlight">\(a\)</span>, 60 J of energy is taken out of the system due to force <span class="math notranslate nohighlight">\(F\)</span> (“release”). Said a different way, there is <em>no change</em> in the energy of the object when it takes a full cycle around the two arrows. This means for this force, there is some quantity that remains the same, regardless of how you go along the path. If we go against the arrows, then the signs of the works flip, but we still get the same net work of zero.</p>
+<p>This force is known as a conservative force. A <strong>conservative</strong> force is one where the work done by the force on an object does not depend on the path taken by the object, for given initial and final points – all the energy put into the system can be gotten back out at a later time.</p>
+<p>Note that this is not true of all forces! Imagine that the force of friction were acting on the object as it followed the two arrows (you can think of this as moving on the surface of a table). Since the force of friction has a constant magnitude, the work done by friction <span class="math notranslate nohighlight">\(W_{fr}\)</span> is greater for a larger distance. In addition, the frictional force is always opposing the motion of the object, so the work <span class="math notranslate nohighlight">\(W_{fr}\)</span> will be negative, regardless of which arrow you follow. Thus, the force of friction is <em>not</em> a conservative force – you can’t get back energy from friction!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For each force listed below, specify whether the force is conservative or non-conservative. It may help to think of a physical situation for each, where you imagine the work done by each force as you move an object around a path.</p>
+<ol class="simple">
+<li><p>Air resistance</p></li>
+<li><p>Friction</p></li>
+<li><p>Gravitational force</p></li>
+<li><p>Spring force</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> Only the gravitational and spring forces are conservative; air resistance and friction are non-conservative. To see the latter, imagine you move an object in a circle, and return to the starting point. Since both air resistance and friction point opposite the direction of motion, they both do negative work. Thus, the total work in a closed path is negative for both forces. On the flip side, for both gravity and the spring force, these forces are against the motion for some parts of the path, and with the force along other parts, so the total work done by these forces is zero.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 150. g mass is attached to a spring with a spring constant of 35.0 N/m, as shown in the figure below. The spring is attached to the ground at a point midway between points <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span>. You grab the mass and move it to point <span class="math notranslate nohighlight">\(A\)</span>, which is 50.0 cm above the ground. Then you move the mass around the rectangular path shown at a constant speed of 1.70 m/s through points <span class="math notranslate nohighlight">\(B, C\)</span>, and <span class="math notranslate nohighlight">\(D\)</span>, and finally return the mass to point <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L24_Fig01_Mass_on_rectangular_path.png"><img alt="../_images/INT_AY21_L24_Fig01_Mass_on_rectangular_path.png" src="../_images/INT_AY21_L24_Fig01_Mass_on_rectangular_path.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.2 </span><span class="caption-text">A mass on a spring, moving in a rectangular path</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Find the work done on the mass by the gravitational force as it completes one cycle around the rectangle.</p></li>
+<li><p>Find the work done by the spring force along the path.</p></li>
+<li><p>Find the work done by the force of air resistance. Assume that this force <span class="math notranslate nohighlight">\({\vec F}_{AR}\)</span> is given by <span class="math notranslate nohighlight">\({\vec F}_{AR} = -C {\vec v}\)</span>, where <span class="math notranslate nohighlight">\(C = 2.10\)</span> kg/s.</p></li>
+<li><p>Find the work that <em>you</em> do on the mass as you move it around the path. <strong>Hint:</strong> What is the net work done on the mass?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 0.00 J, 0.00 J, -25.0 J, 25.0 J</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>One of your shipmates goes to their laboratory and measures the work done by a force <span class="math notranslate nohighlight">\({\vec F}\)</span> between five points. They draw a graph of some of the results they obtained, as seen in the figure. The arrow indicate the direction for each displacement used; going against the arrow would give a work with the opposite sign. For example, the work done by the force when traveling from point <span class="math notranslate nohighlight">\(A\)</span> to point <span class="math notranslate nohighlight">\(B\)</span> is <span class="math notranslate nohighlight">\(-4\)</span> J, while traveling from point <span class="math notranslate nohighlight">\(B\)</span> to point <span class="math notranslate nohighlight">\(A\)</span>, the work would be <span class="math notranslate nohighlight">\(+4\)</span> J. Is <span class="math notranslate nohighlight">\({\vec F}\)</span> a conservative force?</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/Work_non-conservative_graph_01_small.png"><img alt="../_images/Work_non-conservative_graph_01_small.png" src="../_images/Work_non-conservative_graph_01_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.3 </span><span class="caption-text">The work done by a force <span class="math notranslate nohighlight">\({\vec F}\)</span> between marked points</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You only need to check the simplest loops for this diagram; if these all meet the requirement of a conservative force, then so will other possible paths. However, you can see that there is a problem with edge <span class="math notranslate nohighlight">\(BE\)</span>, since neither of loops <span class="math notranslate nohighlight">\(BCE\)</span> or <span class="math notranslate nohighlight">\(BDE\)</span> lead to zero around a closed path. For example, the total work done along the path <span class="math notranslate nohighlight">\(B \to C \to E \to B\)</span> is -6 J, not zero.</p>
+</div>
+<p>For conservative forces, the work <span class="math notranslate nohighlight">\(W_F\)</span> done by the force <span class="math notranslate nohighlight">\({\vec F}\)</span> is the same, regardless of which path you use to move from the starting to the final positions. This is why we can use the following definition for the potential energy of a <em>generic</em> conservative force <span class="math notranslate nohighlight">\({\vec F}\)</span>, based on this work <span class="math notranslate nohighlight">\(W_F\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> potential energy</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(U\)</span></p></li>
+<li><p><strong>Definition:</strong> The change in potential energy <span class="math notranslate nohighlight">\(U_F\)</span> for a conservative force <span class="math notranslate nohighlight">\({\vec F}\)</span> is defined in terms of the work <span class="math notranslate nohighlight">\(W_F\)</span> done by that work as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \Delta U_F = -W_F = -{\vec F} \cdot \Delta {\vec r}
+\]</div>
+<ul class="simple">
+<li><p><strong>Units:</strong> joules (J)</p></li>
+</ul>
+<p>Notice that the work done by the force only defines the <em>change</em> in potential energy. This means that only this change has physical consequences! Said a different way, the absolute size of the potential energy doesn’t matter, so we are free to choose a <strong>reference point</strong> <span class="math notranslate nohighlight">\({\vec r}_{ref}\)</span> where <span class="math notranslate nohighlight">\(U_F (r_{ref}) = 0\)</span>. However, sometimes there is a natural choice of this reference point, either to make the calculations simpler, or there is a special point of physical relevance. This is something to keep in mind for the spring force (Hooke’s law), and the general form of gravitational potential energy (which we will see in <a class="reference internal" href="L22_Gravitational_potential_energy.html#gpe"><span class="std std-ref">Lesson 22</span></a>).</p>
+</div>
+<div class="section" id="gravitational-and-spring-potential-energy">
+<h2><span class="section-number">20.3. </span>Gravitational and spring potential energy<a class="headerlink" href="#gravitational-and-spring-potential-energy" title="Permalink to this headline">¶</a></h2>
+<p>The first type of potential energy we will look at is that for the force of gravity. Remember in <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 19</span></a> that we showed the <em>work</em> done by gravity near the Earth’s surface is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    W_g = -mg(r_{f, y} - r_{i, y})
+\]</div>
+<p>Thus, we can see that this naturally fits into the pattern above, where the work done by a conservative force defines a change in potential energy. In other words, the work <span class="math notranslate nohighlight">\(W_g\)</span> depends only on the difference in vertical position <span class="math notranslate nohighlight">\(r_y\)</span>, and not the path taken between this difference. We saw this earlier for the skater in the simulation earlier in the lesson; when there is no friction on the ramp, the skater always returned to the same height, where they had the same gravitational potential energy.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> gravitational potential energy</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(U_g\)</span></p></li>
+<li><p><strong>Definition:</strong> Near the surface of the Earth (or any other large mass), the gravitational potential energy <span class="math notranslate nohighlight">\(U_g\)</span> is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+		U_g = mgr_y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the object located at vertical position <span class="math notranslate nohighlight">\(r_y\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is the magnitude of the gravitational field (9.81  m/s<span class="math notranslate nohighlight">\(^2\)</span>). <strong>Note:</strong> <span class="math notranslate nohighlight">\(r_y = 0\)</span> is the reference height where <span class="math notranslate nohighlight">\(U_g = 0\)</span> – you are free to choose this height!</p>
+<ul class="simple">
+<li><p><strong>Units:</strong> (kg)(m/s<span class="math notranslate nohighlight">\(^2\)</span>)(m) = (kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s<span class="math notranslate nohighlight">\(^2\)</span>)m = N <span class="math notranslate nohighlight">\(\cdot\)</span> m = J</p></li>
+</ul>
+<p>Later on in <a class="reference internal" href="L22_Gravitational_potential_energy.html#gpe"><span class="std std-ref">Lesson 23</span></a>, we will talk about the gravitational potential energy for a general position, not just near a large mass such as the Earth.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A child starting from rest slides down each of the four frictionless slides <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(D\)</span>. Each has the same vertical height. Rank in order, from largest to smallest, her change in gravitational potential energy as she slides down each of the slides.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L16_Fig02-Four_slides_small.png"><img alt="../_images/INT_AY20_MP2_L16_Fig02-Four_slides_small.png" src="../_images/INT_AY20_MP2_L16_Fig02-Four_slides_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.4 </span><span class="caption-text">Four possible slides</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> All four traverse the same vertical distance, so all four would give the child the same change in gravitational potential energy. The actual path does not matter, since gravity is a conservative force.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A penny (<span class="math notranslate nohighlight">\(m\)</span> = 2.50 g) is dropped from the top of the Empire State Building, which is 1250 ft tall. Assume that the gravitational potential energy is zero at the <strong>bottom</strong> of the building.</p>
+<ol class="simple">
+<li><p>What is the gravitational potential energy (in J) of the penny at the top of the building?</p></li>
+<li><p>What is the gravitational potential energy (in J) of the penny at the bottom of the building?</p></li>
+<li><p>What is the change in the gravitational potential energy (in J) as the penny falls from the top of the Empire State Building to the ground?</p></li>
+<li><p>How do your answers change if <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the <em>top</em> of the building?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the <em>midpoint</em> of the building?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> When <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the bottom of the building, then <span class="math notranslate nohighlight">\(U_g\)</span> is +9.34 J, 0.00 J, and -9.34 J, for the top, bottom, and change in <span class="math notranslate nohighlight">\(U_g\)</span>. When <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the top, then the answers are 0.00 J, -9.34 J, and -9.34 J. Finally, when <span class="math notranslate nohighlight">\(U_g = 0\)</span> is chosen at the midpoint, then the answers are +4.67 J, -4.67 J, and -9.34 J. The changes in gravitational potential energy are the same for all three choices; the actual values at a particular point have no physical relevance.</p>
+</div>
+<p>The following clip looks at whether a penny dropped from the top of the Empire State Building can penetrate a person’s skull.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/1Vjd_FhrohE?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>A second conservative force is the spring or elastic force <span class="math notranslate nohighlight">\({\vec F}_{spr}\)</span>. Suppose a mass at position <span class="math notranslate nohighlight">\({\vec r}\)</span> is attached to a spring with spring constant <span class="math notranslate nohighlight">\(k\)</span> and equilibrium position <span class="math notranslate nohighlight">\({\vec r}_0\)</span>. Then, from <a class="reference internal" href="L19_Work_and_energy.html#work-ke-spring"><span class="std std-ref">Lesson 23</span></a>, the spring force is given by Hooke’s law, with</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{spr} = -k({\vec r} - {\vec r}_0)
+\]</div>
+<p>This was an example of a non-constant force, so to find the work done by the spring force, we needed to use the area under the curve. If you went through the vPython simulation and algebraic problems in Lesson 23, you would have seen that the work done by the spring force when the mass is moved from position <span class="math notranslate nohighlight">\({\vec r}_i\)</span> to <span class="math notranslate nohighlight">\({\vec r}_f\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    W_{spr} = -\frac{1}{2} k (r_f ^2 - r_i ^2)
+\]</div>
+<p>Again, this is the difference of two quantities, each of which depend only on the position of the object, either at the beginning or the end of its motion. The path taken between those two points does not matter. It also does not matter if the spring is compressed or stretched from its equilibrium position – moving it the same distance in either direction gives the same work, and therefore the same change in potential energy. Thus, the <strong>spring potential energy</strong> is given by</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> spring (or elastic) potential energy</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(U_s\)</span></p></li>
+<li><p><strong>Equation:</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    U_s = \frac{1}{2}kr^2
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is the force constant or spring constant (units: N/m) and <span class="math notranslate nohighlight">\(r\)</span> is the distance a spring is compressed or stretched from the equilibrium position <span class="math notranslate nohighlight">\({\vec r}_0\)</span></p>
+<ul class="simple">
+<li><p><strong>Units:</strong> (N / m)(m)<span class="math notranslate nohighlight">\(^2\)</span> = N <span class="math notranslate nohighlight">\(\cdot\)</span> m = J</p></li>
+</ul>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The figures below show systems containing a block attached to the end of a spring resting on a frictionless surface. In each system, the springs are stretched or compressed by a distance given in the figure. The force constant and mass are also given for each system. Rank these systems on the basis of the elastic potential energy stored in the system.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L16_Fig03-Spring_ranking_small.png"><img alt="../_images/INT_AY20_MP2_L16_Fig03-Spring_ranking_small.png" src="../_images/INT_AY20_MP2_L16_Fig03-Spring_ranking_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.5 </span><span class="caption-text">Ranking the elastic potential energy of the systems</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(E &gt; A &gt; D &gt; B &gt; C = F\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How much energy is stored in a spring that is stretched 3.00 cm as compared to the same spring if it were only stretched 1.00 cm? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>they have the same stored energy</p></li>
+<li><p>three times</p></li>
+<li><p>six times</p></li>
+<li><p>nine times</p></li>
+<li><p>twenty-seven times</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> When the spring stretched 3.00 cm, it has nine times the potential energy stored in it as when it is only stretched 1.00 cm.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A spring with a spring constant of 2400. N/m is initially compressed 10.0 cm from its equilibrium length.  What is the <em>change</em> in elastic potential energy if you stretch the spring to 40.0 cm beyond its equilibrium length?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 180. J</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">20.4. </span>Conservation of energy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>We now have all the elements we need to talk about the conservation of mechanical energy. To do this, let’s start with the work-energy theorem from <a class="reference internal" href="L19_Work_and_energy.html#work-ke-ke-thm"><span class="std std-ref">Lesson 19</span></a>. For now, let’s just write kinetic energy as <span class="math notranslate nohighlight">\(K\)</span>, so for a given system, the work-energy theorem says</p>
+<div class="math notranslate nohighlight">
+\[
+    W_{tot} = K_f - K_i
+\]</div>
+<p>Now, we can go through the list of all forces acting on the system, i.e. all forces included in the total work <span class="math notranslate nohighlight">\(W_{tot}\)</span>. Some of these forces will be conservative forces, and thus have their own potential energy; the rest of these forces will be non-conservative. Therefore, we can write the total work as the sum <span class="math notranslate nohighlight">\(W_c\)</span> of the work done by conservative forces, and the sum <span class="math notranslate nohighlight">\(W_{nc}\)</span> of work done by the non-conservative forces.</p>
+<div class="math notranslate nohighlight">
+\[
+    W_c + W_{nc} = K_f - K_i
+\]</div>
+<p>The work <span class="math notranslate nohighlight">\(W_c\)</span> is made up of the changes in potential energy for all the conservative forces. Thus, if we have conservative forces <span class="math notranslate nohighlight">\({\vec F}_1, {\vec F}_2, \cdots\)</span>, up through <span class="math notranslate nohighlight">\({\vec F}_j\)</span>, for an index <span class="math notranslate nohighlight">\(j\)</span>, then each will do a work <span class="math notranslate nohighlight">\(W_j = -\Delta U_j\)</span>. So the sum is</p>
+<div class="math notranslate nohighlight">
+\[
+    W_c = -\Delta U_1 - \Delta U_2 \cdots - \Delta U_j = -(U_{1, f} - U_{1, i}) - (U_{2, f} - U_{2, i}) \cdots - (U_{j, f} - U_{j, i})
+\]</div>
+<p>But this sum of the differences is the same as the difference in the sums!</p>
+<div class="math notranslate nohighlight">
+\[
+    W_c = -[(U_{1, f} + U_{2, f} \cdots + U_{j, f}) - (U_{1, i} + U_{2, i} \cdots + U_{j, i})]
+\]</div>
+<p>Let’s write these in terms of summations, as a way to put these equations together:</p>
+<div class="math notranslate nohighlight">
+\[
+    W_c = -\sum_j \Delta U_j = -\sum_j (U_{j, f} - U_{j, i}) = -(\sum_j U_{j, f} - \sum_jU_{j, i}) = -(U_f - U_i)
+\]</div>
+<p>In the last step, we have added together all of the initial potential energies of the system and called it <span class="math notranslate nohighlight">\(U_i\)</span>; similarly, <span class="math notranslate nohighlight">\(U_f\)</span> is the sum of all the final potential energies of the system. Putting this back into the work-energy theorem,</p>
+<div class="math notranslate nohighlight">
+\[
+    W_{nc} - (U_f - U_i) = K_f - K_i
+\]</div>
+<p>Moving the change in total potential energy to the right-hand side gives</p>
+<div class="math notranslate nohighlight">
+\[
+    W_{nc} = (K_f - K_i) + (U_f - U_i) = (K_f + U_f) - (K_i + U_i) = \Delta(K + U)
+\]</div>
+<p>Thus, when there are <em>no</em> non-conservative forces (i.e. <span class="math notranslate nohighlight">\(W_{nc} = 0\)</span>), the sum of all the kinetic and potential energies of the system remains the same. This is an important result, so we give this sum the name <strong>mechanical energy</strong> <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> mechanical energy</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(E\)</span></p></li>
+<li><p><strong>Definition:</strong> Mechanical energy <span class="math notranslate nohighlight">\(E\)</span> is defined as the sum of all kinetic and potential energies for a system:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+	E = K + U
+\]</div>
+<ul class="simple">
+<li><p><strong>Units:</strong> J</p></li>
+</ul>
+<p>In practice, this means adding in all possible forms of these energies; at this moment, mechanical energy includes gravitational and elastic potential energies:</p>
+<div class="math notranslate nohighlight">
+\[
+	E = K + U_g + U_s
+\]</div>
+<p>The general statement of conservation of energy relates the change in the mechanical energy to the work done by non-conservative forces</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta E = W_{nc}
+\]</div>
+<p>In the absence of non-conservative forces (friction, air resistance), mechanical energy is conserved:</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta E = W_{nc} = 0 \Rightarrow E_i = E_f
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[
+    K_i + U_{g, i} + U_{s, i} = K_f + U_{g, f} + U_{s, f}
+\]</div>
+<p>This last equation will be our typical starting point. It is good practice to begin with the most general case, and think about which kinds of energy are present at the initial and final states of the system. Choosing these states cleverly will help greatly as well!</p>
+<p>It may helpful to look at particular situations, so you can see how the changing state of a system relates to the kinetic, potential, and mechanical energies. If you go back to the simulation of the skater previously mentioned in this lesson, you can see how the kinetic and gravitational potential energies of the skater depending on the ramp shape and height. Use the pie chart or bar graph for pictorial representations of the various energies as the skater moves along the ramp.</p>
+<p>Here is another related simulation, where the motion of a mass on a vertical spring can be studied. Select “Energy” when the app loads up, so you make look at the various types of energy in the system.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/masses-and-springs/latest/masses-and-springs_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="an-example-a-block-on-a-spring">
+<span id="energy-spring-ex"></span><h2><span class="section-number">20.5. </span>An example: A block on a spring<a class="headerlink" href="#an-example-a-block-on-a-spring" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go through an example, and see how the conservation of mechanical energy works. Suppose a 150. g wooden block is placed on top of a vertical spring, and it comes to rest at a distance of 2.64 cm from the spring’s equilibrium point. The block is pushed down a further 5.36 cm, and then released. We are going to find the maximum height the block will momentarily reach over the equilibrium position of the spring.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L24_Fig02_Mass_on_vert_spring_small.png"><img alt="../_images/INT_AY21_L24_Fig02_Mass_on_vert_spring_small.png" src="../_images/INT_AY21_L24_Fig02_Mass_on_vert_spring_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.6 </span><span class="caption-text">Vertical spring with a block set on it</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The first thing to realize is that in the middle position, where the block is at rest on the vertical spring, is <em>not</em> where the “energies balance out”. The block is at rest because the net force at this location is zero; if this was not true, the spring and block would start accelerating. Thus, we first need to use Newton’s second law here. This will allow us to calculate the spring constant of the vertical spring, which we do not know at this point. The net force on the block is due to the upward force <span class="math notranslate nohighlight">\(F_{spr}\)</span> on the block from the spring, as well as the downward force <span class="math notranslate nohighlight">\(F_g\)</span> of gravity. Setting the magnitudes of these two forces equal to each other,</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = F_{spr} - F_g = ma_y = 0
+\]</div>
+<p>then the spring constant <span class="math notranslate nohighlight">\(k\)</span> is equal to <span class="math notranslate nohighlight">\(k = mg / \Delta r_y\)</span>. Here, <span class="math notranslate nohighlight">\(\Delta r_y\)</span> is the vertical distance from the equilibrium point of the spring to where the block comes to rest, and so <span class="math notranslate nohighlight">\(\Delta r_y = 2.64\)</span> cm (as a magnitude, since we have already taken into account the signs in the equation above).</p>
+<p>Now we can look at what happens when the block is pushed down further. The net force will <em>not</em> be zero here, since the spring force is larger than the block’s weight. This is why the block will accelerate upward until it is pushed completely off the spring. Since the spring force depends on the distance the spring is away from its equilibrium, we cannot use the kinematic equations – the acceleration changes with time, so it is not constant! This is why using the conservation of mechanical energy is the best choice: we only need to know what is happening between the initial state (when the block is pushed down to its lowest point) and the final state (the block has left the spring, so the spring is no longer compressed).</p>
+<p>So, we start with <span class="math notranslate nohighlight">\(W_{nc} = 0\)</span> (no friction), and write down the conservation of mechanical energy equation,</p>
+<div class="math notranslate nohighlight">
+\[
+    K_i + U_{g, i} + U_{s, i} = K_f + U_{g, f} + U_{s, f}
+\]</div>
+<p>If we take the initial and final states outlined in the paragraph above, then the block is (momentarily) at rest at both of these points. This means <span class="math notranslate nohighlight">\(K_i = K_f = 0\)</span>. The spring is also not compressed in the final state, since the block is no longer sitting on it, giving <span class="math notranslate nohighlight">\(U_{s, f} = 0\)</span>. The block is compressing the spring at the beginning, however, so <span class="math notranslate nohighlight">\(U_{s, i} \neq 0\)</span> from the total compression <span class="math notranslate nohighlight">\(r\)</span> of <span class="math notranslate nohighlight">\(2.64 + 5.36 = 8.00\)</span> cm from the equilibrium. Last, we turn to the gravitational potential energy. Here we need to make a choice about where to put the reference height. This is different than the choice for the spring potential energy, which was already chosen (when <span class="math notranslate nohighlight">\(U_s\)</span> was defined) to be the spring’s equilibrium position. Since there is no strong reason to choose one height over another, let’s pick the block’s final position as the height where <span class="math notranslate nohighlight">\(U_g = 0\)</span>. This gives <span class="math notranslate nohighlight">\(U_{g, f} = 0\)</span> and <span class="math notranslate nohighlight">\(U_{g, i} = mgh\)</span>, where <span class="math notranslate nohighlight">\(h &lt; 0\)</span> is the distance from the starting and ending heights of the block – negative since the initial position is below the final. Thus, our final energy conservation equation is</p>
+<div class="math notranslate nohighlight">
+\[
+    0 + mgh + \frac{1}{2} kr^2 = 0 + 0 + 0
+\]</div>
+<p>We can solve for <span class="math notranslate nohighlight">\(h\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[
+    h = -\frac{kr^2}{2mg} = -\frac{r^2}{2 \Delta r_y}
+\]</div>
+<p>In the last step, we used the equation for the spring constant <span class="math notranslate nohighlight">\(k\)</span> we got earlier when the net force was zero. Note that the mass of the block doesn’t matter! Plugging in the numbers, and taking the absolute value, we have <span class="math notranslate nohighlight">\(|h| = 12.12\)</span> cm. However, this is the total distance from the initial to the final heights, and we want only the height above the spring’s equilibrium point. So, we subtract 8.00 cm from 12.12 cm to get 4.12 cm for our final answer.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A block of mass <span class="math notranslate nohighlight">\(m = 2.50\)</span> kg situated on a smooth incline at an angle of <span class="math notranslate nohighlight">\(\theta = 37.0^\circ\)</span> is connected to a spring of negligible mass. The pulley is frictionless. The block is released from rest when the spring is unstretched. The block moves 13.0 cm down the incline before coming to rest. Find the force constant (in N/m) of the spring.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L17_Fig01-Block_and_spring_on_incline_small.png"><img alt="../_images/INT_AY20_MP2_L17_Fig01-Block_and_spring_on_incline_small.png" src="../_images/INT_AY20_MP2_L17_Fig01-Block_and_spring_on_incline_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.7 </span><span class="caption-text">Block on a ramp and attached to a horizontal spring</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 227 N/m</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 5.70 kg block starts on a ramp above a frictionless surface. At the opposite end of the flat surface is a spring, with a spring constant of 670 N/m. The figure is drawn to scale, with each grid square having sides of 25.0 cm. After letting go of the block on the ramp, it moves across the surface to hit the spring. Calculate the position (in cm) where the spring momentarily stops the block.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L17_Fig02-Spring_wonderland_w_grid_small.png"><img alt="../_images/INT_AY20_MP2_L17_Fig02-Spring_wonderland_w_grid_small.png" src="../_images/INT_AY20_MP2_L17_Fig02-Spring_wonderland_w_grid_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.8 </span><span class="caption-text">A mass slides down a ramp and is stopped by a spring</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 50.0 cm from the spring’s equilibrium point</p>
+</div>
+</div>
+<div class="section" id="non-conservative-forces-and-mechanical-energy">
+<h2><span class="section-number">20.6. </span>Non-conservative forces and mechanical energy<a class="headerlink" href="#non-conservative-forces-and-mechanical-energy" title="Permalink to this headline">¶</a></h2>
+<p>In the situations given above, we did not include any non-conservative forces. Remember that these would be forces such as friction or air resistance, and would change the mechanical energy of the system. This is the natural next step for extending our energy methods. If an object encounters a non-conservative force between its initial and final states, then <span class="math notranslate nohighlight">\(W_{nc} \ne 0\)</span> – mechanical energy is added to, or removed from, the system and <span class="math notranslate nohighlight">\(\Delta E \neq 0\)</span>. Note that this equation can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+    W_{nc} = \Delta E \Rightarrow E_f = W_{nc} + E_i
+\]</div>
+<p>The right-hand equation tells the story: the system starts with a mechanical energy <span class="math notranslate nohighlight">\(E_i\)</span>, then in the process of going from the initial to the final state, there is an energy flow (or work) <span class="math notranslate nohighlight">\(W_{nc}\)</span>, leading to a final mechanical energy <span class="math notranslate nohighlight">\(E_f\)</span>. Another way to write this matches what was done above, where the initial mechanical energy is now on the left, as is the non-conservative work <span class="math notranslate nohighlight">\(W_{nc}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    K_i + U_{g, i} + U_{s, i} + W_{nc} = K_f + U_{g, f} + U_{s, f}
+\]</div>
+<p>Here are some practice problems to give this modified energy equation a whirl. Remember that these problems just combine what we have done in this lesson and the last – for the non-conservative forces, you have to find the work by those forces using the methods of <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 23</span></a>; otherwise, it is an energy problem as we have done in this lesson.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In the figure below, a block of mass <span class="math notranslate nohighlight">\(m = 2.00\)</span> kg is compressing a spring a distance <span class="math notranslate nohighlight">\(d = 6.00\)</span> cm when it is released. The block travels over a rough spot, after which it has a speed of <span class="math notranslate nohighlight">\(v = 1.00\)</span> m/s. The rough spot has a length of 7.50 cm and <span class="math notranslate nohighlight">\(\mu_k = 0.200\)</span>. What was the spring constant of the spring?</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L18_Fig01-Spring_block_launcher_small.png"><img alt="../_images/INT_AY20_MP2_L18_Fig01-Spring_block_launcher_small.png" src="../_images/INT_AY20_MP2_L18_Fig01-Spring_block_launcher_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.9 </span><span class="caption-text">Block launched by spring, and passes over a rough spot</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 719 N/m</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 5.70 kg block starts on a ramp above a frictionless surface. At the opposite end of the flat surface is a spring, with a spring constant of 670 N/m. The figure is drawn to scale, with each grid square having sides of 25 cm. After letting go of the block on the ramp, it moves across the surface to hit the spring. There is a rough patch along the way of distance <span class="math notranslate nohighlight">\(d\)</span>, with a coefficient of kinetic friction <span class="math notranslate nohighlight">\(\mu_k = 0.375\)</span>. Calculate the position (in cm) where the spring momentarily stops the block.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L18_Fig02-Spring_wonderland_w_friction_small.png"><img alt="../_images/INT_AY20_MP2_L18_Fig02-Spring_wonderland_w_friction_small.png" src="../_images/INT_AY20_MP2_L18_Fig02-Spring_wonderland_w_friction_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.10 </span><span class="caption-text">A mass slides down a ramp passes over a rough patch before being stopped by a spring</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 36.5 cm form the equilibrium point</p>
+</div>
+</div>
+<div class="section" id="energy-graphs">
+<span id="id2"></span><h2><span class="section-number">20.7. </span>Energy graphs<a class="headerlink" href="#energy-graphs" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go back to a situation like we had earlier, with the <a class="reference internal" href="#energy-spring-ex"><span class="std std-ref">vertical spring example</span></a>. Suppose we have an ideal spring again, with spring constant <span class="math notranslate nohighlight">\(k\)</span>, placed so that it is aligned vertically. The spring will have some equilibrium length <span class="math notranslate nohighlight">\(r_{0, y}\)</span>. Since the spring is ideal, it has no mass of its own, but we can imagine placing a block of some mass <span class="math notranslate nohighlight">\(m\)</span> on top of the spring. The spring-mass system will have both gravitational and spring potential energy; thus, the total potential energy <span class="math notranslate nohighlight">\(U\)</span> of this system is</p>
+<div class="math notranslate nohighlight">
+\[
+    U = \frac{1}{2} k(r_y - r_{0, y})^2 + mgr_y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_y\)</span> is the vertical position component of the mass. If we graph this function, we get the plot shown below.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L20-Fig01_U_vs_r_graph.png"><img alt="../_images/INT_AY22_L20-Fig01_U_vs_r_graph.png" src="../_images/INT_AY22_L20-Fig01_U_vs_r_graph.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.11 </span><span class="caption-text">Total potential energy of the spring-mass system</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the graph, I have marked the equilibrium position <span class="math notranslate nohighlight">\(r_{0, y}\)</span> of <em>just</em> the spring. However, the value of <span class="math notranslate nohighlight">\(U\)</span> is not lowest at that point, because of the addition of the gravitational force, and its contribution to the potential energy. The point where the potential energy is lowest is the equilibrium point when <em>both</em> the spring and gravitational forces on the mass are taken into account! Remember in the vertical spring example above, the mass was placed on the spring, and came to rest at a distance of 2.64 cm below the equilibrium of the spring. This would be the point where the total potential energy is the least. I will come back to that point in a bit.</p>
+<p>Now, let’s imagine that we place the mass on the spring, and press it down some further distance. Before we let go of the mass, all of the system’s energy will still be potential energy – no motion, no kinetic energy. I have placed a point <span class="math notranslate nohighlight">\(r_{bot}\)</span> on the graph below to show this bottom point. I will explain the rest of the graph as we go along.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L20-Fig02_U_vs_r_graph_w_ME.png"><img alt="../_images/INT_AY22_L20-Fig02_U_vs_r_graph_w_ME.png" src="../_images/INT_AY22_L20-Fig02_U_vs_r_graph_w_ME.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.12 </span><span class="caption-text">Motion of the spring-mass system, using the potential energy graph</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>So, what will the system do after I get go? Hopefully, you are not surprised that the mass starts moving upward. I will describe this in two different ways. First, let’s talk about it in terms of the separate forces of gravity and the spring. Since the mass is now below the equilibrium point it was resting at before, the spring force has a larger magnitude than the gravitational force, and the mass is pushed upwards. This is because the spring has an even greater compression than it did when the mass was motionless, which increases the size of the spring force.</p>
+<p>However, there is a second way to predict the motion, based solely on the graph. Intuitively, imagine the point <span class="math notranslate nohighlight">\(r_{bot}\)</span> as if there was a ball placed on the graph. You would expect the ball to “roll downhill”, to the right of the graph. This intuition matches a more rigorous description. Since both the gravitational and spring forces are conservative, we can say the total potential energy <span class="math notranslate nohighlight">\(U\)</span> graphed above is related to the total force <span class="math notranslate nohighlight">\({\vec F}_{net}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta U = - {\vec F}_{net} \cdot \Delta {\vec r}
+\]</div>
+<p>Let’s use the fact that the displacement <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> is only vertical, so <span class="math notranslate nohighlight">\(\Delta {\vec r} = (\Delta r_y) {\hat y}\)</span>. This gives that the magnitude <span class="math notranslate nohighlight">\(F_{net}\)</span> of the net force is related to the change <span class="math notranslate nohighlight">\(\Delta U\)</span> in potential energy by</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta U = -F_{net} \Delta r_y
+\]</div>
+<p>If I rearrange this, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{net} = - \frac{\Delta U}{\Delta r_y}
+\]</div>
+<p>This is just the (negative of the) slope of the graph! Since the slope of the <span class="math notranslate nohighlight">\(U\)</span> vs. <span class="math notranslate nohighlight">\(r_y\)</span> graph is negative at <span class="math notranslate nohighlight">\(r_{bot}\)</span>, then the <em>force</em> is <em>positive</em>, i.e. to the right, which means the mass will move to higher <span class="math notranslate nohighlight">\(r_y\)</span>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Force is slope of potential energy vs. position</p>
+<p>Suppose an object moves along a line, with position <span class="math notranslate nohighlight">\(r\)</span>, due to the influence of a potential energy <span class="math notranslate nohighlight">\(U(r)\)</span>. The net force <span class="math notranslate nohighlight">\({\vec F}\)</span> on the object will be</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F} = \biggl( -\frac{\Delta U}{\Delta r} \biggr) {\hat r}
+\]</div>
+</div>
+<p>Now we can see why the equilibrium point for the system is at the point when the potential energy <span class="math notranslate nohighlight">\(U\)</span> is at its smallest. At that position <span class="math notranslate nohighlight">\(r_y\)</span>, the slope of the graph is zero, so the net force on the object will be zero there as well. Again, think of the analogy of the ball; if you place a ball at that point, it will not start rolling uphill! This equilibrium point is known as a <strong>stable equilibrium</strong>: a position where the net force is zero, and where moving a small distance to either side means the system experiences a net force which returns it back to the original point. This is opposed to an <strong>unstable equilibrium</strong>, where the force is zero precisely at the point, but moving just a little bit away gives rise to a net force that amplifies that motion. Think about balancing a pencil on its point; you can do it if you are careful, but the slightest motion will make the pencil fall down.</p>
+<p>Let’s now get back to the graph. Notice that I have drawn a dashed horizontal line on the graph; this line is placed at the value of the <em>mechanical energy</em> <span class="math notranslate nohighlight">\(E\)</span> for the mass. Obviously, this touches the <span class="math notranslate nohighlight">\(U\)</span> curve at the point <span class="math notranslate nohighlight">\(r_{bot}\)</span>, since the mass is motionless there, so the kinetic energy <span class="math notranslate nohighlight">\(K = 0\)</span>. But why did I draw this line? Because it tells us what the motion of the mass will look like after we let go of it. Again, as we saw above, when the mass is at <span class="math notranslate nohighlight">\(r_{bot}\)</span>, the force on it is in the <span class="math notranslate nohighlight">\(+y\)</span> direction, so the mass will move upward. On the potential energy graph, as you move to the right, there is a gap between the dashed line for <span class="math notranslate nohighlight">\(E\)</span>, and the potential energy <span class="math notranslate nohighlight">\(U\)</span>. What is this gap? It is the difference <span class="math notranslate nohighlight">\(E - U\)</span>, which is precisely the kinetic energy <span class="math notranslate nohighlight">\(K\)</span> of the system! Thus, just from the graph, we can see that the mass will initially speed up with increasing <span class="math notranslate nohighlight">\(r_y\)</span>. However, once the mass passes the equilibrium point for the system, the gap gets smaller, and the mass will slow down. Eventually, the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> of the system will equal the potential energy <span class="math notranslate nohighlight">\(U\)</span> at the vertical distance <span class="math notranslate nohighlight">\(r_{top}\)</span>. At this point, the mass will stop, and then start moving downward. Because there are no non-conservative forces, this motion will repeat indefinitely, with the mass oscillating between the highest and lowest points <span class="math notranslate nohighlight">\(r_{top}\)</span> and <span class="math notranslate nohighlight">\(r_{bot}\)</span>, respectively.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The graph show the potential energy <span class="math notranslate nohighlight">\(U(r_x)\)</span> of a 65.0 g object moving under the influence of an outside conservative force. At <span class="math notranslate nohighlight">\(r_x = 0.00\)</span> m, the object is moving in the positive <span class="math notranslate nohighlight">\(x\)</span> direction at 2.89 m/s.</p>
+<ol class="simple">
+<li><p>What is the mechanical energy (in mJ) of the object?</p></li>
+<li><p>What is the net force on the object at <span class="math notranslate nohighlight">\(r_x = 2.50\)</span> m? Give the vector in unit vector notation, in mN.</p></li>
+<li><p>What is the speed (in m/s) of the object when it reaches <span class="math notranslate nohighlight">\(r_x = 4.00\)</span> m?</p></li>
+<li><p>What is its speed (in m/s) when it reaches <span class="math notranslate nohighlight">\(r_x = 7.00\)</span> m?</p></li>
+<li><p>Suppose the starting speed of the object was 2.25 m/s. Does it reach the point <span class="math notranslate nohighlight">\(r_x = 8.00\)</span> m? If not, where does it stop?</p></li>
+</ol>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L17_Fig03-U_vs_x_graph.png"><img alt="../_images/INT_AY20_MP2_L17_Fig03-U_vs_x_graph.png" src="../_images/INT_AY20_MP2_L17_Fig03-U_vs_x_graph.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 20.13 </span><span class="caption-text">Potential energy vs. position graph</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 571 mJ; <span class="math notranslate nohighlight">\((+150. \textrm{ mN}) {\hat x}\)</span>; 3.60 m/s; 1.48 m/s; the block stops at 5.90 m</p>
+</div>
+</div>
+<div class="section" id="the-effective-potential-energy">
+<span id="energy-eff-pe"></span><h2><span class="section-number">20.8. </span>The effective potential energy<a class="headerlink" href="#the-effective-potential-energy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="constant-central-force">
+<h3><span class="section-number">20.8.1. </span>Constant central force<a class="headerlink" href="#constant-central-force" title="Permalink to this headline">¶</a></h3>
+<p>The discussion above was only for motion along a single dimension, such as the <span class="math notranslate nohighlight">\(y\)</span> axis for the vertical spring. However, we are heading towards considering planets orbiting around a star when we get to Kepler’s laws in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23</span></a>. You might think adding a spatial dimension would make the graphs more complicated (since they would now be three dimensional!). In general, this is the case, but it turns out things remain relatively simple if we consider only central forces, which we talked about in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a> and <a class="reference internal" href="L18_Angular_momentum.html#ang-mom-cent-force"><span class="std std-ref">Lesson 18</span></a>. Remember that a central force is a force vector only pointing along the radial vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, i.e. a force which generates zero torque around the <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span> point.</p>
+<p>To start with, let’s return to the central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> with constant magnitude we used as an example in those earlier lessons. Since the magnitude is constant, then we can easily find its potential energy function <span class="math notranslate nohighlight">\(U_F\)</span>. In fact, this will be very similar to what we did with the gravitational potential energy <span class="math notranslate nohighlight">\(U_g\)</span> previously in this lesson, from a constant gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span>. The only difference is that the central force points in the radial direction <span class="math notranslate nohighlight">\({\hat r}\)</span>, so its potential energy is</p>
+<div class="math notranslate nohighlight">
+\[
+    U_F = F_c r
+\]</div>
+<p>Thus, we can write down the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> of the object as the sum of its kinetic and potential energies. However, before I do this, I will use the Pythagorean theorem to decompose the velocity into its radial and perpendicular components <span class="math notranslate nohighlight">\(v_r\)</span> and <span class="math notranslate nohighlight">\(v_\perp\)</span>, respectively. After this step, I have the mechanical energy is</p>
+<div class="math notranslate nohighlight">
+\[
+    E = \frac{1}{2} mv^2 _r + \frac{1}{2} mv^2 _\perp + F_c r
+\]</div>
+<p>Suppose we want to know what the inner and outer radii are of the orbit. In other words, what is the smallest distance <span class="math notranslate nohighlight">\(r\)</span> the object gets to the center <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>? What is the largest distance it gets from the center? Since we only care about the radial motion of the object, let’s do something clever. I will group together everything that is <em>not</em> the kinetic energy piece depending on <span class="math notranslate nohighlight">\(v_r\)</span> into a single part <span class="math notranslate nohighlight">\(U_{eff}\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[
+    U_{eff} = \frac{1}{2} mv^2 _\perp + F_c r
+\]</div>
+<p>This is known as the <strong>effective potential energy</strong>, defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    U_{eff} = E - \frac{1}{2} mv^2 _r
+\]</div>
+<p>Using <span class="math notranslate nohighlight">\(U_{eff}\)</span> allows us to focus purely on the radial motion of the system; we can treat the object as moving only in <span class="math notranslate nohighlight">\(r\)</span> due to the effective potential energy of the system.</p>
+<p>In particular, we can find the velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span>, at a given radius <span class="math notranslate nohighlight">\(r\)</span>, once we know the constant magnitude <span class="math notranslate nohighlight">\(L\)</span> of the angular momentum of the system. Remember in <a class="reference internal" href="L18_Angular_momentum.html#ang-mom"><span class="std std-ref">Lesson 18</span></a> that we can write the magnitude <span class="math notranslate nohighlight">\(L\)</span> of the angular momentum for a point mass in terms of the perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    L = rmv_\perp
+\]</div>
+<p>With some algebra, you can show that</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{1}{2} mv^2 _\perp = \frac{L^2}{2mr^2}
+\]</div>
+<p>This is a step forward, since the magnitude <span class="math notranslate nohighlight">\(L\)</span> is constant for central forces; therefore, this term is now only a function of the radial distance <span class="math notranslate nohighlight">\(r\)</span>. This means that now the effective potential <span class="math notranslate nohighlight">\(U_{eff}\)</span> is also just a function of <span class="math notranslate nohighlight">\(r\)</span>. So we can analyze the system by looking only at how the object changes its radius over the course of its motion, ignoring the perpendicular piece entirely.</p>
+<p>I show this by using the central force simulation we saw previously in Lesson 18 for the constant central force. In this version, I have put in an energy graph with two curves: the effective potential <span class="math notranslate nohighlight">\(U_{eff}\)</span> in blue, and the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> in green. Since mechanical energy is conserved, the green line is flat; the difference between the green and blue curves is the <em>radial</em> piece of the kinetic energy, i.e. the part that depends on <span class="math notranslate nohighlight">\(v_r\)</span>.</p>
+<p id="centr-force-ueff"><a class="reference internal" href="#energy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="800"
+    src="https://trinket.io/embed/glowscript/e593afb7f2?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Notice that we now have another way to explain why the ball never goes closer to the center than some fixed radius. Remember, when I first introduced this central force in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a>, I described this inner radius in terms of the constant central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> versus the necessary centripetal force to keep it in circular motion. There, for radii <span class="math notranslate nohighlight">\(r\)</span> when <span class="math notranslate nohighlight">\(F_c - mv^2 /r &lt; 0\)</span>, the net acceleration is not enough to keep it moving in a circle, so the radial velocity component <span class="math notranslate nohighlight">\(v_r\)</span> will slow down, until the object stops moving inward at the inner radius, and starts moving outward. Using what we have talked about in this lesson, we can express this same process, but in terms of energy. As the ball approaches the inner radius, an increasing amount of its mechanical energy <span class="math notranslate nohighlight">\(E\)</span> is in the perpendicular piece <span class="math notranslate nohighlight">\(L^2 / 2mr^2\)</span> of the kinetic energy, while the radial part <span class="math notranslate nohighlight">\((1/2) mv^2 _r\)</span> will decrease in size. Eventually, there is no available energy for the radial portion, so <span class="math notranslate nohighlight">\(v_r = 0\)</span>, and the ball turns around. The turning points of the ball (both inner and outer) are when the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> equals the effective potential energy <span class="math notranslate nohighlight">\(U_{eff}\)</span>. There is an “energy barrier” to the ball moving too close to the center, due to its angular momentum!</p>
+<p>Thus, we now have enough information to solve for these turning points of the ball – those radial distances <span class="math notranslate nohighlight">\(r\)</span> where the ball is at its maximum and minimum distance from the center. To do this, let’s first find the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> of the system, using the initial values in the program. With <span class="math notranslate nohighlight">\(F_c = 10\)</span> N/m, <span class="math notranslate nohighlight">\(m = 4\)</span> kg, <span class="math notranslate nohighlight">\(r = 5\)</span> m, and <span class="math notranslate nohighlight">\(v = 3\)</span> m/s, then</p>
+<div class="math notranslate nohighlight">
+\[
+    E = \frac{1}{2} mv^2 + F_c r = 68.0 \textrm{ J}
+\]</div>
+<p>Now, at the turning points, this mechanical energy will equal the effective potential energy, with</p>
+<div class="math notranslate nohighlight">
+\[
+    E = \frac{L^2}{2mr^2} + F_c r
+\]</div>
+<p>In other words, the object has momentarily stopped its radial motion, so there is no radial kinetic energy at the turning point. Recall from when we went through this simulation previously in <a class="reference internal" href="L18_Angular_momentum.html#ang-mom-cent-force"><span class="std std-ref">Lesson 18</span></a> that the magnitude <span class="math notranslate nohighlight">\(L\)</span> of the angular momentum was 60.0 kg m<span class="math notranslate nohighlight">\(^2\)</span> / s<span class="math notranslate nohighlight">\(^2\)</span>. Thus, with a little bit of algebra, this last equation becomes an equation for the unknown <span class="math notranslate nohighlight">\(r\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[
+    F_c r^3 - E r^2 + \frac{L^2}{2m} = 0
+\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Why is the start a turning point?</p>
+<p>The ball starts at a turning point because the initial velocity is chosen to be perpendicular to the radial position vector. Thus, the ball is not moving outward or inward at this radius. Whenever it returns to this radius, since the angular momentum and mechanical energy remain the same, this will be true. Thus, the ball will always momentarily stop its radial motion at this distance. Note that whether this is the <em>innermost</em> or <em>outermost</em> radius depends on the values of the initial speed and radius. In addition, if the initial velocity is <em>not</em> perpendicular to the radial position, then the initial position is no longer a turning point; you will see an example of this below, with the spring force.</p>
+</div>
+<p>This may look daunting, since it is a cubic equation. However, if you try the starting radius <span class="math notranslate nohighlight">\(r = 5\)</span>, you will see that this gives a solution to the equation – the ball begins at one of its turning points. It turns out that knowing this root is enough to solve for the other roots. Let’s plug in the numbers, so it is more obvious what is going on. This gives (dropping the units)</p>
+<div class="math notranslate nohighlight">
+\[
+    10 r^3 - 68 r^2 + 450 = 0
+\]</div>
+<p>However, since <span class="math notranslate nohighlight">\(r = 5\)</span> is a root, then <span class="math notranslate nohighlight">\((r - 5)\)</span> is a factor of this polynomial, so that</p>
+<div class="math notranslate nohighlight">
+\[
+    10 r^3 - 68 r^2 + 450 = (r - 5)(ar^2 + br + c)
+\]</div>
+<p>for some unknown coefficients <span class="math notranslate nohighlight">\(a, b, c\)</span>. Thus, when <span class="math notranslate nohighlight">\(r \ne 5\)</span>, it is the second factor that must be zero; this can be easily solved for the last two roots of the polynomial. The two positive solutions of the overall equation will be the outer and inner radii of the object’s motion.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Solve for the unknown coefficients <span class="math notranslate nohighlight">\(a, b, c\)</span> in the second factor, then use the quadratic formula to get the radius of the other turning point.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(a = 10, b = -18, c = -90\)</span>; the other positive solution is <span class="math notranslate nohighlight">\(r = 4.03\)</span> m.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use conservation of angular momentum to find the speed of the object when it reaches its outermost turning point. Do you get the same answer if you use conservation of energy instead?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 3.72 m/s</p>
+</div>
+</div>
+<div class="section" id="the-spring-force">
+<h3><span class="section-number">20.8.2. </span>The spring force<a class="headerlink" href="#the-spring-force" title="Permalink to this headline">¶</a></h3>
+<p>Everything I said above for the constant central force also applies to any other central force. Thus, given a central force, an object moving solely due to this force will have an effective potential energy. We can then explore the properties of the motion with other central forces using the same techniques. To see this, below is a modified version of the mass on a spring program we saw in <a class="reference internal" href="L19_Work_and_energy.html#work-ke-spring"><span class="std std-ref">Lesson 19</span></a>. I have added an effective potential energy graph, much like what I did earlier, and the mass is given an initial velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> that is perpendicular to its position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>. Run the program, and notice how the motion matches the effective potential energy graph.</p>
+<p id="spring-force-ueff"><a class="reference internal" href="#energy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="800"
+    src="https://trinket.io/embed/glowscript/996b468eef?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>As we saw earlier in this lesson, the spring potential energy is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    U_s = \frac{1}{2} kr^2
+\]</div>
+<p>This means that the effective potential energy for a mass on a spring is now</p>
+<div class="math notranslate nohighlight">
+\[
+    U_{eff} = \frac{L^2}{2mr^2} + \frac{1}{2} kr^2
+\]</div>
+<p>You can go through the same analysis as we did above to find the turning points of the mass-spring system; do this in the next problem.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the default values of the appropriate variables in the mass on a spring program above (assigning them the proper SI units) to answer the following questions. You can compare your calculated answers to those shown in the graph after you run the program.</p>
+<ol class="simple">
+<li><p>What is the mechanical energy of the system (in J)?</p></li>
+<li><p>What is the magnitude of the mass’ angular momentum (in kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>)?</p></li>
+<li><p>What are the two turning points (in m) for the mass? <em>Hint:</em> If you use the process described earlier, you will get a quadratic equation in the variable <span class="math notranslate nohighlight">\(r^2\)</span> (not <span class="math notranslate nohighlight">\(r\)</span>). Solve this equation for the values of <span class="math notranslate nohighlight">\(r^2\)</span>, then find the positive solutions for <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+<li><p>What is the speed of the ball at its innermost radius?</p></li>
+<li><p>Suppose you change the initial speed so that it is now 2.50 m/s; do not change any of the other variables. What would be the turning points of the mass in this scenario? Note the angular momentum magnitude is now different!</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 14.6 J; 22.5 kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>; 2.37 m and 3.00 m; 1.90 m/s; 3.00 m and 3.95 m</p>
+</div>
+<p>Now, suppose the initial velocity is <em>not</em> perpendicular to the radial position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>. Let’s change initial velocity in the program above, so it has the same magnitude, but a different direction. Change the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INIT_SPEED</span> <span class="o">=</span> <span class="mf">1.5</span>          <span class="c1"># Initial speed (m/s)</span>
+</pre></div>
+</div>
+<p>so it now reads</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="mi">30</span>                    <span class="c1"># Initial velocity angle</span>
+<span class="n">INIT_VEL</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">)),</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Inside the definition of <code class="docutils literal notranslate"><span class="pre">ball</span></code>, you will need to assign the attribute <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> to be <code class="docutils literal notranslate"><span class="pre">INIT_VEL</span></code>. The initial velocity now points at a <span class="math notranslate nohighlight">\(\theta = 30.0^\circ\)</span> angle to the <span class="math notranslate nohighlight">\(+x\)</span> axis, rather than strictly along the <span class="math notranslate nohighlight">\(+y\)</span> axis, as before. This change means that the initial velocity has both a perpendicular component <em>and</em> a radial component at the start. Because of this, the motion will be different; if you run the program, you will see the ball moves further out, along a “tilted” ellipse. The change in the initial velocity means the angular momentum magnitude has changed; we can solve for its new value (using the <em>original</em> speed <span class="math notranslate nohighlight">\(v\)</span> of 1.50 m/s) by</p>
+<div class="math notranslate nohighlight">
+\[
+    L = rmv_\perp = rmv \sin \theta
+\]</div>
+<p>Plugging in the default values, along with the new angle <span class="math notranslate nohighlight">\(\theta\)</span>, gives <span class="math notranslate nohighlight">\(L = 11.3\)</span> kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>. The new angular momentum magnitude has changed the shape of the effective potential energy, which is noticeably more asymmetric in the radial direction. However, the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> has <em>not</em> changed, since the initial speed is exactly the same as before! We can use these numbers to solve for the turning point radii as we did previously.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Start the mass on the spring with an initial speed of 1.50 m/s, at an angle <span class="math notranslate nohighlight">\(\theta = 30.0^\circ\)</span> from the <span class="math notranslate nohighlight">\(+x\)</span> axis. Calculate the turning point radii of the ball (in m). Verify your answers by running the modified program above.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 0.961 m and 3.70 m</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In this new situation, find the speed of the mass at its new turning points.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> At the inner turning radius, the mass is moving at 2.34 m/s; at its outer turning point, its speed is 0.608 m/s.</p>
+</div>
+</div>
+<div class="section" id="finding-the-stable-equilibrium">
+<h3><span class="section-number">20.8.3. </span>Finding the stable equilibrium<a class="headerlink" href="#finding-the-stable-equilibrium" title="Permalink to this headline">¶</a></h3>
+<p>For both the constant central force, and the spring force, you may have noticed that both graphs look basically the same (although not exactly!). In particular, both are “bowl shaped”, so there is a radius in each case where the slope of the effective potential is zero. Much like we talked about in the last section, this radial distance would be where the object is at a stable equilibrium; if the object were placed slightly away from this point, they would oscillate around the equilibrium distance.</p>
+<p>It is important to note what is being said here. When I talk about <em>just</em> the potential energy, like I did in the last section, I am considering only motion along a single direction – imagine the mass on a spring moving back and forth on the <span class="math notranslate nohighlight">\(x\)</span> axis. Then, the stable equilibrium point is where the mass would be completely stationary. However, when I talk about the <em>effective</em> potential energy, I am talking about two dimensional motion, since <span class="math notranslate nohighlight">\(U_{eff}\)</span> includes the angular momentum of the object moving perpendicular to the radial direction. Here, the stable equilibrium would be that radius <span class="math notranslate nohighlight">\(r\)</span> <em>and</em> perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span> such that the radius does not change. In other words, the object is moving in a circular orbit at precisely this equilibrium distance <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>To flesh this out, let’s go back to the constant central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> and find the stable equilibrium radius for the angular momentum <span class="math notranslate nohighlight">\(L\)</span> for the default values. We have to keep <span class="math notranslate nohighlight">\(L\)</span> the same as the original value, or else the effective potential energy graph would change! Thus, we want to solve the following equations for the equilibrium radius <span class="math notranslate nohighlight">\(r_e\)</span> and the perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    L = mv_\perp r_e \qquad
+    F_c = \frac{mv^2 _\perp}{r_e}
+\]</div>
+<p>The first is just the fact we are keeping the angular momentum magnitude the same, so that the effective potential energy graph is the same; the second is Newton’s 2nd law, relating the constant force magnitude <span class="math notranslate nohighlight">\(F_c\)</span> to the net force. You can solve these algebraically for either <span class="math notranslate nohighlight">\(r_e\)</span> or <span class="math notranslate nohighlight">\(v_\perp\)</span> in one equation, then subtitute into the other equation, to get equations for <span class="math notranslate nohighlight">\(r_e\)</span> and <span class="math notranslate nohighlight">\(v_\perp\)</span>. For the equilibrium radius <span class="math notranslate nohighlight">\(r_e\)</span> in particular, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    r_e = \biggl( \frac{L^2}{F_c m} \biggr)^{1/3}
+\]</div>
+<p>With the default values in the program, and the angular momentum magnitude <span class="math notranslate nohighlight">\(L = 60.0\)</span> kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span> we found previously, then the equilibrium radius <span class="math notranslate nohighlight">\(r_e = 4.48\)</span> m. You can run the earlier program to verify this is the bottom of the effective potential graph.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the default values of the appropriate variables in the mass-spring program above, and find the equilibrium radius <span class="math notranslate nohighlight">\(r_e\)</span> for the mass on a spring. Note you will get a different algebraic equation for <span class="math notranslate nohighlight">\(r_e\)</span>, since the force is different. Run the program and verify your answer using the effective potential energy graph.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 2.67 m</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">20.9. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Energy methods are one of the most powerful techniques in physics. Notice that it is all in one equation! That is one of the advantages of using conservation of energy. In fact, if you decide to pursue physics as a major, you will see that many of the more advanced methods you will see are just different versions of writing down the mechanical energy of the system.</p>
+<p>The flip slide, though, is that all the energies are scalars, so information about direction is lost. For example, you can use mechanical energy to find the speed of an object at a given position, but not its velocity, since you cannot determine the drection using a scalar. However, with that being said, you can learn a lot from using the conservation of mechanical energy.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Define mechanical energy.</p></li>
+<li><p>State the principle of conservation of mechanical energy.</p></li>
+<li><p>Use the change in mechanical energy equation to solve for an unknown quantity such as the speed or position of an object at a particular time.</p></li>
+<li><p>State the relationship between a conservative force, and the slope of the force’s potential energy vs. position graph.</p></li>
+<li><p>Define the effective potential energy of a system.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L19_Work_and_energy.html" title="previous page"><span class="section-number">19. </span>Work and energy</a>
+    <a class='right-next' id="next-link" href="L21_Universal_gravitation.html" title="next page"><span class="section-number">21. </span>Universal gravitation</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

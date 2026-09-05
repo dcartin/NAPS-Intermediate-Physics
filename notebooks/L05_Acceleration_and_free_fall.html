@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Acceleration and free fall &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Kinematic equations" href="L06_Kinematic_equations.html" />
+    <link rel="prev" title="4. Units and scientific notation" href="L04_Units_and_scientific_notation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L05_Acceleration_and_free_fall.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L05_Acceleration_and_free_fall.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   5.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acceleration">
+   5.2. Acceleration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-acceleration">
+     5.2.1. Definition of acceleration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#negative-acceleration-and-deceleration">
+     5.2.2. Negative acceleration and deceleration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-gravitational-field">
+     5.2.3. The gravitational field
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-the-motion">
+   5.3. Updating the motion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-acceleration-to-velocity">
+     5.3.1. From acceleration to velocity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-velocity-to-position">
+     5.3.2. From velocity to position
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-constant-acceleration">
+   5.4. Modeling constant acceleration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-falling-ball">
+     5.4.1. Creating a falling ball
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-velocity-and-acceleration">
+     5.4.2. Visualizing velocity and acceleration
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   5.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="acceleration-and-free-fall">
+<span id="accel"></span><h1><span class="section-number">5. </span>Acceleration and free fall<a class="headerlink" href="#acceleration-and-free-fall" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#ball-no-accel"><span class="std std-ref">Ball with no acceleration</span></a></p></li>
+<li><p><a class="reference internal" href="#ball-accel"><span class="std std-ref">Ball with acceleration</span></a></p></li>
+<li><p><a class="reference internal" href="#vel-accel-graphs"><span class="std std-ref">Velocity and acceleration graphs</span></a></p></li>
+</ol>
+<p>Now that you have velocity under the belt, it is time to move on to acceleration. On the one hand, acceleration is more abstract than velocity. This is because acceleration is defined in terms of the change in velocity with time, while velocity is the change in position over time. So acceleration is the change in the change in the position over a time interval. As you will see when you program an accelerating object into vPython, if you are not careful with all those changes, you will get incorrect motion! Related to this is some confusion about the relation between velocity and acceleration. Sometimes there is a notion that “greater speed = greater acceleration”, which is not true. We will examine the relationship between velocity and acceleration in this lesson.</p>
+<p>On the other hand, you are very familiar with the perfect example of acceleration we see everyday: the acceleration of a falling object. Our brains are wired to understand what happens when we drop a tennis ball, for example, for a small time vs. a large one. We know that if we want to catch a ball that has fallen for twice the time, we don’t put our hand twice as low as we would for the short time, but roughly three times lower. The ball does not display the motion of something in constant velocity, but of an object with velocity changing at a constant rate.</p>
+<p>The idea of acceleration will tie all of this together. The plan is to define acceleration, and explore some of its aspects, then try to use this concept to model the motion of a ball moving vertically under the influence <em>only</em> of the gravitational force. This type of motion is known as <em>free fall</em>.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the definitions of average and instantaneous acceleration.</p></li>
+<li><p>Describe the difference between negative acceleration and deceleration.</p></li>
+<li><p>Define the gravitational field.</p></li>
+<li><p>Define the Euler-Cromer method for updating a group of kinematic variables.</p></li>
+<li><p>Describe how the graphs of velocity vs. time and acceleration vs. time for an object are related.</p></li>
+</ul>
+</div>
+<div class="section" id="acceleration">
+<h2><span class="section-number">5.2. </span>Acceleration<a class="headerlink" href="#acceleration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-acceleration">
+<h3><span class="section-number">5.2.1. </span>Definition of acceleration<a class="headerlink" href="#definition-of-acceleration" title="Permalink to this headline">¶</a></h3>
+<p>Just as velocity is the change in position with time, <strong>average acceleration</strong> is the change in <em>velocity</em> with time (SI units of m/s<span class="math notranslate nohighlight">\(^2\)</span>).</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> average acceleration</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec a}_{avg}\)</span></p></li>
+<li><p><strong>Definition:</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+	{\vec a}_{avg} = \frac{\Delta {\vec v}}{\Delta t} = \frac{{\vec v}_f - {\vec v}_i}{t_f - t_i}
+\]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> m/s<span class="math notranslate nohighlight">\(^2\)</span></p></li>
+</ul>
+<p>When we take the limit <span class="math notranslate nohighlight">\(\Delta t \to 0\)</span> of infinitely small time step, this gives the <strong>instantaneous acceleration</strong>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Naval Auxiliary Air Station Charlestown in southern RI was where President George HW Bush learned to fly during WW2. One of its runways was a site for local drag racing in the late 1950’s and early 1960’s. It is now the site of a wildlife refuge. A drag racing vehicle crosses the finish line at 250. mph moving eastward and slows down uniformly to rest over 2.88 s. What was the magnitude of the vehicle’s acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>)?</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/231px-NAAS_Charlestown_c1945.jpg"><img alt="../_images/231px-NAAS_Charlestown_c1945.jpg" src="../_images/231px-NAAS_Charlestown_c1945.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Naval Auxiliary Air Station Charlestown seen from the air, circa 1945 (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Naval_Auxiliary_Air_Station_Charlestown_circa_1945.jpg">source</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 38.8 m/s<span class="math notranslate nohighlight">\(^2\)</span> westward</p>
+</div>
+<p>The following problem has given quantities which are vectors pointing in different directions; you should write these variables in unit vector notation first, then use the definition of acceleration above to find the final velocity. Use the usual convention of east as the <span class="math notranslate nohighlight">\(+x\)</span> direction, and north as the <span class="math notranslate nohighlight">\(+y\)</span> direction.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An object is moving with a velocity of 17.5 m/s northward at <span class="math notranslate nohighlight">\(t = 0\)</span>, when it starts accelerating at a constant 4.55 m/s<span class="math notranslate nohighlight">\(^2\)</span> westward. What is the object’s velocity (in m/s) after 20.0 seconds?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec v} = (-91.0 \textrm{ m/s}) {\hat x} + (17.5 \textrm{ m/s}) {\hat y}\)</span></p>
+</div>
+<p>One way to think of acceleration is the following. Imagine a speedometer in your car, indicating the velocity of your car.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/Accelerometer.png"><img alt="../_images/Accelerometer.png" src="../_images/Accelerometer.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">An accelerometer measuring the change in velocity of an object</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you increase your velocity from <span class="math notranslate nohighlight">\(+5\)</span> m/s to <span class="math notranslate nohighlight">\(+20\)</span> m/s in three seconds, your acceleration has a magnitude of 5 m/s<span class="math notranslate nohighlight">\(^2\)</span>. When your acceleration is constant, instantaneous acceleration is equal to average acceleration.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig01-Two-moving-balls_small.png"><img alt="../_images/INT_AY21_L03_Fig01-Two-moving-balls_small.png" src="../_images/INT_AY21_L03_Fig01-Two-moving-balls_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Two balls moving to the right, one with constant velocity and one with constant acceleration</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>To see the difference between velocity and acceleration, consider the figure above. Each ball is moving to the right, and its position is shown every second. Thus, the motion shown is over five seconds (not six!). Both balls travel over the same displacement over the same time, so both have the same <em>average velocity</em>. But the way they do this is very different. The yellow ball has <em>equal</em> displacements every second, so its instantaneous velocity is also constant – it moves with the same speed over the five seconds. The green ball has a changing displacement every second; the distance traveled increases every second, so its average velocity over the second time interval is greater than that for the first. Thus, it has an <em>increasing</em> average velocity. In fact, this increase is increasing at a constant rate. You can verify this by measuring the distances between the ball’s position every second. This means the green ball has a constant <em>acceleration</em>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Consider the four objects draw in the figure below. Each of these is moving to the right, and its position is shown every second.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig03-Four-moving-balls_small.png"><img alt="../_images/INT_AY21_L03_Fig03-Four-moving-balls_small.png" src="../_images/INT_AY21_L03_Fig03-Four-moving-balls_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">The position of four objects shown every second</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Which of the objects has a constant velocity?</p></li>
+<li><p>Which of the objects has a non-zero acceleration?</p></li>
+<li><p>Which of the objects could have a <em>constant</em> acceleration?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The blue ball is moving at a constant velocity, and thus a zero acceleration; the other three balls are moving with non-zero accelerations. Only the red ball could have a cosntant acceleration, since the other yellow and green balls have velocities that change at different rates at different locations.</p>
+</div>
+</div>
+<div class="section" id="negative-acceleration-and-deceleration">
+<h3><span class="section-number">5.2.2. </span>Negative acceleration and deceleration<a class="headerlink" href="#negative-acceleration-and-deceleration" title="Permalink to this headline">¶</a></h3>
+<p>In order to set up for acceleration vectors for use in <a class="reference internal" href="L06_Kinematic_equations.html#kin-eqns"><span class="std std-ref">Lesson 06 (kinematics equations)</span></a>, let’s talk about how the directions of the velocity and acceleration are related. For the green ball in the figure below, we can draw the position vectors <span class="math notranslate nohighlight">\({\vec r}\)</span> for the ball at two different times, and use those vectors to find the vector change in position <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>. The average velocity is proportional in size to the displacement <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>, and has the same direction, so this gives us the average velocities for each of the time intervals.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig02-Finding-avg-vel-of-ball_small.png"><img alt="../_images/INT_AY21_L03_Fig02-Finding-avg-vel-of-ball_small.png" src="../_images/INT_AY21_L03_Fig02-Finding-avg-vel-of-ball_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Finding the direction of the average velocity over each second the green ball is moving</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice that the change in position (the displacement) points to the right, since the ball is moving that way. This means the average velocity <span class="math notranslate nohighlight">\({\vec v}_{avg}\)</span> also points to the right as well. Because these differences are increasing in size, the average velocity is also increasing, so this ball is accelerating. You can see this in the figure below, where the change in (average) velocity is found between two displacements.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig04-Change-in-avg-vel_small.png"><img alt="../_images/INT_AY21_L03_Fig04-Change-in-avg-vel_small.png" src="../_images/INT_AY21_L03_Fig04-Change-in-avg-vel_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">The <em>average</em> velocity of the ball is increasing in size, since the gap between successive positions is getting larger. The acceleration points in the same direction as the average velocity.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Average vs. instantaneous velocity</p>
+<p>We should be a little careful here when finding the acceleration. The definition</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec a}_{avg} = \frac{\Delta {\vec v}}{\Delta t}
+\]</div>
+<p>uses the change in the <em>instantaneous</em> velocity <span class="math notranslate nohighlight">\({\vec v}\)</span>, not the <em>average</em> velocity <span class="math notranslate nohighlight">\({\vec v}_{avg}\)</span>. So we are not being strictly accurate when we use the average velocity in the diagram. However, if you remember the mean value theorem from math class, there is some time <span class="math notranslate nohighlight">\(t\)</span> within each time interval <span class="math notranslate nohighlight">\(\Delta t = t_f - t_i\)</span> (where <span class="math notranslate nohighlight">\(t_i \le t \le t_f\)</span>) when the instantaneous velocity at <span class="math notranslate nohighlight">\(t\)</span> is the same as the average velocity for all of <span class="math notranslate nohighlight">\(\Delta t\)</span>. We should be using these instantaneous velocities, but for the examples given here, the directions of the acceleration are the same.</p>
+</div>
+<p>Can we have a situation where the velocity and the acceleration point in opposite directions? Yes! This is known as <strong>deceleration</strong>. If we look at the figure below, with another ball moving to the right, we can go through the same process as above to find which way the change in velocity points (and thus, which way the acceleration points). In this case, the average velocity points to the right, but the change in velocity now points to the left.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig05-Change-in-avg-vel_small.png"><img alt="../_images/INT_AY21_L03_Fig05-Change-in-avg-vel_small.png" src="../_images/INT_AY21_L03_Fig05-Change-in-avg-vel_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">The <em>average</em> velocity of the ball is decreasing in size, since the gap between successive positions is getting smaller. The acceleration points in the opposite direction to the average velocity.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>You may be famiilar with the term “negative acceleration” – is a negative acceleration just another way of saying “deceleration”? No! A <strong>negative acceleration</strong> simply means that the acceleration vector points in the negative direction! For the two examples above, let’s assume (as we usually do) that left is the negative direction. Then our example of deceleration, for the gray ball, is also an example of negative acceleration. But this is not always true. Suppose we take the two situations above, and just reverse the direction of motion: assume that the green and gray balls are now moving to the <em>left</em>. If we find the change in the (average) velocity, we can find out the direction of the acceleration.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig06-Change-in-avg-vel_small.png"><img alt="../_images/INT_AY21_L03_Fig06-Change-in-avg-vel_small.png" src="../_images/INT_AY21_L03_Fig06-Change-in-avg-vel_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">The average velocities of two balls moving to the <em>left</em></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Negative acceleration is not so useful</p>
+<p>The term “negative acceleration” is problematic it is really useful <em>only</em> when the motion is along a line. When we talk about more complicated motion, it does not make sense to say a vector is negative, only its vector components! Thus, it is more proper to talk about the negative <span class="math notranslate nohighlight">\(x\)</span> component <span class="math notranslate nohighlight">\(a_x\)</span> of the acceleration, rather than say the <em>entire</em> acceleration vector is negative.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For the image above, which of the balls has a deceleration? Which have a negative acceleration?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The green ball has a deceleration, since the magnitude of its velocity is decreasing. The gray ball has a negative acceleration, since the direction of the change in velocity is to the left. On the other hand, the green ball has a positive acceleration; its acceleration vector points to the right.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The picture below shows four situations where a moving car is experiencing an acceleration; the arrows in each situation show the direction of the car’s velocity and acceleration. If positive is to the right, in which of these situations does the car have a <em>negative acceleration</em>?</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/Four-cars-vel-accel_small.png"><img alt="../_images/Four-cars-vel-accel_small.png" src="../_images/Four-cars-vel-accel_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Four possible relationships between velocity and acceleration for a moving car</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Only B</p></li>
+<li><p>Only C</p></li>
+<li><p>Only D</p></li>
+<li><p>Both B and C</p></li>
+<li><p>Both B and D</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Cars B and D have acceleration vectors point to the left, in the negative direction.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the same picture for the previous problem to say in which of the situations given does the car have a <em>deceleration</em>?</p>
+<ol class="simple">
+<li><p>Only B</p></li>
+<li><p>Only C</p></li>
+<li><p>Only D</p></li>
+<li><p>Both B and C</p></li>
+<li><p>Both B and D</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Cars B and C have acceleration vectors pointing in the direction opposite to their instanteous velocity vectors. Said another way, these are the two cars that are slowing down.</p>
+</div>
+</div>
+<div class="section" id="the-gravitational-field">
+<span id="accel-grav-field"></span><h3><span class="section-number">5.2.3. </span>The gravitational field<a class="headerlink" href="#the-gravitational-field" title="Permalink to this headline">¶</a></h3>
+<p>As an example of acceleration, we will look at a ball falling towards the ground. Much like what we did earlier, this will have a constant <em>acceleration</em> (rather than velocity), so we will see how that affects the motion. We have a few steps before we get to that point. The program below creates a spherical object <code class="docutils literal notranslate"><span class="pre">ball</span></code>, much like we did before. Notice that we have added in <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> inside the definition of <code class="docutils literal notranslate"><span class="pre">ball</span></code>, and started the ball at rest. It also creates an object <code class="docutils literal notranslate"><span class="pre">ground</span></code>. The <code class="docutils literal notranslate"><span class="pre">ground</span></code> object, using a new vPython module <code class="docutils literal notranslate"><span class="pre">box</span></code>, has its center at <code class="docutils literal notranslate"><span class="pre">ground.pos</span></code>, and its size describes its extent in the <span class="math notranslate nohighlight">\(x, y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> direction. Thus, it has a width of 12 in both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions, and a vertical thickness of 0.2 in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p>
+<p>Run the program, and see what the situation looks like.</p>
+<p id="ball-no-accel"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/7f118cad1e?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>When you run the program, you notice nothing happens! The initial velocity <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> is just the zero vector, and there is nothing in the code that ever changes this velocity. So the ball will just hang there motionless – we need to add in the effect of gravity.</p>
+<p>As I am sure you have noticed by now, if you ever hold up an object and then let go, the object will fall towards the center of the Earth. This leads to the following definition.</p>
+<div class="warning admonition">
+<p class="admonition-title">Gravitational field</p>
+<p>The <strong>gravitational field</strong> <span class="math notranslate nohighlight">\({\vec g}\)</span> of the Earth is a measure of its gravitational influence on other objects. When the force of gravity between the Earth and an object is the <em>only</em> force acting on the object, the object will move with an acceleration <span class="math notranslate nohighlight">\({\vec a} = {\vec g}\)</span>. When this is true, the object is said to be in <strong>free fall</strong>. Thus, <span class="math notranslate nohighlight">\({\vec g}\)</span> has the same units as <span class="math notranslate nohighlight">\({\vec a}\)</span>.</p>
+<p>It turns out that the Earth’s gravitational field is very nearly constant near the surface of the Earth; we will see the more general case in <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21 (universal gravitation)</span></a>. Thus, we can say <em>the gravitational field vector near the surface of the Earth points towards the center of the Earth, and has a magnitude of 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span></em>.</p>
+</div>
+<p>Therefore, we can start out with the fact that, if we neglect air resistance, the vertical acceleration <span class="math notranslate nohighlight">\(a_y\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    a_y = -g
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">Vectors vs. vector components</p>
+<p>Notice what I did there – the gravitational field vector is <span class="math notranslate nohighlight">\({\vec g}\)</span>, and has both a magnitude and direction, while <span class="math notranslate nohighlight">\(g\)</span> (no vector arrow above it), is <em>just</em> the magnitude, and no direction. The minus sign is because we choose downward to be in the <span class="math notranslate nohighlight">\(-y\)</span> direction. Make sure you learn the difference in notation between scalars and vectors, and specifically between vectors and their magnitudes!</p>
+</div>
+<p>In order to truly have an object in free fall, one must eliminate all the other forces acting on the object. Dense objects – such as the balls used in sports – are pretty close to this already, but to see true free fall, air resistance must be taken out of the equation. This is done in a dramatic way in the next video. The video is automatically muted, so you don’t accidently disrupt class, but if you are studying after class and have some headphones, feel free to watch.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/E43-CfukEgs?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="updating-the-motion">
+<h2><span class="section-number">5.3. </span>Updating the motion<a class="headerlink" href="#updating-the-motion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="from-acceleration-to-velocity">
+<h3><span class="section-number">5.3.1. </span>From acceleration to velocity<a class="headerlink" href="#from-acceleration-to-velocity" title="Permalink to this headline">¶</a></h3>
+<p>We can start from the constant acceleration in free fall, and build up to find the velocity and position of the object <code class="docutils literal notranslate"><span class="pre">ball</span></code> as it falls down towards the object <code class="docutils literal notranslate"><span class="pre">ground</span></code>. First, let’s begin with acceleration. Since the acceleration is constant, we have <span class="math notranslate nohighlight">\({\vec a}_{avg} = {\vec a}\)</span>. However, the velocity will be continually changing. So given a time <span class="math notranslate nohighlight">\(t = n \Delta t\)</span>, we want to calculate <span class="math notranslate nohighlight">\(v_{n, y}\)</span>, just like we did above, going from constant velocity to the positions <span class="math notranslate nohighlight">\(r_{n, x}\)</span>. So we have</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec a}_{avg} = \frac{{\vec v}_f - {\vec v}_i}{\Delta t} \Rightarrow
+    a_y = \frac{v_{n + 1, y} - v_{n, y}}{\Delta t}
+\]</div>
+<p>and solving for the velocity at the end of the time step between <span class="math notranslate nohighlight">\(n \Delta t\)</span> and <span class="math notranslate nohighlight">\((n + 1) \Delta t\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{n + 1, y} = v_{n, y} + a_y \Delta t
+\]</div>
+<p>This should look a lot like what we did earlier in the constant velocity case. In fact, if we draw a graph of acceleration versus time, we have a similar interpretation.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/Const-acc-update-graph-01_small.png"><img alt="../_images/Const-acc-update-graph-01_small.png" src="../_images/Const-acc-update-graph-01_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Finding the change in velocity <span class="math notranslate nohighlight">\(\Delta v_y\)</span> from the acceleration <span class="math notranslate nohighlight">\(a_y\)</span></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Since downward is chosen to be negative, the constant acceleration line in the graph below is underneath the time axis. Other than that, the idea is the same. At a given time <span class="math notranslate nohighlight">\(t = n \Delta t\)</span>, the velocity in the <span class="math notranslate nohighlight">\(y\)</span> direction changes from <span class="math notranslate nohighlight">\(v_{n, y}\)</span> to <span class="math notranslate nohighlight">\(v_{n, y} + \Delta v_{n, y}\)</span>, where the change in velocity <span class="math notranslate nohighlight">\(\Delta v_{n, y}\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta v_{n, y} = a_y \Delta t
+\]</div>
+<p>Thus, the relationship between acceleration and change in velocity is similar to that between velocity and change in position.</p>
+<div class="warning admonition">
+<p class="admonition-title">From acceleration to change in velocity</p>
+<p>The area under the curve for an acceleration component vs. time graph is the change in that velocity component of the object. For example, the area under the curve for a <span class="math notranslate nohighlight">\(a_x\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> graph is the change <span class="math notranslate nohighlight">\(\Delta v_x\)</span>.</p>
+</div>
+<p>As you will see later, this will be a crucial relation in updating the velocity of an object in vPython, much like the analogous relation between displacement and average velocity let us change the position.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The graph below represents the acceleration of a particle as a function of time.  The initial velocity of the particle is 5.00 m/s in the <span class="math notranslate nohighlight">\(+x\)</span> direction.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L03_Fig07-Acc-vs-t-graph_small.png"><img alt="../_images/INT_AY21_L03_Fig07-Acc-vs-t-graph_small.png" src="../_images/INT_AY21_L03_Fig07-Acc-vs-t-graph_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Use this acceleration vs. time graph to find information about the velocity and acceleration of an object</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the instantaneous acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the particle at <span class="math notranslate nohighlight">\(t\)</span> = 6 s?</p></li>
+<li><p>What is the change in velocity (in m/s) from <span class="math notranslate nohighlight">\(t\)</span> = 4 s - 8 s?</p></li>
+<li><p>What is the final velocity (in m/s) of the particle after 10 s?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(+6.00\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>; <span class="math notranslate nohighlight">\(+24.0\)</span> m/s; <span class="math notranslate nohighlight">\(+47.0\)</span> m/s</p>
+</div>
+<p>So now, from our constant acceleration, we can construct the velocity vs. time graph for the falling ball. Since the ball is dropped from rest, and is speeding up downward, the velocity vs. time graph will have a constant negative slope. From the graph below, you can see that the slope is, in fact, just the <span class="math notranslate nohighlight">\(y\)</span> component of the acceleration, since</p>
+<div class="math notranslate nohighlight">
+\[
+    a_y = \frac{\Delta v_y}{\Delta t}
+\]</div>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/Const-acc-update-graph-02_small.png"><img alt="../_images/Const-acc-update-graph-02_small.png" src="../_images/Const-acc-update-graph-02_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Updating the velocity of the object for a constant acceleration <span class="math notranslate nohighlight">\(a_y\)</span></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>This gives us that</p>
+<div class="warning admonition">
+<p class="admonition-title">From velocity to acceleration</p>
+<p>The slope of a velocity component vs. time graph for an object is the appropriate acceleration component of the object. For example, the slope of a <span class="math notranslate nohighlight">\(v_x\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> graph is the component <span class="math notranslate nohighlight">\(a_x\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the velocity vs. time graph to answer the following questions.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY19_MP1_L24_Fig01-Vel-vs-t-graph_small.png"><img alt="../_images/INT_AY19_MP1_L24_Fig01-Vel-vs-t-graph_small.png" src="../_images/INT_AY19_MP1_L24_Fig01-Vel-vs-t-graph_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Use this velocity vs. time graph to find information about the velocity and acceleration of an object</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the average acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the object between <span class="math notranslate nohighlight">\(t = 3\)</span> s and <span class="math notranslate nohighlight">\(t = 7\)</span> s?</p></li>
+<li><p>What is the instantaneous acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the object at <span class="math notranslate nohighlight">\(t = 5\)</span> s?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(-0.250\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>; <span class="math notranslate nohighlight">\(0.00\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span></p>
+</div>
+</div>
+<div class="section" id="from-velocity-to-position">
+<h3><span class="section-number">5.3.2. </span>From velocity to position<a class="headerlink" href="#from-velocity-to-position" title="Permalink to this headline">¶</a></h3>
+<p>Let’s keep going, and use what we learned in <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler-vel"><span class="std std-ref">Lesson 03</span></a> about the relationship between velocity and change in position. Remember the task at hand: given the position <span class="math notranslate nohighlight">\(r_{n, y}\)</span> and the velocity <span class="math notranslate nohighlight">\(v_{n, y}\)</span> at a time <span class="math notranslate nohighlight">\(t = n \Delta t\)</span>, we now want to find the position <span class="math notranslate nohighlight">\(r_{n + 1, y}\)</span> when time has moved forward one time step, i.e. at time <span class="math notranslate nohighlight">\(t = (n + 1) \Delta t\)</span>. We can already find the new velocity <span class="math notranslate nohighlight">\(v_{n + 1, y}\)</span> at this new time, from the acceleration <span class="math notranslate nohighlight">\(a_y\)</span> and the time step <span class="math notranslate nohighlight">\(\Delta t\)</span>. We found there that the area under the curve for a velocity vs. time graph gives the change in position, so how do we calculate this area? The graphs below show three different possibilities.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/Const-acc-update-graph-03_small.png"><img alt="../_images/Const-acc-update-graph-03_small.png" src="../_images/Const-acc-update-graph-03_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Three different possible ways to update position from a velocity graph, when acceleration is constant</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>At this point, you may be asking yourself, “Why are we using these rectangles? We know the slope is constant on this graph, why can’t we use triangles?” And you would be right – in <em>this</em> particular case, where the acceleration is constant, we could use our knowledge of the problem and come up with a better scheme. However, what I am trying to do here is motivate our choice without assuming anything about the slope. What if the slope were changing? What would we do then? You will only have the initial and final velocities, calculated using your acceleration, to find the change in position, so we need to develop a good all-purpose method for that. You will see that our “best choice” in the case of constant acceleration is also a good choice when acceleration is changing. In fact, if you have seen integral calculus before, you can see that the methods we use here are the basis for defining the integral of a function!</p>
+<p>Going back to the graph above, the first method is to use the velocity <span class="math notranslate nohighlight">\(v_{n, y}\)</span> at the old time <span class="math notranslate nohighlight">\(t = n \Delta t\)</span>, and find the new position using</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{n, y} = \frac{r_{n + 1, y} - r_{n, y}}{\Delta t} \Rightarrow r_{n + 1, y} = r_{n, y} + v_{n, y} \Delta t
+\]</div>
+<p>After the new position is found, then we can also find the new velocity using the acceleration. In vPython code, this might look like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">DT</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+</pre></div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator, then this can be shortened to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">DT</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+</pre></div>
+</div>
+<p>Thinking in terms of graphs and areas, this equation would give us the graph shown on the left-hand side. However, notice that the blue rectangles give us too small of an area – there are “missing triangles” all along the red line. Physically, the interpretation is that the initial velocity <span class="math notranslate nohighlight">\(v_{n, y}\)</span> is “too slow”, and so the dropped ball is lagging behind where it should be along its path.</p>
+<p>For second method, instead of using the initial velocity, we find the final velocity <span class="math notranslate nohighlight">\({\vec v}_{n + 1}\)</span> <em>first</em>, and then use it to find the new position. In equations, this would be</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{n + 1, y} = \frac{r_{n + 1, y} - r_{n, y}}{\Delta t} \Rightarrow r_{n + 1, y} = r_{n, y} + v_{n + 1, y} \Delta t
+\]</div>
+<p>and in vPython,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">DT</span>
+</pre></div>
+</div>
+<p>Notice the code looks very similar to the code above! All I have done is switched the order of these two statements. This is why the order of programming lines can be important. The first line updates <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> to find <span class="math notranslate nohighlight">\(v_{n + 1, y}\)</span>, and with this updated <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code>, then uses it to find the new position <code class="docutils literal notranslate"><span class="pre">ball.pos</span></code>. This updating method is sometimes referred to as the <strong>Euler-Cromer</strong> method. If you go back to Cromer’s original paper on the method, he says that the method was discovered by a student accidently reversing the two lines! We will frequently use this method of updating <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\({\vec v}\)</span>, since it works rather well for its simplicity.</p>
+<p>However, looking at the right-hand graph in the figure above, you see there is still a problem – now there are “extra triangles”, and the area is too big. This means that we are using too large of a velocity, and the dropped ball is further along the path than it should be. This leads to the final method of updating, which is to take how we defined velocity seriously. Remember that the equation</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{\Delta {\vec r}}{\Delta t}
+\]</div>
+<p>says to use the <em>average</em> velocity when finding the change in position <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>. For an object moving with constant acceleration – and thus with velocity changing at a constant rate – the average velocity is simply</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{1}{2} ({\vec v}_i + {\vec v}_f)
+\]</div>
+<p>For our case, this means that we update the position using</p>
+<div class="math notranslate nohighlight">
+\[
+    r_{n + 1, y} = r_{n, y} + \frac{1}{2} (v_{n, y} + v_{n + 1, y}) \Delta t
+\]</div>
+<p>Looking at the middle graph in the figure above, you’ll see that this is the “Goldilocks” solution. This is known as the <strong>midpoint approximation</strong>. Although there are both missing and extra triangles on either side of the velocity vs. time curve, they cancel out, giving us the correct answer for the change in position <span class="math notranslate nohighlight">\(\Delta r_{n, y}\)</span> from <span class="math notranslate nohighlight">\(r_{n, y}\)</span> to <span class="math notranslate nohighlight">\(r_{n + 1, y}\)</span>.</p>
+<p>To put this into programming code, it means that we have to save the old value <span class="math notranslate nohighlight">\(v_{n, y}\)</span> of the velocity before we update it. If you think about it, there is no other way to order the two lines of code. Thus, the vPython implementation would be something like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">oldvel</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">velocity</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">oldvel</span> <span class="o">+</span> <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span><span class="p">)</span> <span class="o">*</span> <span class="n">DT</span>
+</pre></div>
+</div>
+<p>The midpoint approximation is more accurate than the Euler-Cromer method, but often, we can just use Euler-Cromer and not notice the difference.</p>
+<p>Note that one way to make <em>any</em> of these methods work better is to decrease the size of the time step. If the rectangles are not as wide, the missing triangles become smaller as well, and the answer gets closer to the right one. This is essentially what is going on when we find the instantaneous velocity or acceleration – by making <span class="math notranslate nohighlight">\(\Delta t \to 0\)</span>, we “find the slope” at a single time, rather than the average over a finite length of time. In terms of computation, reducing the time step <code class="docutils literal notranslate"><span class="pre">DT</span></code> makes the calculations more accurate, but also increases the number of such steps that must be done. There is a lot of effort in computational physics to find smarter ways of increasing the accuracy of simulations without slowing them down greatly. We will see some other methods of how this is done in future lessons.</p>
+</div>
+</div>
+<div class="section" id="modeling-constant-acceleration">
+<span id="accel-vpy-freefall"></span><h2><span class="section-number">5.4. </span>Modeling constant acceleration<a class="headerlink" href="#modeling-constant-acceleration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-a-falling-ball">
+<h3><span class="section-number">5.4.1. </span>Creating a falling ball<a class="headerlink" href="#creating-a-falling-ball" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have all of these ideas under our belt, let’s see this in practice. The program below is a copy of the code from above, where the ball remained motionless because there was no gravitational field. However, there are some spots marked out for you to add in additional code. The instructions for this are given below the program.</p>
+<p id="ball-accel"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/a917c3e721?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>You need to complete two steps before running the program above. Copy the three lines from above for the updating method using the average velocity, and place it into the section “Update position, velocity”. You now need to tell the computer what the ball’s acceleration is! This will be the same as the gravitational field, so under “Definitions”, type</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GRAV_FIELD</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then type the following line into the section “Define acceleration”:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">=</span> <span class="n">GRAV_FIELD</span>
+</pre></div>
+</div>
+<p>Once you have done this, run the program above, and you should see the ball fall downward in a natural motion.</p>
+<p>There’s still a problem, though – the computer doesn’t know that the ball can’t go through the ground! Your ball should fall right through the ground and keep going! So we need some way of dealing with the collision of the ball with the ground. One natural choice is for the ball to reverse the direction of its motion when it hits the ground. This means that if the vertical position of <code class="docutils literal notranslate"><span class="pre">ball</span></code> is now at or below the top surface of <code class="docutils literal notranslate"><span class="pre">ground</span></code>, then the vertical velocity component <code class="docutils literal notranslate"><span class="pre">ball.velocity.y</span></code> must switch signs (remember this scalar multiplication by <span class="math notranslate nohighlight">\(-1\)</span> is how we switch the direction of a vector component 180<span class="math notranslate nohighlight">\(^\circ\)</span>).</p>
+<p>In vPython, this would be written as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="n">ball</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>This uses an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, which tests whether a particular mathematical statement is true. Copy the statements above into the program, in the section “Check for ground collision”. Make sure you have indented them properly – the second line below has to be indented twice, since it is inside both the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement! Run the program again, and you should see the ball bouncing naturally on the ground.</p>
+<p>Why did we use a less than sign <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, rather than an equals sign <code class="docutils literal notranslate"><span class="pre">==</span></code>? Note that we are not sure that the ball will hit the <span class="math notranslate nohighlight">\(y\)</span> position of the ground <em>exactly</em> during some part of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, so we check to see only if it has gone beyond the ground. You may notice that in some cases, the ball looks like it sinks partway into the ground! It is possible to deal with collisions in a more sophisticated way than we do here, but I will not worry about this further.</p>
+</div>
+<div class="section" id="visualizing-velocity-and-acceleration">
+<h3><span class="section-number">5.4.2. </span>Visualizing velocity and acceleration<a class="headerlink" href="#visualizing-velocity-and-acceleration" title="Permalink to this headline">¶</a></h3>
+<p>Let’s continue to play around with this simulation, and get a better feeling for the relation between velocity and acceleration. The program below should be where you previously left the last program. There are now places to add code creating a graph, which you will do next. The instructions for doing this are after the program.</p>
+<p id="vel-accel-graphs"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/dec3c3d759?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>You will now create graphs of the <span class="math notranslate nohighlight">\(y\)</span> velocity vs. time, and the <span class="math notranslate nohighlight">\(y\)</span> acceleration vs. time. Add in the required code to complete the following steps (it may be helpful to look back to <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler-graphs"><span class="std std-ref">Lesson 03</span></a> to see how to do this):</p>
+<ul class="simple">
+<li><p>In the “Create graph, curves” section, create a graph <code class="docutils literal notranslate"><span class="pre">yGraph</span></code>, with an <code class="docutils literal notranslate"><span class="pre">xmin</span></code> of 0, an <code class="docutils literal notranslate"><span class="pre">xmax</span></code> of <code class="docutils literal notranslate"><span class="pre">MAX_TIME</span></code>, and <code class="docutils literal notranslate"><span class="pre">xtitle</span> <span class="pre">=</span> <span class="pre">&quot;t</span> <span class="pre">(s)&quot;</span></code>.</p></li>
+<li><p>In the same section, create a blue curve <code class="docutils literal notranslate"><span class="pre">yVelCurve</span></code> and a red curve <code class="docutils literal notranslate"><span class="pre">yAccCurve</span></code>. Make sure you remember to link them to <code class="docutils literal notranslate"><span class="pre">yGraph</span></code> by using <code class="docutils literal notranslate"><span class="pre">graph</span> <span class="pre">=</span> <span class="pre">yGraph</span></code>. Add a label <code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">=</span> <span class="pre">&quot;v_y</span> <span class="pre">(m/s)&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">yVelCurve</span></code>, and <code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">=</span> <span class="pre">&quot;a_y</span> <span class="pre">(m/s^2)&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">yAccCurve</span></code>.</p></li>
+<li><p>Inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, in the “Update curves” section, use the appropriate equations to plot the <span class="math notranslate nohighlight">\(y\)</span> velocity component <code class="docutils literal notranslate"><span class="pre">ball.velocity.y</span></code>, and the <span class="math notranslate nohighlight">\(y\)</span> acceleration component <code class="docutils literal notranslate"><span class="pre">ball.accel.y</span></code>, both as a function of time.</p></li>
+</ul>
+<p>Once you have done all of this, run the program, and see if the graphs look like what you expect.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Is the acceleration of the ball really constant the entire time? What is changing the acceleration of the ball?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The acceleration of the ball changes at the instant it hits the ground. This gives an acceleration <em>different</em> from the gravitational field. You can see this in the velocity vs. time graph, since there is a sudden discontinuity in the value of <code class="docutils literal notranslate"><span class="pre">ball.velocity.y</span></code> that is not explained solely by <span class="math notranslate nohighlight">\({\vec g}\)</span>. We will see later in the course that this is because of the force the ground exerts on the ball.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the initial velocity of the ball so it starts with an upward motion. What do the graphs look like now? Is the maximum velocity of the ball the same? What if the initial velocity is downward?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The maximum velocity of the ball will have a different magnitude; this will be more pronounced, depending on how large you chose your value of <span class="math notranslate nohighlight">\(v_y\)</span>. If you use a negative velocity, with the same speed as your choice of positive velocity, the maximum speed will be the same in both cases. It will just reach that max speed at a different time for the two cases.</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">5.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Acceleration is the last of the three major quantities we will deal with repeatedly during this class – the other two being displacement and velocity. We will see in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11 (linear momentum and Newton’s laws)</span></a> that acceleration is a key part of Newton’s formulation of the laws of motion.</p>
+<p>We also dealt with the gravitational field, which so is prevalent in our lives that we often do not think about its presence. Imagine how you would go about your daily routine if the gravitational field were absent! We will study the consequences of this field more in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 08 (projectile motion)</span></a>. Much later in the course, we will come back to fields as a general idea. At that point, we will build on your intution about the gravitational field to talk about the electric and magnetic fields.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Define (average) acceleration and gravitational field.</p></li>
+<li><p>Relate the velocity vs. time and acceleration vs. time graphs of an object’s motion.</p></li>
+<li><p>Create an accelerating object in vPython.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L04_Units_and_scientific_notation.html" title="previous page"><span class="section-number">4. </span>Units and scientific notation</a>
+    <a class='right-next' id="next-link" href="L06_Kinematic_equations.html" title="next page"><span class="section-number">6. </span>Kinematic equations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

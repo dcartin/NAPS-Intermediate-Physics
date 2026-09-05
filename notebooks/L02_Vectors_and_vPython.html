@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Vectors and vPython &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Velocity and the Euler method" href="L03_Velocity_and_Euler_method.html" />
+    <link rel="prev" title="1. Introduction to Python" href="L01_Introduction_to_Python.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L02_Vectors_and_vPython.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L02_Vectors_and_vPython.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   2.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vectors">
+   2.2. Vectors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scalars-and-vectors">
+     2.2.1. Scalars and vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scalar-multiplication">
+     2.2.2. Scalar multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-addition">
+     2.2.3. Vector addition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unit-vector-notation">
+     2.2.4. Unit vector notation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vpython">
+   2.3. vPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#your-first-vpython-object">
+     2.3.1. Your first vPython object
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scalar-multiplication-with-vector-components">
+     2.3.2. Scalar multiplication with vector components
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2.4. Vector addition
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-unit-vector-notation">
+     2.4.1. Using unit vector notation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-sums-in-vpython">
+     2.4.2. Vector sums in vPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#showing-vector-sums-with-arrows">
+     2.4.3. Showing vector sums with arrows
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relative-position-vectors">
+     2.4.4. Relative position vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-equations">
+     2.4.5. Vector equations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   2.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vectors-and-vpython">
+<span id="vec-vpy"></span><h1><span class="section-number">2. </span>Vectors and vPython<a class="headerlink" href="#vectors-and-vpython" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#arrow"><span class="std std-ref">Yellow arrow</span></a></p></li>
+<li><p><a class="reference internal" href="#create-triad"><span class="std std-ref">createTriad()</span></a></p></li>
+<li><p><a class="reference internal" href="#scal-mult"><span class="std std-ref">scalarMult()</span></a></p></li>
+<li><p><a class="reference internal" href="#vec-sum"><span class="std std-ref">twoVectorSum()</span></a></p></li>
+<li><p><a class="reference internal" href="#arrow-sum"><span class="std std-ref">Graphical vector addition</span></a></p></li>
+</ol>
+<p>This lesson covers two crucial portions of the class: the mathematical idea of a vector, and the programming tool called vPython. Let’s briefly summarize each of these in turn.</p>
+<p>The intuitive idea you should have for a <em>vector</em> is an arrow – something with a direction, and a size or scale. On the other hand, <em>scalars</em> are basically numbers, with no direction associated with them. Many of the physical quantities we will talk about in physics are best described as vectors, such as velocities, forces, momenta, and fields. You will see vector equations that relate these quantities. However, it is important to realize that these equations have a few important differences with equations made up only of scalars. Understanding these differences is crucial for a good grasp of physics concepts, so we will continually revisit this topic over the course of many lessons.</p>
+<p>There are many ways to describe a vector, and this lesson will hopefully give you a handle on these. First, you can go back to the idea of a vector as an arrow, and draw these on paper to see how to add or subtract them. This will be the idea behind “graphical vector addition”. This technique is great for giving you a rough idea of the size and direction of a vector. We will use graphical vector addition frequently in this context – for example, when we draw the “free body diagram” of the forces acting on an object in <a class="reference internal" href="L12_Solving_force_problems.html#force-prob"><span class="std std-ref">Lesson 13 (Solving force problems)</span></a>. We will also draw the “vector diagram” of many vectors, in order to find their “vector components”. This is the second, and more mathematical, way of describing vectors. The components of a vector tell you how much of the vector is along each axis. This will also allow you to calculate the sum of multiple vectors. As a way to tie these two methods together, you will also see how to draw vectors using programming techniques. In particular, you will see that the codes using the mathematical relations gives you the graphical addition of arrows we would expect.</p>
+<p>To help understand these and many other physics concepts, we will use the vPython package. Often in a programming language, the command of the language must be supplemented to make more features available. The 3D graphics package vPython for the Python programming language was created by David Scherer while he was a student at Carnegie Mellon University. It has since been modified and developed by many others into a vibrant community. vPython allows you to create and animate 3D objects, and to navigate around in a 3D scene by spinning and zooming, using the mouse. vPython will build upon your new Python programming experience, and hopefully you will have fun doing so!</p>
+<p>So why do we need vPython? Why can’t we just use the formulas and calculate things with them? My experience as a teacher is that many times, students see mathematical equations as a fancy machine that you put numbers into, then you get other numbers out of. What do they mean? “Well, my roommate (or a supplemental instructor, or somebody in my platoon) told me to do it this way, and…” This means you don’t really get it at all. <em>Learning is doing. Full stop.</em> My goal with using vPython is that you <em>understand</em> physics a little better than you did when started the class.</p>
+<div class="warning admonition">
+<p class="admonition-title">How to read these lessons</p>
+<p>This is the first lesson where we start dealing with calculations of physical quantities. I emphasized at the beginning of Lesson 01 that these lessons are meant to be interactive, and it is the same here: <em>do not read these notes like a novel</em>. What I mean by that is</p>
+<ul class="simple">
+<li><p>You should have a pencil, paper, and a calculator by your side before you even start reading the lesson.</p></li>
+<li><p>As you go through, try the problems listed, and check to see if you can do them. If not, come to class with a question about your confusion.</p></li>
+<li><p>Don’t skip parts just because you don’t understand them! Make a decent effort to carefully read the text, and try the problems. Note this does <em>not</em> mean to get bogged down. If you devote a good deal of time, and it still does not make sense, come and ask me, either in class or EI. But at least give it the ol’ college try.</p></li>
+</ul>
+<p>I will confess that I often don’t follow my own advice, and I frequently come to regret it. I can get away with it when reading about material I already understand fairly well, but when I am trying to learn something new, I usually crash and burn because I have not been methodically working through the concepts. Then I have to start over, and read it again. And again. And again. If learning was easy, everybody would do it.</p>
+</div>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Describe the difference between a scalar and a vector.</p></li>
+<li><p>Describe the effect of scalar multiplication of a vector.</p></li>
+<li><p>Write a vector in proper unit vector form, given its components.</p></li>
+<li><p>Add together multiple vectors graphically.</p></li>
+<li><p>Add together multiple vectors in unit vector form.</p></li>
+<li><p>Create a vPython object, and set its attributes.</p></li>
+</ul>
+</div>
+<div class="section" id="vectors">
+<h2><span class="section-number">2.2. </span>Vectors<a class="headerlink" href="#vectors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scalars-and-vectors">
+<h3><span class="section-number">2.2.1. </span>Scalars and vectors<a class="headerlink" href="#scalars-and-vectors" title="Permalink to this headline">¶</a></h3>
+<p>Throughout the lessons of this class, there will be links to simulations that others have created and placed on their websites. One good source for many of these is <a class="reference external" href="https://phet.colorado.edu/">PhET Interactive Simulations site</a>; I will refer to these simulations as “PhETs”. If you go to the site, you’ll notice there are simulations in other subject besides physics. To start off, the following PhET may be helpful as you work through this lesson. It allows you to play around with vectors, and illustrates many of the concepts discussed in this lesson. Run the next cell to start it. The application has several parts:</p>
+<ul class="simple">
+<li><p>“Explore 1D” – Here, you can add up to three vectors, either all along the <span class="math notranslate nohighlight">\(x\)</span> axis, or all along the <span class="math notranslate nohighlight">\(y\)</span> axis. You can stretch or shrink the vectors, and see how the vector sum changes.</p></li>
+<li><p>“Explore 2D” – This is the same idea in two dimensions. Here, for all the vectors (including the vector sum), you can see either magnitude and direction of each vector, or else the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> vector components, represented in different ways for each vector.</p></li>
+<li><p>“Lab” – Add up as many vectors of the same color as you wish. Each of the individual vectors can be changed in magnitude and direction by clicking and dragging the vector.</p></li>
+<li><p>“Equations” – Experiment with various vector equations, given at the top of the screen, relating three vectors <span class="math notranslate nohighlight">\({\vec a}, {\vec b}\)</span>, and <span class="math notranslate nohighlight">\({\vec c}\)</span>. Change the size of the vectors by selecting “Base Vectors” on the side.</p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Now let’s get into the nitty gritty, and talk about scalars vs. vectors. Many of the things we do in physics will depend on the idea of a “vector”, so it is very important to understand the difference between a vector and a “scalar”. Intuitively, a scalar is just a number. If we put units on a scalar, some examples would be the time of day you are reading this, and the temperature in the room where you are reading it. A vector, on the other hand, can be best thought of as an arrow – a vector is a quantity that has both magnitude (size) and direction. The velocity of an object is a vector, since it has a size (how fast are you moving?) and a direction (which way are you moving?).</p>
+<p>To sum up, there are two basic mathematical quantities we will use this year in physics class:</p>
+<ol class="simple">
+<li><p><strong>Scalar:</strong> A number representing the size (or magnitude) of a quantity. Examples are mass, temperature, electric charge.</p></li>
+<li><p><strong>Vector:</strong> Intuitively, we can think of a vector as an arrow, which has both size and direction. Examples include velocity, acceleration, force.</p></li>
+</ol>
+<p>Whenever you see a symbol with an arrow sign above it, you should read it as a vector. Examples are the velocity vector <span class="math notranslate nohighlight">\({\vec v}\)</span> and the acceleration vector <span class="math notranslate nohighlight">\({\vec a}\)</span>. A symbol without an arrow sign is a scalar. Note that there is a scalar associated with every vector – namely, its size! So, when I talk about the momentum <em>vector</em>, I use the symbol <span class="math notranslate nohighlight">\({\vec p}\)</span>, but when I talk about the <em>scalar</em> magnitude of the momentum vector, I use <span class="math notranslate nohighlight">\(p\)</span> (or sometimes <span class="math notranslate nohighlight">\(|{\vec p}|\)</span>). Know the difference!</p>
+</div>
+<div class="section" id="scalar-multiplication">
+<span id="vec-vpy-scal-mult"></span><h3><span class="section-number">2.2.2. </span>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Permalink to this headline">¶</a></h3>
+<p>I will now draw representations of vectors as arrows. Each arrow will point in the same direction as the vector, and I will scale the arrow to show the size of the vector. It is this last part you have to be careful about – many different kinds of quantities are vectors, so don’t get too wrapped up in the idea of “magnitude = length”. This is why I used the word <em>scale</em> before. I can draw an arrow to represent a force vector, where 1 centimeter of arrow length on my drawing denotes 10.0 N of force magnitude.</p>
+<div class="warning admonition">
+<p class="admonition-title">Vectors are not just distances</p>
+<p>The reason I emphasize this here is that sometimes you will draw multiple vectors – representing <em>different</em> quantities – in the same problem, and if you confuse every vector with a length (or each other!), you will have problems. One place I see this a lot is when doing projectile motion problems <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">(Lesson 07)</span></a>. Here, you may have an initial velocity vector to show how a cannonball is launched from a cannon, and a displacement vector giving its final position relative to its start. These vectors are <em>not</em> the same! They are generally not in the same direction, either. However, I sometimes see students calculate the final position of a cannonball using the initial velocity. Projectiles do not move in straight lines, because of the gravitational field of the Earth. Confusing your vectors will lead to this false conclusion.</p>
+</div>
+<p>Vectors can be multiplied by a scalar, which you can think about as “stretching” the vector if the scalar is positive, along with flipping the vector’s direction if the scalar is negative. Thus, <strong>scalar multiplication</strong> can either change the size of the vector</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig01a-Scalar_multiplication_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig01a-Scalar_multiplication_small.png" src="../_images/INT_AY20_MP1_L04_Fig01a-Scalar_multiplication_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Scalar multiplication by a positive scalar</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>or change the direction by reversing its direction.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig01b-Sign_multiplication_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig01b-Sign_multiplication_small.png" src="../_images/INT_AY20_MP1_L04_Fig01b-Sign_multiplication_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Multiplying a vector by <span class="math notranslate nohighlight">\(-1\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the first figure, the size of the vector <span class="math notranslate nohighlight">\(2 {\vec C}\)</span> is twice that of the original vector <span class="math notranslate nohighlight">\({\vec C}\)</span>, but the direction is unchanged; in the second, <span class="math notranslate nohighlight">\(-{\vec C}\)</span> has the same length as <span class="math notranslate nohighlight">\({\vec C}\)</span>, but opposite direction.</p>
+<p>You will see many examples of such scalar multiplication of vectors in physics. In <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler"><span class="std std-ref">Lesson 03 (velocity and the Euler method)</span></a>, for example, you will see this with the definition of average velocity:</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{\Delta {\vec r}}{\Delta t}
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> is the vector change in position (called the <em>displacement</em> vector), while <span class="math notranslate nohighlight">\(\Delta t\)</span> is the scalar change in time. This is just scalar multiplication in disguise, since</p>
+<div class="math notranslate nohighlight">
+\[ 
+    {\vec v}_{avg} = \biggl( \frac{1}{\Delta t} \biggr) (\Delta {\vec r})
+\]</div>
+<p>Thus, the average velocity vector is found by scalar multiplication of the displacement vector <span class="math notranslate nohighlight">\({\vec r}\)</span> by the scalar <span class="math notranslate nohighlight">\((1 / \Delta t)\)</span> – the average velocity of an object is just the displacement of the object rescaled.</p>
+</div>
+<div class="section" id="vector-addition">
+<span id="vec-vpy-vec-add"></span><h3><span class="section-number">2.2.3. </span>Vector addition<a class="headerlink" href="#vector-addition" title="Permalink to this headline">¶</a></h3>
+<p>We wil often add vectors together; for example, we will see in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton-second-law"><span class="std std-ref">Lesson 11</span></a>, with Newton’s laws of motion, that the acceleration of an object depends on the vector sum of all the forces acting on it. Pictorially, vectors are added by placing them “head” (or “tip”) to “tail”. To get the vector <span class="math notranslate nohighlight">\({\vec A} + {\vec B}\)</span>:</p>
+<ul class="simple">
+<li><p>Draw the first vector, <span class="math notranslate nohighlight">\({\vec A}\)</span></p></li>
+<li><p>Draw the second vector, <span class="math notranslate nohighlight">\({\vec B}\)</span>, with the tail of <span class="math notranslate nohighlight">\({\vec B}\)</span> at the tip of <span class="math notranslate nohighlight">\({\vec A}\)</span></p></li>
+<li><p>The resultant vector <span class="math notranslate nohighlight">\({\vec A} + {\vec B}\)</span> is drawn from the tail of <span class="math notranslate nohighlight">\({\vec A}\)</span> to the tip of <span class="math notranslate nohighlight">\({\vec B}\)</span></p></li>
+<li><p>Note the order we add the vectors doesn’t matter!</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">Moving vectors</p>
+<p>Notice that we can pick up and move vectors around, as long as we don’t change their scale or direction! You often need to do this when using graphical vector addition.</p>
+</div>
+<p>An example of this process is shown in the figure below.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig02-Graphical_vector_addition_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig02-Graphical_vector_addition_small.png" src="../_images/INT_AY20_MP1_L04_Fig02-Graphical_vector_addition_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Adding two vectors graphically</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Based on the figure below, which of the following vector equations is correct?</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec M} + {\vec N} = {\vec S}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec M} + {\vec N} = {\vec T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec M} + {\vec T} = {\vec N}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec S} + {\vec T} = {\vec M}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec S} + {\vec T} = {\vec N}\)</span></p></li>
+</ol>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig03-Graphical_vector_addition_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig03-Graphical_vector_addition_small.png" src="../_images/INT_AY20_MP1_L04_Fig03-Graphical_vector_addition_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Adding two vectors graphically</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em>
+The correct answer is <span class="math notranslate nohighlight">\({\vec M} + {\vec N} = {\vec S}\)</span>. Notice you can “pick up” <span class="math notranslate nohighlight">\({\vec N}\)</span> and move it to the top of the picture, as long as it points in the same direction and has the same length. Then, you would start at the tail of <span class="math notranslate nohighlight">\({\vec M}\)</span> (which is at the same point as the tail of <span class="math notranslate nohighlight">\({\vec S}\)</span>, travel to its tip, which is now at the tail of <span class="math notranslate nohighlight">\({\vec N}\)</span>. Finally, moving to the tip of <span class="math notranslate nohighlight">\({\vec N}\)</span>, you also arrive at the tip of <span class="math notranslate nohighlight">\({\vec S}\)</span>, so the vector equation is satisfied.</p>
+</div>
+<p>Just like vector addition, we will frequently subtract vectors as well. In fact, you will see this often, starting in <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler-create-mot-delta"><span class="std std-ref">Lesson 03</span></a>, where the operation of “difference” (or <span class="math notranslate nohighlight">\(\Delta\)</span>) is defined. Thus, finding the average displacement means subtracting the initial position <span class="math notranslate nohighlight">\({\vec r}_i\)</span> from the final position <span class="math notranslate nohighlight">\({\vec r}_f\)</span>. Vector subtraction can be rewritten as vector addition.</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec A} - {\vec B} = {\vec A} + (-{\vec B})
+\]</div>
+<p>To get the vector <span class="math notranslate nohighlight">\({\vec A} - {\vec B}\)</span>:</p>
+<ul class="simple">
+<li><p>Draw the first vector, <span class="math notranslate nohighlight">\({\vec A}\)</span></p></li>
+<li><p>Draw the second vector, <span class="math notranslate nohighlight">\({\vec B}\)</span>, with reversed direction to make it negative, with the tail of <span class="math notranslate nohighlight">\(-{\vec B}\)</span> at the tip of <span class="math notranslate nohighlight">\({\vec A}\)</span></p></li>
+<li><p>The resultant vector <span class="math notranslate nohighlight">\({\vec A} - {\vec B}\)</span> is drawn from the tail of <span class="math notranslate nohighlight">\({\vec A}\)</span> to the tip of <span class="math notranslate nohighlight">\(-{\vec B}\)</span></p></li>
+</ul>
+<p>This process is shown in the figure below.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig04-Vector_subtraction_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig04-Vector_subtraction_small.png" src="../_images/INT_AY20_MP1_L04_Fig04-Vector_subtraction_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Subtracting two vectors graphically</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Based on the figure below, how would you express the red vector <span class="math notranslate nohighlight">\({\vec T}\)</span> in terms of the vectors <span class="math notranslate nohighlight">\({\vec M}\)</span> and <span class="math notranslate nohighlight">\({\vec N}\)</span>?</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec M} + {\vec N} = {\vec T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec M} - {\vec N} = {\vec T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec N} - {\vec M} = {\vec T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec M} = {\vec T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec N} = {\vec T}\)</span></p></li>
+</ol>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig05-Vector_subtraction_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig05-Vector_subtraction_small.png" src="../_images/INT_AY20_MP1_L04_Fig05-Vector_subtraction_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">What is the correct vector equation for <span class="math notranslate nohighlight">\({\vec T}\)</span>?</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The correct answer is <span class="math notranslate nohighlight">\({\vec M} - {\vec N} = {\vec T}\)</span>. Notice that one way to see this is to add the vector <span class="math notranslate nohighlight">\({\vec N}\)</span> to both sides of the equation, giving <span class="math notranslate nohighlight">\({\vec M} = {\vec N} + {\vec T}\)</span>. By using the tip-to-tail method outlined above, you can see this is a correct vector equation. Adding and subtracting vectors in a vector equation is an acceptable mathematical operation, just like it is for scalars.</p>
+</div>
+<p>Hopefully you find the graphical representation of vectors to be helpful. I often will draw the vectors when working on a problem, just as a double-check to make sure my answers make sense. As mentioned earlier, this will also be part of the problem-solving procedure we use many times throughout the year, such as with forces and Newton’s 2nd law, or when adding electric field vectors together. Getting into the habit of having this thought process in the back of your head is a handy way of avoiding egregious mistakes.</p>
+</div>
+<div class="section" id="unit-vector-notation">
+<h3><span class="section-number">2.2.4. </span>Unit vector notation<a class="headerlink" href="#unit-vector-notation" title="Permalink to this headline">¶</a></h3>
+<p>Drawing vectors as arrows can be helpful, but it is not the entire method. To get accurate results, we need to bring mathematical calculations into the picture. This will be done using “vector components”, which uniquely give a vector in terms of a list of numbers. This method is powerful, and reflects a quantum leap in the study of science that started with the ideas of Rene Descartes in the 17th century.</p>
+<p>As a way of introducing vector components, we will first give a brief history of the grid system of Manhattan. In 1811, a commission established a grid pattern for future roads built on Manhattan island, with avenues running roughly north-south, and streets going east-west. This urban plan helped New York City deal with its exponential growth in population during the 19th century; the five boroughs together were the largest city in the US by 1835. If we ignore some of the rough spots in the grid (due to either history, or living on an island that is not exactly a rectangle!), you can give the position of any street in Manhattan by two numbers: street and avenue. Throw in a height, and you have three numbers giving any spot in the island’s airspace.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/197px-NYC-GRID-1811.png"><img alt="../_images/197px-NYC-GRID-1811.png" src="../_images/197px-NYC-GRID-1811.png" style="width: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">The Commissioners Map of the City of New York, 1807 (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:NYC-GRID-1811.png">source</a>)</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Suppose we start in front of the Guggenheim Museum (5th Ave &amp; 88th St) and walk to the Chrysler Building (3rd Ave &amp; 43rd St). Then, you sneak up to the 70th floor to see the gymnasium. How can we describe the walk from start to finish? No matter how you do it, you have gone back two avenues, down 45 streets, up 70 floors. This is your displacement vector, which we will define more formally in <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler-create-mot-delta"><span class="std std-ref">Lesson 03</span></a>. For now this is the straight-line vector between your starting and ending points, and is independent of the path you actually take. The idea behind unit vector notation is to uniquely describe a vector in a series of numbers, as done with trips in Manhattan; these numbers are called <strong>vector components</strong>.</p>
+<p>There are several ways to mathematically describe a vector. For now, we use <strong>unit vector notation</strong>, which lists how much of a vector is along each of the three coordinate axes <span class="math notranslate nohighlight">\(x, y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>. In unit vector notation, this vector is written as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec A} = A_x {\hat x} + A_y {\hat y} + A_z {\hat z}
+\]</div>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig06-Vector_components_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig06-Vector_components_small.png" src="../_images/INT_AY20_MP1_L04_Fig06-Vector_components_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Dividing a generic vector into three component vectors</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>The three <em>scalars</em> <span class="math notranslate nohighlight">\(A_x, A_y,\)</span> and <span class="math notranslate nohighlight">\(A_z\)</span> are the vector components of the vector <span class="math notranslate nohighlight">\({\vec A}\)</span>. The directions are given by the three “unit vectors” <span class="math notranslate nohighlight">\({\hat x}, {\hat y},\)</span> and <span class="math notranslate nohighlight">\({\hat z}\)</span>. The vector <span class="math notranslate nohighlight">\({\hat x}\)</span> is a vector of size 1 (“unit” size) that points in the <span class="math notranslate nohighlight">\(+x\)</span> direction. Similarly, <span class="math notranslate nohighlight">\({\hat y}\)</span> points in the <span class="math notranslate nohighlight">\(+y\)</span> direction and <span class="math notranslate nohighlight">\({\hat z}\)</span> points in the <span class="math notranslate nohighlight">\(+z\)</span> direction, both with size 1. If <span class="math notranslate nohighlight">\({\hat x}\)</span> has a size of 1 and points in the <span class="math notranslate nohighlight">\(+x\)</span> direction, then <span class="math notranslate nohighlight">\(3 {\hat x}\)</span> also points in the <span class="math notranslate nohighlight">\(+x\)</span> direction but has size of 3, and <span class="math notranslate nohighlight">\(-2 {\hat x}\)</span> has size of 2, but points in the <span class="math notranslate nohighlight">\(-x\)</span> direction.
+We will introduce unit vectors more formally in <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir-unit-vec"><span class="std std-ref">Lesson 07 (vector magnitude and direction)</span></a>.</p>
+</div>
+</div>
+<div class="section" id="vpython">
+<h2><span class="section-number">2.3. </span>vPython<a class="headerlink" href="#vpython" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="your-first-vpython-object">
+<span id="vec-vpy-arrow"></span><h3><span class="section-number">2.3.1. </span>Your first vPython object<a class="headerlink" href="#your-first-vpython-object" title="Permalink to this headline">¶</a></h3>
+<p>The last picture above may be a little confusing, since it is a flat representation of a three-dimensional object. To get a better feel for vectors, it is time to learn about the vPython package, and use it to create arrows to represent vectors. As mentioned at the beginning of this lesson, vPython allows you to create and animate 3D objects, and to navigate around in a 3D scene by spinning and zooming, using the mouse. If you go to the site <a class="reference external" href="https://vpython.org/">vpython.org</a>, you can find examples and documentation that may be helpful; a <a class="reference external" href="https://www.glowscript.org/docs/VPythonDocs/VisualIntro.html">quick introduction</a> is also available.</p>
+<div class="warning admonition">
+<p class="admonition-title">Python vs. vPython</p>
+<p>If you pay attention, you will notice I say “Python” when referring to the programming language, and “vPython” when I start talking about creating visual simulations. One advantage of using either of the sites <a class="reference external" href="http://Glowscript.org">Glowscript.org</a> or <a class="reference external" href="http://Trinket.io">Trinket.io</a> is that we don’t have to worry too much about the difference between Python and vPython. Since vPython is added on to Python, anything that works in Python will work in vPython. However, if you create a new Trinket using your account on that website, make sure that you select “Glowscript” when you want to create a program with vPython in it. This will be the same as if you are using an account on <a class="reference external" href="http://Glowscript.org">Glowscript.org</a>, just with a different user interface.</p>
+<p>Also, when you create a new Glowscript Trinket, you have two options of how you write the program. I will always use the “Python” option, and I recommend you do, too. This will get you used to writing code as it appears in these lessons.</p>
+</div>
+<p>Whenever you create visual simulations in vPython, you are creating <strong>objects</strong>. In many programming languages, special types of procedures and functions are created that exhibit a given list of properties, or <strong>attributes</strong>. The first vPython object we will use is <code class="docutils literal notranslate"><span class="pre">arrow</span></code>, and just like the names says, this will be a representation of an arrow. Its possible attributes include its position, length, direction, and color. As you go through this lesson, you will create <code class="docutils literal notranslate"><span class="pre">arrow</span></code> objects to show various aspects of vector math. So let’s get started! The program below tells the computer to create an arrow. Run the program, then we will talk about what it is doing in detail.</p>
+<p id="arrow"><a class="reference internal" href="#vec-vpy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/5c4d338444?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>This program creates an object <code class="docutils literal notranslate"><span class="pre">A</span></code> which is a vPython <code class="docutils literal notranslate"><span class="pre">arrow</span></code>. We will get back to its attributes in a moment, but let’s first talk about how to play around with our first vPython object. After you run the program, and get the resulting arrow in the right-hand window, hold down both mouse buttons, and then move the mouse on this scene. You should see that you are able to zoom the arrow into and out. Now try holding down only the right mouse button, then move the mouse. You should find that you are able to rotate around the arrow, because of the change in the sphere’s shading; vPython is creating a light source at a specific point which is illuminating the sphere. Note that you are changing your viewpoint (like moving a camera) rather than changing the position of the sphere. You are zooming and rotating the camera, not the sphere.</p>
+<p>Now back to the arrow and the attributes it was assigned. Its position <code class="docutils literal notranslate"><span class="pre">A.pos</span></code> is the origin, or the vector <code class="docutils literal notranslate"><span class="pre">&lt;0,</span> <span class="pre">0,</span> <span class="pre">0&gt;</span></code>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Object attributes</p>
+<p>If I have an object <code class="docutils literal notranslate"><span class="pre">object</span></code> with attribute <code class="docutils literal notranslate"><span class="pre">attribute</span></code>, then I refer to the attribute of the object as <code class="docutils literal notranslate"><span class="pre">object.attribute</span></code>. As we will see later, this is exactly how vPython uses it as well, so if we want to change the value of the attribute, this is how we will do so in the code.</p>
+</div>
+<p>Here, I am using an alternative method of showing the vectors, which is what vPython uses itself. The vector <code class="docutils literal notranslate"><span class="pre">&lt;-2,</span> <span class="pre">3,</span> <span class="pre">0&gt;</span></code>, for example, is the same thing as the vector</p>
+<div class="math notranslate nohighlight">
+\[
+    -2 {\hat x} + 3 {\hat y} + 0 {\hat z}
+\]</div>
+<p>in unit vector notation. If you ever print out a vector in vPython, the result will be three numbers (in <span class="math notranslate nohighlight">\(x, y, z\)</span> order) with the angled brackets, so I wanted you to know how to map this over to unit vector notation.</p>
+<p>Back to positions and axes. The position of the <em>tail</em> of a vector <code class="docutils literal notranslate"><span class="pre">A</span></code> in vPython is given by <code class="docutils literal notranslate"><span class="pre">A.pos</span></code>. The attribute <code class="docutils literal notranslate"><span class="pre">A.axis</span></code> describes how to get to the <em>tip</em> of the vector, when starting from the tail. Thus, the three-dimensional position of the tip of the vector is the vector sum <code class="docutils literal notranslate"><span class="pre">A.pos</span> <span class="pre">+</span> <span class="pre">A.axis</span></code>.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L05_Fig01-Arrow_attributes.png"><img alt="../_images/INT_AY20_MP1_L05_Fig01-Arrow_attributes.png" src="../_images/INT_AY20_MP1_L05_Fig01-Arrow_attributes.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Finding the location of the tip of an <code class="docutils literal notranslate"><span class="pre">arrow</span></code> object in vPython</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>This is an key conceptual point, so let’s write it out mathematically, just to make sure you get the idea. There is a special point called the “origin”, which has coordinate <span class="math notranslate nohighlight">\((0, 0, 0)\)</span>. The tail of the arrow (i.e. the point <code class="docutils literal notranslate"><span class="pre">A.pos</span></code>) will have a position vector <span class="math notranslate nohighlight">\({\vec r}_{tail}\)</span> given relative to the origin; the same thing is true for the tip of the arrow, with position <span class="math notranslate nohighlight">\({\vec r}_{tip}\)</span>. Then the arrow object <code class="docutils literal notranslate"><span class="pre">A</span></code> in vPython represents the mathematical vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, so that starting from the tail and moving along <span class="math notranslate nohighlight">\({\vec A}\)</span>, you reach the tip. As an equation, this says</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r}_{tail} + {\vec A} = {\vec r}_{tip}
+\]</div>
+<p>In other words, starting at the origin, moving to the tail, and then moving along the vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, is exactly the same as if you start from the origin and move straight to the arrow’s tip. Written another way, the vector <span class="math notranslate nohighlight">\({\vec A}\)</span> is just the difference between the tip and tail position vectors, or</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec A} = {\vec r}_{tip} - {\vec r}_{tail}
+\]</div>
+<p>We are going to see variations of this equation throughout the year, so I emphasize it now. This is an example of the vector differences we saw earlier in this lesson.</p>
+<p>Continuing on, the object <code class="docutils literal notranslate"><span class="pre">A</span></code> has two other attributes. Hopefully <code class="docutils literal notranslate"><span class="pre">A.color</span></code> is obvious, but note the way it is defined: <em>not</em> <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">=</span> <span class="pre">yellow</span></code>, but <code class="docutils literal notranslate"><span class="pre">color</span> <span class="pre">=</span> <span class="pre">color.yellow</span></code>. More importantly, we have given the size and direction of the arrow as the attribute <code class="docutils literal notranslate"><span class="pre">A.axis</span></code>. This gives the vector components of the <code class="docutils literal notranslate"><span class="pre">arrow</span></code> object, which way it points starting from the tail at <code class="docutils literal notranslate"><span class="pre">A.pos</span></code>. Think of these numbers as the streets, avenues, and heights of the Manhattan example.</p>
+<p>When you are looking at an object created in vPython (before you move it around as described above), there are specific directions for each of the three coordinate axes <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>. Specifically, the <span class="math notranslate nohighlight">\(+x\)</span> axis points to the right of the screen, the <span class="math notranslate nohighlight">\(+y\)</span> axis points towards the top of the screen, and the <span class="math notranslate nohighlight">\(+z\)</span> axis points out of the screen, directly towards you. The three negative axes point in the opposite directions to those just described. These axes are shown in the figure below.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04-Fig09-Coordinate-axes_small.png"><img alt="../_images/INT_AY20_MP1_L04-Fig09-Coordinate-axes_small.png" src="../_images/INT_AY20_MP1_L04-Fig09-Coordinate-axes_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Coordinate axes in vPython</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>The program below gives a three-dimensional representation of the coordinate axes in vPython. The procedure <code class="docutils literal notranslate"><span class="pre">createTriad()</span></code> creates arrows <code class="docutils literal notranslate"><span class="pre">xArr</span></code>, <code class="docutils literal notranslate"><span class="pre">yArr</span></code>, and <code class="docutils literal notranslate"><span class="pre">zArr</span></code>, each pointing with length 1 along one of the coordinate axes.</p>
+<div class="warning admonition">
+<p class="admonition-title">Variable names</p>
+<p>The names of the variables used in functions do not have to be the same as those given to the returned variables. It may be useful to actually call them something different, so you know when you are using which one.</p>
+</div>
+<p id="create-triad"><a class="reference internal" href="#vec-vpy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/fa2065e65a?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Thus, the length and direction of the arrow <code class="docutils literal notranslate"><span class="pre">A</span></code> from the previous program are described by its three vector components in <code class="docutils literal notranslate"><span class="pre">A.axis</span></code>: 2 units to the right (<span class="math notranslate nohighlight">\(+x\)</span> direction), 3 units upward (<span class="math notranslate nohighlight">\(+y\)</span> direction), and 1 unit “into” the screen (<span class="math notranslate nohighlight">\(-z\)</span> direction). For the example given above, where you traveled from the Guggenheim Museum to the Chrysler Building gymnasium, we could write the total trip as</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec A} = (-2 \ \text{ave.}) {\hat x} + (-45 \ \text{st.})  {\hat y} + (+70 \ \text{fl.}) {\hat z}
+\]</div>
+<p>Notice that this is just a combination of scalar multiplication for each of the three terms, along with a vector sum of the pieces along each axis. Thus, we can think of the vector <span class="math notranslate nohighlight">\({\vec A}\)</span> as the sum of three vectors: <span class="math notranslate nohighlight">\(A_x {\hat x}\)</span> in the <span class="math notranslate nohighlight">\(\pm x\)</span> direction, <span class="math notranslate nohighlight">\(A_y {\hat y}\)</span> in the <span class="math notranslate nohighlight">\(\pm y\)</span> direction, and <span class="math notranslate nohighlight">\(A_z {\hat z}\)</span> in the <span class="math notranslate nohighlight">\(\pm z\)</span> direction. So, speaking figuratively, you first “move” an amount <span class="math notranslate nohighlight">\(A_x\)</span> along the <span class="math notranslate nohighlight">\(x\)</span> axis, then an amount <span class="math notranslate nohighlight">\(A_y\)</span> on the <span class="math notranslate nohighlight">\(y\)</span> axis, and finally <span class="math notranslate nohighlight">\(A_z\)</span> along the <span class="math notranslate nohighlight">\(z\)</span> axis.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Which of the following correctly illustrates the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of vector <span class="math notranslate nohighlight">\({\vec A}\)</span>?</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04_Fig07-Vector_components_small.png"><img alt="../_images/INT_AY20_MP1_L04_Fig07-Vector_components_small.png" src="../_images/INT_AY20_MP1_L04_Fig07-Vector_components_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Combining graphical vector addition with the components of unit vector notation</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Remember that vector addition is always tip-to-tail. Since we are adding together <span class="math notranslate nohighlight">\({\vec A}_x = A_x {\hat x}\)</span> and <span class="math notranslate nohighlight">\({\vec A}_y = A_y {\hat y}\)</span> to get the total vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, then the tails of <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec A}_x\)</span> must be at the same point, and similarly for the tips of <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec A}_y\)</span>. Thus, the correct answer is <span class="math notranslate nohighlight">\(C\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem:</p>
+<p>A person’s velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> is 4.00 m/s in the north direction, 7.00 m/s in the east direction, and 2.50 m/s straight down. How would you express the velocity in unit vector notation? Select the correct choice below.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec v} = (4.00\ \textrm{m/s}) {\hat x} + (7.00\ \textrm{m/s}) {\hat y} + (2.50 \ \textrm{m/s}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec v} = (7.00\ \textrm{m/s}) {\hat x} + (4.00\ \textrm{m/s}) {\hat y} + (-2.50 \ \textrm{m/s}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec v} = (7.00\ \textrm{m/s}) {\hat x} + (11.0\ \textrm{m/s}) {\hat y} + (2.50 \ \textrm{m/s}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec v} = (11.00\ \textrm{m/s}) {\hat x} + (4.00\ \textrm{m/s}) {\hat y} + (-2.50 \ \textrm{m/s}) {\hat z}\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The usual convention is that east is in the <span class="math notranslate nohighlight">\(+x\)</span> direction, and <span class="math notranslate nohighlight">\(+y\)</span> direction is taken to be north, if we are looking down at the ground. Note this would mean that <em>up</em> is the <span class="math notranslate nohighlight">\(+z\)</span> direction! Using this convention, then the correct answer is <span class="math notranslate nohighlight">\({\vec v} = (7.00\ \textrm{m/s}) {\hat x} + (4.00\ \textrm{m/s}) {\hat y} + (-2.50 \ \textrm{m/s}) {\hat z}\)</span>, since downward is in the <span class="math notranslate nohighlight">\(-z\)</span> direction.</p>
+</div>
+<p>Now, suppose we start with the resultant vector from the last question,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v} = (7.00\ \textrm{m/s}) {\hat x} + (4.00\ \textrm{m/s}) {\hat y} + (-2.50 \ \textrm{m/s}) {\hat z}
+\]</div>
+<p>In vPython, this vector would be defined (and then printed out) by</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mf">7.00</span><span class="p">,</span> <span class="mf">4.00</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Thus, the components are listed in the usual order <span class="math notranslate nohighlight">\(x, y, z\)</span>. As mentioned previously, if you ran this two-line program, vPython would print out the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> as <code class="docutils literal notranslate"><span class="pre">&lt;7,</span> <span class="pre">4,</span> <span class="pre">-2.5&gt;</span></code>.</p>
+</div>
+<div class="section" id="scalar-multiplication-with-vector-components">
+<h3><span class="section-number">2.3.2. </span>Scalar multiplication with vector components<a class="headerlink" href="#scalar-multiplication-with-vector-components" title="Permalink to this headline">¶</a></h3>
+<p>Now, let’s see how scalar multiplication and vector addition works when we use numerical vector components. In fact, we have already been doing this! The vector <span class="math notranslate nohighlight">\(2 {\hat x}\)</span> simply takes the vector <span class="math notranslate nohighlight">\({\hat x}\)</span> pointing in the <span class="math notranslate nohighlight">\(+x\)</span> direction  with a length of 1, and multiplies it by 2.</p>
+<p>Here is slightly more involved example.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Given the vector <span class="math notranslate nohighlight">\({\vec A}\)</span> below, what is the unit vector notation for the vector <span class="math notranslate nohighlight">\({\vec B} = 4{\vec A}\)</span>?</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec A} = 2 {\hat x} + 3 {\hat y} - {\hat z}
+\]</div>
+</div>
+<p>Instead of giving the answer here, let’s do the same operation in vPython, and see how it works. You can then verify your answer to the previous problem! The function <code class="docutils literal notranslate"><span class="pre">scalarMult()</span></code> below takes the arguments <code class="docutils literal notranslate"><span class="pre">k</span></code> and <code class="docutils literal notranslate"><span class="pre">vec</span></code>. The function then multiplies the scalar <code class="docutils literal notranslate"><span class="pre">k</span></code> by the vector <code class="docutils literal notranslate"><span class="pre">A</span></code> to get a new vector <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">*</span> <span class="pre">A</span></code>, which is what it returns. After you have solved the problem above, run the program below to confirm your answer.</p>
+<p>Notice the way that this scalar multiplication is done, by increasing the size of <code class="docutils literal notranslate"><span class="pre">A.axis</span></code>. Remember that <code class="docutils literal notranslate"><span class="pre">A.axis</span></code> is the attribute that determines how long the vector is, and which direction it points, using a vPython <code class="docutils literal notranslate"><span class="pre">vector</span></code>. If you change the size of all the vector components of <code class="docutils literal notranslate"><span class="pre">A.axis</span></code> by scalar multiplication, the <code class="docutils literal notranslate"><span class="pre">arrow</span></code> will change size by the same scale. This is different than <code class="docutils literal notranslate"><span class="pre">A.pos</span></code>, which determines the position of the arrow’s tail.</p>
+<p id="scal-mult"><a class="reference internal" href="#vec-vpy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/e1ffa860d5?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In <a class="reference internal" href="L25_Electric_fields.html#elec-field"><span class="std std-ref">Lesson 25</span></a>, you will see the concept of an electric field. Suppose you have a charged particle with charge <span class="math notranslate nohighlight">\(q\)</span> (units of coulombs, or “C”) placed in an electric field <span class="math notranslate nohighlight">\({\vec E}\)</span> (units of newtons/couloumb, or “N/C”). Then the electrostatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> (units of newtons, or “N”) on the charge, due to this field, will be</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_e = q {\vec E}
+\]</div>
+<p>This is just scalar multiplication, as we have just discussed.</p>
+<ol class="simple">
+<li><p>Assume that a charge is <span class="math notranslate nohighlight">\(+2.50\)</span> C is placed in an electric field given by <span class="math notranslate nohighlight">\({\vec E} = (-5.25 \textrm{ N/C}) {\hat x} + (1.40 \textrm{ N/C}) {\hat y} + (3.75 \textrm{ N/C}) {\hat z}\)</span>. What is the electrostatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> on the charge, in unit vector notation? Be sure to include the proper units!</p></li>
+<li><p>Use the same electric field as the previous problem, but now assume that the charge is <span class="math notranslate nohighlight">\(-17.3\)</span> C. What is the electrostatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> on the charge, in unit vector notation?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec F}_e = (-13.1 \textrm{ N}) {\hat x} + (3.50 \textrm{ N}) {\hat y} + (9.38 \textrm{ N}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec F}_e = (90.8 \textrm{ N}) {\hat x} + (-24.2 \textrm{ N}) {\hat y} + (-64.9 \textrm{ N}) {\hat z}\)</span></p></li>
+</ol>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Vectors are not scalars</p>
+<p>It is vitally important that you do not confuse the scalar multiplication of vectors with the multiplication of two scalars! Do not confuse multiplying two <em>scalars</em> (<span class="math notranslate nohighlight">\(6 = 2 \times 3\)</span>) with the <em>scalar multiplication</em> of a scalar and a vector (<span class="math notranslate nohighlight">\({\vec B} = k{\vec A}\)</span>). They use the same symbol <code class="docutils literal notranslate"><span class="pre">*</span></code>, but mean two different things! If you are not careful about this, you can create errors in your Python code. For example, if you multiply two scalars, but vPython is expecting a vector, an error will be reported.</p>
+<p>Later in <a class="reference internal" href="L13_Scalar_product.html#scal-prod"><span class="std std-ref">Lesson 13</span></a>, I will introduce the scalar product, a mathematical operation where you take two vectors and get a scalar. Again, this is <em>not</em> multiplication, in the sense that you multiply two like objects, and get another one back. It is also different in that there are <em>many</em> vector pairs whose scalar product is zero!</p>
+<p>The gist of all this is you have to think about vectors differently than “ordinary” numbers, or scalars. Starting to do this now will save you a lot of grief down the road. This is why we use different notation: <span class="math notranslate nohighlight">\(A\)</span> is a scalar, <span class="math notranslate nohighlight">\({\vec A}\)</span> is a vector.</p>
+</div>
+<p>Note, though, that its size has increased in every direction – it is twice as thick as well! To avoid this issue for very long vectors, we can set the arrow attribute <code class="docutils literal notranslate"><span class="pre">shaftwidth</span></code>. Then only the vector’s length changes with changing axis, but not its width. An example of this is shown in the code below, comparing two arrows with the same length, but different shaftwidths.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Try these commands in a vPython program; the positions of the arrows are shifted, so you can more easily see the difference between the objects. This shift is accomplished by using the attribute <code class="docutils literal notranslate"><span class="pre">pos</span></code> in the lines defining the two vectors.</p>
+<p>To sum up, here is a list of all the attributes you have covered for arrow objects.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">axis</span></code></p></td>
+<td><p>Vector from tail to tip of arrow (vector)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">color</span></code></p></td>
+<td><p>Arrow color (<code>color.xxx</code> or vector)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">pos</span></code></p></td>
+<td><p>Position of arrow tail (vector)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">shaftwidth</span></code></p></td>
+<td><p>Determines arrow thickness (scalar)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L04-Fig10-Arrow-attributes_small.png"><img alt="../_images/INT_AY20_MP1_L04-Fig10-Arrow-attributes_small.png" src="../_images/INT_AY20_MP1_L04-Fig10-Arrow-attributes_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">The various attributes defining an <code class="docutils literal notranslate"><span class="pre">arrow</span></code> object in vPython</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.4. </span>Vector addition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-unit-vector-notation">
+<h3><span class="section-number">2.4.1. </span>Using unit vector notation<a class="headerlink" href="#using-unit-vector-notation" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have discussed both unit vector notation (one way to mathematically represent a vector), and drawn arrows to show vectors in vPython, let’s go back to Manhattan, so we can start talking about how to add multiple vectors. Consider the following situation:</p>
+<ol class="simple">
+<li><p>For a weekend trip, you take the train from RI into Penn Station (7th Av. and 31st St.)</p></li>
+<li><p>From there, you walk to Times Square (7th Av. and 44th St.)</p></li>
+<li><p>Finally, you meet a friend in front of the NY Public Library (5th Av. and 41st St.) for a hot dog and drink</p></li>
+<li><p>What is the total displacement in terms of streets and avenues?</p></li>
+</ol>
+<p>We can add up the changes in streets and avenues for each leg as shown in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Trip</p></th>
+<th class="head"><p>Change in avenues</p></th>
+<th class="head"><p>Change in streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Penn Station <span class="math notranslate nohighlight">\(\to\)</span> Times Square</p></td>
+<td><p>0</p></td>
+<td><p>+ 13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Times Square <span class="math notranslate nohighlight">\(\to\)</span> NY Public Library</p></td>
+<td><p>-2</p></td>
+<td><p>-3</p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p>-2</p></td>
+<td><p>+ 10</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notice what we have done here. Since avenues and streets are perpendicular, moving along a street only changes which avenue I am on, and vice versa. So, to find the total change in position, I can add the change in avenues first, then <em>separately</em> add the change in streets. These two numbers represent your displacement. This is why vector components are so powerful: whatever I do, I do them separately to the <span class="math notranslate nohighlight">\(x\)</span> components, then to the <span class="math notranslate nohighlight">\(y\)</span> components (and possibly the <span class="math notranslate nohighlight">\(z\)</span>, if they are there!), to get my final vector. This is because the <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> axes are all perpendicular – moving along one of the axes does <em>not</em> change the values along the other two. If I represent my first vector as</p>
+<div class="math notranslate nohighlight">
+\[
+	\Delta{\vec r}_1 = (0 \ \text{ave.}) {\hat x} + (13 \ \text{st.})  {\hat y}
+\]</div>
+<p>and my second as</p>
+<div class="math notranslate nohighlight">
+\[
+	\Delta{\vec r}_2 = (-2 \ \text{ave.}) {\hat x} + (-3 \ \text{st.})  {\hat y}
+\]</div>
+<p>then the vector sum <span class="math notranslate nohighlight">\(\Delta {\vec r} = \Delta {\vec r}_1 + \Delta {\vec r}_2\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec r} = \Delta r_x {\hat x} + \Delta r_y {\hat y} = (\Delta r_{1, x} + \Delta r_{2, x}) {\hat x} + (\Delta r_{1, y} + \Delta r_{2, y}) {\hat y} = (-2 \ \text{ave.}) {\hat x} + (10 \ \text{st.})  {\hat y}
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Given two acceleration vectors (in units of centimeters per second squared, or “cm/s<span class="math notranslate nohighlight">\(^2\)</span>”)</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec a}_1 = (6.20\ \textrm{cm/s}^2) {\hat x} + (-7.11 \ \textrm{cm/s}^2) {\hat y} + (2.63\ \textrm{cm/s}^2) {\hat z}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+	{\vec a}_2 = (-4.42\ \textrm{cm/s}^2) {\hat x} + (-3.25 \ \textrm{cm/s}^2) {\hat y} + (1.91\ \textrm{cm/s}^2) {\hat z}
+\]</div>
+<p>what is the resultant vector <span class="math notranslate nohighlight">\({\vec a}_{tot} = {\vec a}_1 + {\vec a}_2\)</span>?</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\((-10.6\ \textrm{cm/s}^2) {\hat x} + (-3.86 \ \textrm{cm/s}^2) {\hat y} + (4.54\ \textrm{cm/s}^2) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1.78\ \textrm{cm/s}^2) {\hat x} + (-3.86 \ \textrm{cm/s}^2) {\hat y} + (0.720\ \textrm{cm/s}^2) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1.78\ \textrm{cm/s}^2) {\hat x} + (-10.4 \ \textrm{cm/s}^2) {\hat y} + (4.54\ \textrm{cm/s}^2) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((10.6\ \textrm{cm/s}^2) {\hat x} + (10.4 \ \textrm{cm/s}^2) {\hat y} + (-0.720\ \textrm{cm/s}^2) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((10.6\ \textrm{cm/s}^2) {\hat x} + (-3.86 \ \textrm{cm/s}^2) {\hat y} + (0.720\ \textrm{cm/s}^2) {\hat z}\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec a}_{tot} = (1.78\ \textrm{cm/s}^2) {\hat x} + (-10.4 \ \textrm{cm/s}^2) {\hat y} + (4.54\ \textrm{cm/s}^2) {\hat z}\)</span></p>
+</div>
+<p>The next problem features solving for an unknown vector, starting from a vector equation. If you use addition and subtraction of vectors, you can solve this just like you would a scalar equation. However, you can <em>not</em> multiply or divide vectors!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you have two force vectors <span class="math notranslate nohighlight">\({\vec F}_A\)</span> and <span class="math notranslate nohighlight">\({\vec F}_B\)</span>, such that</p>
+<div class="math notranslate nohighlight">
+\[
+		{\vec F}_A + {\vec F}_B = {\vec F}_{net}
+\]</div>
+<p>In addition, you know that</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_A = (-9.15\ \textrm{N}) {\hat x} + (4.77 \ \textrm{N}) {\hat y} + (-1.38\ \textrm{N}) {\hat z}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+	{\vec F}_{net} = (-6.92\ \textrm{N}) {\hat x} + (3.36 \ \textrm{N}) {\hat y} + (5.01\ \textrm{N}) {\hat z}
+\]</div>
+<p>What is the vector <span class="math notranslate nohighlight">\({\vec F}_B\)</span> (in N) in unit vector notation?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec F}_B = (2.23\ \textrm{N}) {\hat x} + (-1.41 \ \textrm{N}) {\hat y} + (6.39\ \textrm{N}) {\hat z}\)</span></p>
+</div>
+</div>
+<div class="section" id="vector-sums-in-vpython">
+<h3><span class="section-number">2.4.2. </span>Vector sums in vPython<a class="headerlink" href="#vector-sums-in-vpython" title="Permalink to this headline">¶</a></h3>
+<p>Let’s go back to calculating the sum of vectors using vPython. Suppose we are given the vectors</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec A} = 2 {\hat x} + 3{\vec y} - {\hat z} \qquad
+    {\vec B} = -4 {\hat x} + {\vec y} + 5{\hat z}
+\]</div>
+<p>and we want to find the vector sum <span class="math notranslate nohighlight">\({\vec C} = {\vec A} + {\vec B}\)</span>. In vPython, the code for this is in the next cell. First, try calculating the result yourself, then run the cell below and check to see if the computer prints out the answer you expect.</p>
+<p id="vec-sum"><a class="reference internal" href="#vec-vpy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/cf1c6250ad?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span> defined above, find <span class="math notranslate nohighlight">\(-{\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec A} - 2 {\vec B}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(-{\vec A} = -2 {\hat x} - 3{\vec y} + {\hat z}\)</span>; <span class="math notranslate nohighlight">\({\vec A} - 2{\vec B} = 10 {\hat x} + {\vec y} - 11{\hat z}\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython procedure <code class="docutils literal notranslate"><span class="pre">signFlip()</span></code> that takes a vPython vector <code class="docutils literal notranslate"><span class="pre">A</span></code> as an argument, representing the vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, and returns the vPython vector equivalent to the vector <span class="math notranslate nohighlight">\(-{\vec A}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a simple implementation of <code class="docutils literal notranslate"><span class="pre">signFlip()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">signFlip</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython procedure <code class="docutils literal notranslate"><span class="pre">vectorMath()</span></code> that takes two vPython vectors <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>, representing the vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>, and returns the vPython vector equivalent to <span class="math notranslate nohighlight">\({\vec A} - 2{\vec B}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> One possible program is given below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vectorMath</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">A</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="showing-vector-sums-with-arrows">
+<h3><span class="section-number">2.4.3. </span>Showing vector sums with arrows<a class="headerlink" href="#showing-vector-sums-with-arrows" title="Permalink to this headline">¶</a></h3>
+<p>Now, let’s look at how to show graphical vector addition in vPython. We will create <code class="docutils literal notranslate"><span class="pre">arrow</span></code> objects representing the vectors, then create a third <code class="docutils literal notranslate"><span class="pre">arrow</span></code> to give their vector sum. First, running the program below shows the original two vectors <code class="docutils literal notranslate"><span class="pre">aVect</span></code> and <code class="docutils literal notranslate"><span class="pre">bVect</span></code>.</p>
+<p id="arrow-sum"><a class="reference internal" href="#vec-vpy"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/98f24959cc?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Next, we want to add these two vectors together. When we created the vectors, their tails were both at the same location, so we need to move one of the vectors so that its tail is at the tip of the other. Beneath the lines already given in the program above, type in the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bVect</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">aVect</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">aVect</span><span class="o">.</span><span class="n">axis</span>
+</pre></div>
+</div>
+<p>to move the tail of B to the tip of A. This changes <code class="docutils literal notranslate"><span class="pre">bVect.pos</span></code> so that the tail of vector <span class="math notranslate nohighlight">\({\vec B}\)</span> is moved to the tail of vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, then along the vector <span class="math notranslate nohighlight">\({\vec A}\)</span> itself until it is at the tip of <span class="math notranslate nohighlight">\({\vec A}\)</span>, as described above. Run the program again to make sure this looks right.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Create a third arrow <code class="docutils literal notranslate"><span class="pre">rVect</span></code> that represents the vector sum of the previous two vectors, that is, <span class="math notranslate nohighlight">\({\vec R} = {\vec A} + {\vec B}\)</span>. The tail of <span class="math notranslate nohighlight">\({\vec R}\)</span> should be at the tail of <span class="math notranslate nohighlight">\({\vec A}\)</span>, so define <code class="docutils literal notranslate"><span class="pre">rVect.pos</span> <span class="pre">=</span> <span class="pre">aVect.pos</span></code>. The tip of <span class="math notranslate nohighlight">\({\vec R}\)</span> should be at the tip of <span class="math notranslate nohighlight">\({\vec B}\)</span>, so the axis of <code class="docutils literal notranslate"><span class="pre">rVect</span></code> should be equal to the axes of the two vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span> – this moves the tip of <span class="math notranslate nohighlight">\({\vec R}\)</span> along <span class="math notranslate nohighlight">\({\vec A}\)</span> and then along <span class="math notranslate nohighlight">\({\vec B}\)</span>. Print out the components of the vectors <code class="docutils literal notranslate"><span class="pre">rVect</span></code>, by removing the <code class="docutils literal notranslate"><span class="pre">#</span></code> in front of the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement at the end of the program. Run the program to verify that the graphical vector addition is correct.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a way to complete the program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create arrow rVect representing vector sum</span>
+<span class="c1"># R = A + B</span>
+
+<span class="n">rVect</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">aVect</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">aVect</span><span class="o">.</span><span class="n">axis</span> <span class="o">+</span> <span class="n">bVect</span><span class="o">.</span><span class="n">axis</span><span class="p">,</span> \
+              <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Note that we could have done it the other way around, so that we move the tail of <span class="math notranslate nohighlight">\({\vec R}\)</span> to the tail of <span class="math notranslate nohighlight">\({\vec B}\)</span> and then add the two axes together to move the tip of <span class="math notranslate nohighlight">\({\vec R}\)</span> to the tip of <span class="math notranslate nohighlight">\({\vec A}\)</span>. The cell below does exactly that; the only difference is that it is the position of <code class="docutils literal notranslate"><span class="pre">aVect</span></code> that is moved, not <code class="docutils literal notranslate"><span class="pre">bVect</span></code>, as you did in the cells above.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the program above to complete the graphical vector addition as described above. Specifically, the tail of <code class="docutils literal notranslate"><span class="pre">aVect</span></code> must now be moved to the tip of <code class="docutils literal notranslate"><span class="pre">bVect</span></code>. Then, the tail of <code class="docutils literal notranslate"><span class="pre">rVect</span></code> will be at the tail of <code class="docutils literal notranslate"><span class="pre">bVect</span></code>, while the tip of <code class="docutils literal notranslate"><span class="pre">rVect</span></code> is at the tip of <code class="docutils literal notranslate"><span class="pre">aVect</span></code>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is the complete program you should have, so that the graphical vector addition is done using the method described in the problem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create two vectors A and B</span>
+
+<span class="n">aVect</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> \
+              <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">bVect</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">blue</span><span class="p">,</span> \
+              <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># Write code to move tail of A to tip of B</span>
+
+<span class="n">aVect</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">bVect</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">bVect</span><span class="o">.</span><span class="n">axis</span>
+
+<span class="c1"># Create arrow rVect representing vector sum</span>
+<span class="c1"># R = A + B</span>
+
+<span class="n">rVect</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">bVect</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">aVect</span><span class="o">.</span><span class="n">axis</span> <span class="o">+</span> <span class="n">bVect</span><span class="o">.</span><span class="n">axis</span><span class="p">,</span> \
+              <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+              
+<span class="c1"># Print out the components of rVect</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rVect</span><span class="o">.</span><span class="n">axis</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>In this case, the tails of the blue vector <span class="math notranslate nohighlight">\({\vec B}\)</span> and the red vector <span class="math notranslate nohighlight">\({\vec R}\)</span> are at the same place, while the tail of the green vector <span class="math notranslate nohighlight">\({\vec A}\)</span> is where the tip of the blue vector <span class="math notranslate nohighlight">\({\vec B}\)</span> is.</p>
+</div>
+<div class="section" id="relative-position-vectors">
+<span id="vec-vpy-rel-pos"></span><h3><span class="section-number">2.4.4. </span>Relative position vectors<a class="headerlink" href="#relative-position-vectors" title="Permalink to this headline">¶</a></h3>
+<p>Here, I introduce some notation we will use in various applications, namely the <em>relative position</em> vector. This a good application of the vector math we have been talking about, and getting used to the symbols used here will help you down the road.</p>
+<div class="warning admonition">
+<p class="admonition-title">Object indices</p>
+<p>Throughout the course, I will use letters like <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> to represent the <strong>index</strong> of the object. This is similar to the index of a list in Python, from <a class="reference internal" href="L01_Introduction_to_Python.html#intro-py-loop-list"><span class="std std-ref">Lesson 01</span></a>. Thus, the objects might be objects 1 and 2, or 3 and 5, or something like that. Then, the letters <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> just give the variables I assign these two objects would be <span class="math notranslate nohighlight">\(i = 1, j = 2\)</span>, or <span class="math notranslate nohighlight">\(i = 3, j = 5\)</span>. So, for example, I might label masses as <span class="math notranslate nohighlight">\(m_i\)</span>, which means I have one or more masses, identified by an index <span class="math notranslate nohighlight">\(i\)</span>; this collection of masses would be <span class="math notranslate nohighlight">\(m_1, m_2, \cdots\)</span>. Whenever you see a formula that has an index <span class="math notranslate nohighlight">\(i, j, \cdots\)</span>, just read it as something that applies to many possible objects.</p>
+<p>Notice that sometimes I will use <span class="math notranslate nohighlight">\(m_i\)</span> to talk about a <em>specific</em> mass (i.e. the mass with index <span class="math notranslate nohighlight">\(i\)</span>), while other times I will use <span class="math notranslate nohighlight">\(m_i\)</span> to refer to <em>all</em> the masses in the collection, indexed by the letter <span class="math notranslate nohighlight">\(i\)</span>. Hopefully the difference will be obvious in context.</p>
+</div>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png" src="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Position vectors for two objects</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>Suppose you have two objects, each at some arbitrary location. We would denote the position vector of each object <span class="math notranslate nohighlight">\(i = 1, 2\)</span> as <span class="math notranslate nohighlight">\({\vec r}_i\)</span>; to make it definite, let’s say they are masses <span class="math notranslate nohighlight">\(m_i\)</span>, as in the picture above. The vector <span class="math notranslate nohighlight">\({\vec r}_i\)</span> will be a vector giving the location of the object <span class="math notranslate nohighlight">\(i\)</span> as seen from the origin of the coordinate system. In other words, <span class="math notranslate nohighlight">\({\vec r}_i\)</span> is a vector whose tail is at <span class="math notranslate nohighlight">\((0, 0, 0)\)</span>, and whose tip is at the object <span class="math notranslate nohighlight">\(i\)</span>. However, we often don’t care about where each object is, relative to the origin – the origin is a mathematical device we use to make the calculations easier. There is no special point in the Universe called “the origin”! Instead, we will care more about the <strong>relative position vector</strong> <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span>, which is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r}_{ij} = {\vec r}_i - {\vec r}_j
+\]</div>
+<p>This is the vector pointing <em>from</em> object <span class="math notranslate nohighlight">\(j\)</span> <em>to</em> object <span class="math notranslate nohighlight">\(i\)</span>. In particular, <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> is a vector with its tail at <span class="math notranslate nohighlight">\(m_2\)</span> and its tip at <span class="math notranslate nohighlight">\(m_1\)</span>; on the other hand, <span class="math notranslate nohighlight">\({\vec r}_{21}\)</span> is a vector with its tail at <span class="math notranslate nohighlight">\(m_1\)</span> and its tip at <span class="math notranslate nohighlight">\(m_2\)</span>. The vector <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> is shown in the picture below. Notice that <span class="math notranslate nohighlight">\({\vec r}_1 = {\vec r}_{12} + {\vec r}_2\)</span> in terms of graphical vector addition!</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L02-Fig01_Rel-pos-vec.png"><img alt="../_images/INT_AY22_L02-Fig01_Rel-pos-vec.png" src="../_images/INT_AY22_L02-Fig01_Rel-pos-vec.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">Relative position vector for two objects</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">The index order is important</p>
+<p>The relative position vector points from the <em>second</em> index object to the <em>first</em>. So, reversing the order of the indices flips the direction of the vector by 180<span class="math notranslate nohighlight">\(^\circ\)</span>. As vectors, <span class="math notranslate nohighlight">\({\vec r}_{ij} = -{\vec r}_{ji}\)</span>.</p>
+</div>
+<p>These relative position vectors will be used a lot when we define forces. For example, imagine you have two masses attached to each other by a spring. The spring force on each of the masses due to the spring will depend on the relative position vector between the mass and the equilibrium point of the spring. The larger this relative position vector is, the larger the size of the spring force acting on the mass.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose that object 1 is at position <span class="math notranslate nohighlight">\((1.25 \textrm{ m}) {\hat x} + (-0.750 \textrm{ m}) {\hat y}\)</span> and object 2 is located at <span class="math notranslate nohighlight">\((0.650 \textrm{ m}) {\hat x} + (0.350 \textrm{ m}) {\hat y}\)</span>. Find the vectors <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> and <span class="math notranslate nohighlight">\({\vec r}_{21}\)</span> in unit vector notation.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\({\vec r}_{12} = (0.600 \textrm{ m}){\hat x} + (-1.10 \textrm{ m}) {\hat y}\)</span>; <span class="math notranslate nohighlight">\({\vec r}_{21} = (-0.600 \textrm{ m}) {\hat x} + (1.10 \textrm{ m}) {\hat y}\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">relPosition()</span></code> that uses arrows to show two vectors, and the relative position vector derived from them. Specifically, the function should take two vPython vectors <code class="docutils literal notranslate"><span class="pre">vec1</span></code> and <code class="docutils literal notranslate"><span class="pre">vec2</span></code> as arguments, representing the vectors <span class="math notranslate nohighlight">\({\vec r}_1\)</span> and <span class="math notranslate nohighlight">\({\vec r}_2\)</span>. Then, it should create two vPython arrows representing those vectors, with their tails at the origin, and their tips at the positions given by <span class="math notranslate nohighlight">\({\vec r}_1\)</span> and <span class="math notranslate nohighlight">\({\vec r}_2\)</span>. It should compute the relative position vector <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span>. Show this as a vPython arrow as well using graphical vector addition. In other words, the tail of <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> should be at the tip of <span class="math notranslate nohighlight">\({\vec r}_2\)</span>. This gives a good check of the program, since this placement naturally puts the tip of <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> at the tip of <span class="math notranslate nohighlight">\({\vec r}_1\)</span>. Finally, return the components of <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> as a vPython vector. Again, remember the ordering of the indices in <span class="math notranslate nohighlight">\({\vec r}_{12}\)</span> is important!</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible solution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">relPosition</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">):</span>
+
+    <span class="c1"># Create arrows to represent vectors</span>
+    
+    <span class="n">arr1</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vec1</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> \
+                 <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">arr2</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vec2</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">cyan</span><span class="p">,</span> \
+                 <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    
+    <span class="c1"># Calculate the relative position</span>
+    <span class="c1"># vector, and show as arrow</span>
+    
+    <span class="n">vec12</span> <span class="o">=</span> <span class="n">vec1</span> <span class="o">-</span> <span class="n">vec2</span>
+    <span class="n">arr12</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">arr2</span><span class="o">.</span><span class="n">axis</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vec12</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+    
+    <span class="c1"># Return relative position vector</span>
+    
+    <span class="k">return</span> <span class="n">vec12</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="vector-equations">
+<h3><span class="section-number">2.4.5. </span>Vector equations<a class="headerlink" href="#vector-equations" title="Permalink to this headline">¶</a></h3>
+<p>As we have seen in this lesson, vectors have many mathematical operations that are similar to those for scalars. Specifically, vectors can be added together. We will see many cases where this happens; one prominent case is the addition of forces to get the net (or total) force. For example, suppose three forces <span class="math notranslate nohighlight">\({\vec F}_i\)</span> act on an object, but the net force is zero. This would be a vector equation of the form</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_1 + {\vec F}_2 + {\vec F}_3 = {\vec 0}
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">The zero vector</p>
+<p>To emphasize the fact that this is a <em>vector</em> equation, I have set it equal to the <strong>zero vector</strong> <span class="math notranslate nohighlight">\({\vec 0}\)</span>. This is the vector with all zero components, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec 0} = 0 {\hat x} + 0 {\hat y} + 0 {\hat z}
+\]</div>
+<p>This is different than the <em>scalar</em> 0! I am underlining this point because the vector equation above for the three forces is really three scalar equations – one each for the <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions. By using good notation, we can put a lot of information into not very many symbols! So, scalars can add up to zero, like <span class="math notranslate nohighlight">\(2 + (-2) = 0\)</span>, but vectors add up to the zero vector.</p>
+</div>
+<p>As another, more compact, way of showing the vector equation above, we can use the <strong>summation</strong> symbol <span class="math notranslate nohighlight">\(\sum\)</span>. Here, we would write</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum_i {\vec F}_i = {\vec 0}
+\]</div>
+<p>The left-hand side just means add up all of the vector <span class="math notranslate nohighlight">\({\vec F}_i\)</span> indexed by the letter <span class="math notranslate nohighlight">\(i\)</span>. Here, <span class="math notranslate nohighlight">\(i = 1,2, 3\)</span> for the given forces. So, we have written the vector equation above, with three force vectors, in a different way. This can be useful, especially when the number of things being added together gets large. You may even see infinite sums in math class!</p>
+<p>As an example of a vector equation, suppose we have two known vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>, and we want to find a third vector <span class="math notranslate nohighlight">\({\vec C}\)</span> such that <span class="math notranslate nohighlight">\({\vec A} + {\vec B} + {\vec C} = {\vec 0}\)</span>. Then, this means that along each coordinate axis, the components also add up to zero; this is the “three for one” deal we get for vector equations. The vectors are written in unit vector form as <span class="math notranslate nohighlight">\({\vec A} = A_x {\hat x} + A_y {\hat y} + A_z {\hat z}\)</span>, and similarly for the other two. So, the vector equation becomes the component equations</p>
+<div class="math notranslate nohighlight">
+\[
+    A_x + B_x + C_x = 0 \qquad
+    A_y + B_y + C_y = 0 \qquad
+    A_z + B_z + C_z = 0
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">Components are not vectors</p>
+<p>Remember that the three <em>scalars</em> <span class="math notranslate nohighlight">\(A_x, A_y\)</span>, and <span class="math notranslate nohighlight">\(A_z\)</span> represent the <em>vector</em> <span class="math notranslate nohighlight">\({\vec A}\)</span> in unit vector notation. It is important to keep the difference in mind!</p>
+</div>
+<p>Thus, the three components of <span class="math notranslate nohighlight">\({\vec C}\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[
+    C_x = -A_x - B_x \qquad
+    C_x = -A_y - B_y \qquad
+    C_x = -A_z - B_z
+\]</div>
+<p>Let’s try this with some actual vectors, taking <span class="math notranslate nohighlight">\({\vec A} = 5 {\hat x} - 7 {\hat z}\)</span> and <span class="math notranslate nohighlight">\({\vec B} = -2 {\hat x} + 3 {\hat y}\)</span>. Then, including the zeros for the missing components, we have <span class="math notranslate nohighlight">\({\vec C} = [-(5) - (-2)] {\hat x} + [-(0) - (3)] {\hat y} + [-(-7) - (0)] {\hat z} = -3 {\hat x} - 3 {\hat y} + 7 {\hat z}\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you are given the two vectors <span class="math notranslate nohighlight">\({\vec J} = 8 {\hat y} + 2 {\hat z}\)</span> and <span class="math notranslate nohighlight">\({\vec L} = 5 {\hat x} + 8 {\hat y} - 5 {\hat z}\)</span>, and the vector equation <span class="math notranslate nohighlight">\({\vec J} + {\vec K} + {\vec L} = {\vec 0}\)</span>. What is the vector <span class="math notranslate nohighlight">\({\vec K}\)</span>, in unit vector notation?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec K} = -5 {\hat x} - 16 {\hat y} + 3 {\hat z}\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are given the vector equation <span class="math notranslate nohighlight">\({\vec A} + {\vec B} + {\vec C} = {\vec 0}\)</span>. Write a vPython function <code class="docutils literal notranslate"><span class="pre">missingVec()</span></code> that finds the third vector satisfying this equation, given the other two. Specifically, the arguments of <code class="docutils literal notranslate"><span class="pre">missingVec()</span></code> are two vPython vectors, <code class="docutils literal notranslate"><span class="pre">vecA</span></code> and <code class="docutils literal notranslate"><span class="pre">vecB</span></code>. The function should calculate the vector <span class="math notranslate nohighlight">\({\vec C}\)</span> and return its components.</p>
+<p>The function should also show the graphical vector addition the vector equation represents. In other words, the function must create three vPython <code class="docutils literal notranslate"><span class="pre">arrow</span></code> objects, and arrange them tip-to-tail, to show that the three vectors add together to the zero vector. <strong>Hint:</strong> Remember that for an <code class="docutils literal notranslate"><span class="pre">arrow</span></code> object <code class="docutils literal notranslate"><span class="pre">arrObj</span></code> with position attribute <code class="docutils literal notranslate"><span class="pre">arrObj.pos</span></code> and axis attribute <code class="docutils literal notranslate"><span class="pre">arrObj.axis</span></code>, the tip of the arrow is located at the position vector <code class="docutils literal notranslate"><span class="pre">arrObj.pos</span> <span class="pre">+</span> <span class="pre">arrObj.axis</span></code>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is an example of such a vPython function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">missingVec</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">):</span>
+
+    <span class="c1"># Find third vector C such that</span>
+    <span class="c1"># A + B + C = 0</span>
+    
+    <span class="n">vecC</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">vecA</span> <span class="o">+</span> <span class="n">vecB</span><span class="p">)</span>
+    
+    <span class="c1"># Create arrow objects for each vector</span>
+    
+    <span class="n">Aarr</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vecA</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> \
+                 <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">Barr</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">Aarr</span><span class="o">.</span><span class="n">axis</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vecB</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">cyan</span><span class="p">,</span> \
+                 <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">Carr</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">Barr</span><span class="o">.</span><span class="n">pos</span> <span class="o">+</span> <span class="n">Barr</span><span class="o">.</span><span class="n">axis</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="n">vecC</span><span class="p">,</span> \
+                 <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    
+    <span class="c1"># Return vector C components</span>
+
+    <span class="k">return</span> <span class="n">vecC</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">2.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, you have learned about vectors, one of the fundamental objects we will use throughout this course to describe both the motion of objects – such as position, velocity, and acceleration – and the properties that determine that motion – for example, momentum, forces, and fields. The technique of graphical addition, either drawing by hand or using vPython to create the arrows can demonstrate the appearance of the scalar multiple of a vector, or of a vector sum. These methods will be put in practice often (starting with the next lesson!), so you should make sure you have a firm grasp of these topics.</p>
+<p>After this lesson, you should be able to</p>
+<ul class="simple">
+<li><p>Using graphical vector methods, add or subtract vectors</p></li>
+<li><p>Given the components of a vector,</p>
+<ul>
+<li><p>write the vector in proper unit vector notation</p></li>
+<li><p>multiply the vector by a scalar</p></li>
+</ul>
+</li>
+<li><p>Given the components of two or more vectors, find the vector sum of the vectors</p></li>
+<li><p>Create an arrow in vPython</p></li>
+<li><p>Show the vector sum of two or more vectors using vPython arrows</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L01_Introduction_to_Python.html" title="previous page"><span class="section-number">1. </span>Introduction to Python</a>
+    <a class='right-next' id="next-link" href="L03_Velocity_and_Euler_method.html" title="next page"><span class="section-number">3. </span>Velocity and the Euler method</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

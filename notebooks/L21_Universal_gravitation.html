@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>21. Universal gravitation &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="22. Gravitational potential energy" href="L22_Gravitational_potential_energy.html" />
+    <link rel="prev" title="20. Conservation of energy" href="L20_Conservation_of_energy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L21_Universal_gravitation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L21_Universal_gravitation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   21.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-gravitational-force-equation">
+   21.2. The gravitational force equation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notation-review">
+     21.2.1. Notation review
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-universal-force-of-gravitation">
+     21.2.2. The universal force of gravitation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example-masses-in-an-equilateral-triangle">
+     21.2.3. An example: masses in an equilateral triangle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gravitational-field">
+   21.3. Gravitational field
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   21.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="universal-gravitation">
+<span id="grav"></span><h1><span class="section-number">21. </span>Universal gravitation<a class="headerlink" href="#universal-gravitation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">21.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#net-grav-force"><span class="std std-ref">Net gravitational force on an object</span></a></p></li>
+</ol>
+<p>The gravitational force played an important role in the history of physics. It was in Newton’s seminal book, known today as the <em>Principia</em>, where he worked out the implications of his laws of motion, and one of the pivotal cases was that of the Moon’s orbit around the Earth. This provided the first evidence that motion near the Earth’s surface, and motion of objects in the sky, obeyed the same physical laws. This was a game changer in the world of ideas, and led to the mathematical framework for an understanding of the Universe we now call “physics”.</p>
+<p>Before, Newton, in the Western scientific tradition one of the earliest influential theories of why objects fall towards the Earth was developed by Aristotle (in the 4th century BC), who thought that all substances have a natural place in the Universe (with the Earth at its center), and objects will move to this place based on their composition. There is no gravitational force yet! The Indian astronomer and mathematician Brahmagupta in the 7th century wrote about an actual force of attraction between the Earth and other objects, pulling them towards the Earth’s surface. He saw the Earth as a sphere, and that the attraction would be the same for all points on the surface.</p>
+<p>As we will talk more about in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23</span></a>, in the early 17th century Johannes Kepler used new astronomical observations to deduce the motions of the planets based on the idea of having the Sun at the center of the Solar System. In that lesson, we will show how Newton’s law of universal gravitation – developed in this lesson – leads to a description of planetary motion in the Solar System.</p>
+<p>Sir Isaac Newton formulated a notion of a gravitational force between two objects which acts along the line between them, based on an idea of Robert Hooke and others. Using this gravitational force, Newton was able to explain why Kepler’s laws of planetary motion worked. A key part of the process was Newton’s realization that the force of gravity pulling objects towards the Earth is <em>exactly</em> the same force as that keeping the Moon in orbit around the Earth, and both in orbit around the Sun.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State Newton’s law of universal gravitation.</p></li>
+<li><p>State the definition of gravitational field.</p></li>
+<li><p>Find the gravitational force acting on a single mass due to a group of surrounding masses.</p></li>
+<li><p>Find the gravitatational field at a given distance away from a known mass.</p></li>
+</ul>
+</div>
+<div class="section" id="the-gravitational-force-equation">
+<h2><span class="section-number">21.2. </span>The gravitational force equation<a class="headerlink" href="#the-gravitational-force-equation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notation-review">
+<h3><span class="section-number">21.2.1. </span>Notation review<a class="headerlink" href="#notation-review" title="Permalink to this headline">¶</a></h3>
+<p>In order to write down Newton’s law of universal gravitation, it may be helpful to review some notation; this is similar to notation we defined back in <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy-rel-pos"><span class="std std-ref">Lesson 02</span></a> when we first looked at relative position vectors. First, remember that an object’s position is defined by a vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, which points from the origin (i.e. <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>) to the object. For more than one object, we can label these position vectors as we do the objects, as seen in the diagram below. In this diagram, there are two objects, <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>, with corresponding position vectors <span class="math notranslate nohighlight">\({\vec r}_1\)</span> and <span class="math notranslate nohighlight">\({\vec r}_2\)</span>.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png" src="../_images/INT_AY20_MP2_L27_Fig08-Position_vectors_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.1 </span><span class="caption-text">Position vectors for two objects</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, suppose we want to define an interaction between the two objects, which does depend on our choice of origin, but only the relative position of the objects. This is what is needed for central forces, such as the gravitational force (for this lesson) as well as the electrostatic force (in <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force"><span class="std std-ref">Lesson 24</span></a> for Coulomb’s law). In both of these cases, the direction of the force is on the line connecting the two objects, either towards the other object (for attractive forces) or away (for repulsion). The choice of origin should not matter – these forces are the same, regardless of how the coordinates are picked. To this end, we can define the relative position vectors</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec r}_{12} = {\vec r}_1 - {\vec r}_2 \qquad
+	{\vec r}_{21} = {\vec r}_2 - {\vec r}_1 
+\]</div>
+<p>This means that the vector <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span> is the vector with its tip at object <span class="math notranslate nohighlight">\(i\)</span>, and its tail at object <span class="math notranslate nohighlight">\(j\)</span>. You may want to look back at <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy-vec-add"><span class="std std-ref">Lesson 02</span></a> to remind yourself of graphical vector addition, in order to see where the directions of the vectors come from. Because of these definitions, <span class="math notranslate nohighlight">\({\vec r}_{12} = -{\vec r}_{21}\)</span>.</p>
+<p>However, all we care about now is the direction, not the magnitude of the distance between these objects. So we take these vectors <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span>, and find the unit vector pointing in the same direction. Remember from <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir-unit-vec"><span class="std std-ref">Lesson 07</span></a> that this would be defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r}_{ij} = \frac{{\vec r}_{ij}}{r_{ij}}
+\]</div>
+<p>where, as usual, <span class="math notranslate nohighlight">\(r_{ij}\)</span> is the magnitude of the vector <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span>. Notice that this means the units cancel out! The unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> summarizes where the object <span class="math notranslate nohighlight">\(i\)</span> is, as seen by object <span class="math notranslate nohighlight">\(j\)</span>. It is helpful to think of each unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> with its tail <em>at</em> object <span class="math notranslate nohighlight">\(i\)</span>, and pointing <em>away</em> from object <span class="math notranslate nohighlight">\(j\)</span>. This is shown in the diagram below, along with the position vectors from the last figure.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig01-Unit_position_vector_def_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig01-Unit_position_vector_def_small.png" src="../_images/INT_AY20_MP2_L27_Fig01-Unit_position_vector_def_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.2 </span><span class="caption-text">The unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose that object 1 is at position <span class="math notranslate nohighlight">\((1.25 \textrm{ m}) {\hat x} + (-75.0 \textrm{ cm}) {\hat y}\)</span> and object 2 is located at <span class="math notranslate nohighlight">\((65.0 \textrm{ cm}) {\hat x} + (35.0 \textrm{ cm}) {\hat y}\)</span>.</p>
+<ol class="simple">
+<li><p>What is the unit vector <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span> at object 1 pointing away from object 2?</p></li>
+<li><p>What is the unit vector <span class="math notranslate nohighlight">\({\hat r}_{21}\)</span>?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\({\hat r}_{12} = 0.479 {\hat x} - 0.878 {\hat y}\)</span>; <span class="math notranslate nohighlight">\({\hat r}_{21} = -0.479 {\hat x} + 0.878 {\hat y}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">rHat()</span></code> that calculates the unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> at an object <span class="math notranslate nohighlight">\(i\)</span> with position <span class="math notranslate nohighlight">\({\vec r}_i\)</span>, away from an object <span class="math notranslate nohighlight">\(j\)</span> at position <span class="math notranslate nohighlight">\({\vec r}_j\)</span>. The two arguments of the function are <code class="docutils literal notranslate"><span class="pre">r_i</span></code> and <code class="docutils literal notranslate"><span class="pre">r_j</span></code>, which are vPython vectors representing the vectors <span class="math notranslate nohighlight">\({\vec r}_i\)</span> and <span class="math notranslate nohighlight">\({\vec r}_j\)</span>, respectively. The function should return the unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span>. See if you can do this without using the built-in vPython modules <code class="docutils literal notranslate"><span class="pre">mag()</span></code> or <code class="docutils literal notranslate"><span class="pre">hat()</span></code>! You <em>will</em> need to use the square root function <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code>, however.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one possible program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rHat</span><span class="p">(</span><span class="n">r_i</span><span class="p">,</span> <span class="n">r_j</span><span class="p">):</span>
+
+    <span class="c1"># Find relative position vector</span>
+    
+    <span class="n">rel_pos</span> <span class="o">=</span> <span class="n">r_i</span> <span class="o">-</span> <span class="n">r_j</span>
+    
+    <span class="c1"># Find magnitude of this vector</span>
+    
+    <span class="n">r_mag</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">rel_pos</span><span class="o">.</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">rel_pos</span><span class="o">.</span><span class="n">y</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">rel_pos</span><span class="o">.</span><span class="n">z</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># Return unit vector r_ij</span>
+    
+    <span class="k">return</span> <span class="n">rel_pos</span> <span class="o">/</span> <span class="n">r_mag</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-universal-force-of-gravitation">
+<h3><span class="section-number">21.2.2. </span>The universal force of gravitation<a class="headerlink" href="#the-universal-force-of-gravitation" title="Permalink to this headline">¶</a></h3>
+<p>Using the definition of the unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span>, we can now write down Newton’s law of universal gravitation. This gives the gravitational force between two point masses <span class="math notranslate nohighlight">\(m_i\)</span> and <span class="math notranslate nohighlight">\(m_j\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{g, ij} = -\biggl( \frac{G m_i m_j}{r^2 _{ij}} \biggr) {\hat r}_{ij}
+\]</div>
+<p>with the constant <span class="math notranslate nohighlight">\(G = 6.67 \times 10^{-11}\)</span> N<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>/kg<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<p>There are several things to unpack in this equation. This quantity <span class="math notranslate nohighlight">\({\vec F}_{g, ij}\)</span> is the gravitational force on object <span class="math notranslate nohighlight">\(i\)</span>, due to object <span class="math notranslate nohighlight">\(j\)</span>; this ordering matches our definition of the unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> at the mass <span class="math notranslate nohighlight">\(i\)</span>. If we flip the ordering of <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span>, we flip the sign of the unit vector, while everything else stays the same, so that <span class="math notranslate nohighlight">\({\vec F}_{g, ji} = -{\vec F}_{g, ij}\)</span>. Both masses <span class="math notranslate nohighlight">\(m_i\)</span> and <span class="math notranslate nohighlight">\(m_j\)</span> appear in exactly the same way in the equation, i.e. you can reverse them and get the same magnitude, although as stated in the last point, the direction would reverse. This is what we would expect from Newton’s third law.</p>
+<p>The size of the force depends on the inverse of the square of the center-to-center distance <span class="math notranslate nohighlight">\(r_{ij}\)</span> between the two masses. This is known as an <strong>inverse square law</strong>. The force magnitude gets smaller as the distance gets larger, and vice versa. The electrostatic force is another example of an inverse square law. For physics in three spatial dimensions, an inverse square law is a sure sign of a force that has an infinite range!</p>
+<p>Finally, the sign in front of the equation is probably confusing. If we look at the grouping <span class="math notranslate nohighlight">\(-{\hat r}_{ij}\)</span>, we see that the gravitational force on mass <span class="math notranslate nohighlight">\(i\)</span> always points towards mass <span class="math notranslate nohighlight">\(j\)</span>; the force is <em>attractive</em>. Said differently, since <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> always points away from the other mass, the minus sign tells us the force points towards the other mass. Note that this depends on the rest of the equation being positive! We will see a very similar form for the electrostatic force in <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force"><span class="std std-ref">Lesson 24(Coulomb’s law)</span></a>, but since electric charges can be negative, the electrostatic force can be either attractive or repulsive.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Consider the two masses shown in the figure below. When the two masses 1 and 2 have the same size <span class="math notranslate nohighlight">\(M\)</span>, the magnitude of the gravitational force on mass 1 is 3.00 N. If we replace <em>one</em> mass with a mass 1<span class="math notranslate nohighlight">\(^\prime\)</span> of size <span class="math notranslate nohighlight">\(4M\)</span> (as shown in the lower part of the figure below), what is the magnitude of the force <span class="math notranslate nohighlight">\(F_{1^\prime}\)</span> on the new mass 1<span class="math notranslate nohighlight">\(^\prime\)</span>, due to the old? Choose the best answer below.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L29_Fig01-Attracting_masses.png"><img alt="../_images/INT_AY20_MP2_L29_Fig01-Attracting_masses.png" src="../_images/INT_AY20_MP2_L29_Fig01-Attracting_masses.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.3 </span><span class="caption-text">Original situation on top, and the new situation on bottom</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>0.750 N</p></li>
+<li><p>3.00 N</p></li>
+<li><p>12.0 N</p></li>
+<li><p>16.0 N</p></li>
+<li><p>48.0 N</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 12.0 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The force between two masses separated by a distance <span class="math notranslate nohighlight">\(d\)</span> is <span class="math notranslate nohighlight">\(F\)</span>. If the masses are pulled apart to a distance <span class="math notranslate nohighlight">\(3d\)</span>, what is the new magnitude of the gravitational force on each mass? Choose the best answer below.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L29_Fig02-Attracting_masses.png"><img alt="../_images/INT_AY20_MP2_L29_Fig02-Attracting_masses.png" src="../_images/INT_AY20_MP2_L29_Fig02-Attracting_masses.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.4 </span><span class="caption-text">Two attracting masses</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(9F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F/3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(F/9\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(F/9\)</span></p>
+</div>
+</div>
+<div class="section" id="an-example-masses-in-an-equilateral-triangle">
+<span id="grav-ex"></span><h3><span class="section-number">21.2.3. </span>An example: masses in an equilateral triangle<a class="headerlink" href="#an-example-masses-in-an-equilateral-triangle" title="Permalink to this headline">¶</a></h3>
+<p>Let’s work through an example, to see how to calculate the gravitational force; we will also see how the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> are used. In the figure below, three masses are held in place at the corners of an equilateral triangle with sides <span class="math notranslate nohighlight">\(d\)</span> of 7.00 m. The sizes of the three masses are <span class="math notranslate nohighlight">\(m_1 = 2.00\)</span> kg, <span class="math notranslate nohighlight">\(m_2 = 4.00\)</span> kg, and <span class="math notranslate nohighlight">\(m_3 = 3.00\)</span> kg. We are going to find the net gravitational force acting on the top mass <span class="math notranslate nohighlight">\(m_1\)</span>, due to the other two masses.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig04b-Three_masses_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig04b-Three_masses_small.png" src="../_images/INT_AY20_MP2_L27_Fig04b-Three_masses_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.5 </span><span class="caption-text">Three masses fixed at the corners of an equilateral triangle</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>As usual for force problems, our first step is to draw the FBD for the object whose net force we are calculating. This is shown below.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L25_Fig01_FBD_small.png"><img alt="../_images/INT_AY21_L25_Fig01_FBD_small.png" src="../_images/INT_AY21_L25_Fig01_FBD_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.6 </span><span class="caption-text">FBD for mass <span class="math notranslate nohighlight">\(m_1\)</span></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>where <span class="math notranslate nohighlight">\(\theta = 60.0^\circ\)</span>. Again, make sure you are good with the notation here – <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> is the gravitational force <em>on</em> mass 1 <em>due to</em> mass 2, while <span class="math notranslate nohighlight">\({\vec F}_{13}\)</span> is the gravitational force <em>on</em> mass 1 <em>due to</em> mass 3. On the other hand, <span class="math notranslate nohighlight">\({\vec F}_{21}\)</span> is the force <em>on</em> mass 2 <em>due to</em> mass 1, which is related to <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> by Newton’s third law, but not the same. We can also label the two angles for each force with the same symbol <span class="math notranslate nohighlight">\(\theta\)</span>, since the masses are on the corners of an equilateral triangle. This is not true in general!</p>
+<div class="warning admonition">
+<p class="admonition-title">Make sure you find the right forces</p>
+<p>You may remember that when we first talked about Newton’s laws of motion in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton-forces"><span class="std std-ref">Lesson 11</span></a>, I introduced them with a “zeroth law”. This law says that an object responds only to the forces acting directly on it. At the time, most of you probably said this is common sense, and why do I need to spell this out? Well, here’s the reason! My experience when starting with gravitational force (or electrostatic forces in <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force"><span class="std std-ref">Lesson 24</span></a>) is that students get confused about the directions of the forces, because they are not taking Newton’s zeroth law into account! <em>We only care about the forces acting on mass 1</em>. I often see students answering questions like this by telling me about the forces on <span class="math notranslate nohighlight">\(m_2\)</span> and <span class="math notranslate nohighlight">\(m_3\)</span>; those are irrelevant! Find out how the masses act <em>on</em> mass 1, not how mass 1 acts on the other masses.</p>
+</div>
+<p>To calculate the force vectors <span class="math notranslate nohighlight">\({\vec F}_{12}, {\vec F}_{13}\)</span>, we need the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{12}, {\hat r}_{13}\)</span>. In the end, the arrows we have already drawn in the FBD should match those we are about to get from using the gravitational force equation – this is something you should check! Fortunately, since we know the relative positions of each mass, we do not have to do too much calculation here. The important thing to remember is that these two unit vectors <em>always</em> point from the other two masses. You can see the unit vectors superimposed on the physical situation in the figure below.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L25_Fig02_Unit_vectors_small.png"><img alt="../_images/INT_AY21_L25_Fig02_Unit_vectors_small.png" src="../_images/INT_AY21_L25_Fig02_Unit_vectors_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.7 </span><span class="caption-text">Unit vectors <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span> and <span class="math notranslate nohighlight">\({\hat r}_{13}\)</span></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Therefore, the unit vectors are given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r}_{12} = (\cos \theta) {\hat x} + (\sin \theta) {\hat y} \qquad
+    {\hat r}_{13} = (-\cos \theta) {\hat x} + (\sin \theta) {\hat y}
+\]</div>
+<p>These vectors came from seeing which quadrant they were in, knowing the angle <span class="math notranslate nohighlight">\(\theta\)</span>, plus the fact that unit vectors have a magnitude of 1. For this problem, that was the hard part! The rest is just substituting into the gravitational force equation. Let’s find the force <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> first. This would be</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{12} = -\biggl( \frac{G m_1 m_2}{r^2 _{12}} \biggr) {\hat r}_{12} = \biggl(\frac{G m_1 m_2}{d^2} \biggr) [(-\cos \theta) {\hat x} + (-\sin \theta)]
+\]</div>
+<p>In the second equality, I have taken the minus sign from out front, and distributed it over the components of <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span>. Thus, the direction of this vector is in the third quadrant, since both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components are negative. This matches what we drew for <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> in the FBD! I also used the fact that the distance <span class="math notranslate nohighlight">\(r_{12}\)</span> is simply the side length <span class="math notranslate nohighlight">\(d\)</span> of the triangle. Similarly, for <span class="math notranslate nohighlight">\({\vec F}_{13}\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{13} = -\biggl( \frac{G m_1 m_3}{r^2 _{13}} \biggr) {\hat r}_{13} = \biggl(\frac{G m_1 m_3}{d^2} \biggr) [(\cos \theta) {\hat x} + (-\sin \theta)]
+\]</div>
+<p>Plugging in the numbers for this problem, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{12} = (-5.450 \times 10^{-12} \textrm{ N}) {\hat x} + (-9.440 \times 10^{-12} \textrm{ N}) {\hat y}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{13} = (4.084 \times 10^{-12} \textrm{ N}) {\hat x} + (-7.073 \times 10^{-12} \textrm{ N}) {\hat y}
+\]</div>
+<p>Note that I have used four significant figures here to maintain accuracy, even though the original values are given only with three significant figures. We will round back to three at the end, since that is how the numbers are given in the original problem.</p>
+<div class="warning admonition">
+<p class="admonition-title">Significant figures reminder</p>
+<p>It is always a good policy to do your intermediate calculations using one extra significant figure, and then round back to the appropriate number at the end. However, whenever you are using a lot of trigonometric functions or square roots, it is even more important to do this to maintain accuracy. You will see this a lot when solving gravitational or electrostatic force problems.</p>
+</div>
+<p>If I add these two vectors together, I get the net gravitational force is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_1 = {\vec F}_{12} + {\vec F}_{13} = (-1.366 \times 10^{-12} \textrm{ N}) {\hat x} + (-1.651 \times 10^{-11} \textrm{ N}) {\hat y}
+\]</div>
+<p>Using the Pythagorean theorem with these components, I find that the magnitude of this force is <span class="math notranslate nohighlight">\(1.66 \times 10^{-11}\)</span> N (rounded down to three sig figs!). This is almost the same as the <span class="math notranslate nohighlight">\(y\)</span> component, because it is so much larger than the <span class="math notranslate nohighlight">\(x\)</span> component. Since there are no specific directions given in the problem, we find the direction relative to the <span class="math notranslate nohighlight">\(+x\)</span> axis used in the problem. With the inverse tangent function, we find the force points at 275<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis. Again, with such a large <span class="math notranslate nohighlight">\(y\)</span> component, it makes sense that the force is very close to the <span class="math notranslate nohighlight">\(-y\)</span> axis.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the same picture and information as the example just done, find the net gravitational force on mass <span class="math notranslate nohighlight">\(m_3\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(2.16 \times 10^{-11}\)</span> N at 161<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis</p>
+</div>
+<p>Let’s now go through and check our work, by writing a vPython program to find the net gravitational force on <span class="math notranslate nohighlight">\(m_1\)</span>. I will do this by writing a function <code class="docutils literal notranslate"><span class="pre">netGravForce()</span></code>, where the first argument <code class="docutils literal notranslate"><span class="pre">obj</span></code> will be an object representing the mass to find the force <em>on</em>, and the second argument <code class="docutils literal notranslate"><span class="pre">massList</span></code> will be a list of the other masses in the problem. Thus, for the problem above, <code class="docutils literal notranslate"><span class="pre">obj</span></code> will be the mass <span class="math notranslate nohighlight">\(m_1\)</span>, while <code class="docutils literal notranslate"><span class="pre">massList</span></code> will be a list of the masses <span class="math notranslate nohighlight">\(m_2, m_3\)</span>. I will use sphere objects to represent all of the masses, which have both <code class="docutils literal notranslate"><span class="pre">pos</span></code> and <code class="docutils literal notranslate"><span class="pre">mass</span></code> attributes. This is done in the Trinket app below. Remember you can view the code by clicking on the pencil icon.</p>
+<p id="net-grav-force"><a class="reference internal" href="#grav"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/a7a42f5dcf?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>The key part of the program is the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">netForce</span> <span class="o">+=</span> <span class="p">(</span><span class="n">G</span> <span class="o">*</span> <span class="n">obj</span><span class="o">.</span><span class="n">mass</span> <span class="o">*</span> <span class="n">otherObj</span><span class="o">.</span><span class="n">mass</span> <span class="o">/</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">rHat</span>
+</pre></div>
+</div>
+<p>so let’s look at this in detail: this command in vPython is the same as the mathematical relation for the force <span class="math notranslate nohighlight">\({\vec F}_{ij}\)</span> <em>on</em> mass <span class="math notranslate nohighlight">\(m_i\)</span> <em>due to</em> <span class="math notranslate nohighlight">\(m_j\)</span> (notice the order!), namely</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{ij} = \biggl( \frac{G m_i m_j}{r^2 _{ij}} \biggr) {\hat r}_{ij}
+\]</div>
+<p>The point mass <code class="docutils literal notranslate"><span class="pre">obj</span></code> is the one we are finding the net gravitational force for; thus <span class="math notranslate nohighlight">\(m_i\)</span> corresponds to <code class="docutils literal notranslate"><span class="pre">obj.mass</span></code>. The second mass <code class="docutils literal notranslate"><span class="pre">otherObj</span></code> (one of the objects in the list <code class="docutils literal notranslate"><span class="pre">objList</span></code>), and its mass <code class="docutils literal notranslate"><span class="pre">otherObj.mass</span></code>, represents the mass <span class="math notranslate nohighlight">\(m_j\)</span>. We find the vector <span class="math notranslate nohighlight">\({\vec r}_{ij} = {\vec r}_i - {\vec r}_j\)</span> by the previous command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rVec</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">pos</span> <span class="o">-</span> <span class="n">otherObj</span><span class="o">.</span><span class="n">pos</span>
+</pre></div>
+</div>
+<p>so that <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> is found with <code class="docutils literal notranslate"><span class="pre">rHat</span> <span class="pre">=</span> <span class="pre">hat(rVec)</span></code>, and the center-to-center distance <span class="math notranslate nohighlight">\(r\)</span> between the two masses <span class="math notranslate nohighlight">\(m_i\)</span> and <span class="math notranslate nohighlight">\(m_j\)</span> is calculated via <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">mag(rVec)</span></code>. Including the constant <code class="docutils literal notranslate"><span class="pre">G</span></code> completes the correspondence between the vPython commands and the original equation. Notice that everything in the parentheses above is a scalar; the <em>vector</em> nature of <code class="docutils literal notranslate"><span class="pre">netForce</span></code> comes from the unit vector <code class="docutils literal notranslate"><span class="pre">rHat</span></code>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">netGravForce()</span></code> in the program above, and find the net gravitational force on <span class="math notranslate nohighlight">\(m_3\)</span> in unit vector form. Verify that this matches the answer you got by doing the problem analytically above.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You can do this by changing the definition of the variable <code class="docutils literal notranslate"><span class="pre">result</span></code> above, so it reads</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">netGravForce</span><span class="p">(</span><span class="n">m3</span><span class="p">,</span> <span class="p">[</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="gravitational-field">
+<span id="grav-field"></span><h2><span class="section-number">21.3. </span>Gravitational field<a class="headerlink" href="#gravitational-field" title="Permalink to this headline">¶</a></h2>
+<p>The idea of a “field” is a powerful one in physics, and is the basis of a lot of how modern physics describes the world. However, it is a little bit abstract, so let’s warm up to this concept by starting with life on the surface of the Earth. Suppose you drop two masses, a large mass <span class="math notranslate nohighlight">\(M\)</span> and a small mass <span class="math notranslate nohighlight">\(m &lt; M\)</span>. You would expect that the larger mass is going to damage the floor more, since the gravitational force is larger on <span class="math notranslate nohighlight">\(M\)</span> than it is on <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig07a-Falling_masses_w_forces.png"><img alt="../_images/INT_AY20_MP2_L27_Fig07a-Falling_masses_w_forces.png" src="../_images/INT_AY20_MP2_L27_Fig07a-Falling_masses_w_forces.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.8 </span><span class="caption-text">Two falling objects, and the forces on them, near the surface of the Earth</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now what would the motion of the two masses look like if we filmed it with a high-speed camera? Neglecting air resistance, we would see the two move with exactly the same motion! Remember the cannonball and the feather movie back in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel-grav-field"><span class="std std-ref">Lesson 05</span></a>. This is because the two masses have exactly the same acceleration.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig07b-Falling_masses_w_accel_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig07b-Falling_masses_w_accel_small.png" src="../_images/INT_AY20_MP2_L27_Fig07b-Falling_masses_w_accel_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.9 </span><span class="caption-text">Two falling objects, and their accelerations, near the surface of the Earth</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Thus, we have found a quantity that is the same for all objects moving under the influence of gravity near the Earth. This is a measure of the Earth’s gravitational influence on other things close to it! This measure does <em>not</em> depend on the size of the object, just on the mass and radius of the Earth. If you use a large mass <span class="math notranslate nohighlight">\(M\)</span> to test this influence, while I use a small mass <span class="math notranslate nohighlight">\(m\)</span>, we still get the same answer for their accelerations. These are the key points behind the <em>gravitational field</em> created by an object (here, the Earth):</p>
+<ol class="simple">
+<li><p>The gravitational field created by the Earth is depends only on the properties of the Earth.</p></li>
+<li><p>The gravitational field is the same, regardless of what mass you used to find its magnitude and direction. Here, the “test masses” were the two masses <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(M\)</span>.</p></li>
+</ol>
+<p>These are the basic properties of any kind of field. In <a class="reference internal" href="L25_Electric_fields.html#elec-field"><span class="std std-ref">Lesson 25</span></a>, we will define an electric field, but again, these vectors will only depend what charge is creating them, not what is used to test them.</p>
+<p>So how does this happen? Look back at the example in the previous section, and particularly at the algebraic expressions for the two force <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> and <span class="math notranslate nohighlight">\({\vec F}_{13}\)</span>. You will notice that both of these forces are proportional to the mass <span class="math notranslate nohighlight">\(m_1\)</span> acted on by these forces. Said differently, this means that <span class="math notranslate nohighlight">\({\vec F}_{12}\)</span> is equal to <span class="math notranslate nohighlight">\(m_1\)</span> times some vector made of the “other pieces”, and the same is true for <span class="math notranslate nohighlight">\({\vec F}_{13}\)</span>. We can factor out the mass affected by this net force. This is how we can define the gravitational field.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> gravitational field</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec g}\)</span></p></li>
+<li><p><strong>Definition:</strong> Suppose a small mass <span class="math notranslate nohighlight">\(m\)</span> (known as a <strong>test mass</strong>) is placed at some distance away from a mass <span class="math notranslate nohighlight">\(M\)</span>, which results in a gravitational force <span class="math notranslate nohighlight">\(F_g\)</span> on the test mass due to the mass <span class="math notranslate nohighlight">\(M\)</span>. Then the <strong>gravitational field</strong> due to object <span class="math notranslate nohighlight">\(M\)</span> at the location of mass <span class="math notranslate nohighlight">\(m\)</span> is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ {\vec g} = \frac{{\vec F}_g}{m} \]</div>
+<ul class="simple">
+<li><p><strong>SI Units:</strong> N/kg (equivalent to m/s<span class="math notranslate nohighlight">\(^2\)</span>)</p></li>
+</ul>
+<p>Suppose we want to find the gravitational field at a point <span class="math notranslate nohighlight">\(P\)</span>, due to a mass <span class="math notranslate nohighlight">\(m_j\)</span>, with the set-up as in the picture below.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L22_Fig01_Field_at_point.png"><img alt="../_images/INT_AY22_L22_Fig01_Field_at_point.png" src="../_images/INT_AY22_L22_Fig01_Field_at_point.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.10 </span><span class="caption-text">Finding gravitational field due to mass <span class="math notranslate nohighlight">\(m_j\)</span></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Regardless of the size of the test mass <span class="math notranslate nohighlight">\(m_P\)</span> we place at <span class="math notranslate nohighlight">\(P\)</span>, the gravitational field will be the gravitational force <em>on</em> <span class="math notranslate nohighlight">\(m_P\)</span>, divided by the mass <span class="math notranslate nohighlight">\(m_P\)</span>, so that</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = - \frac{(G m_P m_j / r^2 _{Pj})}{m_P} {\hat r}_{Pj}
+\]</div>
+<p>If we simply this, we get the gravitational field due to a point mass <span class="math notranslate nohighlight">\(m_j\)</span> at a point <span class="math notranslate nohighlight">\(P\)</span> a distance <span class="math notranslate nohighlight">\(r_{Pj}\)</span> away from the mass <span class="math notranslate nohighlight">\(m_j\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = -\biggl( \frac{Gm_j}{r^2 _{Pj}} \biggr) {\hat r}_{Pj}
+\]</div>
+<p>Notice this is just the same conceptual definition of the gravitational field we saw in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05</span></a>. The only additional part is that we know can calculate the gravitational force <span class="math notranslate nohighlight">\({\vec F}_g\)</span> directly, and use it to find an equation for the gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Between the red and the blue masses, which of them experiences the greater gravitational field magnitude <em>due to</em> the green mass?</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig05-Colored_masses_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig05-Colored_masses_small.png" src="../_images/INT_AY20_MP2_L27_Fig05-Colored_masses_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.11 </span><span class="caption-text">Which of the two situations shown has a larger gravitational field due to the green mass?</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The distances of both the red and blue masses from the green mass are the same, so the gravitational fields are the same as well.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Listed below are the radii and masses of various objects in the solar system; what would be the magnitude of the gravitational field for an astronaut standing on their surface?</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Object</p></th>
+<th class="head"><p>Radius (km)</p></th>
+<th class="head"><p>Mass (kg)</p></th>
+<th class="head"><p>Field (m/s<span class="math notranslate nohighlight">\(^2\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>2440</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.30 \times 10^{23}\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Venus</p></td>
+<td><p>6051</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.87 \times 10^{24}\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Earth</p></td>
+<td><p>6378</p></td>
+<td><p><span class="math notranslate nohighlight">\(5.97 \times 10^{24}\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Moon</p></td>
+<td><p>1737</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.35 \times 10^{22}\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Mars</p></td>
+<td><p>3397</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.42 \times 10^{23}\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Europa</p></td>
+<td><p>1569</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.80 \times 10^{22}\)</span></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is the completed table. Remember to convert each radius into meters!</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Object</p></th>
+<th class="head"><p>Radius (km)</p></th>
+<th class="head"><p>Mass (kg)</p></th>
+<th class="head"><p>Field (m/s<span class="math notranslate nohighlight">\(^2\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>2440</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.30 \times 10^{23}\)</span></p></td>
+<td><p>3.70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Venus</p></td>
+<td><p>6051</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.87 \times 10^{24}\)</span></p></td>
+<td><p>8.87</p></td>
+</tr>
+<tr class="row-even"><td><p>Earth</p></td>
+<td><p>6378</p></td>
+<td><p><span class="math notranslate nohighlight">\(5.97 \times 10^{24}\)</span></p></td>
+<td><p>9.79</p></td>
+</tr>
+<tr class="row-odd"><td><p>Moon</p></td>
+<td><p>1737</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.35 \times 10^{22}\)</span></p></td>
+<td><p>1.62</p></td>
+</tr>
+<tr class="row-even"><td><p>Mars</p></td>
+<td><p>3397</p></td>
+<td><p><span class="math notranslate nohighlight">\(6.42 \times 10^{23}\)</span></p></td>
+<td><p>3.71</p></td>
+</tr>
+<tr class="row-odd"><td><p>Europa</p></td>
+<td><p>1569</p></td>
+<td><p><span class="math notranslate nohighlight">\(4.80 \times 10^{22}\)</span></p></td>
+<td><p>1.30</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Notice that we can use the definition of the gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span>, in terms of the gravitational force, to simplify calculations. In the last section, for the example of the equilateral triangle, we solved for the net force on mass <span class="math notranslate nohighlight">\(m_1\)</span>. Now that we have that, we can use the fact that</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = \frac{{\vec F}_1}{m_1}
+\]</div>
+<p>to find the gravitational field at the location of <span class="math notranslate nohighlight">\(m_1\)</span>. It doesn’t matter that there is an object at that point; we can think of this mass as the test mass we are using to find the field. Let’s do this calculation in two different ways, so you can see how it goes. First, we can use the unit vector form of <span class="math notranslate nohighlight">\({\vec F}_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = \frac{(-1.366 \times 10^{-12} \textrm{ N}) {\hat x} + (-1.651 \times 10^{-11} \textrm{ N}) {\hat y}}{(2.00 \textrm{ kg})}
+\]</div>
+<p>Dividing both components by the the mass <span class="math notranslate nohighlight">\(m_1\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = (-6.830 \times 10^{-13} \textrm{ N/kg}) {\hat x} + (-8.255 \times 10^{-12} \textrm{ N/kg}) {\hat y}
+\]</div>
+<p>Finding the magnitude and direction of this vector gives <span class="math notranslate nohighlight">\(8.28 \times 10^{-12}\)</span> N/kg at 275<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis. However, the attentive reader will notice something about this vector, leading to the second way we can find the gravitational field at the location of <span class="math notranslate nohighlight">\(m_1\)</span>. This is the fact that this magnitude is simply the original <em>force</em> magnitude, divided by 2.00 kg; the direction is the same as the force itself! This works out because the mass is a positive number. We are scaling both components of the vector triangle by the same amount, so the hypotenuse changes by the same, and the direction is unaltered. This works for gravity, but be careful when we come back to this with electric fields (where the charges can be negative!).</p>
+<div class="warning admonition">
+<p class="admonition-title">Forces and fields</p>
+<p>If you know one of either the gravitational field at a point, or the gravitational force on a charge at the same point, and are asked to find the other, don’t solve from scratch! It is much easier to use the definition of <span class="math notranslate nohighlight">\({\vec g}\)</span> to simplify the calculation.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For the equilateral triangle problem above, find the gravitational field at the location of mass <span class="math notranslate nohighlight">\(m_3\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(7.20 \times 10^{-12}\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span> at 161<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two masses <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(4M\)</span> are fixed at a distance of <span class="math notranslate nohighlight">\(3R\)</span>. Is there a location <span class="math notranslate nohighlight">\(P\)</span> on the line between the two masses such that the net gravitational field is zero? If so, give the distance from the mass <span class="math notranslate nohighlight">\(M\)</span> to this location, in terms of a multiple of <span class="math notranslate nohighlight">\(R\)</span>. If not, explain why not.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig06-Masses_in_line_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig06-Masses_in_line_small.png" src="../_images/INT_AY20_MP2_L27_Fig06-Masses_in_line_small.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 21.12 </span><span class="caption-text">Find the location between the two masses <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(4M\)</span> where the gravitational field is zero</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The gravitational fields of each mass <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(4M\)</span> point towards that mass. Thus, at every point on the line between the two masses, their gravitational fields point in opposite directions. For them to cancel, their magnitudes must be the same. This happens when the distance between the location <span class="math notranslate nohighlight">\(P\)</span> and mass <span class="math notranslate nohighlight">\(M\)</span> is <span class="math notranslate nohighlight">\(R\)</span>, which gives the distance between <span class="math notranslate nohighlight">\(P\)</span> and mass <span class="math notranslate nohighlight">\(4M\)</span> is <span class="math notranslate nohighlight">\(2R\)</span>. Because the distance is twice as great to mass <span class="math notranslate nohighlight">\(4M\)</span>, by the inverse square law, the magnitude of the gravitational field will be exactly the same as that from <span class="math notranslate nohighlight">\(M\)</span>. This means there is a location closer to the smaller mass where the net gravitational field is the zero vector.</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">21.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>The gravitational force was one of the first examples of forces we worked with in <a class="reference internal" href="L12_Solving_force_problems.html#force-prob"><span class="std std-ref">Lesson 13 (solving force problems)</span></a>. However, at that point, we leaned heavily on the fact that the gravitational field is close to constant on the Earth’s surface, and used that fact to “define” the force of gravity on an object. We have now reached the point where we can define the gravitational force between <em>any</em> two point masses, not just the Earth and another (small) mass. If we were so inclined, we could built up the force between arbitrary objects by thinking of each of them as made of a collection of small masses. You may see something like that later in your academic career.</p>
+<p>The gravitational force is the only truly long-range force in the Universe. We will see in <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force"><span class="std std-ref">Lesson 24</span></a> that Coulomb’s law for the electrostatic force has a similar form. But in practice, because there are both positive and negative charges, the electrostatic force tends to cancel out over large distances, and it does not have too much of an effect on astronomical scales. This is different than gravity, which is the force keeping the planets of the Solar System around the Sun, and the stars in our Milky Way galaxy in their spiral structure. Even the evolution of the Universe in time depends primarily on how gravity affects all the objects in it!</p>
+<p>We also fleshed out the idea of a field, using the gravitational field as our first example. Remember to focus on the key ideas behind what a field is – a field measures the influence of an object on its surroundings. We say that falling objects have an acceleration  of 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span> downward because that is the gravitational field near the surface of the Earth. This depends only on the mass and size of the Earth, not on the object’s mass. If we lived on another planet, we would remember another number for the magnitude, because the gravitational field would be different. However, this is also dependent on the physical properties of our environment. There are some spiders, for example, that use the electrostatic force for help getting from one plant to another. A physics class for intelligent spiders would memorize the size of the electric field at the Earth’s surface!</p>
+<p>Fields are fundamental to our modern understanding of how physics works. Not only do they make the mathematics simpler, but they get at the heart of why objects have the properties that they do. Whenever you hear a physicist talk about a “quantum field theory”, they are thinking about using fields to describe the basic properties of matter. Fields are both powerful, and a natural way to describe the nature of the Universe.</p>
+<p>After today’s class, you should be able to:</p>
+<ul class="simple">
+<li><p>Describe how the gravitational force between two objects changes as their masses or distance change by some proportion.</p></li>
+<li><p>Calculate the gravitational force between two objects.</p></li>
+<li><p>Define gravitational field, and state its SI units.</p></li>
+<li><p>Calculate the gravitational field at some distance from a mass.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L20_Conservation_of_energy.html" title="previous page"><span class="section-number">20. </span>Conservation of energy</a>
+    <a class='right-next' id="next-link" href="L22_Gravitational_potential_energy.html" title="next page"><span class="section-number">22. </span>Gravitational potential energy</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

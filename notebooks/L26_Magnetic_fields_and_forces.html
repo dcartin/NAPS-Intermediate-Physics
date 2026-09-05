@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>26. Magnetic fields and forces &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="27. Biot-Savart law" href="L27_Biot-Savart_law.html" />
+    <link rel="prev" title="25. Electric fields" href="L25_Electric_fields.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L26_Magnetic_fields_and_forces.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L26_Magnetic_fields_and_forces.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   26.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-fields">
+   26.2. Magnetic fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-force">
+   26.3. Magnetic force
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motion-of-charged-particle-in-constant-magnetic-field">
+   26.4. Motion of charged particle in constant magnetic field
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mass-spectrometer">
+     26.4.1. The mass spectrometer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   26.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="magnetic-fields-and-forces">
+<span id="mag-field"></span><h1><span class="section-number">26. </span>Magnetic fields and forces<a class="headerlink" href="#magnetic-fields-and-forces" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">26.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#mag-field-ucm"><span class="std std-ref">Motion in a constant magnetic field</span></a></p></li>
+</ol>
+<p>After the gravitational field, magnetic fields are probably the next most common example of a field in everyday life. I am sure you have played around at least once with bar magnets, and seen how the various poles of the magnets attract or repel. You may also have used a compass to navigate around, emulating sailors who have done this for centuries. In fact, the Chinese have been using compasses for that purpose for over a thousand years. Before that, they used the magnetic properties of lodestones for divination; it is not too surprising that a mystical purpose was given to stones that naturally seek to align with the Earth’s magnetic field! In today’s technology, magnets run the gamut from the speakers in your headphones, to the “M” in “MRI” when you go to the doctor’s office.</p>
+<p>In this lesson, we will explore magnetic fields, and the forces they exert on moving charges. Some of this will be similar to what we did with gravitational and electric fields. However, magnetic fields and forces feature interesting behavior unlike those other fields. In particular, magnetism is inherently three-dimensional, so we will lean heavily on the vector ideas we have been using throughout the course.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define magnetic field and identify its units.</p></li>
+<li><p>Define a magnetic dipole.</p></li>
+<li><p>State the visual representation for vectors pointing perpendicular to the page.</p></li>
+<li><p>State the magnetic force on a moving charged particle in terms of its charge, velocity and the magnetic field.</p></li>
+<li><p>For a charge moving in a magnetic field, using the right-hand rule find the direction of either the charge’s velocity, the magnetic field, or the magnetic force on the charge, given two of the other quantities.</p></li>
+</ul>
+</div>
+<div class="section" id="magnetic-fields">
+<h2><span class="section-number">26.2. </span>Magnetic fields<a class="headerlink" href="#magnetic-fields" title="Permalink to this headline">¶</a></h2>
+<p>I am now going to introduce the idea of a magnetic field. This is denoted by the symbol <span class="math notranslate nohighlight">\({\vec B}\)</span>. We have already covered two fields before – the gravitational and electric fields – and much of your intuition from those should carry over. In particular, the magnetic field is something that everyone agrees on; no matter how you measure the magnetic field, you will get the same answer for <span class="math notranslate nohighlight">\({\vec B}\)</span> as any other observer. This is the central intuition you should always remember about <em>any</em> type of field. However, as we will see, magnetic fields are more complicated than the fields we have dealt with before.</p>
+<p>Much like the other fields, we can draw magnetic field lines for <span class="math notranslate nohighlight">\({\vec B}\)</span>. Remember that the direction of the electric field <span class="math notranslate nohighlight">\({\vec E}\)</span> at a particular point is given by the direction of the electrostatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> on a positive charge placed at that point (<em>not</em> the direction of its velocity!). So we can imagine using a positive charge to map out the directions of the electric field, then connect these directions together to get electric field lines. We can do something similar with a magnetic field. As our operative definition, we have the following.</p>
+<div class="warning admonition">
+<p class="admonition-title">Direction of magnetic field</p>
+<p>The direction of the magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> at a point <span class="math notranslate nohighlight">\(P\)</span> is given by the direction the “north” end of a compass would point when placed at that point.</p>
+</div>
+<p>Thus, just like an electric field, we can use a compass to map out the directions of the magnetic field at particular points, then stitch these directions together to get magnetic field lines. A wonderful demonstration of this (and standard fare at every elementary school!) to use to iron filings around a bar magnet, to show the field of the magnet. This works because the iron filings act like small compasses, so they map out the field very well.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/Iron_filings_bar_magnet.jpg"><img alt="../_images/Iron_filings_bar_magnet.jpg" src="../_images/Iron_filings_bar_magnet.jpg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.1 </span><span class="caption-text">Iron filings showing the magnetic field of a bar magnet (<a class="reference external" href="https://www.flickr.com/photos/daynoir/2181293650">source</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>As you can see from the picture above, the bar magnet itself has two <strong>magnetic poles</strong>: north and south. The magnetic field lines go between the north and south poles. Outside of the bar magnet, the magnetic field lines go <em>from</em> the north pole <em>towards</em> the south pole. From our method of finding the direction of magnetic field lines from compasses, this means that the north pole of the compass is attracted to the south pole of the bar magnet. Much like charges, opposites attract!</p>
+<div class="warning admonition">
+<p class="admonition-title">Poles are not charges</p>
+<p>Students often see this <em>analogous</em> behavior between electric charges and magnetic poles, and go forward and say that it is because they are <em>equal</em>. This is not true! Magnetic poles are not the same as electric charges. They display similar behaviors, regarding directions of forces and field lines, but they are distinct physical properties. In fact, we will see later that magnetic poles are created by the motion of electric charges.</p>
+</div>
+<p>You may also notice that the magnetic field lines never end. Instead they form loops, with each line starting at the north magnetic pole, extending outside the bar magnet to the south magnetic pole, then joining up again to itself back at the north pole. <em>Magnetic field lines have no beginnings or ends</em>. This is different than electric field lines, which start and stop at electric charges. This is a manifestation of a physical observation: there is no such thing as an isolated magnetic pole, they always come in north/south pairs. We refer to two opposite magnetic poles, such as a bar magnet, as a <strong>magnetic dipole</strong>. A single pole (or <em>magnetic monopole</em>) has never been seen, although there are theoretical reasons to expect that they may exist.</p>
+<p>The definition of direction for the magnetic field lines has another interesting consequence. Remember that these field lines are given by which way the “north” end of a compass points. Because opposite poles of a magnet attract, this means that the north <em>geographic</em> pole of the Earth is where the south <em>magnetic</em> pole of the planet’s magnetic field is! Our compass points (roughly) north because it is attracted to a south magnetic pole! As you can see in the picture below, the magnetic field of the Earth has roughly the same magnetic dipole behavior as a bar magnet.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/320px-VFPt_Earths_Magnetic_Field_Confusion_overlay.svg.png"><img alt="../_images/320px-VFPt_Earths_Magnetic_Field_Confusion_overlay.svg.png" src="../_images/320px-VFPt_Earths_Magnetic_Field_Confusion_overlay.svg.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.2 </span><span class="caption-text">Magnetic field of the Earth (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:VFPt_Earths_Magnetic_Field_Confusion_overlay.svg">source</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The magnetic field around a bar magnet is shown in the picture below. What can you say about the two poles <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>? Choose the best answer below.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig01_Bar_magnet_w_field.png"><img alt="../_images/INT_AY20_MP3_L22_Fig01_Bar_magnet_w_field.png" src="../_images/INT_AY20_MP3_L22_Fig01_Bar_magnet_w_field.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.3 </span><span class="caption-text">Magnetic field of a bar magnet</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is a negative pole, <span class="math notranslate nohighlight">\(B\)</span> is a positive pole</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is a north pole, <span class="math notranslate nohighlight">\(B\)</span> is a south pole</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is a positive pole, <span class="math notranslate nohighlight">\(B\)</span> is a negative pole</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is a south pole, <span class="math notranslate nohighlight">\(B\)</span> is a north pole</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(A\)</span> is a north pole, <span class="math notranslate nohighlight">\(B\)</span> is a south pole</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Select the arrow that gives the correct direction of the magnetic field due to the bar magnet at the indicated point, or state that the magnetic field is zero.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig02_Bar_magnet_field_to_left.png"><img alt="../_images/INT_AY20_MP3_L22_Fig02_Bar_magnet_field_to_left.png" src="../_images/INT_AY20_MP3_L22_Fig02_Bar_magnet_field_to_left.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.4 </span><span class="caption-text">What is the direction of the magnetic field to the left of the bar magnet?</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The magnetic field at the marked point has a direction to the left (<span class="math notranslate nohighlight">\(A\)</span>).</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Select the arrow that gives the correct direction of the magnetic field due to the bar magnet at the indicated point, or state that the magnetic field is zero.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig03_Bar_magnet_field_above.png"><img alt="../_images/INT_AY20_MP3_L22_Fig03_Bar_magnet_field_above.png" src="../_images/INT_AY20_MP3_L22_Fig03_Bar_magnet_field_above.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.5 </span><span class="caption-text">What is the direction of the magnetic field above of the bar magnet?</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The magnetic field at the marked point has a direction to the right (<span class="math notranslate nohighlight">\(D\)</span>).</p>
+</div>
+</div>
+<div class="section" id="magnetic-force">
+<h2><span class="section-number">26.3. </span>Magnetic force<a class="headerlink" href="#magnetic-force" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have an understanding of magnetic fields, we can use this to find the magnetic force on a charged particle. Recall that from <a class="reference internal" href="L25_Electric_fields.html#elec-field"><span class="std std-ref">Lesson 25</span></a>, the relation between electric fields <span class="math notranslate nohighlight">\({\vec E}\)</span> and electrostatic forces <span class="math notranslate nohighlight">\({\vec F}_e\)</span> was rather simple, namely</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E} = \frac{{\vec F}_e}{q_0}
+\]</div>
+<p>for a test charge <span class="math notranslate nohighlight">\(q_0\)</span>. However, the magnetic force equation is more complicated. In particular, it depends not only on the magnetic field vector and the charge itself, but also the <em>velocity</em> of the charge!</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> Magnetic field</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec B}\)</span></p></li>
+<li><p><strong>Definition:</strong> The magnetic force <span class="math notranslate nohighlight">\({\vec F}_m\)</span> on a charge <span class="math notranslate nohighlight">\(q\)</span> moving with a velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> is related to the magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> at the charge’s location by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_m = q {\vec v} \times {\vec B}
+\]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> teslas (T)</p></li>
+</ul>
+<p>You should probably review the vector product from <a class="reference internal" href="L17_Vector_product.html#vec-prod"><span class="std std-ref">Lesson 20</span></a>, to make sure you know how to calculate the magnetic force from the other information given.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A proton moves perpendicular to a uniform magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> with a velocity <span class="math notranslate nohighlight">\((1.20 \times 10^7 \textrm{ m/s}) {\hat z}\)</span> and experiences an acceleration <span class="math notranslate nohighlight">\((2.60 \times 10^{13} \textrm{ m/s}^2) {\hat x}\)</span>. What is the magnetic field (in mT)?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\((+22.6 \textrm{ mT}) {\hat x}\)</span></p>
+</div>
+<p>Because of this vector product, the magnetic force <span class="math notranslate nohighlight">\({\vec F}_m\)</span> has some important properties. First, the magnetic force on a stationary charge is zero! It does not matter how large the charge is, if it is not moving, then there will be no <span class="math notranslate nohighlight">\({\vec F}_m\)</span> acting on it. Second, the direction of the magnetic force is <em>always</em> perpendicular to both the velocity and magnetic field vectors. Notice, however, that <span class="math notranslate nohighlight">\({\vec v}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span> may not be perpendicular to <em>each other</em>. Remember from <a class="reference internal" href="L17_Vector_product.html#vec-prod"><span class="std std-ref">Lesson 20</span></a> that the magnitude <span class="math notranslate nohighlight">\(|{\vec A} \times {\vec B}| = AB \sin \theta_{AB}\)</span>, where <span class="math notranslate nohighlight">\(A, B\)</span> are the vector magnitudes, and <span class="math notranslate nohighlight">\(\theta_{AB}\)</span> is the angle between the two vectors. Then the magnitude <span class="math notranslate nohighlight">\(F_m\)</span> of the magnetic force is</p>
+<div class="math notranslate nohighlight">
+\[
+    F_m = |q| vB \sin \theta
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between the velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> and the magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span>. It is entirely possible that the angle <span class="math notranslate nohighlight">\(\theta = 0\)</span> or <span class="math notranslate nohighlight">\(\theta = 180.^\circ\)</span>, in which case the magnetic force is zero.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A proton travels with a speed of 3.00 Mm/s at an angle of 28.0<span class="math notranslate nohighlight">\(^\circ\)</span> relative to the direction of a 700 mT magnetic field. What is the magnitude (in N) of the magnetic force on the proton?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(1.58 \times 10^{-13}\)</span> N</p>
+</div>
+<p>As we did when introducing the vector product, we can use the right-hand rule (RHR) to give the relationship between the directions of the charge velocity <span class="math notranslate nohighlight">\({\vec v}\)</span>, the magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span>, and the magnetic force on the charge <span class="math notranslate nohighlight">\({\vec F_m}\)</span>. This is given by the figure below. There are other right-hand rule techniques, but I like this one, since you can see how the force is perpendicular to the velocity and magnetic field. The rule is that the pointer finger is in the direction of the velocity, the middle finger in the direction of the field, and the thumb will point in the direction of the magnetic force.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig04_RHR-forces.png"><img alt="../_images/INT_AY20_MP3_L22_Fig04_RHR-forces.png" src="../_images/INT_AY20_MP3_L22_Fig04_RHR-forces.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.6 </span><span class="caption-text">Using the right-hand rule for magnetic force (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Right_hand_rule_cross_product.svg">source</a>)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice this assumes that the charge is a <em>positive</em> charge! When you are using the RHR and have a negative charge, you can either just reverse the direction for the magnetic force, or else use your left hand. For the latter case, which finger goes with which vector is the same, just the mirror image.</p>
+<p>As a way to represent 3D vectors on a 2D page (or screen), here is some notation. Imagine that we have an arrow, with an arrowhead on one end, and the feathers of the arrow on the other. If the arrow is coming towards you, you will see the tip of the arrow and the round arrowhead; if the arrow is going away from you, you see the four feathers at the end. We represent these with the following pictures:</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig05_3D-notation.png"><img alt="../_images/INT_AY20_MP3_L22_Fig05_3D-notation.png" src="../_images/INT_AY20_MP3_L22_Fig05_3D-notation.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.7 </span><span class="caption-text">Notation for three-dimensional vectors</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Thus, a circle with a dot (or sometimes just a dot) is the tip and arrowhead coming towards you, while the cross in a circle (or just a cross) are the feathers going away from you. Here are some practice questions; remember to think three-dimensionally!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A positive charge enters a uniform magnetic field (the blue crosses in the diagram) as shown. What is the direction of the magnetic force? Choose the best answer.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig06_F_mag_dir.png"><img alt="../_images/INT_AY20_MP3_L22_Fig06_F_mag_dir.png" src="../_images/INT_AY20_MP3_L22_Fig06_F_mag_dir.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.8 </span><span class="caption-text">Find the direction of the magnetic force</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>towards the top of the page</p></li>
+<li><p>towards the bottom of the page</p></li>
+<li><p>into the page</p></li>
+<li><p>out of the page</p></li>
+<li><p>to the left</p></li>
+<li><p>to the right</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> to the left</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A positive charge enters a uniform magnetic field (the blue lines in the diagram) as shown. What is the direction of the magnetic force? Choose the best answer.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L22_Fig07_F_mag_dir.png"><img alt="../_images/INT_AY20_MP3_L22_Fig07_F_mag_dir.png" src="../_images/INT_AY20_MP3_L22_Fig07_F_mag_dir.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.9 </span><span class="caption-text">Find the direction of the magnetic force</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>towards the top of the page</p></li>
+<li><p>towards the bottom of the page</p></li>
+<li><p>into the page</p></li>
+<li><p>out of the page</p></li>
+<li><p>to the left</p></li>
+<li><p>to the right</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> into the page</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The magnetic force on a proton points downward. If the velocity of the proton is westward, what is the direction of the magnetic field the proton moves in?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> north</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An electron has a magnetic force acting due west on it. If the electron is moving in a magnetic field pointing due north, what is the direction of the electron’s velocity?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> down</p>
+</div>
+</div>
+<div class="section" id="motion-of-charged-particle-in-constant-magnetic-field">
+<h2><span class="section-number">26.4. </span>Motion of charged particle in constant magnetic field<a class="headerlink" href="#motion-of-charged-particle-in-constant-magnetic-field" title="Permalink to this headline">¶</a></h2>
+<p>From the above equation for the magnetic force <span class="math notranslate nohighlight">\({\vec F}_m\)</span>, this force is at its maximum size when the velocity of a charged particle is perpendicular to the magnetic field. Let’s explore this situation a little more; we will see that this gives interesting behavior we did not see with the electric field. In particular, since the magnetic force is perpendicular to both the magnetic field and the velocity, this means that the charge will experience an acceleration that is always perpendicular to the velocity. There will never be an acceleration <em>along</em> the magnetic field lines.</p>
+<p>If you remember the ideas of circular motion from <a class="reference internal" href="L16_Circular_motion.html#ucm"><span class="std std-ref">Lesson 18</span></a>, you will see that this means the magnetic force acts like a centripetal force here! The magnetic force will always be pointing perpendicular to the velocity, so the charge curves around in the direction of that force, but keeping the same speed. You can see this yourself by running the program below. The cyan arrows represent a constant magnetic field, and the program simulates the motion of a charged particle in that field, with a velocity perpendicular to the field. The red arrow is the momentum of the charge.</p>
+<p id="mag-field-ucm"><a class="reference internal" href="#mag-field"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/6df52d1938?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Let’s make this more mathematical. If the magnetic force acts like a centripetal force, then we can use Newton’s second law to find out the radius of the resulting circle. Using <span class="math notranslate nohighlight">\({\hat r}\)</span> to be the usual radial unit vector (i.e. the unit vector <em>at</em> the charge, pointing <em>away</em> from the center of the circle), then</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r} \cdot \sum {\vec F} = -ma_{cp}
+\]</div>
+<p>Recall that the minus sign here is because the centripetal force always points towards the center of the circle. However, the magnetic force will as well, so <span class="math notranslate nohighlight">\({\vec F}_m = -F_m {\hat r}\)</span>; in this situation, the magnetic force acts like a (constant) central force. This means we can relate the magnetic force magnitude <span class="math notranslate nohighlight">\(F_m\)</span> to the centripetal force by</p>
+<div class="math notranslate nohighlight">
+\[
+    F_m = ma_{cp} \Rightarrow |q|vB \sin \theta = \frac{mv^2}{r}
+\]</div>
+<p>The charge <span class="math notranslate nohighlight">\(q\)</span> is in absolute value signs, since we are using only the magnitudes; you should think about how changing the sign would alter anything with the directions. Also, we have already <em>assumed</em> that the velocity is perpendicular to the field, so <span class="math notranslate nohighlight">\(\theta = 90.0^\circ\)</span>, giving <span class="math notranslate nohighlight">\(\sin \theta = 1\)</span>. Solving the equation for the radius of the circle, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    r = \frac{mv}{|q|B}
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For the default values in the program above, the circular motion of the charge is <em>not</em> centered at the origin. What speed would be necessary, so that the point <span class="math notranslate nohighlight">\((0, 0, 0)\)</span> is at the center of the charge’s path?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> To have the path centered at the origin, the radius of the circle must be <span class="math notranslate nohighlight">\(r = 3.00\)</span> m (from the value of <code class="docutils literal notranslate"><span class="pre">INIT_POS</span></code>). Solving for the speed <span class="math notranslate nohighlight">\(v\)</span> in the equation above gives</p>
+<div class="math notranslate nohighlight">
+\[
+    v = \frac{|q|rB}{m}
+\]</div>
+<p>so <span class="math notranslate nohighlight">\(v = 5.00\)</span> m/s.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What happens if you use the speed from the last problem, but change the sign of the charge <span class="math notranslate nohighlight">\(q\)</span>?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The charge will move in a circular path of the same radius as before, but counterclockwise instead of clockwise. Thus, the path will be centered to the left of the charge’s starting point.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you change the velocity, so that it points along the magnetic field direction. What kind of motion do you see now?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> If the velocity is parallel to the magnetic field, then the magnetic force has zero magnitude. Thus, the charge will continue along a straight path.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the velocity, so that it has both non-zero <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components. This means that the velocity has components both parallel and perpendicular to the magnetic field. What kind of path will the charge have?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The charge will now have a combination of motions. The magnetic force will always point in the <span class="math notranslate nohighlight">\(x-y\)</span> plane, so the charge will have circular motion in this plane as well. However, with the non-zero <span class="math notranslate nohighlight">\(z\)</span> component of the velocity, the charge will continue to move at a constant rate in this direction. The combination of the two is a helical path around the magnetic field lines.</p>
+</div>
+<div class="section" id="the-mass-spectrometer">
+<h3><span class="section-number">26.4.1. </span>The mass spectrometer<a class="headerlink" href="#the-mass-spectrometer" title="Permalink to this headline">¶</a></h3>
+<p>There are many cases where the circular motion of charges around the magnetic field lines occurs. One of which we depend on every day! The strong magnetic field of the Earth channels charged particles, coming from the Sun and other sources in outer space, along its field lines. This serves as a barrier for most of these charges, preventing them from hitting the Earth’s atmosphere. If they did in great numbers, this would steadily erode the atmosphere, destroying the ozone layer, and eventually stripping the Earth of its air. In comparison, it is believed that the weak magnetic field of Mars was a key factor in that planet’s loss of atmosphere; the surface pressure at the Martian surface is only about 600 pascals (compared to 101.3 kPa on the Earth!).</p>
+<p>Another common use for the process described above is the <strong>mass spectrometer</strong>; you may have heard this term if you watch a lot of crime shows. A mass spectrometer takes an unknown substance, ionizes the constituents in some way, then feeds these molecules into a constant magnetic field. By determining the path of these molecules, the molecular charge-to-mass ratio <span class="math notranslate nohighlight">\(q/m\)</span> can be calculated. Early versions of this were used by various physicists to study “cathode rays”, those particles we now call electrons. The picture below shows such a process – the air molecules inside the tube are fluorescing because of collisions with the electron beam.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/320px-Cyclotron_motion_wider_view.jpg"><img alt="../_images/320px-Cyclotron_motion_wider_view.jpg" src="../_images/320px-Cyclotron_motion_wider_view.jpg" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.10 </span><span class="caption-text">Beam of electrons moving in a curved path due to a magnetic field (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Cyclotron_motion_wider_view.jpg">source</a>)</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let’s go through an estimate of how large the circular path of electrons would be in a laboratory experiment. Suppose we use a voltage <span class="math notranslate nohighlight">\(\Delta V = 3000\)</span> V to accelerate the electrons. Voltage <span class="math notranslate nohighlight">\(V\)</span> (as known as electric potential) is related to electric potential energy <span class="math notranslate nohighlight">\(U_e\)</span> by <span class="math notranslate nohighlight">\(\Delta U_e = q \Delta V\)</span>, for a charge <span class="math notranslate nohighlight">\(q\)</span>. This gives each electron a kinetic energy of <span class="math notranslate nohighlight">\(e \Delta V = 4.81 \times 10^{-16}\)</span> J. With the mass <span class="math notranslate nohighlight">\(m_e = 9.11 \times 10^{-31}\)</span> kg, then the electrons have a speed of <span class="math notranslate nohighlight">\(3.25 \times 10^7\)</span> m/s – about 1/10th the speed of light. Using this speed in the Earth’s magnetic field of about 50.0 <span class="math notranslate nohighlight">\(\mu\)</span> T, then the electrons will travel in a circular path with a radius of 3.69 m. In the picture above, a magnetic field is created which is about ten times stronger than the Earth’s field, so the path is correspondingly smaller.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you want to use a mass spectrometer to determine the ratio of U<span class="math notranslate nohighlight">\(^{235}\)</span> to U<span class="math notranslate nohighlight">\(^{238}\)</span> in a confiscated shipment. If each isotope is singly ionized and placed in a 750. mT magnetic field, with masses <span class="math notranslate nohighlight">\(m_{235} = 3.90 \times 10^{-25}\)</span> kg, <span class="math notranslate nohighlight">\(m_{238} = 3.95 \times 10^{-25}\)</span> kg, and both isotopes are moving at <span class="math notranslate nohighlight">\(1.05 \times 10^5\)</span> m/s, what is the distance separation (in mm) of the isotopes after half a circular orbit inside the magnetic field?</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L34-Fig01_Uranium-mass-spec.png"><img alt="../_images/INT_AY22_L34-Fig01_Uranium-mass-spec.png" src="../_images/INT_AY22_L34-Fig01_Uranium-mass-spec.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.11 </span><span class="caption-text">Uranium ions in a mass spectrometer</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 8.74 mm</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The image below shows a particle, <span class="math notranslate nohighlight">\(q\)</span>, as it moves through a magnetic field of <span class="math notranslate nohighlight">\(B = 0.570\)</span> T in a circular path with a radius of 30.0 cm. Determine whether <span class="math notranslate nohighlight">\(q\)</span> is a proton (<span class="math notranslate nohighlight">\(m_p = 1.67 \times 10^{-27}\)</span> kg) or electron (<span class="math notranslate nohighlight">\(m_e = 9.11 \times 10^{-31}\)</span> kg) from the image, and then use the appropriate mass in order to calculate the speed of <span class="math notranslate nohighlight">\(q\)</span> (in m/s) while in the magnetic field.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L24-Charge-in-field-01.png"><img alt="../_images/INT_AY20_MP3_L24-Charge-in-field-01.png" src="../_images/INT_AY20_MP3_L24-Charge-in-field-01.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.12 </span><span class="caption-text">Unknown charge moving in a magnetic field</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(1.64 \times 10^7\)</span> m/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An <em>electron</em> moves through four different regions (each represented by a different shade) from region I to region IV.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L24-Charge-in-field-02.png"><img alt="../_images/INT_AY20_MP3_L24-Charge-in-field-02.png" src="../_images/INT_AY20_MP3_L24-Charge-in-field-02.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 26.13 </span><span class="caption-text">Electron moving through four regions</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Based off of the path shown, find the directions of the magnetic fields in each region. Note it may be possible that the magnetic field is zero in a particular region.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers</em>: For region I, the magnetic field can either be zero, or in the left-right direction, since the magnetic force on the electron is zero. For the other three regions, the electron is undergoing uniform circular motion, so the magnetic force points towards the center of the circular motion for each region. For region II, the force is towards the bottom of the page, so the magnetic field is into the page. For regions III, the force is towards the top of the page, so the magnetic field is out of the page.</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">26.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We have now introduced the last of the three types of fields we will see in this course: the magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span>. Like the gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span> and the electric field <span class="math notranslate nohighlight">\({\vec E}\)</span>, the field at a particular point is measured to have the same magnitude and direction by all observers, and is used to find the corresponding force on an object at that point. The simplest system creating these magnetic fields is the magnetic dipole, consisting of a pair of magnetic poles, one a north pole and the other a south pole. Examples of these magnetic dipoles range from a simple bar magnet to the overall structure of the Earth’s magnetic field.</p>
+<p>In addition, we saw that a charged particle moving in a magnetic field undergoes circular motion around the field lines; if the charge’s velocity has non-zero components both parallel and perpendicular to the field, then the motion will be helical around the field lines. This has many applications, such as the mass spectrometer, as well as others in particle physics experiments.</p>
+<p>However, we have not touched on the important question of how these magnetic fields are created. For the gravitational and electric fields, this was relatively easy. In particular, we could start with the fields due to a point mass or charge (depending on which field type we are talking about!), where the field magnitude was an inverse square law, and the direction was given by the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span>, either in the same direction or opposite the position vector. Then, we could add together the contributions of a large number of point masses or charges to get the fields due to more complicated shapes.</p>
+<p>As we will see in the next lesson, this basic recipe is the same, with magnetic fields created by the motion of charged particles, or currents. However, like the magnetic force equation we saw in this lesson, the field created by a “point current” involves the vector product, so it is not so simple as, say, the gravitational field of a point mass. This is dealt with using Biot-Savart law in the next lesson.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>State the direction of the magnetic field due to magnetic poles.</p></li>
+<li><p>Interpret a drawing of magnetic field lines.</p></li>
+<li><p>Describe the motion of a charged particle in a constant magnetic field.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L25_Electric_fields.html" title="previous page"><span class="section-number">25. </span>Electric fields</a>
+    <a class='right-next' id="next-link" href="L27_Biot-Savart_law.html" title="next page"><span class="section-number">27. </span>Biot-Savart law</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

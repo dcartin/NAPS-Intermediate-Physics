@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22. Gravitational potential energy &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="23. Kepler’s laws of planetary motion" href="L23_Kepler%27s_laws.html" />
+    <link rel="prev" title="21. Universal gravitation" href="L21_Universal_gravitation.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L22_Gravitational_potential_energy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L22_Gravitational_potential_energy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   22.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   22.2. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escape-speed">
+   22.3. Escape speed
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#energy-graphs-and-gravitational-potential-energy">
+   22.4. Energy graphs and gravitational potential energy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   22.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="gravitational-potential-energy">
+<span id="gpe"></span><h1><span class="section-number">22. </span>Gravitational potential energy<a class="headerlink" href="#gravitational-potential-energy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">22.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#surf-gpe"><span class="std std-ref">Gravitational potential energy near the Earth’s surface</span></a></p></li>
+</ol>
+<p>In <a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20 (conservation of energy)</span></a>, we used the form <span class="math notranslate nohighlight">\(U_g = mgr_y\)</span> for the gravitational potential energy of an object. However, this was based on a constant gravitational field, which works well when we are close to the surface of the Earth. Yet when we make more significant changes to our distance from the Earth, this is no longer a good approximation. It certainly will not be true when we start looking at orbiting objects! So, let’s see if we can find a more general form. This will allow us to use the techniques of conservation of energy for scenarios where there are significant changes in the gravitational field – for example, when a rocket is launched from the surface of the Earth. By the end of this lesson, we will find the <em>escape speed</em> necessary for such a rocket to avoid crashing back down to the Earth.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define gravitational potential energy.</p></li>
+<li><p>Identify the reference radius for zero gravitational potential energy.</p></li>
+<li><p>Calculate the escape speed necessary to travel very far away from an object.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">22.2. </span>Gravitational potential energy<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go back a step and recall the definition of the potential energy for <em>any</em> conservative force. In particular, the change in potential energy <span class="math notranslate nohighlight">\(U_F\)</span> for a conservative force <span class="math notranslate nohighlight">\({\vec F}\)</span>, over a small interval <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>, is related to the work <span class="math notranslate nohighlight">\(W_F\)</span> done by that conservative force <span class="math notranslate nohighlight">\({\vec F}\)</span> over the same interval by the relation</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta U_F = -W_F = -{\vec F} \cdot \Delta {\vec r}
+\]</div>
+<p>In particular for gravity, suppose we move an object a distance <span class="math notranslate nohighlight">\(\Delta r\)</span> away from the Earth. This gives a displacement of <span class="math notranslate nohighlight">\(\Delta {\vec r} = (\Delta r) {\hat r}\)</span>, where we are using the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span> at the object, pointing away from the Earth. On the other hand, as we just saw in <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>, we can write the gravitational force as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_g = -\biggl( \frac{G M m}{r^2} \biggr) {\hat r}
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(M\)</span> is the mass of the Earth, <span class="math notranslate nohighlight">\(m\)</span> of the object, and <span class="math notranslate nohighlight">\(r\)</span> is the distance between them; I also use the same <span class="math notranslate nohighlight">\({\hat r}\)</span> as I did with <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>. Thus, the change in gravitational potential energy over the displacement <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta U_g = - {\vec F}_g \cdot \Delta {\vec r} = \biggl( \frac{G M m}{r^2} \biggr) \Delta r
+\]</div>
+<p>since <span class="math notranslate nohighlight">\({\hat r} \cdot {\hat r} = 1\)</span>, by definition. This gives the change <span class="math notranslate nohighlight">\(\Delta U_g\)</span> in gravitational potential energy for the Earth-object <em>system</em> as the distance between their centers goes from <span class="math notranslate nohighlight">\(r\)</span> to <span class="math notranslate nohighlight">\(r + \Delta r\)</span>.</p>
+<p>To get a handle on how this is different than the <span class="math notranslate nohighlight">\(mgr_y\)</span> function we used before, the program below creates a graph for the two versions. The scenario is the following: a 1.00 kg mass is lifted from the surface of the Earth up to a height of 250. km above the surface. The red curve on the graph just shows <span class="math notranslate nohighlight">\(mg(R_E + h)\)</span>, where <span class="math notranslate nohighlight">\(R_E\)</span> is the Earth’s radius, and <span class="math notranslate nohighlight">\(h\)</span> the altitude of the object above the surface. This is what the gravitational potential energy would be if we could assume a constant gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span> for all heights <span class="math notranslate nohighlight">\(h\)</span>. On the other hand, the blue line adds up all of the <span class="math notranslate nohighlight">\(\Delta U_g\)</span> as the object moves, and shows the total up to that height <span class="math notranslate nohighlight">\(h\)</span>. These <span class="math notranslate nohighlight">\(\Delta U_g\)</span> are computed over height intervals <span class="math notranslate nohighlight">\(\Delta r\)</span> of 10.0 m; you can see the specific code by clicking on the pencil icon of the app. Note that in both cases, since we are graphing <span class="math notranslate nohighlight">\(\Delta U_g\)</span> from the surface, then we have chosen our <span class="math notranslate nohighlight">\(U_g\)</span> such that <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the surface; I will come back to this point later. Run the program, and see how the two functions compare. Notice that the values of <span class="math notranslate nohighlight">\(U_g\)</span> are given in megajoules (MJ), and height <span class="math notranslate nohighlight">\(h\)</span> in km.</p>
+<p id="surf-gpe"><a class="reference internal" href="#gpe"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/3d95532f3d?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Notice a few things about this graph. First, the definition <span class="math notranslate nohighlight">\(mgr_y\)</span> works really well up to about 100-150 km; you can’t the difference between it and the proper definition for these altitudes – the gravitational field within that height range is really close to 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>. If we climbed the highest mountains, we would barely even notice the change! This is why we have assumed the gravitational field is constant – for all applications we’ve dealt with so far, it basically stays the same. Notice that a lot of the intuition we have developed previously still works out. In particular, the gravitational potential energy of the Earth-object system increases as the two get further apart.</p>
+<p>However, eventually the distance between the Earth and the object we are lifting up become significant. As we get further away from the Earth’s center, the gravitational field magnitude <span class="math notranslate nohighlight">\(g\)</span> gets smaller, so it takes a little less energy to raise the object a further 10.0 m at heights of 100. km and greater. Thus, the red and blue curves start to diverge, with the actual <span class="math notranslate nohighlight">\(\Delta U_g\)</span> a little smaller than the equation given by <span class="math notranslate nohighlight">\(mgr_y\)</span>. This is because of the inverse square law nature of the gravitational force (<span class="math notranslate nohighlight">\(1/r^2\)</span> in the denominator).</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the maximum height <code class="docutils literal notranslate"><span class="pre">H_F</span></code> in the code to something larger. What do you notice about the actual <span class="math notranslate nohighlight">\(U_g\)</span> curve? Try at least a value of 2000. km.</p>
+</div>
+<p>Let’s now go back to the issue of where to choose <span class="math notranslate nohighlight">\(U_g = 0\)</span>. When using <span class="math notranslate nohighlight">\(mgr_y\)</span> near the surface, we had the freedom to choose our reference level <span class="math notranslate nohighlight">\(r_y = 0\)</span>, i.e. the height where <span class="math notranslate nohighlight">\(U_g = 0\)</span>. This is because we were assuming a constant gravitational field, so there was no natural altitude to use. For the general case, however, there is a natural distance <span class="math notranslate nohighlight">\(r\)</span> to use, although it may seem odd at first. Our definition of <span class="math notranslate nohighlight">\(U_g\)</span> will assume that <span class="math notranslate nohighlight">\(U_g \to 0\)</span> as <span class="math notranslate nohighlight">\(r \to \infty\)</span>; in other words, <span class="math notranslate nohighlight">\(U_g\)</span> is zero when the two objects are “very far away” from each other. This situation is more like that of a spring, and elastic potential energy. In that case, there is a natural place for the reference, namely the equilibrium point <span class="math notranslate nohighlight">\(r = 0\)</span> where the spring is neither stretched nor compressed. Obviously, if the spring is at its equilbrium point, there is no energy stored in the spring, so it makes sense that <span class="math notranslate nohighlight">\(U_{spr} = 0\)</span> there.</p>
+<p>This gives the following equation:</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> gravitational potential energy</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(U_g\)</span></p></li>
+<li><p><strong>Definition:</strong> For two masses <span class="math notranslate nohighlight">\(m_i\)</span> and <span class="math notranslate nohighlight">\(m_j\)</span> separated by a distance <span class="math notranslate nohighlight">\(r_{ij}\)</span>, the gravitational potential energy is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    U_g = - \frac{G m_i m_j}{r_{ij}}
+\]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> joules (J)</p></li>
+<li><p>This is a scalar quantity, not a vector</p></li>
+</ul>
+<p>The minus sign is important in this definition, but again, it is probably strange the first time you see it. But it matches our intuition for how <span class="math notranslate nohighlight">\(U_g\)</span> changes with distance. If I throw a ball up in the air, the gravitational potential energy of the ball-Earth system increases. But it’s just that this is because <span class="math notranslate nohighlight">\(U_g\)</span> goes from a larger negative number to a smaller one, <em>not</em> because it goes from a small positive number to a larger one.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A planet has an orbit around its parent star as shown below. At which point does the planet-star system have the greatest gravitational potential energy? Answer in terms of values along the number line.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L28_Fig02-Orbit_around_primary_small.png"><img alt="../_images/INT_AY20_MP2_L28_Fig02-Orbit_around_primary_small.png" src="../_images/INT_AY20_MP2_L28_Fig02-Orbit_around_primary_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22.1 </span><span class="caption-text">A planet in orbit around its parent star</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>A</p></li>
+<li><p>B</p></li>
+<li><p>C</p></li>
+<li><p>D</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The conceptual idea is the same as when we looked at gravitational potential energy near the surface of the Earth (i.e. of the form <span class="math notranslate nohighlight">\(mgr_y\)</span>) – the further the two objects are apart, the bigger the value of <span class="math notranslate nohighlight">\(U_g\)</span> as a <em>number</em>. Thus, the largest <span class="math notranslate nohighlight">\(U_g\)</span> is when the planet is at point <span class="math notranslate nohighlight">\(D\)</span>. At point <span class="math notranslate nohighlight">\(D\)</span>, the gravitational potential energy <span class="math notranslate nohighlight">\(U_g\)</span> is negative, but the closest to <span class="math notranslate nohighlight">\(U_g = 0\)</span> out of all four points. At point <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(U_g\)</span> is its most negative value, since <span class="math notranslate nohighlight">\(r\)</span> is the smallest, so it has the smallest <span class="math notranslate nohighlight">\(U_g\)</span> at this location.</p>
+</div>
+<p>I will return to this negative sign at the end of the next section, where the sign of <span class="math notranslate nohighlight">\(U_g\)</span> gives information about the properties of the system. First, however, let’s figure out how the different form of the gravitational potential energy changes the maximum height of an object going upward from the Earth’s surface.</p>
+</div>
+<div class="section" id="escape-speed">
+<h2><span class="section-number">22.3. </span>Escape speed<a class="headerlink" href="#escape-speed" title="Permalink to this headline">¶</a></h2>
+<p>One of the first topics we covered in this class, back in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05 (acceleration and free fall)</span></a>, was what happens when you throw a ball up into the air – how high does it go? Remember that this was using the assumption that the gravitational field was constant, as it is near the surface of the Earth. This field has very little variation over the heights we normally encounter during our daily routine.</p>
+<p>But how would this change if something was moving very fast, and we had to worry about a decreasing gravitational field as we move away from the Earth? One way to do this would be to take into account the changing field. For example, you could write a Python program, where the position and velocity of the moving object is updated using an acceleration that depends on the height above the Earth’s surface.</p>
+<p>However, this is really overkill, since the changing field is “taken into account” by the gravitational potential energy. All we really need to do is use is conservation of mechanical energy, using the <span class="math notranslate nohighlight">\(U_g\)</span> from this lesson, rather than the equation <span class="math notranslate nohighlight">\(mgr_y\)</span> (which assumes a fixed gravitational field <span class="math notranslate nohighlight">\(g\)</span>). Then we can find how high an object moves if it has some starting speed at ground level.</p>
+<p>To show how this works, let’s go through the following example. The largest rocket ever built is the Saturn V, used to put US astronauts on the Moon. Suppose instead this <span class="math notranslate nohighlight">\(2.97 \times 10^6\)</span> kg rocket is launched from the surface of the Earth into deep space. The Earth has a mass of <span class="math notranslate nohighlight">\(5.97 \times 10^{24}\)</span> kg and a radius of 6,380 km; ignore the effect of the Sun and the other planets. We are going to find the necessary launch speed for the Saturn V to momentarily stop at the height of low Earth orbit (LEO), 2000 km away above the surface of the Earth.</p>
+<p>We are ignoring the effects of air resistance on the rocket, so <span class="math notranslate nohighlight">\(W_{NC} = 0\)</span>. Then we can use conservation of mechanical energy to solve for the final distance from the surface. At its launch, the rocket has both kinetic and gravitational potential energy; it starts at a distance <span class="math notranslate nohighlight">\(r = R_E = 6380\)</span> km from the Earth’s <em>center</em> with a speed <span class="math notranslate nohighlight">\(v_i\)</span>, so its initial mechanical energy is</p>
+<div class="math notranslate nohighlight">
+\[
+    E_i = \frac{1}{2} m_S v_i ^2 - \frac{GM_E m_S}{R_E}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(M_E\)</span> is the mass of the Earth, and <span class="math notranslate nohighlight">\(m_S\)</span> is the mass of the Saturn rocket. At the rocket’s highest point, it <em>just</em> reaches LEO, so its final speed <span class="math notranslate nohighlight">\(v_f = 0\)</span>. This will be at a height <span class="math notranslate nohighlight">\(h = 2000\)</span> km above the surface, so it is a distance <span class="math notranslate nohighlight">\(R_E + h\)</span> away from the Earth’s center. This gives the final mechanical energy as</p>
+<div class="math notranslate nohighlight">
+\[
+    E_f = -\frac{GM_E m_S}{R_E + h}
+\]</div>
+<p>Setting these equal to each other, notice that the mass <span class="math notranslate nohighlight">\(m_S\)</span> is in every term, so it can be canceled out – the mass of the rocket doesn’t matter!</p>
+<div class="warning admonition">
+<p class="admonition-title">Ignoring the rocket mass</p>
+<p>You may be a little uncomfortable about the fact we can get rid of the Saturn rocket’s mass. Does that mean we can make the rocket as big as we want, and it doesn’t matter? Well, no, because I am really assuming that the mass <span class="math notranslate nohighlight">\(M_E\)</span> of the Earth is much bigger than the mass <span class="math notranslate nohighlight">\(m_S\)</span> of the rocket. If this were not true (imagine a binary star system, with two stars the same mass), then the masses we use would be more like an “averaged” mass, much like what we did in <a class="reference internal" href="L11_Center_of_mass_and_collisions.html#cm-coll"><span class="std std-ref">Lesson 09</span></a> when we talked about the center of mass. This would be necessary in order to have conservation of linear momentum. In the case considered here, the masses we are using are essentially correct, and give a very small error, so I don’t worry about it.</p>
+</div>
+<p>Dividing out by the mass of the rocket, this gives the energy equation</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{1}{2} v_i ^2 - \frac{GM_E}{R_E} = -\frac{GM_E}{R_E + h}
+\]</div>
+<p>The gravitational potential energy terms can be moved to the same side, then you can solve for <span class="math notranslate nohighlight">\(v_i\)</span>. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+    v_i = \sqrt{2GM_E \biggl( \frac{1}{R_E} - \frac{1}{R_E + h} \biggr)}
+\]</div>
+<p>Plugging in the numbers from above, one finds the initial speed must be 5.46 km/s to just barely reach LEO.</p>
+<p>Notice that we get a bonus by doing the algebra – we can now find the necessary speed to reach any distance <span class="math notranslate nohighlight">\(h\)</span> above the surface. In fact, we can figure out the speed needed to go “very far away”, in other words, when <span class="math notranslate nohighlight">\(h \to \infty\)</span>. This gives the speed known as the <strong>escape speed</strong> <span class="math notranslate nohighlight">\(v_{esc}\)</span>: the speed required to travel an infinite distance away from another object. In practice, this just means a large distance, compared to the size of the object left (for example, the Earth). Starting with our last equation, and taking the limit of <span class="math notranslate nohighlight">\(h\)</span> going to infinity, we have that</p>
+<div class="math notranslate nohighlight">
+\[
+    \lim_{h \to \infty} \frac{1}{R_E + h} = 0
+\]</div>
+<p>So the second term disappears, and the escape speed is</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{esc} = \sqrt{\frac{2GM_E}{R_E}}
+\]</div>
+<p>We can now easily calculate the escape speed for the Earth as 11.2 km/s.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The mass of the planet Mars is <span class="math notranslate nohighlight">\(6.42 \times 10^{23}\)</span> kg, and its radius is 3397 km. The larger of its two satellites, Phobos, orbits at a distance of 5979 km above the surface of Mars.</p>
+<ol class="simple">
+<li><p>What is the necessary launch speed for the Saturn V to just reach Phobos’ orbital radius?</p></li>
+<li><p>How fast would it have to leave Mars’ surface in order to travel very far away from the planet?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 4.01 km/s; 5.02 km/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">maxLaunchAlt()</span></code> that finds the maximum height reached above the surface of a planet, when an object is launched vertically with a given speed. The arguments of the function are <code class="docutils literal notranslate"><span class="pre">M_P</span></code>, the mass of the planet (in kg); <code class="docutils literal notranslate"><span class="pre">R_P</span></code>, the radius of the planet (in km); and <code class="docutils literal notranslate"><span class="pre">v_i</span></code>, the initial vertical velocity component of the object (in km/s). Assume that the object has a negligible mass, compared to the planet. The function should return the maximum altitude (in km) the object reaches, before stopping and falling back towards the planet.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> First, you need to solve the energy equation above for <span class="math notranslate nohighlight">\(h\)</span> as a function of <span class="math notranslate nohighlight">\(M_P, R_P\)</span> and <span class="math notranslate nohighlight">\(v_i\)</span>. When you do this, you should get</p>
+<div class="math notranslate nohighlight">
+\[
+    h = \biggl( \frac{1}{R_P} - \frac{v_i ^2}{2 G M_p} \biggr)^{-1} - R_P
+\]</div>
+<p>Below is a possible implementation of this algebraic equation in vPython.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maxLaunchAlt</span><span class="p">(</span><span class="n">M_P</span><span class="p">,</span> <span class="n">R_P</span><span class="p">,</span> <span class="n">v_i</span><span class="p">):</span>
+
+    <span class="n">G</span> <span class="o">=</span> <span class="mf">6.67E-11</span>        <span class="c1"># Gravitational constant (N m^2 / kg^2)</span>
+    
+    <span class="c1"># Convert quantities to proper units</span>
+    
+    <span class="n">R_P</span> <span class="o">*=</span> <span class="mi">1000</span>         <span class="c1"># R_P to meters</span>
+    <span class="n">v_i</span> <span class="o">*=</span> <span class="mi">1000</span>         <span class="c1"># v_i to m/s</span>
+    
+    <span class="c1"># Calculate final altitude h in meters</span>
+    
+    <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">R_P</span> <span class="o">-</span> <span class="n">v_i</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M_P</span><span class="p">))</span> <span class="o">-</span> <span class="n">R_P</span>
+    
+    <span class="c1"># Return value in km</span>
+
+    <span class="k">return</span> <span class="n">h</span> <span class="o">/</span> <span class="mi">1000</span>
+</pre></div>
+</div>
+<p>You can verify this program works by comparing it to the problems we did earlier. For example, <code class="docutils literal notranslate"><span class="pre">maxLaunchAlt(5.97E24,</span> <span class="pre">6380,</span> <span class="pre">5.46)</span></code> should give a result of 2000 km, while <code class="docutils literal notranslate"><span class="pre">maxLaunchAlt(6.42E23,</span> <span class="pre">3397,</span> <span class="pre">4.01)</span></code> should return the value 5980 km (both of these to three sig figs).</p>
+</div>
+</div>
+<div class="section" id="energy-graphs-and-gravitational-potential-energy">
+<h2><span class="section-number">22.4. </span>Energy graphs and gravitational potential energy<a class="headerlink" href="#energy-graphs-and-gravitational-potential-energy" title="Permalink to this headline">¶</a></h2>
+<p>Now I will turn to a graphic method of thinking about the motion of escape speed. I will mirror the discussion above, where motion is only radial, i.e. there is no perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span>; we will talk about the effective potential energy for gravity in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits-graphs"><span class="std std-ref">the next lesson</span></a>. Remember from the <a class="reference internal" href="L20_Conservation_of_energy.html#energy-graphs"><span class="std std-ref">energy graphs</span></a> section of Lesson 20 how plotting the mechanical energy of a system onto the potential energy graph will give an idea of how fast an object is moving, and at which points it will momentarily stop. In particular, the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> will be a horizontal line, if there are no non-conservative forces such as air resistance or friction. Then the “gap” between this total energy, and the potential energy <span class="math notranslate nohighlight">\(U\)</span> of the system will be the kinetic energy <span class="math notranslate nohighlight">\(K\)</span>. The larger this gap, the greater <span class="math notranslate nohighlight">\(K\)</span> will be, and therefore the larger the speed. On the other hand, if the mechanical and potential energy curves intersect, the kinetic energy is zero, and the system momentarily stops moving.</p>
+<p>To apply this to a gravitational system, in the figure below, I have graphed two possible values for the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> – one negative, and the other positive. We can interpret these in terms of the motion, as described above, and also to the escape speed we just finished discussing.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L22-Fig02_Ug_vs_r_graph_w_ME.png"><img alt="../_images/INT_AY22_L22-Fig02_Ug_vs_r_graph_w_ME.png" src="../_images/INT_AY22_L22-Fig02_Ug_vs_r_graph_w_ME.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 22.2 </span><span class="caption-text">Possible values of the mechanical energy <span class="math notranslate nohighlight">\(E\)</span>, for a <span class="math notranslate nohighlight">\(U_g\)</span> vs. <span class="math notranslate nohighlight">\(r\)</span> graph</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>In particular, notice that the line with negative mechanical energy <span class="math notranslate nohighlight">\(E &lt; 0\)</span> intersects the gravitational potential energy <span class="math notranslate nohighlight">\(U_g\)</span> curve at a distance <span class="math notranslate nohighlight">\(r_{max}\)</span>. So, if the object is initially moving upward, it will slow down (smaller gap between <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(U_g\)</span>) until it reaches <span class="math notranslate nohighlight">\(r_{max}\)</span>, then fall back downward, i.e. move in the direction of smaller <span class="math notranslate nohighlight">\(r\)</span>. Since the mechanical energy is negative, the object does not have enough energy to escape; thus, situations where <span class="math notranslate nohighlight">\(E &lt; 0\)</span> are known as <strong>bound</strong> systems.</p>
+<p>On the other hand, when there is a positive mechanical energy <span class="math notranslate nohighlight">\(E &gt; 0\)</span>, there is always a non-zero gap, so the object keeps moving towards larger <span class="math notranslate nohighlight">\(r\)</span>, even though it slows down as it does so. Even in the limit of infinite <span class="math notranslate nohighlight">\(r\)</span>, it will have some kinetic energy, since <span class="math notranslate nohighlight">\(U_g \le 0\)</span> for all <span class="math notranslate nohighlight">\(r\)</span>. This is an <strong>unbound</strong> system, with <span class="math notranslate nohighlight">\(E &gt; 0\)</span>.</p>
+<p>The boundary between these two cases is exactly what we treated when we found the escape speed. Remember there, we wanted to “just barely” reach an infinite distance. This is what happens when we have <span class="math notranslate nohighlight">\(E = 0\)</span>, with the stopping point of the object now at <span class="math notranslate nohighlight">\(r = \infty\)</span>. Any speed above the escape speed gives <span class="math notranslate nohighlight">\(E &gt; 0\)</span>, while anything below has <span class="math notranslate nohighlight">\(E &lt; 0\)</span>, and a stopping point smaller than an infinite distance.</p>
+<p>Notice that everything I have said here is true for a generic potential energy, where <span class="math notranslate nohighlight">\(\lim_{r \to \infty} U(r) = 0\)</span>. Thus, it also works for the electrostatic potential energy of charged particles. In particular, you may have wondered why the electrons in an atom are said to have negative energy; the reason is the same as here, where the electrons are bound to the atomic system, and cannot escape without an input of energy from the outside. We will also see these graphical methods in the next lesson, when we turn to orbiting objects. Here, we only looked at motion towards or away from the gravitational center <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>; in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits-graphs"><span class="std std-ref">Lesson 23 (Kepler’s laws)</span></a>, we will consider how the picture changes when there is a motion around the center as well.</p>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">22.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We now have all of the tools needed to understand the motion of objects in the Solar System. In <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>, we discussed Newton’s law of universal gravitation; this is the interaction force between all bodies, large and small, moving around the Sun. Thinking about how this gravitational force provides a necessary centripetal force (<a class="reference internal" href="L16_Circular_motion.html#ucm"><span class="std std-ref">Lesson 16</span></a>) will allow us to start talking about the size of orbits, and the time needed to complete one.</p>
+<p>In this lesson, we defined the gravitational potential energy, based on the gravitational force. Along with conservation of energy (<a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20</span></a>), we can now relate the distance between the Earth and an orbiting satellite to its kinetic energy, and thus its speed. This will give us a relation between speed and distance. However, remember we also have conservation of angular momentum (<a class="reference internal" href="L18_Angular_momentum.html#ang-mom"><span class="std std-ref">Lesson 18</span></a>), which relates distance and the perpendicular velocity component. Thus, between these two conservation principles, we can find the <em>velocity</em> of an orbiting object, given its distance away from a planet, because we can use the speed, along with the perpendicular velocity component, to find the radial velocity component.</p>
+<p>This overview shows us all the physics tools that we can use to understand orbital motion. With this perspective, we next head to <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23</span></a>, and show how these all come together in Kepler’s laws of planetary motion.</p>
+<p>After today’s class, you should be able to:</p>
+<ul class="simple">
+<li><p>Calculate the gravitational potential energy of a system of masses</p></li>
+<li><p>Find the escape speed for a given astronomical object</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L21_Universal_gravitation.html" title="previous page"><span class="section-number">21. </span>Universal gravitation</a>
+    <a class='right-next' id="next-link" href="L23_Kepler%27s_laws.html" title="next page"><span class="section-number">23. </span>Kepler’s laws of planetary motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

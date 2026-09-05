@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. Linear momentum and Newton’s laws of motion &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Center of mass and collisions" href="L11_Center_of_mass_and_collisions.html" />
+    <link rel="prev" title="9. Relative motion" href="L09_Relative_motion.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L10_Linear_momentum_and_Newton's_laws_of_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L10_Linear_momentum_and_Newton's_laws_of_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   10.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#momentum-and-impulse">
+   10.2. Momentum and impulse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-linear-momentum">
+     10.2.1. Definition of linear momentum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impulse">
+     10.2.2. Impulse
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forces">
+   10.3. Forces
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-momentum-to-force">
+     10.3.1. From momentum to force
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-s-zeroth-law">
+     10.3.2. Newton’s zeroth law
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-s-first-law">
+     10.3.3. Newton’s first law
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-s-second-law">
+     10.3.4. Newton’s second law
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-s-third-law">
+     10.3.5. Newton’s third law
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internal-and-external-forces">
+     10.3.6. Internal and external forces
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   10.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="linear-momentum-and-newton-s-laws-of-motion">
+<span id="lin-mom-newton"></span><h1><span class="section-number">10. </span>Linear momentum and Newton’s laws of motion<a class="headerlink" href="#linear-momentum-and-newton-s-laws-of-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">10.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Newton’s laws of motion form a crucial piece of physics, both historically and conceptually. We will be building a lot of what we do in this course on them, so it is important to make sure you understand these concepts! They deal with the relationship between “forces” and the acceleration of an object. Up to this point, the acceleration vector has been handed to you, and you can then use the kinematic equations to solve for the position and velocity of the object at any time. In vPython, we did the same thing, using updating methods based on average velocity and acceleration. But in all of these cases, the reason for a particular acceleration was perhaps mysterious. Newton’s laws of motion will allow us to calculate the acceleration of an object explicitly, based on its physical situation, and thus the forces acting on it.</p>
+<p>This lesson will explore the laws of motion and their consequences, without worrying about specific forces. We will focus here on the observable consequences of Newton’s laws. For example, how can I see the effect of a force on a moving object? How do interactions between objects work? To do this, we will define the concept of “momentum”, which directly relates to the motion of an object; from there, forces will intuitively be things that change momentum. Starting with <a class="reference internal" href="L12_Solving_force_problems.html#force-prob"><span class="std std-ref">Lesson 12 (Solving force problems)</span></a>, we will begin to bring in specific forces – such as gravity, tension, friction, and the normal force – and look at how they affect the motion of objects.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/Aristotle.png"><img alt="../_images/Aristotle.png" src="../_images/Aristotle.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Roman copy in marble of a Greek bronze bust of Aristotle by Lysippos, c. 330 BC, with modern alabaster mantle. (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg">source</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Early concepts of momentum were based on commentaries of Aristotle’s view that objects require a continual force to keep moving. In the 6th century, for example, Philoponus pointed out it did not make sense that objects were moved by the same air that resisted their motion.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/196px-Frans_Hals_-_Portret_van_Rene_Descartes.jpg"><img alt="../_images/196px-Frans_Hals_-_Portret_van_Rene_Descartes.jpg" src="../_images/196px-Frans_Hals_-_Portret_van_Rene_Descartes.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.2 </span><span class="caption-text">Portrait of René Descartes by Frans Hals (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg">source</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the 17th century, there was much controversy among physicists – there was a general sense of a quantity conserved during motion (generically called “force”), but a lack of understanding of what it was. For example, Descartes argued for the quantity <span class="math notranslate nohighlight">\(m|{\vec v}|\)</span>; notice this is a scalar quantity! On the other hand, Leibniz argued for <span class="math notranslate nohighlight">\(mv^2\)</span>. The first evolved into linear momentum; the latter we will see later in <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 19</span></a> is twice the kinetic energy of an object.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/Isaac_Newton.png"><img alt="../_images/Isaac_Newton.png" src="../_images/Isaac_Newton.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Sir Isaac Newton (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Sir_Isaac_Newton_by_Sir_Godfrey_Kneller,_Bt.jpg">source</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Newton is one of the greatest scientists in history, for developing (along with Gottfried Liebniz) calculus, and placing physics on a firm mathematical footing. He attended Cambridge University; while it was closed from 1665 to 1667 due to the Great Plague (social distancing!), he started developing his laws of motion, principles of optics, and a universal law of gravitation. In later years, he acted as Master of the Mint, taking responsibility for the coinage in England, and wrote many works dealing with interpretations of the Bible.</p>
+<p>Through the late 1600’s and early 1700’s, there continued a confusion between “force” and “momentum”, including by Newton in his great work <em>Principia</em>, but the correct definition of momentum – as a quantity with direction – was in use by 1721, as seen in John Jennings’ textbook <em>Miscellanea in Usum Juventutis Academicae</em>.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define linear momentum and impulse.</p></li>
+<li><p>Calculate the impulse on an object after it interacts with another object.</p></li>
+<li><p>State Newton’s laws of motion.</p></li>
+<li><p>Calculate the average force acting on an object after it interacts with another object over a given time interval.</p></li>
+<li><p>Calculate the acceleration or final velocity of an object after it experiences a force over a given time interval.</p></li>
+</ul>
+</div>
+<div class="section" id="momentum-and-impulse">
+<h2><span class="section-number">10.2. </span>Momentum and impulse<a class="headerlink" href="#momentum-and-impulse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-linear-momentum">
+<h3><span class="section-number">10.2.1. </span>Definition of linear momentum<a class="headerlink" href="#definition-of-linear-momentum" title="Permalink to this headline">¶</a></h3>
+<p>As we will see when we get into the actual laws of motion, objects have “inertia”. Inertia literally translates as “laziness”, and is the physical property of objects to continue their state of motion unless an interaction with other objects causes a change in this motion. This is a bit of a vague statement, so “linear momentum” is used to quantify this property. This is a quantity that is the simplest way to combine two facts: the objects we deal with have a mass, and these objects will continue with a constant velocity until outside forces combine to change this velocity. Thus, <em>linear momentum</em> <span class="math notranslate nohighlight">\({\vec p}\)</span> is defined as a <em>vector</em> with the same direction as velocity.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> linear momentum</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec p}\)</span></p></li>
+<li><p><strong>Equation:</strong> <span class="math notranslate nohighlight">\({\vec p} = m {\vec v}\)</span></p></li>
+<li><p><strong>SI units:</strong> kg <span class="math notranslate nohighlight">\(\cdot\)</span> m/s</p></li>
+</ul>
+<p>Thus, we can say that inertia corresponds to a constant linear momentum, and forces due to an interaction will change this momentum. Note that we tack on the adjective “linear” because we are dealing right now with things moving along a line. Later when we consider rotation, there will be a “angular” or “rotational” version of momentum, relating to the property of continuing rotational motion.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The SIG Sauer P226 has a rated muzzle speed of 335 m/s. If the bullet’s mass is 7.45 g FMJ, what is the magnitude of the bullet’s linear momentum? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>2.50 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>2.74 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>25.0 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>2.50 <span class="math notranslate nohighlight">\(\times 10^3\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 2.50 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In each of the five pictures below, a ball is moving to the right, and its position is shown at every second. The larger balls have twice the mass of the smaller balls. Rank each of the five situations based on the magnitude of the linear momentum for each ball.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L08_Fig02-Mom-of-moving-balls_small.png"><img alt="../_images/INT_AY21_L08_Fig02-Mom-of-moving-balls_small.png" src="../_images/INT_AY21_L08_Fig02-Mom-of-moving-balls_small.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.4 </span><span class="caption-text">Rank the linear momentum magnitude of the balls</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(E &gt; C &gt; A = B &gt; D\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 142 g baseball has a velocity of 100 mph at 10.0<span class="math notranslate nohighlight">\(^\circ\)</span> south of east. What is the <span class="math notranslate nohighlight">\(y\)</span> component of the baseball’s momentum? Choose the best answer below.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(-14.2\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(-1.10\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(+1.10\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(+6.25\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(+14.2\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(-1.10\)</span> kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p>
+</div>
+</div>
+<div class="section" id="impulse">
+<span id="lin-mom-newton-imp"></span><h3><span class="section-number">10.2.2. </span>Impulse<a class="headerlink" href="#impulse" title="Permalink to this headline">¶</a></h3>
+<p>We said earlier how forces are related to changes in momentum, so we give this quantity a special name: <em>impulse</em>.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> impulse</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec I}\)</span></p></li>
+<li><p><strong>Equation:</strong> <span class="math notranslate nohighlight">\({\vec I} = \Delta {\vec p} = {\vec p}_f - {\vec p}_i\)</span></p></li>
+<li><p><strong>SI units:</strong>  kg <span class="math notranslate nohighlight">\(\cdot\)</span> m/s</p></li>
+</ul>
+<p>Note that momentum can change either because of a change in mass or velocity. Also, because velocity is a vector, this means that changing the direction (even if the speed is constant) gives an impulse! A car driving around a circular track at constant speed is continually changing its momentum; this will tell us later that there must be a force acting on the car to make this happen.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 419 g racquetball is traveling at 20.0 m/s in the positive <span class="math notranslate nohighlight">\(x\)</span> direction. It hits a vertical wall and travels at 20.0 m/s in the negative <span class="math notranslate nohighlight">\(x\)</span> direction. What is the magnitude of the change in momentum for the racquetball? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>0.00 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>8.38 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>16.8 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>20.0 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+<li><p>40.0 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 16.8 kg<span class="math notranslate nohighlight">\(\cdot\)</span>m/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An object has an initial momentum <span class="math notranslate nohighlight">\({\vec p}_i\)</span> at <span class="math notranslate nohighlight">\(t = 0\)</span>, and at a later time <span class="math notranslate nohighlight">\(t = \Delta t\)</span>, has a different momentum <span class="math notranslate nohighlight">\({\vec p}_f\)</span>. These vectors are shown as the left two vectors in the figure below. Note that the position of these vectors in the figure does not necessarily reflect the position of the object at these times. Which of the following choices best represents the object’s change in momentum during this time interval?</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L08_Fig03-Impulse-vector_small.png"><img alt="../_images/INT_AY21_L08_Fig03-Impulse-vector_small.png" src="../_images/INT_AY21_L08_Fig03-Impulse-vector_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.5 </span><span class="caption-text">What is the direction of the impulse for the given initial and final momentum vectors <span class="math notranslate nohighlight">\({\vec p}_i\)</span> and <span class="math notranslate nohighlight">\({\vec p}_f\)</span>?</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(B\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A batter tries to hit a 95.0 mph fastball (initially traveling in the negative <span class="math notranslate nohighlight">\(x\)</span> direction), but fouls the ball straight up at a speed of 55.0 mph. The 145 g baseball is in contact with the bat for 1.50 ms. Calculate the magnitude of the impulse (in kg m/s) the bat delivers to the baseball.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 7.11 kg m/s</p>
+</div>
+<p>A bit of vocabulary that is used in physics: whenever I say <strong>normal</strong>, I mean a line or vector that is perpendicular to something else. Thus, a flagpole is normal to the ground; this is the sense of the normal in the diagram below being a “normal” to the wall shown.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The diagram below is a view from above of a squash ball with mass 24.0 g hitting the wall at an angle <span class="math notranslate nohighlight">\(\theta\)</span> of 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> with respect to the normal.  The ball hit the wall with a speed of 25.0 m/s and rebounded with the same speed and angle with respect to the normal (as shown). What was the impulse that the wall imparted on the ball as it rebounded? Find the magnitude in kg m/s, and the direction relative to the wall.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L19_Fig01_Ball_bouncing_off_wall_small.png"><img alt="../_images/INT_AY20_MP1_L19_Fig01_Ball_bouncing_off_wall_small.png" src="../_images/INT_AY20_MP1_L19_Fig01_Ball_bouncing_off_wall_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.6 </span><span class="caption-text">Squash ball bouncing off of wall</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 1.04 kg m/s, away from the wall</p>
+</div>
+</div>
+</div>
+<div class="section" id="forces">
+<span id="lin-mom-newton-forces"></span><h2><span class="section-number">10.3. </span>Forces<a class="headerlink" href="#forces" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="from-momentum-to-force">
+<h3><span class="section-number">10.3.1. </span>From momentum to force<a class="headerlink" href="#from-momentum-to-force" title="Permalink to this headline">¶</a></h3>
+<p>We all have an inituitive idea of what a force is, based on our experiences in the natural world, although sometimes the effects of forces are confused with the “natural motion” of an object. For example, when we slide a book across a table, we expect that it will slow to a stop, so we may push it harder to get it to the opposite side of the table. Thinking in physics terms, though, it is not that books “want” to come to rest, but that there is a frictional force acting on the book preventing it from remaining at constant velocity.</p>
+<p>That being said, let’s talk about the common properties of forces. Usually, forces are a <em>push or a pull</em> that can cause objects to change velocity (or accelerate). This can result in either a change in speed or direction, or both. Here are some common forces. One is the force <span class="math notranslate nohighlight">\(F_g\)</span> due to gravity, also know as the object’s <strong>weight</strong>. Near the surface of the Earth, <span class="math notranslate nohighlight">\({\vec F}_g\)</span> points directly downward. This force is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_g = m{\vec g}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is mass and <span class="math notranslate nohighlight">\({\vec g}\)</span> is the gravitational field (with a <em>magnitude</em> of 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span> near the Earth). Another is the tension force <span class="math notranslate nohighlight">\(F_T\)</span>, a force due to something like a rope or a string. The tension force acting on an object will point in the direction this connecting rope makes with the object at the point of contact.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L20_Fig01b-Tension_force_small.png"><img alt="../_images/INT_AY20_MP1_L20_Fig01b-Tension_force_small.png" src="../_images/INT_AY20_MP1_L20_Fig01b-Tension_force_small.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.7 </span><span class="caption-text">Tension force due to a rope</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Finally, the applied force <span class="math notranslate nohighlight">\(F_{app}\)</span> is a catch-all for forces due to interactions with people or other objects that cannot be explicitly calculated based on the object’s properties. An example would be you pushing a book across a table.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L20_Fig01a-Applied_force_small.png"><img alt="../_images/INT_AY20_MP1_L20_Fig01a-Applied_force_small.png" src="../_images/INT_AY20_MP1_L20_Fig01a-Applied_force_small.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.8 </span><span class="caption-text">Applied force acting on a block</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Consistent labels for forces</p>
+<p>We will always label forces with a capital <span class="math notranslate nohighlight">\(F\)</span>, and a subscript indicating the specific type of force.</p>
+</div>
+</div>
+<div class="section" id="newton-s-zeroth-law">
+<span id="lin-mom-newton-zero"></span><h3><span class="section-number">10.3.2. </span>Newton’s zeroth law<a class="headerlink" href="#newton-s-zeroth-law" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes there are hidden assumptions that should be stated explicitly; here is an important one.</p>
+<div class="warning admonition">
+<p class="admonition-title">Newton’s zeroth law</p>
+<p>An object at a particular instant responds only to the forces acting directly on it at that instant.</p>
+</div>
+<p>This idea will be crucial in determining which forces to include in the net force acting on an object. From experience, I notice that students intuitively understand this law when they are dealing with the motion of common objects – blocks sliding along floors or down ramps. It seems to be forgotten, however, when we start talking about gravitational or electrostatic forces between isolated objects. To show an example of what we will be doing later in the course, imagine that we have four masses arranged as shown in the figure below.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L27_Fig03-Four_masses_small.png"><img alt="../_images/INT_AY20_MP2_L27_Fig03-Four_masses_small.png" src="../_images/INT_AY20_MP2_L27_Fig03-Four_masses_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.9 </span><span class="caption-text">Four isolated masses</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>These masses are isolated, so that there are no other objects nearby; if it helps, you can think of the objects as placed faraway in outer space. Now, when we talk about Newton’s universal law of gravitation, we will see that the net (gravitational) force on one object due to the others around it is found by adding all of the forces due to each of the other objects. This is known as the <strong>principle of superposition</strong>. In particular, there is a gravitational interaction between masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>, which gives rise to a force <span class="math notranslate nohighlight">\(F_{g, 12}\)</span> on mass <span class="math notranslate nohighlight">\(m_1\)</span>, and a force <span class="math notranslate nohighlight">\(F_{g, 21}\)</span> on mass <span class="math notranslate nohighlight">\(m_2\)</span>. Notice how the subscripts change!. <span class="math notranslate nohighlight">\(F_{ij}\)</span> is the force on object <span class="math notranslate nohighlight">\(i\)</span> to due its interaction with object <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<p>Now, suppose I wanted to find the net gravitational force acting on mass <span class="math notranslate nohighlight">\(m_1\)</span>. What Newton’s zeroth law would say, along with the principle of superposition, is that I find the force <em>on</em> <span class="math notranslate nohighlight">\(m_1\)</span> due to each of the other three masses. I do <em>not</em> care about how the other masses are affecting each other – I don’t need to know what the force is between masses <span class="math notranslate nohighlight">\(m_2\)</span> and <span class="math notranslate nohighlight">\(m_3\)</span>, for example. All I would need to calculate are the three forces due to <span class="math notranslate nohighlight">\(m_1\)</span> interacting with <span class="math notranslate nohighlight">\(m_2, m_3\)</span>, and <span class="math notranslate nohighlight">\(m_4\)</span>. For the other masses, I would do something similar: add up all the forces acting on <em>that</em> mass. This is the content of the zeroth law.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Three blocks are stacked as shown below. How many forces are acting on the bottom block <span class="math notranslate nohighlight">\(m_3\)</span>? Choose the best answer.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L20_Fig02-Three_blocks_stack_small.png"><img alt="../_images/INT_AY20_MP1_L20_Fig02-Three_blocks_stack_small.png" src="../_images/INT_AY20_MP1_L20_Fig02-Three_blocks_stack_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.10 </span><span class="caption-text">Three blocks in a stack on the floor</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>one</p></li>
+<li><p>two</p></li>
+<li><p>three</p></li>
+<li><p>four</p></li>
+<li><p>five</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> There are three forces acting on the bottom block: the force of gravity (from the Earth), the contact force from the surface beneath, and the contact force with block <span class="math notranslate nohighlight">\(m_2\)</span>.</p>
+</div>
+</div>
+<div class="section" id="newton-s-first-law">
+<h3><span class="section-number">10.3.3. </span>Newton’s first law<a class="headerlink" href="#newton-s-first-law" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s move on to the rest of the laws of motion. As we said above, <strong>inertia</strong> is the property of all objects to maintain a constant velocity; this would entail having a constant momentum. This law is stated:</p>
+<div class="warning admonition">
+<p class="admonition-title">Newton’s first law</p>
+<p>An object will continue at a constant velocity unless acted on by an outside net (or total) force.</p>
+</div>
+<p>This includes an object at rest (<span class="math notranslate nohighlight">\(\vec{v} = {\vec 0}\)</span>)! If an object is at rest or moving with constant velocity, then the sum of the net force on that object is zero, or <span class="math notranslate nohighlight">\(\sum {\vec F} = 0\)</span>. Remember that this is a vector equation, so we have to enforce zero total force along each of the three coordinate axes, or</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_x = 0 \quad
+    \sum F_y = 0 \quad
+    \sum F_z = 0
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Consider a cart on a horizontal frictionless table. Once the cart has been given a push and released, what will happen to the cart? Choose the best answer.</p>
+<ol class="simple">
+<li><p>continue with constant acceleration</p></li>
+<li><p>continue with constant velocity</p></li>
+<li><p>continue with decreasing acceleration</p></li>
+<li><p>immediately come to a stop</p></li>
+<li><p>slowly come to a stop</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The cart will continue with a constant velocity, since the net force on it is zero. Notice that there <em>are</em> forces acting on the cart, just that they all cancel out.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A hockey puck slides on ice at constant velocity. What is the <em>net force</em> acting on the puck? Choose the best answer.</p>
+<ol class="simple">
+<li><p>more than its weight</p></li>
+<li><p>equal to its weight</p></li>
+<li><p>less than its weight, but more than zero</p></li>
+<li><p>depends on the speed of the puck</p></li>
+<li><p>zero</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since the puck is moving at constant velocity, the net force on it must be zero.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You put your book on the bus seat next to you. When the bus stops suddenly, the book slides forward off the seat. Why? Choose the best answer.</p>
+<ol class="simple">
+<li><p>a net force acted on it</p></li>
+<li><p>gravity briefly stopped acting on it</p></li>
+<li><p>it did not move, but only seemed to</p></li>
+<li><p>it remained at rest</p></li>
+<li><p>no net force acted on it</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> When the bus is moving, the book has a constant velocity. The bus stops because a frictional force acts on it from the brakes; the book will continue moving, since it has no net force acting on it. The book will appear to start moving from your viewpoint, but that is because you are accelerating in the opposite direction!</p>
+</div>
+</div>
+<div class="section" id="newton-s-second-law">
+<span id="lin-mom-newton-second-law"></span><h3><span class="section-number">10.3.4. </span>Newton’s second law<a class="headerlink" href="#newton-s-second-law" title="Permalink to this headline">¶</a></h3>
+<p>Here we come to the workhorse for physics! We have seen before that an object’s constant velocity (or momentum) is altered by the application of a force to that object. Newton’s 2nd law tells us exactly how the momentum is changed. Thus, it provides the key relationship between the motion of a single object, and the interactions that object experiences, giving rise to a net force.</p>
+<div class="warning admonition">
+<p class="admonition-title">Newton’s second law</p>
+<p>The change in the momentum <span class="math notranslate nohighlight">\(\Delta {\vec p}\)</span> of an object over a time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is equal to the net (or total) force acting on the object.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F_{net}} = \sum {\vec F} = \frac{\Delta {\vec p}}{\Delta t}
+\]</div>
+</div>
+<p>Note that the net force vector and the change in momentum (or impulse) vector are in the same direction. For a single object, the mass is constant, so</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F_{net}} = \frac{\Delta (m {\vec v)}}{\Delta t} = m \biggl( \frac{\Delta {\vec v}}{\Delta t} \biggr) = m {\vec a}
+\]</div>
+<p>Objects (e.g. rockets) with changing masses will be dealt with using Newton’s third law. This is the usual form of Newton’s 2nd law, and we will use it this way for most of the course. However, it is perhaps conceptually more helpful to think of the law as saying “forces change momentum”. This provides a more intuitive basis for both of these concepts.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In each of the four pictures below, a ball is moving to the right, and its position is shown at every second. There are no forces acting on the ball, except possibly at point <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<ol class="simple">
+<li><p>In which of the four situations is a force acting on the ball at point <span class="math notranslate nohighlight">\(P\)</span>?</p></li>
+<li><p>For the choices you made in the previous question, what is the direction of the force in each situation?</p></li>
+</ol>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L08_Fig01-Force-on-moving-balls_small.png"><img alt="../_images/INT_AY21_L08_Fig01-Force-on-moving-balls_small.png" src="../_images/INT_AY21_L08_Fig01-Force-on-moving-balls_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.11 </span><span class="caption-text">Which of the balls shown have a force acting on them at point <span class="math notranslate nohighlight">\(P\)</span>?</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> All the balls experience a force at point <span class="math notranslate nohighlight">\(P\)</span>, except in situation <span class="math notranslate nohighlight">\(B\)</span>, where the ball continues with a constant velocity. For ball <span class="math notranslate nohighlight">\(A\)</span>, the force is to the left, since the ball slows down (and thus, experiences a leftward acceleration). The situation is the same for ball <span class="math notranslate nohighlight">\(D\)</span>, except that the leftward acceleration is larger, since the change in velocity is big enough to stop the ball. For ball <span class="math notranslate nohighlight">\(C\)</span>, the force is towards the bottom of the page, since the velocity increases in that direction.</p>
+</div>
+<p>Whenever we have a problem dealing with forces on an object, Newton’s 2nd law is frequently the first mathematical tool we will pick up out of the toolbox. Even in cases, such as energy conservation, where we do not directly see these equations, it will be “in the background”, providing the conceptual framework to define quantities such as potential energy. You should get into the habit of starting your solutions to problems with Newton’s 2nd law!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A disorganized group of people are trying to move a stalled car. Two people are trying to pull it forward with 100. N and 150. N each, while one is trying to pull it backwards with 200. N. If the car has a mass of 1500 kg, what is the acceleration of the car? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>zero</p></li>
+<li><p>3.33 cm/s<span class="math notranslate nohighlight">\(^2\)</span>, backward</p></li>
+<li><p>3.33 cm/s<span class="math notranslate nohighlight">\(^2\)</span>, forward</p></li>
+<li><p>10.0 cm/s<span class="math notranslate nohighlight">\(^2\)</span>, backward</p></li>
+<li><p>10.0 cm/s<span class="math notranslate nohighlight">\(^2\)</span>, forward</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 3.33 cm/s<span class="math notranslate nohighlight">\(^2\)</span>, forward</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You work at an engineering firm, testing the safety of car components under large accelerations. When testing a particular 175 g piece of equipment, you find the following <span class="math notranslate nohighlight">\(v_x\)</span> vs. time graph. What is the average force (in N) on the equipment from 1.00 ms to 5.00 ms? Give your answer in unit vector form.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L20_Fig03-vx-vs-t-graph_small.png"><img alt="../_images/INT_AY20_MP1_L20_Fig03-vx-vs-t-graph_small.png" src="../_images/INT_AY20_MP1_L20_Fig03-vx-vs-t-graph_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.12 </span><span class="caption-text">Measuring the velocity of a car component as a function of time</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec F}_{avg} = (-984 \textrm{ N}) {\hat x}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A hockey puck with a mass of 155 g is hit with a force with magnitude <span class="math notranslate nohighlight">\(F\)</span>. The force causes the puck to accelerate from 15.0 m/s to 25.0 m/s in 1.79 s. What is the magnitude <span class="math notranslate nohighlight">\(F\)</span>? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>866 mN</p></li>
+<li><p>1.59 N</p></li>
+<li><p>2.17 N</p></li>
+<li><p>3.88 N</p></li>
+<li><p>4.94 N</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 866 mN</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A cart is pulled with a constant, horizontal net force of 110 N. The cart starts from rest and reaches a speed of 9.50 m/s over a distance of 15.5 m.</p>
+<ol class="simple">
+<li><p>How long does it take (in s) for the car to reach its final speed?</p></li>
+<li><p>What is the mass of the cart (in kg)?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 3.26 s; 37.8 kg</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are driving in your 1000 kg car with an initial velocity <span class="math notranslate nohighlight">\((25.0 \textrm{ m/s}) {\hat x} + (15.0 \textrm{ m/s}) {\hat y}\)</span> when you encounter a bend in the road. You brake and turn, ending up with a final velocity <span class="math notranslate nohighlight">\((10.0 \textrm{ m/s}) {\hat x} + (18.0 \textrm{ m/s}) {\hat y}\)</span>. If you turned in 2.23 seconds, what is the net force (in kN) acting on the car?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec F} = (-6.73 \textrm{ kN}) {\hat x} + (1.35 \textrm{ kN}) {\hat y}\)</span></p>
+</div>
+</div>
+<div class="section" id="newton-s-third-law">
+<h3><span class="section-number">10.3.5. </span>Newton’s third law<a class="headerlink" href="#newton-s-third-law" title="Permalink to this headline">¶</a></h3>
+<p>As said above, Newton’s 2nd law will be our go-to source for finding how interactions on a single object change its momentum. But what are the sources of these interactions? Where are the forces coming from? These questions naturally lead to thinking about how a given object is effected by the other objects around it. Newton’s 3rd law describes an crucial property that these interactions must have.</p>
+<p>The important thing to realize is that a force on one object <em>cannot</em> happen unless it is due to an interaction with a second object. An object will not start moving because of a force acting on itself! Two objects share the interaction we call a “force”. This force of interaction acts with equal size on both objects. Only because of Newton’s 2nd law will these forces generate different accelerations, because of the differing masses of the objects. The directions of the forces must also be in opposite directions – they can’t “add up”, or else you get extra acceleratiion for free! The forces of the interaction do <em>not</em> cancel out, because they act on different objects. Putting all of this together gives</p>
+<div class="warning admonition">
+<p class="admonition-title">Newton’s third law</p>
+<p>Two interacting objects will each feel the same magnitude of force, acting in opposite directions.</p>
+</div>
+<p>As we said before, let <span class="math notranslate nohighlight">\({\vec F}_{AB}\)</span> be the force <em>on</em> <span class="math notranslate nohighlight">\(A\)</span> <em>due to</em> <span class="math notranslate nohighlight">\(B\)</span>, and similarly, <span class="math notranslate nohighlight">\({\vec F}_{BA}\)</span> is the force <em>on</em> <span class="math notranslate nohighlight">\(B\)</span> <em>due to</em> <span class="math notranslate nohighlight">\(A\)</span>. Then the mathematical form of Newton’s third law is</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec F}_{AB} = - {\vec F}_{BA}
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A small car collides with a large truck. Which experiences the greater magnitude of impact <em>force</em>?</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig02-Colliding-truck-car_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig02-Colliding-truck-car_small.png" src="../_images/INT_AY20_MP1_L21_Fig02-Colliding-truck-car_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.13 </span><span class="caption-text">A car and a truck, about to collide</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>the car</p></li>
+<li><p>the truck</p></li>
+<li><p>both the same</p></li>
+<li><p>it depends on the mass of each</p></li>
+<li><p>it depends on the velocity of each</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Using Newton’s <em>third</em> law, the magnitudes of the forces are equal on the car and truck.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In the collision between the small car and the large truck, which has the greater <em>acceleration</em> magnitude?</p>
+<ol class="simple">
+<li><p>the car</p></li>
+<li><p>the truck</p></li>
+<li><p>both the same</p></li>
+<li><p>it depends on the collision time</p></li>
+<li><p>it depends on the velocity of each</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> From the previous question, we know the force magnitudes are equal. Then, using Newton’s <em>second</em> law, the acceleration of the car is greater.</p>
+</div>
+<p>These last two questions focus on a frequent confusion. The first question – about the size of the force – is dealt with by Newton’s <em>3rd</em> law. This law of motion pertains to the interaction between two objects, and says that this interaction must treat each object equally. However, this notion of equality does not say anything about how the interaction affects the motion of the individual objects. This is the content of Newton’s <em>2nd</em> law, which relates the forces on an object to the resulting change in the object’s motion. Thus, the second question – about the size of the acceleration – <em>starts</em> with what Newton’s 3rd law says about interactions, and uses it as input for Newton’s 2nd law. You need to use Newton’s 3rd law to be able to say anything with the 2rd law!</p>
+</div>
+<div class="section" id="internal-and-external-forces">
+<span id="lin-mom-newton-forces-sys"></span><h3><span class="section-number">10.3.6. </span>Internal and external forces<a class="headerlink" href="#internal-and-external-forces" title="Permalink to this headline">¶</a></h3>
+<p>Let’s explore another crucial implication of Newton’s 3rd law. Suppose a system is made of two objects <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The rest of the universe is called the “outside” or “external” to the system. There are three possible forces acting on the objects: a force between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> (<span class="math notranslate nohighlight">\({\vec F}_{AB} = -{\vec F}_{BA}\)</span>), a force between <span class="math notranslate nohighlight">\(A\)</span> and the outside (<span class="math notranslate nohighlight">\({\vec F}_{A, out}\)</span>), and a force between <span class="math notranslate nohighlight">\(B\)</span> and the outside (<span class="math notranslate nohighlight">\({\vec F}_{B, out}\)</span>). What is the net force on the system? It is the sum of the forces on all objects in the system:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F}_{sys} = \sum {\vec F}_A + \sum {\vec F}_B = \bigl( {\vec F}_{AB} + {\vec F}_{A, out} \bigr) + \bigl( {\vec F}_{BA} + {\vec F}_{B, out} \bigr)
+\]</div>
+<p>Because of Newton’s 3rd law, <span class="math notranslate nohighlight">\({\vec F}_{AB} + {\vec F}_{BA} = {\vec 0}\)</span> as vectors for the system, not a single object. So</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F}_{sys} = {\vec F}_{A, out} + {\vec F}_{B, out} = \sum {\vec F}_{sys, out}
+\]</div>
+<p>The net force on a general system is thus the sum of all <em>external</em> forces acting on the system. Internal forces do not contribute to the motion of the <em>system</em>, but do affect the motion of the individual objects within the system. Be careful about the difference – for example, you do not start moving because your lungs expand with air as you breath! We will discuss “the motion of the system” again in <a class="reference internal" href="L11_Center_of_mass_and_collisions.html#cm-coll"><span class="std std-ref">Lesson 11 (center of mass)</span></a>.</p>
+<p>It is important to know what system to look at when working with Newton’s second law. So let’s go through an example of this, where I consider the motion of a 1500 kg truck pulling a 500 kg sled along. The sled is on runners, so there is no friction between the sled and the road. The sled pulls on the truck with a force of 250 N to the left. The force of friction between the road and the truck’s tires is 1000 N.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig03-Truck-and-sled_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig03-Truck-and-sled_small.png" src="../_images/INT_AY20_MP1_L21_Fig03-Truck-and-sled_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.14 </span><span class="caption-text">Truck and sled</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>We will figure out the accelerations of the truck and the sled, the force of the truck on the sled, and the net force on the truck. Because I have two objects interacting, I can divide them in two ways: either as individual systems, or as a combined system. Depending on which system I consider, there will be different forces acting on the system. These are shown in the figure below.</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig04-Truck-sled-system_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig04-Truck-sled-system_small.png" src="../_images/INT_AY20_MP1_L21_Fig04-Truck-sled-system_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.15 </span><span class="caption-text">The forces on the truck and sled as individual objects, and as a system</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>For the sled, with no friction, the only external force is the force on the sled, due to the truck. For the truck, there are two external forces: the force on the truck, from the road (i.e. friction), and the force on the truck due to the sled. If I look at the combined system, the only external force is the force on the truck due to the road. In this last case, the internal forces are those between the truck and the sled. These internal forces only cancel out <em>inside</em> the system due to Newton’s 3rd law. So it is important to think about what system you are using! Forces from outside the system do not cancel. The diagram below considers the three possible systems we can make out of the truck and sled.</p>
+<p>Notice that in the diagram above, I have also drawn diagrams to indicate the forces acting on each system. This type of diagram is known as a <em>free body diagram</em> (or FBD), and is a compact and effective way of showing all the forces. We will see many of these starting in <a class="reference internal" href="L12_Solving_force_problems.html#force-prob-fbd"><span class="std std-ref">Lesson 13 (Solving force problems)</span></a>, where I will go into them in more detail. For now, notice how I have drawn them:</p>
+<ol class="simple">
+<li><p>A dot represents the system acted on by the forces.</p></li>
+<li><p>Every arrow indicating a force points away from the dot.</p></li>
+<li><p>Only forces are included; velocity and acceleration are not indicated on an FBD.</p></li>
+</ol>
+<p>Now back to the problem. It is easiest to find the acceleration magnitude of the truck and the sled. To do this, we look at the combined system, since we know the size of the net force on it (1000 N), and the mass of the system (2000 kg). Using Newton’s 2nd law for this, we get an acceleration of 0.500 m/s<span class="math notranslate nohighlight">\(^2\)</span> to the right. Note this is the acceleration of <em>both</em> truck and sled, since they are attached – they move together as one unit.</p>
+<p>Turning to the forces, since these deal with the forces between the sled and truck, we cannot use the combined system. We need to look at each object individually. To find the force between the sled and the truck, it is somewhat easier to use the sled. We know the mass of the sled, its acceleration, and the net force is simply the force on the sled due to the truck. Putting all of this together gives this force is 250. N to the right. Finally, we know from Newton’s third law that the truck experiences a force <span class="math notranslate nohighlight">\({\vec F}_{truck, sled}\)</span> of 250. N to the left from the sled. Since the net force on the truck is simply the sum of the forces acting on it, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_x = -F_{truck, sled} + F_{truck, road}
+\]</div>
+<p>Here, I am only writing the <span class="math notranslate nohighlight">\(x\)</span> components of the vector equation, so these are magnitudes, with signs giving the directions. Solving this equation for the net force <span class="math notranslate nohighlight">\(\sum F_x\)</span> gives 750. N, to the right. This is the same answer I get if, instead, I use Newton’s 2nd law and write</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_x = m_{truck} a_x
+\]</div>
+<p>The next two problems deal with the interplay between forces on the <em>system</em>, and forces on the <em>individual</em> objects. Obviously, when solving for a particular force between the objects, it will be best to use Newton’s 2nd law, written down for one of the objects involved. As some problem-solving hints, you should draw a FBD for every system that you are considering. Remember that Newton’s 3rd law says that forces represent an interaction between two objects, so what you know may guide you in choosing one of the affected objects over the other. However, there are other quantities that are more easily found when looking at the system. These will be those that every object has in common.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>On NAPS I-Day, you push three boxes of your favorite books into your room in Ripley. You exert a force <span class="math notranslate nohighlight">\(F\)</span> of magnitude 11.0 N on the three boxes <span class="math notranslate nohighlight">\(m_1 = 1.90\)</span> kg, <span class="math notranslate nohighlight">\(m_2 = 4.20\)</span> kg and <span class="math notranslate nohighlight">\(m_3 = 3.30\)</span> kg.</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig05-Three-boxes-w-applied-force_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig05-Three-boxes-w-applied-force_small.png" src="../_images/INT_AY20_MP1_L21_Fig05-Three-boxes-w-applied-force_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.16 </span><span class="caption-text">Pushing three boxes of books into your room</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the magnitude of the acceleration (in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the three boxes?</p></li>
+<li><p>What is the magnitude of the force (in N) between boxes 2 and 3?</p></li>
+<li><p>What is the magnitude of the force (in N) between boxes 1 and 2?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 1.17 m/s<span class="math notranslate nohighlight">\(^2\)</span>; 3.86 N; 8.78 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>On your last day at NAPS, you line up the boxes in the same order, but now you exert the same force <span class="math notranslate nohighlight">\(F\)</span> of magnitude 11.0 N on the right hand side. Remember that <span class="math notranslate nohighlight">\(m_1 = 1.90\)</span> kg, <span class="math notranslate nohighlight">\(m_2 = 4.20\)</span> kg and <span class="math notranslate nohighlight">\(m_3 = 3.30\)</span> kg.</p>
+<div class="figure align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L21_Fig06-Three-boxes-w-applied-force_small.png"><img alt="../_images/INT_AY20_MP1_L21_Fig06-Three-boxes-w-applied-force_small.png" src="../_images/INT_AY20_MP1_L21_Fig06-Three-boxes-w-applied-force_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10.17 </span><span class="caption-text">Pushing three boxes of books out of your room</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the magnitude of the force (in N) between boxes 2 and 3?</p></li>
+<li><p>What is the magnitude of the force (in N) between boxes 1 and 2?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 7.14 N; 2.22 N</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">10.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>It is not too far off to say that Isaac Newton, when he presented his ideas in <em>Principia</em>, created the first unified system of mathematical physics. Not only did he provide a rigorous framework for investigating the natural world, but he also linked all phenomena known at the time into a single picture. Obviously, much has been discovered since that time, but the core ideas of Newton still provide the skeleton on which our understanding of the Universe sits. This core is summed up in Newton’s laws of motion. Understanding their consequences took the effort of many physicists and mathematicians over many decades.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Define linear momentum and impulse.</p></li>
+<li><p>Find the impulse of an object due to a change in velocity.</p></li>
+<li><p>State Newton’s laws of motion.</p></li>
+<li><p>Define inertia.</p></li>
+<li><p>Calculate the final velocity or acceleration of an object, knowing its mass, initial velocity and the net force acting on it.</p></li>
+<li><p>Define an isolated system.</p></li>
+<li><p>Describe the net force acting on an isolated system.</p></li>
+<li><p>Calculate the acceleration of an isolated system, or the internal forces between objects in that system, given the appropriate information.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L09_Relative_motion.html" title="previous page"><span class="section-number">9. </span>Relative motion</a>
+    <a class='right-next' id="next-link" href="L11_Center_of_mass_and_collisions.html" title="next page"><span class="section-number">11. </span>Center of mass and collisions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

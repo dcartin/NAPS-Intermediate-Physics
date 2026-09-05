@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18. Angular momentum &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="19. Work and energy" href="L19_Work_and_energy.html" />
+    <link rel="prev" title="17. Vector product" href="L17_Vector_product.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L18_Angular_momentum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L18_Angular_momentum.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   18.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#torque">
+   18.2. Torque
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   18.3. Angular momentum
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#angular-momentum-of-point-masses">
+     18.3.1. Angular momentum of point masses
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-product-tricks">
+     18.3.2. Vector product tricks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#angular-momentum-in-vpython">
+     18.3.3. Angular momentum in vPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conservation-of-angular-momentum">
+     18.3.4. Conservation of angular momentum
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-forces">
+   18.4. Central forces
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-alternative-definition">
+     18.4.1. An alternative definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#central-force-simulation">
+     18.4.2. Central force simulation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-calculating-the-parallel-velocity-component">
+     18.4.3. Example: Calculating the parallel velocity component
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   18.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="angular-momentum">
+<span id="ang-mom"></span><h1><span class="section-number">18. </span>Angular momentum<a class="headerlink" href="#angular-momentum" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">18.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#ang-mom-lin-mot"><span class="std std-ref">Angular momentum and linear motion</span></a></p></li>
+<li><p><a class="reference internal" href="#centr-force-ang-mom"><span class="std std-ref">Angular momentum and central forces</span></a></p></li>
+<li><p><a class="reference internal" href="#centr-force-vel-comps"><span class="std std-ref">Central forces and velocity components</span></a></p></li>
+</ol>
+<p>In <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11</span></a>, the idea of linear momentum was introduced. Remember that this quantity is a good one to use when thinking about the inertia of an object. Linear momentum stays the same unless acted on by a net force (Newton’s 1st law); the size of the change in linear momentum is related to the size of this net force (Newton’s 2nd law). Thus, we could talk about the conservation of linear momentum when a system was isolated, i.e. no <em>external</em> forces acted on the system. Collisions were a good example of using this conservation principle to understand the motion of objects.</p>
+<p>We will now go through an “angular” or “rotational” version of momentum. However, we will see that many of the same ideas hold here as they do with linear momentum – angular momentum changes due to the action of a net torque (or “rotational force”), while angular momentum is conserved in isolated systems. Perhaps surprisingly, this conservation of angular momentum works even if the object moves in a straight line! As long as we have a reference point (the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> location), we can calculate the angular momentum of an object around that point, regardless of what kind of motion the object has.</p>
+<p>Angular momentum is very important in dealing with my favorite force: the gravitational force. Specifically, we can use conservation of angular momentum to talk about the orbit of one object around another (e.g. the Moon and the Earth). Indeed, it can be used for any central force, such as the spring force or the electrostatic force. Later on, we will also have discuss the principle of mechanical energy conservation, and between these two conservation principles, we can calculate quite a bit about an orbiting body. We will see a hint of that by the end of this lesson.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define torque and angular momentum.</p></li>
+<li><p>State the rotational version of Newton’s 2nd law.</p></li>
+<li><p>State the condition necessary for angular momentum to be conserved.</p></li>
+<li><p>Define point mass.</p></li>
+<li><p>Calculate the unknown mass, position, or perpendicular velocity component of a point mass using conservation of angular momentum.</p></li>
+</ul>
+</div>
+<div class="section" id="torque">
+<span id="ang-mom-torque"></span><h2><span class="section-number">18.2. </span>Torque<a class="headerlink" href="#torque" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have discussed the vector product in <a class="reference internal" href="L17_Vector_product.html#vec-prod"><span class="std std-ref">Lesson 17</span></a>, we have enough of a mathematical framework to talk about torque. You should think of this as a rotational version of the force; we will use it primarily in these lessons to get some insight into angular momentum. Here is the definition of torque.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> torque</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec \tau}\)</span> (“tau”)</p></li>
+<li><p><strong>Equation:</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    {\vec \tau} = {\vec r} \times {\vec F}
+\]</div>
+<ul class="simple">
+<li><p><strong>Units:</strong> N <span class="math notranslate nohighlight">\(\cdot\)</span> m</p></li>
+</ul>
+<p>Here <span class="math notranslate nohighlight">\({\vec r}\)</span> is the position where the force <span class="math notranslate nohighlight">\({\vec F}\)</span> acts; the position <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> (sometimes called the “axis”) must be defined in order to find a torque. There are several consequences to this fact. For systems where the net force <span class="math notranslate nohighlight">\(\sum {\vec F} \ne 0\)</span>, changing the position of the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> can give a different answer for the torque! So you should always specify the origin <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> of the coordinate system when computing torques.</p>
+<div class="warning admonition">
+<p class="admonition-title">Forces are not torques</p>
+<p>The torque <span class="math notranslate nohighlight">\({\vec \tau}\)</span> on an object can be zero, even if the force <span class="math notranslate nohighlight">\({\vec F}\)</span> creating the torque is <em>not</em> zero. This can occur if (1) the forces acts at the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> point, or (2) the force <span class="math notranslate nohighlight">\({\vec F}\)</span> is parallel to the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>. Case (2) can be seen in the diagram below.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L22_Fig03-Zero_moment_arm_torque_small.png"><img alt="../_images/INT_AY20_MP2_L22_Fig03-Zero_moment_arm_torque_small.png" src="../_images/INT_AY20_MP2_L22_Fig03-Zero_moment_arm_torque_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.1 </span><span class="caption-text">Non-zero forces can give zero torques</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here, we have <span class="math notranslate nohighlight">\({\vec \tau} = (R {\hat x}) \times (-F {\hat x}) = 0\)</span>.</p>
+</div>
+<p>The PhET linked below should help you build up some intuition about torques. Notice that, because the torque is related to both the force itself, and where the force acts, two forces of different sizes can cause the same magnitude of torque.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="800"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Let’s go through an example of finding the net torque vector for an object. Below is shown a cross-sectional view of a pulley with three forces acting on it at various points. The two pulley radii are 25.0 cm and 50.0 cm. The magnitudes of the forces are <span class="math notranslate nohighlight">\(F_1 = 6.00\)</span> N, <span class="math notranslate nohighlight">\(F_2 = 12.0\)</span> N and <span class="math notranslate nohighlight">\(F_3 = 9.00\)</span> N. We will find net torque on the pulley around its center, in unit vector notation.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L22_Fig04-Pulley_small.png"><img alt="../_images/INT_AY20_MP2_L22_Fig04-Pulley_small.png" src="../_images/INT_AY20_MP2_L22_Fig04-Pulley_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.2 </span><span class="caption-text">Example of forces acting on a pulley to give a net torque</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Since we are finding the net torque around the center, that will be our <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> choice. I will call the smaller pulley radius <span class="math notranslate nohighlight">\(r_1\)</span>, and the larger radius <span class="math notranslate nohighlight">\(r_2\)</span>. Then, we can algebraically find the torques due to the various forces. The torques due to <span class="math notranslate nohighlight">\({\vec F}_2\)</span> and <span class="math notranslate nohighlight">\({\vec F}_3\)</span> are easier, so let’s do them first.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec \tau}_2 = (r_2 {\hat x}) \times (-F_2 {\hat y}) = (-r_2 F_2) {\hat z}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec \tau}_3 = (-r_1 {\hat x}) \times (-F_3 {\hat y}) = (r_1 F_3) {\hat z}
+\]</div>
+<p>The torque <span class="math notranslate nohighlight">\({\vec \tau}_1\)</span> takes a little thought, since we have to be careful about our vectors. The force <span class="math notranslate nohighlight">\({\vec F}_1\)</span> is acting at a point <span class="math notranslate nohighlight">\(r_1\)</span> from the pulley’s center, along the <span class="math notranslate nohighlight">\(+y\)</span> axis. At this point, the force is 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> CW from the <span class="math notranslate nohighlight">\(-x\)</span> axis. This means we have to break <span class="math notranslate nohighlight">\({\vec F}_1\)</span> into <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components. With <span class="math notranslate nohighlight">\(\theta = 30.0^\circ\)</span>, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec \tau}_1 = (r_1 {\hat y}) \times [(-F_1 \cos \theta) {\hat x} + (F_1 \sin \theta) {\hat y}] = (r_1 F_1 \cos \theta) {\hat z}
+\]</div>
+<p>You might be wondering why there is a <span class="math notranslate nohighlight">\(\cos \theta\)</span>, since the magnitude formula we had before gave us <span class="math notranslate nohighlight">\(|{\vec A} \times {\vec B}| = AB \sin \theta\)</span>. Here is a place where you have to watch out for the definitions! The angle <span class="math notranslate nohighlight">\(\theta\)</span> in <span class="math notranslate nohighlight">\(AB \sin \theta\)</span> is the angle between the vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>. However, for the pulley, the angle between the position vector <span class="math notranslate nohighlight">\({\vec r}_1\)</span> and the force vector <span class="math notranslate nohighlight">\({\vec F}_1\)</span> is <em>not</em> 30.0<span class="math notranslate nohighlight">\(^\circ\)</span>, but rather its complement! This is why you get the cosine, rather than the sine, function. In other words, if you use the sine function, you would have to use <span class="math notranslate nohighlight">\(\sin(90^\circ - \theta)\)</span>, which is the same as <span class="math notranslate nohighlight">\(\cos \theta\)</span>.</p>
+<p>Putting all of this together, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec \tau} = {\vec \tau}_1 + {\vec \tau}_2 + {\vec \tau}_3 = (r_1 F_1 \cos \theta - r_2 F_2 + r_1 F_3) {\hat z}
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">Signs of the torques</p>
+<p>In this case, where the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span> and the force vector <span class="math notranslate nohighlight">\({\vec F}\)</span> are both in the <span class="math notranslate nohighlight">\(x-y\)</span> plane, notice how the signs are related to how each torque acts “around” the central point. Torques that tend to turn the object in the <em>counterclockwise</em> direction are <em>positive</em>, while those in the <em>clockwise</em> direction are <em>negative</em>. This is a shorthand way of finding the sign of the torque, without going through the full vector product calculation.</p>
+</div>
+<p>Substituting the numbers, we get <span class="math notranslate nohighlight">\(\sum {\vec \tau} = (-2.45 \textrm{ N} \cdot \textrm{m}) {\hat z}\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The length of the beam is 3.00 m, and the point <span class="math notranslate nohighlight">\(C\)</span> is at the center of the beam. What is the torque produced by the 10.0 N force around <span class="math notranslate nohighlight">\(C\)</span>, in unit vector notation?</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L22_Fig05-Beam_w_one_force_small.png"><img alt="../_images/INT_AY20_MP2_L22_Fig05-Beam_w_one_force_small.png" src="../_images/INT_AY20_MP2_L22_Fig05-Beam_w_one_force_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.3 </span><span class="caption-text">Beam with a single force acting on it</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\((-5.13 \textrm{ N m}) {\hat z}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The length of the beam is 3.00 m, with the point <span class="math notranslate nohighlight">\(C\)</span> at the center of the beam. Find the net torque (in N <span class="math notranslate nohighlight">\(\cdot\)</span> m) on the beam around an axis passing through point <span class="math notranslate nohighlight">\(O\)</span>, and express your answer in unit vector notation.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L22_Fig06-Beam_w_three_forces_small.png"><img alt="../_images/INT_AY20_MP2_L22_Fig06-Beam_w_three_forces_small.png" src="../_images/INT_AY20_MP2_L22_Fig06-Beam_w_three_forces_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.4 </span><span class="caption-text">Beam with multiple forces acting on it</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\((22.2 \textrm{ N m}) {\hat z}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Below is shown a cross-sectional view of a pulley with three forces acting on it at various points. The two pulley radii are 1.00 cm and 2.50 cm. If the magnitudes of the forces are <span class="math notranslate nohighlight">\(F_1 = 9.00\)</span> N, <span class="math notranslate nohighlight">\(F_2 = 10.0\)</span> N and <span class="math notranslate nohighlight">\(F_3 = 12.0\)</span> N, what is the net torque (in mN <span class="math notranslate nohighlight">\(\cdot\)</span> m) on the pulley around its center, in unit vector notation?</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L22_Fig07-Pulley_small.png"><img alt="../_images/INT_AY20_MP2_L22_Fig07-Pulley_small.png" src="../_images/INT_AY20_MP2_L22_Fig07-Pulley_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.5 </span><span class="caption-text">Pulley with multiple forces</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\((-355 \textrm{ mN m}) {\hat z}\)</span></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">18.3. </span>Angular momentum<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="angular-momentum-of-point-masses">
+<h3><span class="section-number">18.3.1. </span>Angular momentum of point masses<a class="headerlink" href="#angular-momentum-of-point-masses" title="Permalink to this headline">¶</a></h3>
+<p>Recall that in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11</span></a>, linear momentum <span class="math notranslate nohighlight">\({\vec p}\)</span> was defined as</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec p} = m {\vec v}
+\]</div>
+<p>and from the same lesson, it changes whenever there is a net force acting on a system:</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F} = \frac{\Delta {\vec p}}{\Delta t}
+\]</div>
+<p>The intuition behind this is based on Newton’s 1st and 2nd laws of motion. The first law says that an object will move with a constant velocity unless acted on by an outside force. In terms of linear momentum, this says that the object (or system of objects) will have a constant <span class="math notranslate nohighlight">\({\vec p}\)</span> unless external forces are present. Newton’s second law then relates the net external force to the change in the system’s linear momentum.</p>
+<p>In a similar manner, angular momentum <span class="math notranslate nohighlight">\({\vec L}\)</span> is a measure of the rotational motion of an object about a chosen axis. Much like Newton’s 2nd law says changes in linear momentum are due to net forces, there is a corresponding rotational version of this equation. Here, it says that changes in <em>angular</em> momentum are due to a net <em>torque</em> <span class="math notranslate nohighlight">\({\vec \tau}\)</span> acting on the system.</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec \tau} = \frac{\Delta {\vec L}}{\Delta t}
+\]</div>
+<p>Again, this can be seen by our analogy between linear and rotational quantities. Here, we replace force with torque, <span class="math notranslate nohighlight">\({\vec F} \to {\vec \tau}\)</span>, and linear momentum with angular momentum, or <span class="math notranslate nohighlight">\({\vec p} \to {\vec L}\)</span>. This version of Newton’s 2nd law intuitively makes sense as torque changing the “spinningness” of an object, as represented by the angular momentum.</p>
+<div class="warning admonition">
+<p class="admonition-title">Symmetry gives conservation</p>
+<p>The attentive reader may notice that I have tried to pull a fast one on you! Before, I said that conservation of linear momentum in the absence of net external forces is a re-statement of the principle of inertia (Newton’s 1st law). However, inertia only deals with constant <em>velocity</em>. As we saw when we discussed uniform circular motion, there is no corresponding “rotational” version of Newton’s 1st law – in other words, objects do not have a natural tendency to rotate, since this requires a centripetal force acting on the object. However, it turns out that the answer to this riddle deals with the <em>symmetry</em> of physics. One (slightly strange) way to say this is that if I took the entire Universe and rotated it, the laws of physics would be exactly the same – no one would notice! Modern physics is now based heavily on this idea of symmetry, based on the ideas of <a class="reference external" href="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy Noether</a>, as discussed in the following videos linked <a class="reference external" href="https://www.youtube.com/watch?v=ahf0zCaqrwM">here</a>, and more in-depth <a class="reference external" href="https://www.youtube.com/watch?v=04ERSb06dOg">here</a>.</p>
+</div>
+<p>You would think from the name that angular momentum is only for rotating objects. But you would be wrong! It turns out that you can calculate the angular momentum of <em>any</em> object, whether they are rotating or not. In particular, for a <strong>point mass</strong> (i.e. an object whose size is much smaller than their distance away from the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> point), it is often helpful to use the following version of the angular momentum definition.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec L} = {\vec r} \times {\vec p}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\({\vec p} = m{\vec v}\)</span> is the linear momentum of the object. Consider a collection of masses <span class="math notranslate nohighlight">\(m_i\)</span>, with an index <span class="math notranslate nohighlight">\(i\)</span>. Then the total angular momentum <span class="math notranslate nohighlight">\({\vec L}_{sys}\)</span> of the system of masses <span class="math notranslate nohighlight">\(m_i\)</span> around a point <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> would be given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec L}_{sys} = \sum_i {\vec L}_i = \sum_i ({\vec r}_i \times {\vec p}_i)
+\]</div>
+<p>Since each of the masses <span class="math notranslate nohighlight">\(m_i\)</span> has its own position <span class="math notranslate nohighlight">\({\vec r}_i\)</span> and linear momentum <span class="math notranslate nohighlight">\({\vec p}_i\)</span>, the total angular momentum is the vector sum of the individual angular momenta. In addition, the change in this angular momentum with time is given by the net torque on the system, from Newton’s second law of rotational motion.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>At a certain time, a 250. g object has a position vector <span class="math notranslate nohighlight">\({\vec r} = (2.00 \textrm{ m}) {\hat x} + (-3.00 \textrm{ m}) {\hat y}\)</span> and a velocity <span class="math notranslate nohighlight">\({\vec v} = (5.00 \textrm{ m/s}) {\hat x} + (-4.00 \textrm{ m/s}) {\hat y}\)</span>. At that moment, a force <span class="math notranslate nohighlight">\({\vec F} = (2.25 \textrm{ N}) {\hat y}\)</span> is acting on the object.</p>
+<ol class="simple">
+<li><p>What is the angular momentum of the particle at this instant?</p></li>
+<li><p>What is the rate of change of the particle’s angular momentum?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\((1.75 \textrm{ kg m}^2 \textrm{/s}) {\hat z}\)</span>; <span class="math notranslate nohighlight">\((4.50 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A particle with mass 2.00 kg is a distance <span class="math notranslate nohighlight">\(r = 3.00\)</span> m away from the origin, and moves with a speed <span class="math notranslate nohighlight">\(v = 4.00\)</span> m/s. A force <span class="math notranslate nohighlight">\({\vec F}\)</span> of magnitude 3.50 N acts on the particle. The vectors <span class="math notranslate nohighlight">\({\vec r}, {\vec v}\)</span> and <span class="math notranslate nohighlight">\({\vec F}\)</span> are all in the <span class="math notranslate nohighlight">\(x-y\)</span> plane as shown in the figure.</p>
+<ol class="simple">
+<li><p>What is the angular momentum of the particle at the instant shown?</p></li>
+<li><p>What is the rate of change of the particle’s angular momentum?</p></li>
+</ol>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png"><img alt="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png" src="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.6 </span><span class="caption-text">Force acting on point mass</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\((12.0 \textrm{ kg m}^2 \textrm{/s}) {\hat z}\)</span>; <span class="math notranslate nohighlight">\((5.25 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span></p>
+</div>
+</div>
+<div class="section" id="vector-product-tricks">
+<h3><span class="section-number">18.3.2. </span>Vector product tricks<a class="headerlink" href="#vector-product-tricks" title="Permalink to this headline">¶</a></h3>
+<p>Depending on the information you are given about a point mass, there may be easier ways to solve for the angular momentum of the mass. Let’s go through this in detail, especially since the same tricks can be used for <em>anything</em> that involves the vector product. The diagram below sets up the situation; the basic set-up and how to think about it are given below the picture.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L20_Fig03_Ang_mom_variations_small.png"><img alt="../_images/INT_AY21_L20_Fig03_Ang_mom_variations_small.png" src="../_images/INT_AY21_L20_Fig03_Ang_mom_variations_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.7 </span><span class="caption-text">Three perspectives on finding the magnitude of angular momentum</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Suppose we are given a point mass moving at some velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> along the dotted line, and it has a position <span class="math notranslate nohighlight">\({\vec r}\)</span> away from some special point <span class="math notranslate nohighlight">\(P\)</span>. You are asked to find the magnitude of the angular momentum for the mass around <span class="math notranslate nohighlight">\(P\)</span>. This is the situation in the left-hand diagram, where the velocity and position vectors are shown. At the mass, the line of the position vector is extended (this is the dashed line at the top), and the angle <span class="math notranslate nohighlight">\(\theta\)</span> between the two vectors <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\({\vec v}\)</span> is shown. Then, we can use</p>
+<div class="math notranslate nohighlight">
+\[
+    L = |{\vec r} \times {\vec p}| = |{\vec r} \times (m {\vec v})| = rmv \sin \theta
+\]</div>
+<p>to find the magnitude, using this marked angle <span class="math notranslate nohighlight">\(\theta\)</span> along with the two magnitudes <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<p>However, suppose we don’t know the entire vector <span class="math notranslate nohighlight">\({\vec r}\)</span>. Sometimes you only know the distance between the point <span class="math notranslate nohighlight">\(P\)</span> and the line the mass moves along; I will call this distance <span class="math notranslate nohighlight">\(r_\perp\)</span>. How would you solve the problem then? Looking at the middle picture, you can see that the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span> has been broken up into its two components. One component <span class="math notranslate nohighlight">\(r_{||}\)</span> is in the same direction as the velocity <span class="math notranslate nohighlight">\({\vec v}\)</span>, so it points parallel to the dotted line. The other component <span class="math notranslate nohighlight">\(r_\perp\)</span> is perpendicular to this line. If you look back at the left-hand diagram, you will see that there is a second dotted line, passing through the point <span class="math notranslate nohighlight">\(P\)</span>, parallel to the motion of the mass. The two angles <span class="math notranslate nohighlight">\(\theta\)</span> are thus the same, since they are related by two parallel lines (the dotted lines) crossed by the same transversal (the position vector). This allows us to find the length of <span class="math notranslate nohighlight">\(r_\perp\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    r_\perp = r \sin \theta
+\]</div>
+<p>In the middle figure above, I have drawn the triangle so it uses the same angle <span class="math notranslate nohighlight">\(\theta\)</span> as the first picture. However, I can “slide” the distance <span class="math notranslate nohighlight">\(r_\perp\)</span> down to the point <span class="math notranslate nohighlight">\(P\)</span>, and it will be the distance between <span class="math notranslate nohighlight">\(P\)</span> and the dotted line. This component <span class="math notranslate nohighlight">\(r_\perp\)</span> is a special one, so it has its own name – the <strong>moment arm</strong>: the shortest distance from the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> point to the line through the velocity vector of the object. Looking back at the magnitude of the angular momentum, we can use this moment arm to get</p>
+<div class="math notranslate nohighlight">
+\[
+    L = rmv \sin \theta = (r \sin \theta) mv = r_\perp mv
+\]</div>
+<p>So the angular momentum magnitude is the same as the moment arm <span class="math notranslate nohighlight">\(r_\perp\)</span> times the magnitude <span class="math notranslate nohighlight">\(mv\)</span> of the momentum (not a component of it!).</p>
+<p>We can also play the same game if we only know the component <span class="math notranslate nohighlight">\(v_\perp\)</span> of the velocity perpendicular to <span class="math notranslate nohighlight">\({\vec r}\)</span>. This is the right-hand picture in the diagram above. For example, if you imagine yourself watching a moving object, you actually only see <span class="math notranslate nohighlight">\(v_\perp\)</span> directly; the motion of the object towards or away from you is only apparent from the changing size of the object. Then, we can just use the angle <span class="math notranslate nohighlight">\(\theta\)</span> between <span class="math notranslate nohighlight">\({\vec v}\)</span> and <span class="math notranslate nohighlight">\({\vec r}\)</span> to divide the velocity into components parallel and perpendicular to the <em>position</em> vector – notice we are using “parallel” and “perpendicular” in a different sense than we did above with <span class="math notranslate nohighlight">\(r_{||}\)</span> and <span class="math notranslate nohighlight">\(r_\perp\)</span>! The component <span class="math notranslate nohighlight">\(r_\perp\)</span> is perpendicular to <span class="math notranslate nohighlight">\({\vec v}\)</span>, while the component <span class="math notranslate nohighlight">\(v_\perp\)</span> is perpendicular to <span class="math notranslate nohighlight">\({\vec r}\)</span> . In any case, grouping the <span class="math notranslate nohighlight">\(\sin \theta\)</span> appropriately, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    L = rmv \sin \theta = rm v_\perp
+\]</div>
+<p>We will see this version of the angular momentum mangitude often when we treat orbits, such as the orbit of a planet around a star. Cases like this will be discussed in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23 (Kepler’s laws)</span></a>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For the diagram below, you have already found the angular momentum of the particle in an earlier problem.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png"><img alt="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png" src="../_images/INT_AY20_MP2_L24_Fig02-Force_on_point_mass_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.8 </span><span class="caption-text">Force acting on point mass</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the magnitude (in m/s) of the velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span> perpendicular to the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>?</p></li>
+<li><p>What is the magnitude (in m) of the position component <span class="math notranslate nohighlight">\(r_\perp\)</span> perpendicular to the velocity vector <span class="math notranslate nohighlight">\({\vec r}\)</span>? In other words, what is the moment arm of the mass?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 2.00 m/s; 1.50 m</p>
+</div>
+<p>Obviously, point masses are not the only types of object that occur in physics. As mentioned above, for extended objects, we can use conservation of angular momentum to find, for example, the rotational speed of an object. However, this depends on defining a quantity known as the <em>moment of inertia</em>. Much like mass is a measure of an object’s resistance to linear motion, the moment of inertia is the same for rotational motion. However, we will not define this quantity because we are focusing on the angular momentum of point masses. You may see the moment of inertia in a future physics class, when you are dealing with the rotation of an extended object.</p>
+</div>
+<div class="section" id="angular-momentum-in-vpython">
+<h3><span class="section-number">18.3.3. </span>Angular momentum in vPython<a class="headerlink" href="#angular-momentum-in-vpython" title="Permalink to this headline">¶</a></h3>
+<p>We will now delve further into the notion of angular momentum using vPython. The program below creates a ball moving with a constant velocity. Thus, the ball will move along the line <span class="math notranslate nohighlight">\(r_y = +2\)</span> at constant speed <span class="math notranslate nohighlight">\(v = 1\)</span>. The ball is also given a mass <code class="docutils literal notranslate"><span class="pre">M</span></code>, defined at the beginning of the program. In addition, there are two arrows in the simulation: a yellow arrow showing the constant velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> of the ball, and a cyan arrow showing the changing ball position <span class="math notranslate nohighlight">\({\vec r}\)</span>. Run the program, and note how <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\({\vec v}\)</span> change with time.</p>
+<p id="ang-mom-lin-mot"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="800"
+    src="https://trinket.io/embed/glowscript/821d471a51?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Now you will need to calculate the magnitude <span class="math notranslate nohighlight">\(L\)</span> of the angular momentum, and graph this magnitude as a function of time. <span class="math notranslate nohighlight">\(L\)</span> is calculated from the position <span class="math notranslate nohighlight">\({\vec r}_O = (0, 0, 0)\)</span>. In other words, the vector difference <span class="math notranslate nohighlight">\(\Delta {\vec r} = {\vec r}_b - {\vec r}_O\)</span> between the ball’s position <span class="math notranslate nohighlight">\({\vec r}_b\)</span> and the origin <span class="math notranslate nohighlight">\({\vec r}_O\)</span> will be used to define the angular momentum <span class="math notranslate nohighlight">\({\vec L}_b = \Delta {\vec r} \times {\vec p}\)</span> of the mass.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>As the ball moves in the <span class="math notranslate nohighlight">\(x-y\)</span> plane, its angular momentum vector will have a non-zero component only in one direction. What is that direction?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> will have only <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components, and <span class="math notranslate nohighlight">\({\vec v}\)</span> only has a <span class="math notranslate nohighlight">\(y\)</span> component, then <span class="math notranslate nohighlight">\({\vec L}\)</span> will only have a <span class="math notranslate nohighlight">\(z\)</span> component. All other components of <span class="math notranslate nohighlight">\({\vec L}\)</span> are zero, since neither <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> nor <span class="math notranslate nohighlight">\({\vec v}\)</span> have <span class="math notranslate nohighlight">\(z\)</span> components.</p>
+</div>
+<p>The steps to do this are similar to those you have used with previous lessons; <a class="reference internal" href="L03_Velocity_and_Euler_method.html#vel-euler-graphs"><span class="std std-ref">Lesson 03</span></a> would be a useful reference. In the space indicated just before the evolution loop, create a graph <code class="docutils literal notranslate"><span class="pre">angMomGraph</span></code>. Set its horizontal axis limits as <code class="docutils literal notranslate"><span class="pre">xmin</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">xmax</span> <span class="pre">=</span> <span class="pre">MAX_TIME</span></code>. Also, set its lower vertical axis limit as <code class="docutils literal notranslate"><span class="pre">ymin</span> <span class="pre">=</span> <span class="pre">0</span></code>. Label the two axes with proper titles using <code class="docutils literal notranslate"><span class="pre">xtitle</span></code> and <code class="docutils literal notranslate"><span class="pre">ytitle</span></code> (including units!). Immediately below this, create a blue curve <code class="docutils literal notranslate"><span class="pre">angMomCurve</span></code> using the graph <code class="docutils literal notranslate"><span class="pre">angMomGraph</span></code>. In the space indicated inside the evolution loop, update the angular momentum graph by plotting the appropriate component of the angular momentum at the time <span class="math notranslate nohighlight">\(t\)</span>. Use the definition of angular momentum, along with the modules <code class="docutils literal notranslate"><span class="pre">cross</span></code>, to find the component of <span class="math notranslate nohighlight">\({\vec L}\)</span> you are plotting.</p>
+<p>Once you have done all of the coding above, run the program and see what the <span class="math notranslate nohighlight">\(L\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> graph looks like; you should get something like the graph shown below. What is true about the magnitude of the angular momentum for the ball? This demonstrates that angular momentum can be used for objects that have no “rotational” aspect to their motion.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L18_Fig01_L_graph.png"><img alt="../_images/INT_AY22_L18_Fig01_L_graph.png" src="../_images/INT_AY22_L18_Fig01_L_graph.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.9 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(L_z\)</span> vs. time for the moving ball</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What would be the angular momentum of the ball if it started at <span class="math notranslate nohighlight">\({\vec r}_{b, i} = (-3, -2, 0)\)</span> – in other words, it travels along a line <span class="math notranslate nohighlight">\(r_y = -2\)</span> instead of <span class="math notranslate nohighlight">\(r_y = +2\)</span>? Keep the velocity the same as before. Calculate this yourself first, then change the code above to verify your answer. Has anything changed with the magnitude and direction of <span class="math notranslate nohighlight">\({\vec L}\)</span>?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The angular momentum vector <span class="math notranslate nohighlight">\({\vec L} = (+16.0 \textrm{ kg m/s}) {\hat z}\)</span>. The magnitude of the angular momentum is the same, but the direction of <span class="math notranslate nohighlight">\({\vec L}\)</span> has reversed.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What would be the angular momentum of the ball if it traveled along the line <span class="math notranslate nohighlight">\(r_y = 0\)</span>? Keep the velocity the same as before. Calculate this yourself first, then change the code above to verify your answer.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The angular momentum vector <span class="math notranslate nohighlight">\({\vec L}\)</span> is now the zero vector.</p>
+</div>
+<p>Use the intuition you have gained from the vPython simulation to answer the following question.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The figure shows three particles, all moving in the same direction along straight lines. Particle 3 moves directly away from point <span class="math notranslate nohighlight">\(P\)</span>, while the trajectories of the other two have the moment arms as shown. All three particles have the same mass and speed. Rank the magnitudes of the angular momenta of the three particles around the point <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L24_Fig03-Three_moving_masses_small.png"><img alt="../_images/INT_AY20_MP2_L24_Fig03-Three_moving_masses_small.png" src="../_images/INT_AY20_MP2_L24_Fig03-Three_moving_masses_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.10 </span><span class="caption-text">Rank the angular momenta magnitudes of the point masses</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(1 &gt; 2 &gt; 3\)</span></p>
+</div>
+</div>
+<div class="section" id="conservation-of-angular-momentum">
+<h3><span class="section-number">18.3.4. </span>Conservation of angular momentum<a class="headerlink" href="#conservation-of-angular-momentum" title="Permalink to this headline">¶</a></h3>
+<p>Recall that in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11</span></a>, we saw that when the net force on a system was zero, this meant the momentum of that system remained constant (or was <em>conserved</em>):</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F} = \frac{\Delta {\vec p}}{\Delta t} = 0 \Rightarrow \Delta {\vec p} = 0
+\]</div>
+<p>Similarly, if the net torque acting on a system is zero, then the angular momentum of the system is conserved as well.</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec \tau} = \frac{\Delta {\vec L}}{\Delta t} = 0 \Rightarrow \Delta {\vec L} = 0
+\]</div>
+<p>Remember that a zero net torque does <em>not</em> mean a zero net force!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 2.00 kg red bowling ball, moving to the right at a speed of 3.00 m/s on a frictionless table, collides head-on with a stationary 3.00 kg green bowling ball. The green ball leaves the collision at 2.67 m/s to the right. The two balls move along a line that is a distance <span class="math notranslate nohighlight">\(L\)</span> of 1.50 m from a marked point <span class="math notranslate nohighlight">\(P\)</span>. Give your answers in unit vector notation.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L20_Fig02_Collision_of_two_balls_small.png"><img alt="../_images/INT_AY21_L20_Fig02_Collision_of_two_balls_small.png" src="../_images/INT_AY21_L20_Fig02_Collision_of_two_balls_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.11 </span><span class="caption-text">A red ball strikes a sationary green ball</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the initial angular momentum (in kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>) of the green ball around the point <span class="math notranslate nohighlight">\(P\)</span>?</p></li>
+<li><p>What is the initial angular momentum (in kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>) of the red ball around the point <span class="math notranslate nohighlight">\(P\)</span>?</p></li>
+<li><p>What is the final angular momentum (in kg m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>) of the green ball around the point <span class="math notranslate nohighlight">\(P\)</span>?</p></li>
+<li><p>Using conservation of angular momentum, find the final velocity (in m/s) of the red ball. Think carefully about how to go from the final angular momentum of the red ball, to its final velocity.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\((6.00 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span>; <span class="math notranslate nohighlight">\((0.00 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span>; <span class="math notranslate nohighlight">\((12.0 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span>; <span class="math notranslate nohighlight">\((-2.00 \textrm{ m/s}) {\hat x}\)</span></p>
+</div>
+<p>A classic physics demonstration dealing with the conservation of angular momentum is to hang a bicycle wheel off of a rope on one side. If the wheel is not spinning, then once you let go of the wheel, it will drop to point downward as you would expect. However, it does something very surprising if the wheel is spinning! This is detailed in the video linked below, from the Veritasium YouTube channel, always a good source of science videos. In the video, the channel Smarter Every Day is also mentioned, since this video relates to a series on helicopter physics on that other channel – well worth checking out!</p>
+<div class="hint admonition">
+<p class="admonition-title">Challenge</p>
+<p>There is one small error in this video. Did you see it?</p>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/ty9QSiVC2g0?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="central-forces">
+<span id="ang-mom-cent-force"></span><h2><span class="section-number">18.4. </span>Central forces<a class="headerlink" href="#central-forces" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="an-alternative-definition">
+<h3><span class="section-number">18.4.1. </span>An alternative definition<a class="headerlink" href="#an-alternative-definition" title="Permalink to this headline">¶</a></h3>
+<p>We talked about central forces in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-numref">Lesson 16.6</span></a>; examples of these are the prominent forces of gravitation, the spring force, and the electrostatic force. In that previous lesson, we defined a central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> as a force of the form</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_c = F_c (-{\hat r})
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\({\vec r}\)</span> is the position of the object acted on by the force, so <span class="math notranslate nohighlight">\({\hat r}\)</span> is the associated unit vector. Now that we have talked about the vector product and torque, we can phrase this condition in another, equivalent manner. A central force is a force that exerts no torque about the central point <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>. Below is a repeat of the picture you saw in Lesson 18, where I first introduced central forces.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L20_Fig01_Central_force.png"><img alt="../_images/INT_AY21_L20_Fig01_Central_force.png" src="../_images/INT_AY21_L20_Fig01_Central_force.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.12 </span><span class="caption-text">The radial vectors and the physical situation for a central force</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Central forces and net torque</p>
+<p>A central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> is a force which gives no net torque around the point <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>. In other words,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec \tau} = {\vec r} \times {\vec F_c} = {\vec 0}
+\]</div>
+</div>
+<p>Why are these the same? It boils down to the fact that the unit vector <span class="math notranslate nohighlight">\({\vec r}\)</span> is along the same line as the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span>, so their vector product is zero:</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r} \times {\vec F_c} = (-F_c) ({\vec r} \times {\hat r}) = {\vec 0}
+\]</div>
+<p>Let’s work through this in detail, to see how it goes. The position vector in unit vector form is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r} = r_x {\hat x} + r_y {\hat y} + r_x {\hat z}
+\]</div>
+<p>Using the three-dimensional Pythagorean theorem to find the magnitude <span class="math notranslate nohighlight">\(r\)</span> of this vector, then <span class="math notranslate nohighlight">\({\hat r} = {\vec r} / r\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r} = \biggl( \frac{r_x}{r} \biggr) {\hat x} + \biggl( \frac{r_y}{r} \biggr) {\hat y} + \biggl( \frac{r_z}{r} \biggr) {\hat z}
+\]</div>
+<p>Then the central force is written as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_c = \biggl( -\frac{r_x F_c}{r} \biggr) {\hat x} + \biggl( -\frac{r_y F_c}{r} \biggr) {\hat y} + \biggl( -\frac{r_z F_c}{r} \biggr) {\hat z}
+\]</div>
+<p>Putting this all together, the vector product of the position vector and the force gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r} \times {\vec F_c} = \biggl[ \frac{(r_y r_z - r_z r_y) F_c}{r} \biggr] {\hat x} + \biggl[ \frac{(r_z r_x - r_x r_z) F_c}{r} \biggr] {\hat y} +\biggl[ \frac{(r_x r_y - r_y r_x) F_c}{r} \biggr] {\hat z}
+\]</div>
+<p>Thus, every term cancels out, and the entire vector product is just the zero vector.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Which of the following forces are a central force? In each choice, the letters <span class="math notranslate nohighlight">\(A, B, C, D\)</span> represent constants; <span class="math notranslate nohighlight">\({\vec r}\)</span> is the position vector of the object acted on by the force, and <span class="math notranslate nohighlight">\({\hat r}\)</span> is the unit vector pointing in the same direction as the position vector.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec F}_1 = -A {\vec r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec F}_2 = (B r_x) {\hat y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec F}_3 = (C / r^2) {\hat r}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec F}_4 = D[(-r_y) {\hat x} + (r_x) {\hat y}]\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Only <span class="math notranslate nohighlight">\({\vec F}_1\)</span> and <span class="math notranslate nohighlight">\({\vec F}_3\)</span> are central forces.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">isCentralForce()</span></code> which determines whether a force acting at a particular position <em>could</em> be a central force. Assume that a force <span class="math notranslate nohighlight">\({\vec F}\)</span> is acting on an object currently at position <span class="math notranslate nohighlight">\({\vec r}\)</span>. Then, the arguments of <code class="docutils literal notranslate"><span class="pre">isCentralForce()</span></code> are two vPython vectors – <code class="docutils literal notranslate"><span class="pre">forceVec</span></code> representing the force <span class="math notranslate nohighlight">\({\vec F}\)</span>, and <code class="docutils literal notranslate"><span class="pre">posVec</span></code> representing the position <span class="math notranslate nohighlight">\({\vec r}\)</span>. The function should return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the force could be a central force, and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible solution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">isCentralForce</span><span class="p">(</span><span class="n">forceVec</span><span class="p">,</span> <span class="n">posVec</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Use definition of central force as one where</span>
+<span class="sd">    net force on object due to force is zero.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="k">if</span> <span class="n">cross</span><span class="p">(</span><span class="n">posVec</span><span class="p">,</span> <span class="n">forceVec</span><span class="p">)</span> <span class="o">==</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>     <span class="c1"># Net torque is zero vector</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>                                              <span class="c1"># Non-zero net torque</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<p>Since the constant central force here produces no torque on the orbiting object, this means the angular momentum of the object is conserved. This comes from Newton’s second law of rotational law, namely</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec \tau} = \frac{\Delta {\vec L}}{\Delta t} = 0 \Rightarrow \Delta {\vec L} = 0
+\]</div>
+<p>This is true of all central forces, since they all have zero net torque.</p>
+<div class="warning admonition">
+<p class="admonition-title">Central forces and angular momentum</p>
+<p>A force will conserve angular momentum only if it is a central force.</p>
+</div>
+</div>
+<div class="section" id="central-force-simulation">
+<h3><span class="section-number">18.4.2. </span>Central force simulation<a class="headerlink" href="#central-force-simulation" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now create a vPython simulation of a point mass acted on by this constant central force. Below is the same code we saw in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a> the last time we talked about central forces; the only addition is that a graph of the angular momentum component in the <span class="math notranslate nohighlight">\(z\)</span> direction has been added.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Before you run the program, using the physical parameters defined in the code, calculate the angular momentum vector of the ball. Remember you can look at the code by clicking on the pencil icon in the Trinket app.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\((60.0 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span></p>
+</div>
+<p id="centr-force-ang-mom"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="800"
+    src="https://trinket.io/embed/glowscript/6272756665?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>When you run the program above, you will see that the <span class="math notranslate nohighlight">\(z\)</span> component <span class="math notranslate nohighlight">\(L_z\)</span> of the angular momentum will “wobble” around a little bit (due to numerical error), but that the value basically stays the same. I am using a pretty simple updating scheme, so this is pretty good; other, more sophisticated, methods would give even better results.</p>
+<p>However, this is not the normal situation! Remember that we have specified a constant <em>central</em> force. Whenever the force is not a central force – i.e. whenever it produces a net torque on the object – then the angular momentum will <em>not</em> stay constant. To see an example of this, you will use the program above, but change the force. In particular, use the force given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F} = F_c (-r_y {\hat x} + r_x {\hat y})
+\]</div>
+<p>You will need to change the two commands in the program where <code class="docutils literal notranslate"><span class="pre">ball.force</span></code> is defined to the appropriate code; you can keep the constant <code class="docutils literal notranslate"><span class="pre">FORCE_MAG</span></code> in front. After you have made the changes, run the program. You should notice a dramatic change in the value of <span class="math notranslate nohighlight">\({\vec L}\)</span>! The object will spiral outward from the center with increasing speed and radius. This is because the force acting on the object is always acting tangent to the position vector, and so increases the object’s “spinningness” always in the same direction. Thus, a net torque is always created in one rotational direction (which depends on how you put in the signs).</p>
+</div>
+<div class="section" id="example-calculating-the-parallel-velocity-component">
+<h3><span class="section-number">18.4.3. </span>Example: Calculating the parallel velocity component<a class="headerlink" href="#example-calculating-the-parallel-velocity-component" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now use conservation of angular momentum to find how the velocity changes as the ball moves in the original simulation. So, if you changed the force, change it back to <span class="math notranslate nohighlight">\({\vec F}_c = -F_c {\hat r}\)</span>. For the default values given in the program above, the initial position of the ball is at its largest radius from the center. Let’s see why that is true; this will recount some of our discussion from <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a>. To start, the ball is moving perpendicular to its position vector, so the velocity has a zero radial component. Then, we can compare the net force on the ball to the necessary centripetal force needed to keep it at that radius. Plugging in the default numbers from the cell above, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{cp} = \frac{mv^2}{r} = 1.44 \textrm{ N}
+\]</div>
+<p>This is much smaller than the constant 10.0 N of the central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span>, so the ball will move inward under the central force. If <span class="math notranslate nohighlight">\(F_{cp}\)</span> had been the same as <span class="math notranslate nohighlight">\(F_c\)</span>, the ball would have moved in the same radius all the time. If <span class="math notranslate nohighlight">\(F_{cp}\)</span> was larger than <span class="math notranslate nohighlight">\(F_c\)</span>, the ball would have been moving too fast to stay at that radius, and moved outward. Although we haven’t talked about it yet in class, you can then use conservation of mechanical energy (<a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20</span></a>) that the ball will <em>never</em> go to a larger radius than its initial one.</p>
+<p>It may help to see how the radius of the object changes with time, and compare that to the sizes of the radial and perpendicular velocity components. This is done in the program below. To flesh this out, I should emphasize that I <em>only</em> used the scalar product to find these components, not the angular momentum! However, obviously these should match up in the end, and they do, as we will see. To find the radial velocity component <span class="math notranslate nohighlight">\(v_r\)</span>, I used the fact that this is the component in the same direction as the position unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span>, so that</p>
+<div class="math notranslate nohighlight">
+\[
+    v_r = {\vec v} \cdot {\hat r}
+\]</div>
+<p>I used <span class="math notranslate nohighlight">\({\hat r}\)</span>, rather than <span class="math notranslate nohighlight">\({\vec r}\)</span>, so that I do not have to divide out by the magnitude <span class="math notranslate nohighlight">\(r\)</span> of the position vector to get just <span class="math notranslate nohighlight">\(v_r\)</span>. Then, the perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span> is what is left over, given by the magnitude</p>
+<div class="math notranslate nohighlight">
+\[
+    v_\perp = |{\vec v} - v_r {\hat r}|
+\]</div>
+<p>This explains why I used the particular vPython commands in the program below. Run the program, and watch how <span class="math notranslate nohighlight">\(v_r\)</span> (the red curve) and <span class="math notranslate nohighlight">\(v_\perp\)</span> (green curve) vary with the radius <span class="math notranslate nohighlight">\(r\)</span> (the blue curve).</p>
+<p id="centr-force-vel-comps"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="800"
+    src="https://trinket.io/embed/glowscript/1b92ce7989?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>After the program has run, you can use the cursor over the graph to find the smallest radius is 4.03 m; this is the value when the blue line is at one of its “dips”. We will now use angular momentum to find the speed of the ball at this radius. The key point is to realize that, just like at the maximum radius, when the ball is at its minimum radius, it has stopped moving towards the center. Thus, the radial component of the velocity <span class="math notranslate nohighlight">\(v_r = 0\)</span>; you can see these are the points where the red line passes through a value of zero. Said a different way, the speed of the ball at this smallest radius is equal to the perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span>. But this is exactly what appears in the angular momentum! In fact, we can say that, with angular momentum conservation,</p>
+<div class="math notranslate nohighlight">
+\[
+    L_i = L_f \Rightarrow r_i m v_{i, \perp} = r_f m v_{f, \perp}
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(r_i\)</span> the largest radius and <span class="math notranslate nohighlight">\(r_f\)</span> the smallest, we can solve for the speed <span class="math notranslate nohighlight">\(v_{f, \perp}\)</span> at the smallest radius with some algebra, to get</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, \perp} = \biggl( \frac{r_i}{r_f} \biggr) v_{i, \perp}
+\]</div>
+<p>Notice what is happening here. Since <span class="math notranslate nohighlight">\(r_i &gt; r_f\)</span>, then <span class="math notranslate nohighlight">\(v_{f, \perp} &gt; v_{i, \perp}\)</span>; at the larger radius <span class="math notranslate nohighlight">\(r_i\)</span>, the ball has a smaller speed <span class="math notranslate nohighlight">\(v_{i, \perp}\)</span>, while at the smaller radius <span class="math notranslate nohighlight">\(r_f\)</span>, the speed <span class="math notranslate nohighlight">\(v_{f, \perp}\)</span> is larger. Conservation of angular momentum says that the perpendicular velocity component <span class="math notranslate nohighlight">\(v_\perp\)</span> is larger as the radius gets smaller. We can verify this by plugging in the numbers to get <span class="math notranslate nohighlight">\(v_{f, \perp} = 3.72\)</span> m/s, larger than the initial speed of 3.00 m/s. You can use your cursor on the green curve of the graph to confirm this is the correct value.</p>
+<div class="warning admonition">
+<p class="admonition-title">Angular momentum depends only on <span class="math notranslate nohighlight">\(v_\perp\)</span></p>
+<p>One crucial part of the analysis above is taking the radius of the ball when it is at the closest to, or furthest away, from the center. These are the only locations when <span class="math notranslate nohighlight">\(v_r = 0\)</span>. At all other radii, this is <em>not</em> true, and the angular momentum only gives the perpendicular component <span class="math notranslate nohighlight">\(v_\perp\)</span> of the total velocity. This is shown in the figure below, where the ball is at three different locations – the maximum radius <span class="math notranslate nohighlight">\(r_{max}\)</span>, the minimum radius <span class="math notranslate nohighlight">\(r_{min}\)</span>, and an intermediate value <span class="math notranslate nohighlight">\(r\)</span> of the radius. Only for the middle value of <span class="math notranslate nohighlight">\(r\)</span> do you have a non-zero radial velocity component <span class="math notranslate nohighlight">\(v_r\)</span>. At this middle location, you <em>cannot</em> use angular momentum conservation to find the speed of the object, just its component <span class="math notranslate nohighlight">\(v_\perp\)</span>.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L20_Fig05_Vel_in_central_force.png"><img alt="../_images/INT_AY21_L20_Fig05_Vel_in_central_force.png" src="../_images/INT_AY21_L20_Fig05_Vel_in_central_force.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18.13 </span><span class="caption-text">Three possible radii for the object moving in a central force, and their associated velocity vectors</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Remember that the speed <span class="math notranslate nohighlight">\(v\)</span> of the ball is given in terms of the components <span class="math notranslate nohighlight">\(v_r\)</span> and <span class="math notranslate nohighlight">\(v_\perp\)</span> by the Pythagorean theorem:</p>
+<div class="math notranslate nohighlight">
+\[
+    v^2 = v^2 _r + v^2 _\perp
+\]</div>
+<p>So if you know one of <span class="math notranslate nohighlight">\(v\)</span> or <span class="math notranslate nohighlight">\(v_r\)</span>, as well as the angular momentum (to get <span class="math notranslate nohighlight">\(v_\perp\)</span>), you can find the other value.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>When the ball is at a radius halfway between the largest and smallest values (i.e. <span class="math notranslate nohighlight">\(r = 4.52\)</span> m), the computer tells you its speed is 3.38 m/s. What is the size of the radial velocity component <span class="math notranslate nohighlight">\(v_r\)</span> (in cm/s) of the ball at this radius?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 62.3 cm/s</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">18.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, we see another rotational quantity that has its analogue in linear motion. Just as torque is similar (but not the same as!) force, the angular momentum of an object is similar to its linear momentum. Each pair of physical quantities are related, but the addition of the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span> and the vector product are an extra element that you need to consider. The analogy goes on to relate net torque and angular momentum with the rotational version of Newton’s second law (just as we saw in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11</span></a> between net force and linear momentum).</p>
+<p>We also saw that the angular momentum of a system remains the same when the net torque on that system is zero. Such conservation laws are an important tool in physics, and the conservation of angular momentum is no exception. In fact, when combined with the conservation of mechanical energy, these two principles will go far in describing the motion of an orbiting body when considering Newton’s law of universal gravitation.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Define angular momentum, either for a generic object or for a point mass.</p></li>
+<li><p>Calculate the angular momentum of an object around a given point <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span>.</p></li>
+<li><p>Explain when angular momentum is conserved.</p></li>
+<li><p>Use conservation of angular momentum to calculate the mass or speed of an object.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L17_Vector_product.html" title="previous page"><span class="section-number">17. </span>Vector product</a>
+    <a class='right-next' id="next-link" href="L19_Work_and_energy.html" title="next page"><span class="section-number">19. </span>Work and energy</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

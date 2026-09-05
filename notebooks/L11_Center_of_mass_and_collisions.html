@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11. Center of mass and collisions &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12. Solving force problems" href="L12_Solving_force_problems.html" />
+    <link rel="prev" title="10. Linear momentum and Newton’s laws of motion" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L11_Center_of_mass_and_collisions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L11_Center_of_mass_and_collisions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   11.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#center-of-mass">
+   11.2. Center of mass
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#collisions">
+   11.3. Collisions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-momentum-of-an-isolated-system">
+     11.3.1. The momentum of an isolated system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coefficient-of-restitution">
+     11.3.2. Coefficient of restitution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-collisions">
+   11.4. 2D collisions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-find-final-speeds">
+     11.4.1. Example: Find final speeds
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-smashing-particles">
+     11.4.2. Example: Smashing particles
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   11.5. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="center-of-mass-and-collisions">
+<span id="cm-coll"></span><h1><span class="section-number">11. </span>Center of mass and collisions<a class="headerlink" href="#center-of-mass-and-collisions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>So far, I have been avoiding a key part of physics. Over all of the lessons so far, we have talked about how and why objects move. Specifically, given the acceleration of an object, we can find its position and velocity; with Newton’s laws, we can start to calculate acceleration ourselves! But what is doing the moving? In particular, when I say the position of an object has changed, what point of the object is has shifted? We have glossed over this part, but it is actually important to consider.</p>
+<p>It turns out that for motion in a line, instead of thinking of a given object as an extended mass – that is, with some finite shape and size – I can think of its mass as concentrated at a specific point. This point is called the “center of mass”. All of the physics we have done so far is then describing the motion of this point because of interactions with other objects. Hopefully, this is an obvious statement, but it is something that has to be proven. In fact, this need for a proof is one of the reasons Newton developed calculus!</p>
+<p>Note that I was careful to say “motion in a line”. When rotation gets involved, then the shape and size of the object become important again. We will ignore those complications. This lesson will introduce the concept of the center of mass, and how it applies to collisions in one dimension.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define the center of mass position and velocity of a group of objects.</p></li>
+<li><p>Describe how Newton’s 3rd law is equivalent to conservation of momentum for an isolated system.</p></li>
+<li><p>Calculate the unknown mass or velocity of an object experiencing a collision in one dimension using conservation of momentum.</p></li>
+<li><p>Define the coefficient of restitution.</p></li>
+<li><p>Define elastic and inelastic collisions in terms of the coefficient of restitution.</p></li>
+</ul>
+</div>
+<div class="section" id="center-of-mass">
+<h2><span class="section-number">11.2. </span>Center of mass<a class="headerlink" href="#center-of-mass" title="Permalink to this headline">¶</a></h2>
+<p>When you calculate your grade in this class, you know that you weigh different types of grades differently – tests count more than homeworks, for example. Your grade is a “weighted average” of what you earn on various assessments. In the same vein, the “center of mass” (or CM) is also a weighted average, but now over the mass in an object. If we consider the CM to be a specific point associated with an object, or system of objects, then we can define various quantities describing that point and its motion. Thus, we start with the position of this CM point.</p>
+<div class="warning admonition">
+<p class="admonition-title">Center of mass position</p>
+<p>The <strong>center of mass position</strong> <span class="math notranslate nohighlight">\({\vec r}_{CM}\)</span> for a group of objects is defined as the average of the positions, weighted by the mass of each object, or</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec r}_{CM} = \frac{\sum_i m_i {\vec r}_i}{\sum_i m_i} = \frac{m_1 {\vec r}_1 + m_2 {\vec r}_2 + \cdots}{m_1 + m_2 + \cdots}
+\]</div>
+</div>
+<p>The video below does a good job of demonstrating this idea of the CM and its motion.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/nyJeaUe7wXM?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>If you think about it, the CM will be closer to the points where there is more mass, and further away from the places where there is less. This is what it means to have a “weighted average”. Note that the SI units for <span class="math notranslate nohighlight">\({\vec r}_{CM}\)</span> are still meters, since the mass units cancel out in the ratio.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Find the center of mass position (in cm) of the following mass distribution. The origin is at the center of the rectangle. Give your answer in unit vector notation.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L25_Fig01-Connected_oranges_small.png"><img alt="../_images/INT_AY20_MP1_L25_Fig01-Connected_oranges_small.png" src="../_images/INT_AY20_MP1_L25_Fig01-Connected_oranges_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text">Find the center of mass of the four objects in the picture</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec r}_{CM} = (18.2 \textrm{ cm}) {\hat x} + (-27.3 \textrm{ cm}) {\hat y}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A uniform piece of thin sheet metal is shaped as shown below. Calculate the position (in cm) of the center of mass, and give your answer in unit vector notation.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L25_Fig04-CM_of_extended_object_small.png"><img alt="../_images/INT_AY20_MP1_L25_Fig04-CM_of_extended_object_small.png" src="../_images/INT_AY20_MP1_L25_Fig04-CM_of_extended_object_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.2 </span><span class="caption-text">Find the CM position of an extended object</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec r}_{CM} = (11.7 \textrm{ cm}) {\hat x} + (13.3 \textrm{ cm}) {\hat y}\)</span></p>
+</div>
+<p>Let’s learn how to use physics to be a better athlete! One famous use of the idea of center of mass is the “Fosbury flop”, a new technique for the high jump that allowed competitors to raise the bar higher than it ever had been before. This is featured in the video.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/RaGUW1d0w8g?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Similar to how the CM position was defined, for a system of moving objects, we also have the center of mass <em>velocity</em>.</p>
+<div class="warning admonition">
+<p class="admonition-title">Center of mass velocity</p>
+<p>The <strong>center of mass velocity</strong> <span class="math notranslate nohighlight">\({\vec v}_{CM}\)</span> is defined as a weighted average of all the individual velocities:</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{CM} = \frac{\sum_i m_i {\vec v}_i}{\sum_i m_i} = \frac{m_1 {\vec v}_1 + m_2 {\vec v}_2 + \cdots}{m_1 + m_2 + \cdots}
+\]</div>
+</div>
+<p>Notice that, using the idea of momentum <span class="math notranslate nohighlight">\({\vec p}\)</span>, then the total momentum <span class="math notranslate nohighlight">\({\vec P}\)</span> of the system of objects can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec P} = \sum_i {\vec p}_i = \sum_i m_i {\vec v}_i = M {\vec v}_{CM}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(M\)</span> is the total mass of the objects</p>
+<div class="math notranslate nohighlight">
+\[
+    M = \sum_i m_i = m_1 + m_2 + \cdots
+\]</div>
+<p>When we talked about the motion of a system in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton-forces-sys"><span class="std std-ref">Lesson 10</span></a>, this was referring to the velocity of the system CM. The system is considered to be located at its CM position. Notice the special symbol used for the sled and truck system’s CM position on the right-hand side of the diagram below; you may see it again in an engineering course.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L25_Fig02-CM_of_system_small.png"><img alt="../_images/INT_AY20_MP1_L25_Fig02-CM_of_system_small.png" src="../_images/INT_AY20_MP1_L25_Fig02-CM_of_system_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.3 </span><span class="caption-text">The center of mass of a system of objects</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose the masses <span class="math notranslate nohighlight">\(m_A = 4.55\)</span> kg, <span class="math notranslate nohighlight">\(m_B = 6.19\)</span> kg and <span class="math notranslate nohighlight">\(m_C = 2.83\)</span> kg, shown below, are moving with the given velocities. Give your answers in unit vector notation.</p>
+<ol class="simple">
+<li><p>What is the center of mass position (in m) of the system at the instant shown?</p></li>
+<li><p>What is the center of mass velocity of the system (in cm/s)?</p></li>
+</ol>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L25_Fig03-CM_of_distinct_objects_small.png"><img alt="../_images/INT_AY20_MP1_L25_Fig03-CM_of_distinct_objects_small.png" src="../_images/INT_AY20_MP1_L25_Fig03-CM_of_distinct_objects_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.4 </span><span class="caption-text">Find the CM position and velocity of the moving objects</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\({\vec r}_{CM} = (-0.615 \textrm{ m}) {\hat x} + (1.34 \textrm{ m}) {\hat y}\)</span>; <span class="math notranslate nohighlight">\({\vec v}_{CM} = (43.1 \textrm{ cm/s}) {\hat x} + (-32.6 \textrm{ cm/s}) {\hat y}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Challenge</p>
+<p>Suppose you have a stack of identical blocks, with a length <span class="math notranslate nohighlight">\(L\)</span>. If you are careful, you can balance the stack on the edge of a table, so that the top block overhangs the table edge by some distance <span class="math notranslate nohighlight">\(d\)</span>. What is the <em>maximum</em> distance <span class="math notranslate nohighlight">\(d\)</span> for two blocks, in terms of the length <span class="math notranslate nohighlight">\(L\)</span>? For three blocks? What is the minimum number of blocks needed for the overhang <span class="math notranslate nohighlight">\(d\)</span> to be greater than the length <span class="math notranslate nohighlight">\(L\)</span>? To be twice as much? Write a Python program that calculates the ratio <span class="math notranslate nohighlight">\(d / L\)</span> for a given number of blocks.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L09_Stack-of-overhanging-blocks_small.png"><img alt="../_images/INT_AY21_L09_Stack-of-overhanging-blocks_small.png" src="../_images/INT_AY21_L09_Stack-of-overhanging-blocks_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.5 </span><span class="caption-text">Stacking blocks on the edge of a table</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="collisions">
+<h2><span class="section-number">11.3. </span>Collisions<a class="headerlink" href="#collisions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-momentum-of-an-isolated-system">
+<h3><span class="section-number">11.3.1. </span>The momentum of an isolated system<a class="headerlink" href="#the-momentum-of-an-isolated-system" title="Permalink to this headline">¶</a></h3>
+<p>Suppose a system is made of two objects <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>. The sum of the forces on the system is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F}_{sys} = \sum {\vec F}_A + \sum {\vec F}_B
+\]</div>
+<p>If we use Newton’s 2nd law, this is the same as</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F}_{sys} = \frac{\Delta {\vec p}_A}{\Delta t} + \frac{\Delta {\vec p}_B}{\Delta t} = \frac{\Delta ({\vec p}_A + {\vec p}_B)}{\Delta t} = \frac{\Delta {\vec P}}{\Delta t}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\({\vec P}\)</span> is the combined momentum of the system.</p>
+<p>In order to simplify the physics of a situation, it is frequently helpful to consider a group of objects where the primary forces are between the objects. In other words, the net force on each object in the group is all due to interactions with other objects in the group; the external forces on the system add up to the zero vector. This is known as an <strong>isolated system</strong>. Collisions and explosions are a good example of this, since the outside forces (e.g. friction) have little effect compared to the forces between the objects in the system.</p>
+<p>Remember that in <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton-forces"><span class="std std-ref">Lesson 10</span></a>, it was shown that the net force on a system is the sum of the external forces acting on the system (using Newton’s 3rd law).</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec F}_{sys} = \sum {\vec F}_{sys, out}
+\]</div>
+<p>We just showed that the net force on the system is also equal to the change in the total momentum of the system, or</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F}_{sys} = \frac{\Delta {\vec P}}{\Delta t}
+\]</div>
+<p>If the system is <em>isolated</em>, then <span class="math notranslate nohighlight">\(\sum {\vec F}_{sys, out} = {\vec 0}\)</span>, which means that the total momentum of the system does not change:</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F}_{sys} = \sum {\vec F}_{sys, out} = {\vec 0} \Rightarrow \frac{\Delta {\vec P}}{\Delta t} = {\vec 0}
+\]</div>
+<p>This is known as the <strong>conservation of linear momentum</strong>, and is one of the bedrock ideas of physics! Whenever we can say that some quantity stays the same in a physical interaction, this allows us to describe the motion in much better detail.</p>
+<div class="warning admonition">
+<p class="admonition-title">Conservation of linear momentum</p>
+<p>The total linear momentum of an isolated system stays constant.</p>
+</div>
+<p>Thus, if we add up the initial momenta of all the objects in an isolated system, this will be the same as the sum of the final momenta:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec p}_i = \sum {\vec p}_f
+\]</div>
+<p>Above, we showed that the total momentum of a system is equal to the total mass of the system multiplied by the center of mass velocity. With total mass <span class="math notranslate nohighlight">\(M\)</span>, this means</p>
+<div class="math notranslate nohighlight">
+\[
+	\sum {\vec F}_{sys} = M \biggl( \frac{\Delta {\vec v}_{CM}}{\Delta t} \biggr)
+\]</div>
+<p>Thus, another way of saying that momentum is conserved is that the CM velocity of an isolated system is constant:</p>
+<div class="math notranslate nohighlight">
+\[
+    M \biggl( \frac{\Delta {\vec v}_{CM}}{\Delta t} \biggr) = {\vec 0}
+\]</div>
+<p>This leads to an important idea: for a system of constant mass, a constant total momentum is the same as a constant center of mass velocity. Remember that from Newton’s 2nd law, the force acting on an object will change its momentum. So another way to say the above is</p>
+<div class="warning admonition">
+<p class="admonition-title">No forces, no CM acceleration</p>
+<p>An isolated system will have a constant center of mass velocity.</p>
+</div>
+<p>Let’s now see how this works in calculations. For the following two problems, use the conservation of momentum for the system to solve for the unknown velocity. The balls are only moving in one dimension, so there is only one vector component equation to worry about, but you have to use conservation for the <em>system</em>, meaning both masses are included in that equation.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 2.00 kg red bowling ball, moving to the right at a speed of 3.00 m/s on a frictionless table, collides head-on with a stationary 2.50 kg green bowling ball. The green ball leaves the collision at 2.67 m/s to the right.</p>
+<ol class="simple">
+<li><p>What is the velocity of the red ball (magnitude in cm/s) afterwards?</p></li>
+<li><p>If the collision happens in 75.0 ms, what is the force on the red ball (magnitude in N) due to the green ball?</p></li>
+</ol>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L26_Fig01-1D_collision_small.png"><img alt="../_images/INT_AY20_MP1_L26_Fig01-1D_collision_small.png" src="../_images/INT_AY20_MP1_L26_Fig01-1D_collision_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.6 </span><span class="caption-text">A red ball strikes a stationary green ball</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 33.8 cm/s, to the left; 89.0 N, to the left</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose we start the same way as the previous problem – a 2.00 kg red bowling ball, moving to the right at a speed of 3.00 m/s on a frictionless table, collides head-on with a stationary 2.50 kg green bowling ball – but now the green ball leaves the collision at 2.00 m/s to the right.</p>
+<ol class="simple">
+<li><p>What is the velocity of the red ball (magnitude in cm/s) afterwards?</p></li>
+<li><p>If the collision happens in 75.0 ms, what is the force on the red ball (magnitude in N) due to the green ball?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 50.0 cm/s, to the right; 66.7 N, to the left</p>
+</div>
+</div>
+<div class="section" id="coefficient-of-restitution">
+<h3><span class="section-number">11.3.2. </span>Coefficient of restitution<a class="headerlink" href="#coefficient-of-restitution" title="Permalink to this headline">¶</a></h3>
+<p>The collision between the two objects will change their velocities. In the last two problems of the previous section, the two collisions started with the same information, but had different final velocities. What was the difference? One way of saying it is that the interaction force between the two bowling balls was different – the second collision was “less springy”, so the force between the balls was smaller. However, this force depends on the masses of the objects. Can we characterize the collision only by the velocities? This leads to the idea of the <em>elasticity</em> of the collision, which can be given by the <strong>coefficient of restitution</strong>. The coefficient of restitution is given the symbol <span class="math notranslate nohighlight">\(\epsilon\)</span> (the Greek letter “epsilon”). It can depend on the shape of the colliding objects, their speeds and composition.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> coefficient of restitution</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(\epsilon\)</span></p></li>
+<li><p><strong>Definition:</strong> The ratio of the final to initial relative speeds. For two colliding objects 1 and 2, with initial velocities <span class="math notranslate nohighlight">\({\vec v}_{1i}, {\vec v}_{2i}\)</span>, and final velocities <span class="math notranslate nohighlight">\({\vec v}_{1f}, {\vec v}_{2f}\)</span>, the coefficient of restitution is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+	\epsilon = \frac{|{\vec v}_{1f} - {\vec v}_{2f}|}{|{\vec v}_{1i} - {\vec v}_{2i}|}
+\]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> unitless</p></li>
+</ul>
+<p>Notice that this is a ratio of <em>magnitudes</em>, indicated by the absolute value signs.</p>
+<p>The collision can be classified by the value of <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\epsilon = 1\)</span>, the two objects leave the collision with the same relative speed as they entered. This is known as an <strong>elastic</strong> collsion.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\epsilon = 0\)</span>, the two objects stick together; their final relative speed is zero. This is called a <strong>completely inelastic</strong> collsion.</p></li>
+<li><p>If the coefficient is between the two, i.e. <span class="math notranslate nohighlight">\(0 &lt; \epsilon &lt; 1\)</span>, then the two objects move away from each other, but with a lower relative speed than before. This is known as an <strong>inelastic</strong> collision.</p></li>
+</ol>
+<p>We will revisit this idea of elasticity in <a class="reference internal" href="L19_Work_and_energy.html#work-ke-coll"><span class="std std-ref">Lesson 20 (work and energy)</span></a>, when we define <span class="math notranslate nohighlight">\(\epsilon\)</span> in terms of kinetic energy.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Below are given the initial and final velocities from the two problems at the end of the last section. For both situations, <span class="math notranslate nohighlight">\(v_{R, ix} = +3.00\)</span> m/s and <span class="math notranslate nohighlight">\(v_{G, ix} = 0\)</span>. Calculate the relative speeds of the two bowling balls, and use this to find the coefficient of restitution <span class="math notranslate nohighlight">\(\epsilon\)</span> for each collision. Categorize each collision as elastic, inelastic or completely inelastic based on your calculated coefficients.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(v_{R, fx}\)</span>	(m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{G, fx}\)</span>	(m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\epsilon\)</span></p></th>
+<th class="head"><p>collision type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-0.338\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+2.67\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-0.500\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+2.00\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> The completed table is shown below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(v_{R, fx}\)</span>	(m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{G, fx}\)</span>	(m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\epsilon\)</span></p></th>
+<th class="head"><p>collision type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-0.338\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+2.67\)</span></p></td>
+<td><p>1.00</p></td>
+<td><p>elastic</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-0.500\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+2.00\)</span></p></td>
+<td><p>0.833</p></td>
+<td><p>inelastic</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose we begin again with the same problem – a 2.00 kg red bowling ball, moving to the right at a speed of 3.00 m/s on a frictionless table, collides head-on with a stationary 2.50 kg green bowling ball. Assume the collision is <em>completely inelastic</em> (i.e. the two balls stick together).</p>
+<ol class="simple">
+<li><p>What is the velocity of the red ball (magnitude in m/s) afterwards?</p></li>
+<li><p>If the collision happens in 75.0 ms, what is the force on the red ball (magnitude in N) due to the green ball?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 1.33 m/s, to the right; 44.5 N, to the left</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A box slides with an initial speed of 10 m/s on a frictionless surface and collides with an identical box. The boxes stick together after the collision. What is the final speed of the two boxes? Choose the best answer below.</p>
+<ol class="simple">
+<li><p>0.00 m/s</p></li>
+<li><p>5.00 m/s</p></li>
+<li><p>10.0 m/s</p></li>
+<li><p>15.0 m/s</p></li>
+<li><p>20.0 m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 5.00 m/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A ball of mass <span class="math notranslate nohighlight">\(M\)</span> and speed <span class="math notranslate nohighlight">\(v\)</span> collides head-on with a ball of mass 2<span class="math notranslate nohighlight">\(M\)</span> and speed <span class="math notranslate nohighlight">\(\frac{v}{2}\)</span>, as shown. If the two balls stick together, which choice below gives their final combined speed?</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L26_Fig03-Colliding_spheres.png"><img alt="../_images/INT_AY20_MP1_L26_Fig03-Colliding_spheres.png" src="../_images/INT_AY20_MP1_L26_Fig03-Colliding_spheres.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.7 </span><span class="caption-text">Two colliding spheres</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>0</p></li>
+<li><p><span class="math notranslate nohighlight">\(3v/4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2v\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3v\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since the two momentum vectors are equal in magnitude, but opposite in direction, the total momentum is the zero vector. Thus, this is their final momentum after the collision, giving a speed of zero.</p>
+</div>
+</div>
+</div>
+<div class="section" id="d-collisions">
+<span id="cm-coll-2d-coll"></span><h2><span class="section-number">11.4. </span>2D collisions<a class="headerlink" href="#d-collisions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-find-final-speeds">
+<h3><span class="section-number">11.4.1. </span>Example: Find final speeds<a class="headerlink" href="#example-find-final-speeds" title="Permalink to this headline">¶</a></h3>
+<p>Let’s now try using conservation of linear momentum in two dimensions. The drawing below shows a collision between two pucks on an air-hockey table. Puck A has a mass of 23.0 g and is moving along the <span class="math notranslate nohighlight">\(x\)</span> axis with a speed of 5.50 m/s. It makes a collision with puck B, which has a mass of 63.0 g and is initially at rest. The collision is not head-on. After the collision, the two pucks fly apart with the angles shown in the drawing. The final speed of puck A is 3.38 m/s. Find the final speed of puck B (in m/s).</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L31_Fig01-Colliding-pucks_small.png"><img alt="../_images/INT_AY20_MP1_L31_Fig01-Colliding-pucks_small.png" src="../_images/INT_AY20_MP1_L31_Fig01-Colliding-pucks_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.8 </span><span class="caption-text">Two colliding air-hockey pucks</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>To solve this problem, or any collision problem, our go-to method is momentum conservation. Thus, we start with the fact that the total momentum of the two-puck system stays the same before and after the collision.</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec p}_i = \sum {\vec p}_f
+\]</div>
+<p>If we write out what this means in terms of the momenta for pucks A and B, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec p}_{A, i} + {\vec p}_{B, i} = {\vec p}_{A, f} + {\vec p}_{B, f}
+\]</div>
+<p>Using <span class="math notranslate nohighlight">\({\vec p} = m {\vec v}\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+    m_A {\vec v}_{A, i} + m_B {\vec v}_{B, i} = m_A {\vec v}_{A, f} + m_B {\vec v}_{B, f}
+\]</div>
+<p>Puck B is not moving before the collision, so <span class="math notranslate nohighlight">\({\vec v}_{B, i} = {\vec 0}\)</span>.</p>
+<p>Now, to solve this vector equation, we need to break it up into its <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components. Since there is no motion in the <span class="math notranslate nohighlight">\(z\)</span> direction, the <span class="math notranslate nohighlight">\(z\)</span> component of the total momentum is zero. This gives the two component equations</p>
+<div class="math notranslate nohighlight">
+\[
+    x: m_A v_{A, ix} = m_A v_{A, fx} + m_B v_{B, fx} \qquad
+    y: m_A v_{A, iy} = m_A v_{A, fy} + m_B v_{B, fy}
+\]</div>
+<p>Puck A is chosen to move along the <span class="math notranslate nohighlight">\(x\)</span> axis before the collision, so <span class="math notranslate nohighlight">\(v_{A, iy} = 0\)</span>. The figure shows the two directions for the final velocities; also, we know the final speed of puck A, and we are looking for the final speed of puck B. So it makes sense to use some trigonometry here, instead of writing the equations in terms of the velocity components. Using the vector diagrams</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L12_Fig04_Vector_diagrams_small.png"><img alt="../_images/INT_AY21_L12_Fig04_Vector_diagrams_small.png" src="../_images/INT_AY21_L12_Fig04_Vector_diagrams_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.9 </span><span class="caption-text">Vector diagrams for <span class="math notranslate nohighlight">\({\vec v}_{A, f}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{B, f}\)</span></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>we get that</p>
+<div class="math notranslate nohighlight">
+\[
+    x: m_A v_{A, ix} = m_A v_{A, f} \cos \theta_A + m_B v_{B, f} \cos \theta_B\qquad
+    y: 0 = m_A v_{A, f} \sin \theta_A - m_B v_{B, f} \sin \theta_B
+\]</div>
+<p>Notice that the <span class="math notranslate nohighlight">\(y\)</span> component of the final velocity <span class="math notranslate nohighlight">\({\vec v}_{B, f}\)</span> is negative, so there is a corresponding minus sign in that equation.</p>
+<p>We are solving for the final speed <span class="math notranslate nohighlight">\(v_{B, f}\)</span>, which appears in both equations. Everything else in both equations is known, though, so we can really just pick one of the two, and solve for the unknown speed. Using the <span class="math notranslate nohighlight">\(y\)</span> equation, for example, gives</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{B, f} = \frac{m_A v_{A, f} \sin \theta_A}{m_B \sin \theta_B} = \biggl( \frac{m_A}{m_B} \biggr) \biggl( \frac{\sin \theta_A}{\sin \theta_B} \biggr) v_{A, f}
+\]</div>
+<p>I have grouped together like quantities in the last equation. From this, we can easily see that if the masses have the same units, then it doesn’t matter what they are, since they cancel out. Similarly, the units we use for <span class="math notranslate nohighlight">\(v_{A, f}\)</span> will be the same as those for the final answer <span class="math notranslate nohighlight">\(v_{B, f}\)</span>. Thus, we don’t have to convert from grams to kilograms when substituting here. In addition, we can see what happens if one mass is, say, four times the other, or the initial speed of puck A is halved. Algebraic equations can help answer questions like this easily without having to recalculate the entire problem. Plugging in the given values gives <span class="math notranslate nohighlight">\(v_{B, f} = 1.858\)</span> m/s.</p>
+<p>Let’s now use these values to figure out the coefficient of restitution. Since this is a two-dimensional collision, there is more work to do here. Namely, we have to find the relative speed of the two pucks before and after the collision, by finding the magnitude of the difference in their velocities. Before the collision, this is easy, since</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{A, i} - {\vec v}_{B, i} = (5.50 \textrm{ m/s}) {\hat x}
+\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[
+    |{\vec v}_{A, i} - {\vec v}_{B, i}| = 5.50 \textrm{ m/s}
+\]</div>
+<p>For after the collision, we need to find the two final velocities in unit vector form. We are given the final speed and direction of puck A, so its final velocity is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{A, f} = (1.428 \textrm{ m/s}) {\hat x} + (3.063 \textrm{ m/s}) {\hat y}
+\]</div>
+<p>Using the final speed we just calculated for puck B, along with the given angle <span class="math notranslate nohighlight">\(\theta_B\)</span>, we get (notice the minus sign in the <span class="math notranslate nohighlight">\(y\)</span> component!)</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{B, f} = (1.485 \textrm{ m/s}) {\hat x} + (-1.119 \textrm{ m/s}) {\hat y}
+\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{A, f} - {\vec v}_{B, f} = (-5.70 \times 10^{-2} \textrm{ m/s}) {\hat x} + (4.182 \textrm{ m/s}) {\hat x}
+\]</div>
+<p>Using the Pythagorean theorem with this vector difference, the relative speed of the two pucks after the collision is</p>
+<div class="math notranslate nohighlight">
+\[
+    |{\vec v}_{A, f} - {\vec v}_{B, f}| = 4.182 \textrm{ m/s}
+\]</div>
+<p>This gives the coefficient of restitution <span class="math notranslate nohighlight">\(\epsilon\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    \epsilon = \frac{|{\vec v}_{A, f} - {\vec v}_{B, f}|}{|{\vec v}_{A, i} - {\vec v}_{B, i}|} = \frac{4.182 \textrm{ m/s}}{5.50 \textrm{ m/s}} = 0.760
+\]</div>
+<p>The collision is inelastic, but <em>not</em> completely inelastic.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the vPython function <code class="docutils literal notranslate"><span class="pre">calcCoeffRest()</span></code> you wrote in a previous problem, and verify that this is the correct coefficient of restitution <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+</div>
+</div>
+<div class="section" id="example-smashing-particles">
+<h3><span class="section-number">11.4.2. </span>Example: Smashing particles<a class="headerlink" href="#example-smashing-particles" title="Permalink to this headline">¶</a></h3>
+<p>Here, I show another example, where we are solving for one <em>velocity</em>, rather than one speed. The method I use will be different, and it is good to see this alternate technique. The drawing below shows a collision between two particles. The red particle has a mass of 200. g and is initially moving along the x-axis with a speed of 5.00 m/s. The blue particle has twice the mass of the red one and was initially at rest.  After the collision, the red particle moves off with a velocity of 4.00 m/s at an angle of 54.9<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the +x-axis. What is the speed (in m/s) and direction (<span class="math notranslate nohighlight">\(\theta_2\)</span>, or the angle CW from <span class="math notranslate nohighlight">\(+x\)</span> axis) of the blue particle after the collision?</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L33_Fig01-Colliding-particles_small.png"><img alt="../_images/INT_AY20_MP1_L33_Fig01-Colliding-particles_small.png" src="../_images/INT_AY20_MP1_L33_Fig01-Colliding-particles_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11.10 </span><span class="caption-text">Two colliding particles</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>The initial setup of this problem is much like the last example – we set up the conservation of momentum equations for the situation, making them particular for this situation. Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum {\vec p}_i = \sum {\vec p}_f \Rightarrow {\vec p}_{1, i} = {\vec p}_{1, f} + {\vec p}_{2, f}
+\]</div>
+<p>The vector <span class="math notranslate nohighlight">\({\vec p}_{2, i} = {\vec 0}\)</span>, since the second particle is initially at rest. Now we reach the point where we use a slightly different strategy than the last example. There, we knew the angle for puck B, so we could use trigonometry to write the momentum equations in terms of the unknown final speed <span class="math notranslate nohighlight">\(v_{2, f}\)</span>. Here, though, we don’t know either the final speed or direction of the second particle. We could still use trigonometry as before, but if you try it, it can get a little messy. There is a smarter method, which is to write the unknown velocity in terms of its <em>components</em>, rather than its magnitude and direction. I can still write the final velocity for the first particle, using the known speed and direction. This gives the two equations</p>
+<div class="math notranslate nohighlight">
+\[
+    x: m_1 v_{1, ix} = m_1 v_{1, f} \cos \theta_1 + m_2 v_{2, fx} \qquad
+    y: 0 = m_1 v_{1, f} \sin \theta_2 + m_2 v_{2, fy}
+\]</div>
+<p>The only change from the last example is how I wrote the last terms in each equation, keeping them as components, rather than using trigonometry. These can be solved for the unknown velocity components as</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{2, fx} = \biggl( \frac{m_1}{m_2} \biggr) (v_{1, ix} - v_{1, f} \cos \theta_1) \qquad
+    v_{2, fy} = - \biggl( \frac{m_1}{m_2} \biggr) v_{1, f} \sin \theta_2
+\]</div>
+<p>As we would expect, <span class="math notranslate nohighlight">\(v_{2, fy}\)</span> is negative, since it moves downward. As the previous problem, I have written the masses separately from the rest. We have that <span class="math notranslate nohighlight">\(m_1 / m_2 = 0.500\)</span>, since the blue mass <span class="math notranslate nohighlight">\(m_2\)</span> has twice the mass of the red one, so we didn’t even need to know the value of <span class="math notranslate nohighlight">\(m_1\)</span>!</p>
+<p>Plugging in the given values, we calculate the components to be <span class="math notranslate nohighlight">\(v_{2, fx} = 1.350\)</span> m/s, and <span class="math notranslate nohighlight">\(v_{2, fy} = -1.636\)</span> m/s. Now, we can use the Pythagorean theorem to find the final speed, and the inverse tangent to find the direction. This gives a speed of 2.12 m/s, and an angle <span class="math notranslate nohighlight">\(\theta_2\)</span> (as given in the figure above) of <span class="math notranslate nohighlight">\(50.5^\circ\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Calculate the coefficient of restitution for the two particles in this collision. What type of collision is this?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(\epsilon = 1.00\)</span>; the collision is elastic.</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">11.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We have started using the ideas of center of mass and momentum in physical situations. For now, we have only covered what happens in a collision in a specific point of view, the center of mass frame of reference. Over the next few lessons, we will gradually look at more complicated situations.</p>
+<p>After this lesson you should be able to:</p>
+<ul class="simple">
+<li><p>calculate the center of mass position and velocity of a group of masses.</p></li>
+<li><p>Given a system in the CM frame of reference, calculate the unknown velocity before or after a collision, and the force on one of the objects due to the collision.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html" title="previous page"><span class="section-number">10. </span>Linear momentum and Newton’s laws of motion</a>
+    <a class='right-next' id="next-link" href="L12_Solving_force_problems.html" title="next page"><span class="section-number">12. </span>Solving force problems</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

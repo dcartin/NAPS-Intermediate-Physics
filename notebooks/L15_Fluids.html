@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15. Fluids &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16. Circular motion" href="L16_Circular_motion.html" />
+    <link rel="prev" title="14. Inclined planes" href="L14_Inclined_planes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L15_Fluids.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L15_Fluids.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   15.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   15.2. Fluids
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-a-fluid">
+     15.2.1. Definition of a fluid
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pressure">
+   15.3. Pressure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-pressure">
+     15.3.1. Definition of pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-pressure">
+     15.3.2. Atmospheric pressure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pressure-at-a-depth">
+   15.4. Pressure at a depth
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pressure-depth-relationship">
+     15.4.1. Pressure-depth relationship
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-us-standard-atmosphere-model">
+     15.4.2. The US Standard Atmosphere model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pascal-s-principle">
+   15.5. Pascal’s principle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#buoyancy">
+   15.6. Buoyancy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archimedes-principle">
+     15.6.1. Archimedes’ principle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#floating-objects">
+     15.6.2. Floating objects
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   15.7. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="fluids">
+<span id="id1"></span><h1><span class="section-number">15. </span>Fluids<a class="headerlink" href="#fluids" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">15.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Anything that you do in the sea services depends fundamentally on the properties of fluids. If you fly aircraft, you maintain altitude because of the lift on the wings or blades of your vehicle. The depth your submarine cruises at is a result of how much air versus water the boat has in its ballast tanks. Whether you are a sailor or a marine, your ship stays on the water because a naval architect has ensured the ship is buoyant and maintains its stability in choppy weather. Air and water are two prominent examples of fluids, but there are many others you can probably think of.</p>
+<p>It is important to realize that “buoyant force” refers to the total force a fluid exerts on an object; however, this force results from the difference in pressure on the top and bottom of the object. The pressure on the bottom is almost always greater, giving an upwards buoyant force. Therefore, this lesson starts with the idea of pressure, and builds on that to develop the buoyant force. It was the great thinker Archimedes who came up with a relatively simple way to find the buoyant force, over two thousand years ago. If you use the resulting Archimedes’ principle, you will have an able guide to understand situations with fluids.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Define pressure and density.</p></li>
+<li><p>State the density of fresh water.</p></li>
+<li><p>State the value of standard atmospheric pressure in SI units.</p></li>
+<li><p>Explain Pascal’s principle.</p></li>
+<li><p>Explain the relationship between pressure and depth in a fluid.</p></li>
+<li><p>Solve for the column height of a fluid in a U-tube using Pascal’s principle.</p></li>
+<li><p>State Archimedes’ Principle.</p></li>
+<li><p>Calculate the buoyant force on submerged or floating objects.</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">15.2. </span>Fluids<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-a-fluid">
+<h3><span class="section-number">15.2.1. </span>Definition of a fluid<a class="headerlink" href="#definition-of-a-fluid" title="Permalink to this headline">¶</a></h3>
+<p>A <strong>fluid</strong> is a substance that can readily flow from place to place and take on the shape of a container. Fluid can be a liquid or a gas. For any type of object, fluid or otherwise, we can define the <strong>density</strong> of the object as its mass divided by its volume.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> density</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(\rho\)</span> (“rho”)</p></li>
+<li><p><strong>Definition:</strong> For an solid object, or volume of fluid, with mass <span class="math notranslate nohighlight">\(M\)</span> and volume <span class="math notranslate nohighlight">\(M\)</span>, the density is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \rho = \frac{M}{V}
+\]</div>
+<ul class="simple">
+<li><p><strong>Units:</strong> kg/m<span class="math notranslate nohighlight">\(^3\)</span></p></li>
+</ul>
+<p><em>You should memorize the density of fresh water as 1000 kg/m<span class="math notranslate nohighlight">\(^3\)</span>.</em></p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A cube of metal has a mass of 347 g and measures 3.21 cm on a side. Using the table of densities given, identify the metal.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\rho\)</span> (kg/m<span class="math notranslate nohighlight">\(^3\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>aluminum</p></td>
+<td><p>2700</p></td>
+</tr>
+<tr class="row-odd"><td><p>iron</p></td>
+<td><p>7860</p></td>
+</tr>
+<tr class="row-even"><td><p>silver</p></td>
+<td><p>10500</p></td>
+</tr>
+<tr class="row-odd"><td><p>lead</p></td>
+<td><p>11300</p></td>
+</tr>
+<tr class="row-even"><td><p>mercury</p></td>
+<td><p>13600</p></td>
+</tr>
+<tr class="row-odd"><td><p>gold</p></td>
+<td><p>19300</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em>  silver (Ag)</p>
+</div>
+<p>Historically, one of the more important ideas in physics from the 18th and 19th centuries is the <a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">kinetic theory of gases</a>, which explains many of the properties of a gas by the simple model of assuming the gas is made of very small particles moving at random speeds. A good simulation to explore this model, and to review how it accounts for the various gas laws, is given below. You can also explore the distribution of kinetic energies for all of the particles in the gas, including the case where there are two different kinds of particle involved.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="pressure">
+<h2><span class="section-number">15.3. </span>Pressure<a class="headerlink" href="#pressure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-pressure">
+<h3><span class="section-number">15.3.1. </span>Definition of pressure<a class="headerlink" href="#definition-of-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have a simple model of a fluid, let’s use it to get an intuition for how fluids generate pressure. Consider what happens when you push both a pin and the blunt end of a pen against your skin with the same force. What will determine whether your skin will be punctured? Or how you “feel” this push? It turns out your skin actually measures the amount of force over a given area, not the absolute size of the force. So, if you exert the same force, but over a larger portion of your body, it does not feel as painful as if you apply the same force to a small area.</p>
+<p>Thus, the ratio of force over area is important for determining how painful such prods are, among a lot of other things! The ratio is called the <strong>pressure</strong>.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> pressure</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(P\)</span></p></li>
+<li><p><strong>Definition:</strong> For a force <span class="math notranslate nohighlight">\(F\)</span> acting perpendicular to an area <span class="math notranslate nohighlight">\(A\)</span>, the pressure is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ P = \frac{F}{A} \]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> pascals (Pa), with 1 Pa = 1 N/m<span class="math notranslate nohighlight">\(^2\)</span></p></li>
+</ul>
+<p>For example, squeezing an egg from all sides will <em>not</em> break the egg. The curved shape of the egg is able to redistribute the force all across its area, so the resulting pressure on the egg is too small to break the shell. However, exerting a force on a small area – by hitting the egg against the edge of a bowl – results in a large enough pressure to crack the egg!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are walking out on a frozen lake and you begin to hear the ice cracking beneath you. What is your best strategy for getting off the ice safely? Choose the best answer.</p>
+<ol class="simple">
+<li><p>Jump up and down to lessen your contact time with the ice.</p></li>
+<li><p>Lie down flat on the ice and crawl toward shore.</p></li>
+<li><p>Shuffle your feet (without lifting them) to move toward shore.</p></li>
+<li><p>Stand absolutely still and wait for rescue.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You want to decrease the pressure you exert on the ice as much as possible. Since you cannot change your weight, you must increase your contact area with the ice, so you need to lie down flat, then crawl to shore.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A 60.0 kg woman is standing up such that the weight is distributed equally on both feet. If her heels are supporting 75.0 percent of her weight and the contact area between her heels and the ground are 0.250 in<span class="math notranslate nohighlight">\(^2\)</span> (for the high heel) and 2.00 in<span class="math notranslate nohighlight">\(^2\)</span> (for the flat heel), what is the pressure value on each heel?</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig02-Shoes_on_foam_small.png"><img alt="../_images/INT_AY20_MP2_L06_Fig02-Shoes_on_foam_small.png" src="../_images/INT_AY20_MP2_L06_Fig02-Shoes_on_foam_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.1 </span><span class="caption-text">Two types of heel (high and flat) give different pressures on the foam beneath them</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 1.37 MPa (high heel), 171 kPa (flat heel)</p>
+</div>
+</div>
+<div class="section" id="atmospheric-pressure">
+<h3><span class="section-number">15.3.2. </span>Atmospheric pressure<a class="headerlink" href="#atmospheric-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Although we do not notice it, the air around us exerts a pressure at all times. This is known as the <strong>atmospheric pressure</strong>, and is due to the weight of the air above. If you live at a high altitude, there is less air above you, so the atmospheric pressure decreases.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> atmospheric pressure</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(P_{at}\)</span></p></li>
+<li><p><strong>Definition:</strong> The standard atmospheric pressure at the surface of the Earth is 101.3 kPa. If a problem does not give the atmospheric pressure, you may assume a standard pressure of 101.3 kPa.</p></li>
+</ul>
+<p>There are other non-SI units that you will see when dealing with pressure. One unit is the <em>atmosphere</em> (atm), which is the standard average pressure <span class="math notranslate nohighlight">\(P_{at}\)</span> at sea level on the Earth’s surface. Another such unit is <em>pounds per square inch</em> (psi), with 101.3 kPa (or 1 atm) the same as 14.7 psi; most tire gauges measure the pressure of vehicle tires in psi. You might also see units of <em>mm of Hg</em> (Torr). Torr are most often used when measuring blood pressure or by meteorologists discussing the weather!</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig01-Tire_gauge_small.png"><img alt="../_images/INT_AY20_MP2_L06_Fig01-Tire_gauge_small.png" src="../_images/INT_AY20_MP2_L06_Fig01-Tire_gauge_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.2 </span><span class="caption-text">A tire gauge is used to measure the difference in the pressure inside the tire <em>above</em> atmospheric pressure</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can measure the atmospheric pressure by using a device called a barometer. A barometer is formed when a tube filled with fluid and blocked at both ends is put into a basin of the same fluid, and the bottom end is uncapped.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/Barometer.png"><img alt="../_images/Barometer.png" src="../_images/Barometer.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.3 </span><span class="caption-text">A Goethe barometer, originally developed by the German writer Johann Wolfgang Von Goethe (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Barometer_Goethe_01.jpg">source</a>)</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The fluid level in the top of the tube will go down to some level and stay. Why is this?  Based on Aristotle’s ideas – “nature abhors a vacuum” – it was originally believed that a vacuum was formed and could pull the fluid up with a limited amount of force. However, this idea was tested by various people in the 1630s and 1640s. Evangelista Torricelli thought instead it was the weight of the air itself <em>pushing</em> the fluid up, until the forces from the air and fluid weights balanced.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig03-Evangelista_Torricelli_small.png"><img alt="../_images/INT_AY20_MP2_L06_Fig03-Evangelista_Torricelli_small.png" src="../_images/INT_AY20_MP2_L06_Fig03-Evangelista_Torricelli_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.4 </span><span class="caption-text">Portrait of Evangelista Torricelli (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Evangelista_Torricelli_by_Lorenzo_Lippi_(circa_1647,_Galleria_Silvano_Lodi_%26_Due).jpg">source</a>)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>This idea was tested by Blaise Pascal in various ways in 1644, with Pascal showing that Torricelli was correct. One way Pascal did this was to convince his brother-in-law to climb a local mountain with a barometer, and record the heights of the fluid in the barometer at various altitudes. His brother-in-law did this, accompanied by several of the local dignitaries, and they saw a clear decrease in the fluid height.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig04-Blaise_Pascal.png"><img alt="../_images/INT_AY20_MP2_L06_Fig04-Blaise_Pascal.png" src="../_images/INT_AY20_MP2_L06_Fig04-Blaise_Pascal.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.5 </span><span class="caption-text">Portrait of Blaise Pascal (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles.JPG">source</a>)</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we want to measure the pressure in our car or bicycle tires, we can use a pressure gauge. Note that the gauge does <em>not</em> measure the absolute pressure. It is much easier to measure the difference in pressure between that in the tire and the air outside. This is because this difference can be quickly measured by finding the net force on a given area. The force will be the difference in the forces from the atmospheric pressure, and from the pressure inside the tire. Thus, <strong>gauge pressure</strong> is the difference between total pressure and atmospheric pressure for a given situation.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> gauge pressure</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\(P_g\)</span></p></li>
+<li><p><strong>Definition:</strong> When measuring the total pressure <span class="math notranslate nohighlight">\(P_{tot}\)</span> at a point in the atmosphere, the gauge pressure is the amount of pressure over the standard atmospheric pressure; thus,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ 
+    P_g = P_{tot} - P_{at}
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A glass bottle of soda is sealed with a screw cap. The absolute pressure of the carbon dioxide inside the bottle is 160 kPa. Assuming the top and bottom surfaces of the cap each have an area of 4.74 cm<span class="math notranslate nohighlight">\(^2\)</span>, obtain the magnitude of the force (in N) the screw thread exerts on the cap in order to keep it on the bottle. The air pressure outside the bottle is one atmosphere. Neglect the weight of the cap, which is very small compared to the forces due to the inside and outside pressures.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 28.0 N</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The weight of your 1420 kg car (2019 Corvette ZR1) is supported equally by its four tires, each inflated to a gauge pressure of 35.0 psi.  What is the area of contact each tire makes with the road (in cm<span class="math notranslate nohighlight">\(^2\)</span>)?</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/2019_Chevrolet_Corvette.png"><img alt="../_images/2019_Chevrolet_Corvette.png" src="../_images/2019_Chevrolet_Corvette.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.6 </span><span class="caption-text">2019 Chevrolet Corvette ZR1 at the Montreal International Car Show (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:2019_Chevrolet_Corvette_ZR1_au_SIAM_2019.jpg">source</a>)</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 144 cm<span class="math notranslate nohighlight">\(^2\)</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="pressure-at-a-depth">
+<h2><span class="section-number">15.4. </span>Pressure at a depth<a class="headerlink" href="#pressure-at-a-depth" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pressure-depth-relationship">
+<h3><span class="section-number">15.4.1. </span>Pressure-depth relationship<a class="headerlink" href="#pressure-depth-relationship" title="Permalink to this headline">¶</a></h3>
+<p>If you measure the pressure at a particular point in a fluid, you are measuring the weight of all the fluid above that point acting on the area of your pressure gauge. Thus, for a denser fluid, the weight would be larger, even if nothing else changed, since there is more mass above the point. Similarly, if you take the container of fluid to another planet, with a different gravitational field, the weight will change for that reason. Finally, if you change the depth of the point you are measuring, there will be more or less fluid above that point, giving a different pressure reading. Notice that moving horizontally will <em>not</em> change the pressure, since the amount of fluid above the point has not changed.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L07_Fig01-Pressure_at_a_depth_small.png"><img alt="../_images/INT_AY20_MP2_L07_Fig01-Pressure_at_a_depth_small.png" src="../_images/INT_AY20_MP2_L07_Fig01-Pressure_at_a_depth_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.7 </span><span class="caption-text">Pressure at a depth in a fluid</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can work out this pressure <span class="math notranslate nohighlight">\(P\)</span> at a given depth <span class="math notranslate nohighlight">\(h\)</span> in the fluid by imagining we have an area <span class="math notranslate nohighlight">\(A\)</span> that we are measuring the pressure with – this may be the surface of our pressure gauge, for example. The weight of fluid above that area will be due to all the mass above it. To find this mass, we can think of it as forming a cylinder above the area <span class="math notranslate nohighlight">\(A\)</span>, with a height the same as the depth <span class="math notranslate nohighlight">\(h\)</span>. Thus, the volume of this cylinder is <span class="math notranslate nohighlight">\(Ah\)</span>. We can write the mass <span class="math notranslate nohighlight">\(m\)</span> of the fluid in terms of the fluid density <span class="math notranslate nohighlight">\(\rho_{fl}\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    m = \rho_{fl} V = \rho_{fl} A h
+\]</div>
+<p>This means that there is a gravitational force on the pressure gauge area <span class="math notranslate nohighlight">\(A\)</span> given by the weight of the fluid above, or <span class="math notranslate nohighlight">\(F_g = mg = \rho_{fl} g A h\)</span>. However, if we find the actual pressure on our gauge area <span class="math notranslate nohighlight">\(A\)</span>, the area cancels out! This gives us that the change in pressure <span class="math notranslate nohighlight">\(\Delta P\)</span> due to a change in depth <span class="math notranslate nohighlight">\(\Delta h\)</span> in a fluid with density <span class="math notranslate nohighlight">\(\rho_{fl}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta P = \frac{F_g}{A} = \frac{\rho_{fl} g A \Delta h}{A} = \rho_{fl} g \Delta h
+\]</div>
+<p>So, for example, imagine you are swimming in a pool. At a particular depth <span class="math notranslate nohighlight">\(h\)</span> of water, there is a pressure difference <span class="math notranslate nohighlight">\(\Delta P\)</span> between the pressure at the surface of the pool (assumed to be the standard atmospheric pressure <span class="math notranslate nohighlight">\(P_{at}\)</span>), and the total pressure <span class="math notranslate nohighlight">\(P_{tot}\)</span> at the depth <span class="math notranslate nohighlight">\(h\)</span>. This means <span class="math notranslate nohighlight">\(\Delta P = P_{tot} - P_{at}\)</span>, so we can find the total pressure at the depth <span class="math notranslate nohighlight">\(h\)</span> using</p>
+<div class="math notranslate nohighlight">
+\[
+    P_{tot} = P_{at} + \rho_{fl} g h
+\]</div>
+<p>Again, <span class="math notranslate nohighlight">\(\rho_{fl}\)</span> is the fluid density, <span class="math notranslate nohighlight">\(h\)</span> is the depth below the surface of the fluid where you are measuring the total pressure <span class="math notranslate nohighlight">\(P_{tot}\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is the magnitude of the gravitational field.</p>
+<p>This equation works if you have a container of fluid <em>open to the atmosphere</em>, with only one fluid in it. You can easily imagine a situation where more than one fluid is in the same container. There are many fluids which do not mix, and can form separate layers on top of each other, such as oil and water (how would you know what the order of the layers is, from top to bottom?). In that case, at the bottom of the container, the total pressure would be the sum of all the changes in pressure from each of the fluids, along with the atmospheric pressure, if the container is open. Then,</p>
+<div class="math notranslate nohighlight">
+\[
+    P_{tot} = P_{at} + \sum_i \Delta P_i = P_{at} + \rho_1 g h_1 + \rho_2 g h_2 + \cdots
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_i\)</span> is the density of fluid with index <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(h_i\)</span> is the total depth of the fluid layer (<em>or</em> how deep the point is within that fluid, for the fluid the measuring point is inside).</p>
+<p>One thing you may have noticed is that there was no mention of the container’s shape at all! If the fluid is at rest, then the forces of the container wall on the fluid have to balance the fluid’s force (coming from the pressure) back on the wall, due to Newton’s 3rd law. Thus, the shape of the container does not matter at all when finding the pressure in a fluid, only the depth the measuring point is below the top of the fluid. You can explore pressure at a depth using the PhET linked in the next cell.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/under-pressure/latest/under-pressure_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The figure below shows four identical boxes held stationary in a pool of water.  Which choice below correctly ranks the fluid pressure on the bottom of each block, from greatest to least?</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L07_Fig02-Rank_the_boxes_small.png"><img alt="../_images/INT_AY20_MP2_L07_Fig02-Rank_the_boxes_small.png" src="../_images/INT_AY20_MP2_L07_Fig02-Rank_the_boxes_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.8 </span><span class="caption-text">Rank the fluid pressures on each block</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> II &gt; III &gt; I &gt; IV</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Water in the lake behind Hoover Dam is 221 m deep. What is the <em>water pressure</em> (aka gauge pressure) at the base of the dam (in MPa)?</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/Hoover_dam.png"><img alt="../_images/Hoover_dam.png" src="../_images/Hoover_dam.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.9 </span><span class="caption-text">Hoover dam seen from the air (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Hoover_dam_from_air.jpg">source</a>)</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 2.17 MPa</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The Mariana Trench is located in the Pacific Ocean at a depth of about 11.7 km below the surface of the water. The density of sea water is 1025 kg/m<span class="math notranslate nohighlight">\(^3\)</span>. If an underwater vehicle were to explore such a depth, what force (in MN) would the water exert on the vehicle’s observation window, with a radius of 13.0 cm?</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/Bathyscaphe_Trieste.png"><img alt="../_images/Bathyscaphe_Trieste.png" src="../_images/Bathyscaphe_Trieste.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.10 </span><span class="caption-text">The U.S. Navy bathyscaphe <em>Trieste</em>, just before her record dive to the bottom of the Marianas Trench, 23 January 1960. The waves were were about 1,5 to 1,8 m high when scientist Jacques Piccard and Lt. Don Walsh, USN, and Piccard boarded from the rubber raft attached to the bathyscaphe. The destroyer escort USS <em>Lewis</em> (DE-535) is steaming by in the background. (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Hoover_dam_from_air.jpg">source</a>)</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 6.25 MN</p>
+</div>
+</div>
+<div class="section" id="the-us-standard-atmosphere-model">
+<h3><span class="section-number">15.4.2. </span>The US Standard Atmosphere model<a class="headerlink" href="#the-us-standard-atmosphere-model" title="Permalink to this headline">¶</a></h3>
+<p>It is important for many applications to have a “standard atmosphere” model, which gives a way to compute the pressure, temperature, and air density of the Earth’s atmosphere at various heights above the surface. In particular, the World Meteorological Organization defines a standard atmosphere as:</p>
+<blockquote>
+<div><p>…a hypothetical vertical distribution of atmospheric temperature, pressure and density which, by international agreement, is roughly representative of year-round, midlatitude conditions. Typical usages are as a basis for pressure altimeter calibrations, aircraft performance calculations, aircraft and rocket design, ballistic tables, and meteorological diagrams.</p>
+</div></blockquote>
+<p>I will go through the basic assumptions of the model, then you will try your hand at finding the temperature at a given height using the model. The United States is currently using the <a class="reference external" href="https://en.wikipedia.org/wiki/U.S._Standard_Atmosphere">US Standard Atmosphere model</a>, last updated in 1976.</p>
+<p>To start, the model assumes <em>hydrostatic equilibrium</em>; this is just a fancy way of saying the same pressure-height equation we were using earlier. The only difference is that, since we are now going <em>up</em> in the fluid (i.e. the atmosphere!), it is more convenient to use the height <span class="math notranslate nohighlight">\(r_z\)</span>, instead of a depth <span class="math notranslate nohighlight">\(h\)</span>. Since we are increasing our height, rather than going downward in depth, we need to take this difference into account by using <span class="math notranslate nohighlight">\(\Delta r_z = -\Delta h\)</span>. Again, the minus sign comes from the fact we are moving upward in the fluid, not downward. Thus, our first equation relates pressure <span class="math notranslate nohighlight">\(P\)</span> to the distance <span class="math notranslate nohighlight">\(r_z\)</span> above sea level, or</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta P = -\rho g \Delta r_z
+\]</div>
+<p>The second equation is one you probably have seen before in chemistry – namely, the ideal gas law. This relates the pressure <span class="math notranslate nohighlight">\(P\)</span>, the temperature <span class="math notranslate nohighlight">\(T\)</span>, and the volume <span class="math notranslate nohighlight">\(V\)</span> of a “packet” of gas, based on its composition. Specifically, the ideal gas law is</p>
+<div class="math notranslate nohighlight">
+\[
+    PV = nRT
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of moles of the gas, <span class="math notranslate nohighlight">\(R\)</span> is the ideal gas law constant, with <span class="math notranslate nohighlight">\(R = 8.314\)</span> J/(mol K), and <span class="math notranslate nohighlight">\(T\)</span> the temperature of the gas (in K). Notice we are using degrees kelvin, or K, for our temperature measurements. To put this in a more helpful form, let’s write this in terms of gas density, instead of volume, since it is density that appears in the pressure-height equation above. Using the fact that <span class="math notranslate nohighlight">\(n\)</span> is the mass <span class="math notranslate nohighlight">\(M\)</span> of gas divided by the molar mass <span class="math notranslate nohighlight">\(m_{mol}\)</span> of the gas, then with <span class="math notranslate nohighlight">\(M = \rho V\)</span>, after some algebra we can solve for density to get</p>
+<div class="math notranslate nohighlight">
+\[
+    \rho = \frac{m_{mol} P}{RT}
+\]</div>
+<p>This gives us two relations between the three quantities of pressure, density, and temperature. To round out the group, we need some way of finding the temperature at a given height. The US Standard Atmosphere model assumes that, for heights of 11.0 km and below, that the temperature decreases at a steady rate with height. This depends on a constant known as the <em>termperature lapse rate</em>, given by the symbol <span class="math notranslate nohighlight">\(\lambda\)</span>. Thus, the third equation is</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta T = \lambda \Delta r_z
+\]</div>
+<p>Now, to find the pressure, air density, and temperature at any given height, we need some physical constants and starting values. The values for the US Standard Atmospheric Model are given to four sig figs in the table below; notice that the value of <span class="math notranslate nohighlight">\(g\)</span> slightly different than what is usually assumed in class.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_0\)</span></p></td>
+<td><p>101.3 kPa</p></td>
+<td><p>Sea level pressure</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td><p>9.806 m/s<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+<td><p>Constant grav. field mag.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(m_{mol}\)</span></p></td>
+<td><p>0.02896 kg/mol</p></td>
+<td><p>Mean mol. mass of air</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>8.314 J/(mol K)</p></td>
+<td><p>Ideal gas const.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_0\)</span></p></td>
+<td><p>288.2 K</p></td>
+<td><p>Sea level temp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+<td><p>-0.0065 K/m</p></td>
+<td><p>Temp. lapse rate (up to 11 km)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the temperature lapse rate is negative, since the temperature decreases for the first 11 km of the atmosphere; however, the air remperature can actually increase for higher altitudes!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the US Standard Atmosphere values for the pressure and temperature at sea level, along with the air density equation derived above, to find the density of the atmosphere at sea level.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 1.22 kg/m<span class="math notranslate nohighlight">\(^3\)</span></p>
+</div>
+<p>Let’s take a moment, and think about the equations of the US Standard Atmosphere model, specifically those for the pressure and temperature:</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta P = -\rho g \Delta r_z \qquad
+    \Delta T = \lambda \Delta r_z
+\]</div>
+<p>Notice these look a lot like the equations</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec r} = {\vec v}_{avg} \Delta t \qquad
+    \Delta {\vec v} = {\vec a}_{avg} \Delta t
+\]</div>
+<p>we have been using from kinematics to get the motion of objects! In fact, they are a little easier, since pressure and temperature are scalar quantities, not vectors. Thus, we can start at a given height <span class="math notranslate nohighlight">\(r_{z, i}\)</span> and use these equations to find <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> at a different height <span class="math notranslate nohighlight">\(r_{z, f}\)</span>, by choosing an appropriate height interval <span class="math notranslate nohighlight">\(\Delta r_z\)</span>, along with the constants <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(\lambda\)</span>. You will also have to use the ideal gas law to find the atmospheric density <span class="math notranslate nohighlight">\(\rho\)</span> at a particular height <span class="math notranslate nohighlight">\(r_z\)</span>, based on the pressure and temperature found at that height.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python function <code class="docutils literal notranslate"><span class="pre">findTemp(HEIGHT)</span></code> that finds the atmospheric temperature at a given height <span class="math notranslate nohighlight">\(r_z &lt; 11.0\)</span> km in the Earth’s atmosphere. The argument <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> of the function should be the height in meters above sea level, and the function should return the temperature in degrees kelvin. Notice that you will have to use only the equation for temperature as a function of height. Thus, you need a loop that updates the temperature values as the height increases. To test your function, you should get 217 K (or -56<span class="math notranslate nohighlight">\(^\circ\)</span> C) when using <span class="math notranslate nohighlight">\(r_z = 11.0\)</span> km, with the standard temperature <span class="math notranslate nohighlight">\(T_0\)</span> given in the table above for <span class="math notranslate nohighlight">\(r_z = 0\)</span> m.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible solution. Notice that the height interval <span class="math notranslate nohighlight">\(\Delta r_z\)</span> is chosen to be 10.0 meters, which gives sufficient accuracy for this application, over distances up to 11.0 km.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">findTemp</span><span class="p">(</span><span class="n">HEIGHT</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Using the US Standard Atmosphere model,</span>
+<span class="sd">    find the temperature at a given height above</span>
+<span class="sd">    sea level on Earth. Assume the gravitational</span>
+<span class="sd">    field magnitude is constant at all heights.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1"># Physical constants (from US</span>
+    <span class="c1"># Standard Atmosphere model)</span>
+    
+    <span class="n">LAMBDA</span> <span class="o">=</span> <span class="o">-</span><span class="mf">6.5E-3</span>        <span class="c1"># temp lapse rate (K/m)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="mf">288.2</span>            <span class="c1"># sea level temp (K)</span>
+
+    <span class="c1"># Starting height, height interval</span>
+    
+    <span class="n">r_z</span> <span class="o">=</span> <span class="mi">0</span>                 <span class="c1"># m</span>
+    <span class="n">DZ</span> <span class="o">=</span> <span class="mi">10</span>                 <span class="c1"># m</span>
+
+    <span class="c1"># Calculation loop</span>
+
+    <span class="k">while</span> <span class="n">r_z</span> <span class="o">&lt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
+
+        <span class="c1"># Update temperature</span>
+        
+        <span class="n">temp</span> <span class="o">+=</span> <span class="n">LAMBDA</span> <span class="o">*</span> <span class="n">DZ</span>
+
+        <span class="c1"># Update height</span>
+
+        <span class="n">r_z</span> <span class="o">+=</span> <span class="n">DZ</span>
+
+    <span class="k">return</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pascal-s-principle">
+<h2><span class="section-number">15.5. </span>Pascal’s principle<a class="headerlink" href="#pascal-s-principle" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above, for a stationary fluid, the shape of the container does not matter when measuring the pressure at a given depth. Let’s explore this notion some more. We can think of the fluid as composed of imaginary bags, each of which is pressing against its neighbors, or the container walls. In equilibrium, these forces will balance out, and the fluid remains stationary. If they did <em>not</em> balance out, then the net force on each “bag of fluid” would give it an acceleration until the forces <em>did</em> balance out, and equilibrium is restored.</p>
+<p>Now, suppose there is an outside force acting on the fluid. This could be something like a piston pressing down on the fluid, or even a change in atmospheric pressure above a lake as a storm front comes into the area. This results in a change in the force on the top of the fluid. The “bags of fluid” will then rearrange themselves to account for this different force, until the fluid is again in equilibrium. Every change in pressure from outside the fluid will result in the same change in pressure everywhere inside the fluid as well, an idea known as <strong>Pascal’s principle</strong>. One consequence is that the ressure of a stationary enclosed fluid at one vertical height is the same pressure at a different point with the same vertical height. If it were not, the fluid would flow until the pressures are equalized, and the net force on each “bag of fluid” is now zero.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig05-Diver_in_pool.png"><img alt="../_images/INT_AY20_MP2_L06_Fig05-Diver_in_pool.png" src="../_images/INT_AY20_MP2_L06_Fig05-Diver_in_pool.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.11 </span><span class="caption-text">Pascal’s principle says the pressure throughout the pool changes due to an external change in pressure</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let’s go through an example, to see how this principle has practical consequences. Suppose we have a U-shaped tube, as shown in the diagram below, filled with water at the bottom, and oil on one side of the tube.</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L07_Fig03-U_tube_small.png"><img alt="../_images/INT_AY20_MP2_L07_Fig03-U_tube_small.png" src="../_images/INT_AY20_MP2_L07_Fig03-U_tube_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.12 </span><span class="caption-text">U-tube filled with water</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>We are interested in finding the height <span class="math notranslate nohighlight">\(h\)</span> of the oil column, if we know that the oil has a density of 800. kg/m<span class="math notranslate nohighlight">\(^3\)</span>. We use Pascal’s principle to figure out this distance. Imagine we have two pressure gauges. If we place them side by side at the bottom of the tube, they should read the exact same pressure. Now let’s raise the gauges upward, one of either side of the tube, so that they are always in the same depth of water inside the tube. Because they are in the same fluid at the same depth, they will still read the same pressure. This is true <em>until</em> the gauge going up the right side crosses into the oil; because the oil has a different density, the pressures will now be different on either side of the tube. So, at the highest point where there is still water on both sides of the tube, we can say that the pressures are equal:</p>
+<div class="math notranslate nohighlight">
+\[
+    P_{left} = P_{right}
+\]</div>
+<p>Now, we need to write out what the pressures are on either side at this particular depth. On the right-hand side, the pressure is due to the atmosphere, and the depth <span class="math notranslate nohighlight">\(h\)</span> of oil above the water; on the left side, it is the atmosphere along with the depth <span class="math notranslate nohighlight">\((h - d)\)</span> cm of water, where <span class="math notranslate nohighlight">\(d = 2.00\)</span> cm is the difference in surface height. This means that saying the pressures are equal on either side of the tube means</p>
+<div class="math notranslate nohighlight">
+\[
+    P_{at} + \rho_w g (h - d) = P_{at} + \rho_o g h
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_w, \rho_o\)</span> are the densities of water and oil, respectively. Cancelling out the two atmospheric pressures <em>first</em>, then cancelling out the factors of <span class="math notranslate nohighlight">\(g\)</span>, we can solve for the depth <span class="math notranslate nohighlight">\(h\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    h = \biggl( \frac{\rho_w}{\rho_w - \rho_o} \biggr) d
+\]</div>
+<p>Notice what happens: the depth <span class="math notranslate nohighlight">\(h\)</span> is determined by a ratio of densities, multiplied by the difference in surface depths <span class="math notranslate nohighlight">\(d\)</span>. Thus, as long as the units for the densities are the same, the units for <span class="math notranslate nohighlight">\(d\)</span> and <span class="math notranslate nohighlight">\(h\)</span> will also be the same – there is no need to convert! Plugging in the numbers gives <span class="math notranslate nohighlight">\(h = 10.0\)</span> cm.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Technically, the two atmospheric pressures are <em>not</em> the same on either side, because of the slight difference in the surface height in the tube. Take this difference into account, using the density of air <span class="math notranslate nohighlight">\(\rho_a = 1.22\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span> (as you found in a previous problem), and see how much of a change there is in your answer for <span class="math notranslate nohighlight">\(h\)</span>. Calculate your answer to four sig figs.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 9.988 cm (or a 0.122% difference)</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A U-shaped tube is filled mostly with fresh water, but a small amount of vegetable oil has been added to both sides. Calculate the density of the oil in kg/m<span class="math notranslate nohighlight">\(^3\)</span>, using the distances <span class="math notranslate nohighlight">\(h_1 = 4.00\)</span> cm, <span class="math notranslate nohighlight">\(h_2 = 9.00\)</span> cm, and <span class="math notranslate nohighlight">\(h_3 = 3.00\)</span> cm.</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L07_Fig04-U_tube_small.png"><img alt="../_images/INT_AY20_MP2_L07_Fig04-U_tube_small.png" src="../_images/INT_AY20_MP2_L07_Fig04-U_tube_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.13 </span><span class="caption-text">U-tube filled with water and vegetable oil</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 400. kg/m<span class="math notranslate nohighlight">\(^3\)</span></p>
+</div>
+<p>As a military application of Pascal’s principle, we can look to the action of torpedoes. Torpedoes do not sink ships by holing their hulls, but instead are fired underneath the keel of the target. When the torpedo detonates, it creates a pressure wave, which forms the boundary of a steam bubble, lifting the hull and weakening the keel. The steam bubble quickly collapses, dropping the ship downward and breaking the keel. For more information, see the chapter <a class="reference external" href="https://fas.org/man/dod-101/navy/docs/es310/uw_wpns/uw_wpns.htm">Underwater Weapons</a> at the on-line <a class="reference external" href="http://fas.org/man/dod-101/navy/docs/es310/syllabus.htm">Introduction to Naval Weapons</a>.</p>
+<div class="figure align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L06_Fig06-Torpedo_effect_on_ship.png"><img alt="../_images/INT_AY20_MP2_L06_Fig06-Torpedo_effect_on_ship.png" src="../_images/INT_AY20_MP2_L06_Fig06-Torpedo_effect_on_ship.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.14 </span><span class="caption-text">How a torpedo breaks a ship’s keel</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>In June 1999, the Australian submarine HMAS Farncomb conducted a live-fire sinking exercise against the former HMAS Torrens, a destroyer escort. The video linked in the cell below clearly shows the intended effects of a torpedo on a target ship.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://player.vimeo.com/video/130514745?muted=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="buoyancy">
+<span id="fluids-buoy"></span><h2><span class="section-number">15.6. </span>Buoyancy<a class="headerlink" href="#buoyancy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="archimedes-principle">
+<h3><span class="section-number">15.6.1. </span>Archimedes’ principle<a class="headerlink" href="#archimedes-principle" title="Permalink to this headline">¶</a></h3>
+<p>We now have the pieces we need to find the buoyancy force on an object in a fluid. Suppose we put a cylinder into a container. The fluid will exert a pressure on all sides of this cylinder. In particular, the pressure is greater on the bottom of the object than it is on the top, because the bottom is at a greater depth. This means there is a greater force <span class="math notranslate nohighlight">\(F_{bot}\)</span> on the bottom surface area <span class="math notranslate nohighlight">\(A_{bot}\)</span> than the force <span class="math notranslate nohighlight">\(F_{top}\)</span> the fluid exerts on the top area <span class="math notranslate nohighlight">\(A_{top}\)</span>. The buoyant force will be upward because of this difference. Because we are using a cylinder for simplicity, <span class="math notranslate nohighlight">\(A_{bot} = A_{top} = A\)</span>; we can do the same thing for more complicated shapes, but it requires more math. In addition, the forces on the side will not matter, since the forces on opposite sides of the cylinder middle will cancel out.</p>
+<div class="figure align-default" id="id17">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L08_Fig02-Immersed_block_with_forces_small.png"><img alt="../_images/INT_AY20_MP2_L08_Fig02-Immersed_block_with_forces_small.png" src="../_images/INT_AY20_MP2_L08_Fig02-Immersed_block_with_forces_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.15 </span><span class="caption-text">Forces acting on a completely submerged object</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, suppose the top of the cylinder is at a depth <span class="math notranslate nohighlight">\(H_{top}\)</span>. If the cylinder has a height <span class="math notranslate nohighlight">\(h\)</span>, then the bottom of the cylinder will be at a depth <span class="math notranslate nohighlight">\(H_{bot} = H_{top} + h\)</span>. Let’s use this to find the net force on the cylindrical object, due to the fluid. Using the relations between force and pressure, and the method to find pressure at a depth, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = F_{bot} - F_{top} = (P_{bot} A) - (P_{top} A) = (P_{at} + \rho g H_{bot}) A - (P_{at} + \rho g H_{top}) A
+\]</div>
+<p>Cancelling out the common atmospheric pressures, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = \rho g (H_{bot} - H_{top}) A = \rho g h A
+\]</div>
+<p>However, the quantity <span class="math notranslate nohighlight">\(hA\)</span> is just the volume of the cylinder; I will call this <span class="math notranslate nohighlight">\(V_{disp}\)</span>, the volume of fluid displaced by the object. This may not be the same as the object’s volume, if it is not completely immersed! So the net force of the fluid on the object, which we call the <strong>buoyant force</strong> <span class="math notranslate nohighlight">\(F_B\)</span>, is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    F_B = \rho_{fl} g V_{disp}
+\]</div>
+<p>There are a couple of important things to note here. The density <span class="math notranslate nohighlight">\(\rho_{fl}\)</span> is the density of the <em>fluid</em>, not the object. Remember that this came in because we found the forces on the object due to being at a depth in the fluid. The volume <span class="math notranslate nohighlight">\(V_{disp}\)</span> is the volume of the object in the fluid. For the derivation above, we assumed that the object is completely submerged, but it also works for partially submerged objects, i.e. when the top is outside the fluid.</p>
+<p>Because of these facts, the combination <span class="math notranslate nohighlight">\(\rho_{fl} V_{disp}\)</span> is actually the mass of the fluid pushed aside by the object, so <span class="math notranslate nohighlight">\(\rho_{fl} g V_{disp}\)</span> is the weight of the displaced fluid! This gives us a derivation of Archimedes’ principle, stated next.</p>
+<div class="warning admonition">
+<p class="admonition-title">Archimedes’ principle</p>
+<p>An object immersed (either completely or partially) in a fluid experiences an upward buoyant force equal in magnitude to the weight of fluid displaced by the object.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Imagine holding two identical bricks in place under water, as shown in the diagram below. Brick 1 is just beneath the surface of the water, while brick 2 is held about two feet down. Fill in the blank in the following sentence: “The force needed to hold brick 2 in place <span class="math notranslate nohighlight">\(\underline{\hspace{2cm}}\)</span> is the force for brick 1.”</p>
+<div class="figure align-default" id="id18">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L08_Fig03-Two_immersed_blocks_small.png"><img alt="../_images/INT_AY20_MP2_L08_Fig03-Two_immersed_blocks_small.png" src="../_images/INT_AY20_MP2_L08_Fig03-Two_immersed_blocks_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.16 </span><span class="caption-text">Two immersed blocks</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>greater than</p></li>
+<li><p>less than</p></li>
+<li><p>equal to</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Each of the bricks have the same volume, and are in the same fluid. Thus, the buoyant and gravitational forces on both are the same. This means you need the <em>same</em> applied force to hold each in place.</p>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Make sure you keep track of your quantities</p>
+<p>Here is some advice when finding the buoyant force using Archimedes’ principle. This idea is very powerful, but you also need to be very careful about the quantities involved. Typically, you know the density of the fluid, and maybe the density of the object as well. You may also know both the total volume of the object, and the amount of this volume that is in the fluid (e.g. for a floating object, these will be different). You need to make sure that you are matching the right quantities when finding the weight of the displaced fluid. This will depend on the fluid density, and the volume of fluid displaced by the object. This will give rise to a force on the object, which has its own density and total volume. Don’t get these mixed up!</p>
+</div>
+<p>To see an example of this, let’s imagine we have a spherical balloon with a diameter of 4.80 m. The skin of the balloon is made of neoprene synthetic rubber, and has a mass of 1.08 kg. The balloon is filled with 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> air, with a density of 1.16 kg/m<span class="math notranslate nohighlight">\(^3\)</span>, and the air outside the balloon is at room temperature (20.0<span class="math notranslate nohighlight">\(^\circ\)</span>) with a density of 1.20 kg/m<span class="math notranslate nohighlight">\(^3\)</span>. If you want to put an electronic instrument onto the balloon as cargo, what is the maximum mass it could have?</p>
+<p>First, notice in this problem there are several densities: the inside air <span class="math notranslate nohighlight">\(\rho_{in}\)</span> = 1.16 kg/m<span class="math notranslate nohighlight">\(^3\)</span> and the outside air <span class="math notranslate nohighlight">\(\rho_{out}\)</span> = 1.20 kg/m<span class="math notranslate nohighlight">\(^3\)</span>. It is the <em>outside</em> air that acts as the fluid in which the balloon is completely immersed; this will be our <span class="math notranslate nohighlight">\(\rho_{fl}\)</span> in the equations above. On the other hand, the inside air is part of the system, so it will contribute to the total weight of this system – air has a weight! Thus, the total weight of the balloon-inside air system include the cargo <span class="math notranslate nohighlight">\(F_{g, cargo}\)</span>, the skin <span class="math notranslate nohighlight">\(F_{g, skin}\)</span>, <em>and</em> the inside air <span class="math notranslate nohighlight">\(F_{g, in}\)</span> (all downward), while the upward buoyant force <span class="math notranslate nohighlight">\(F_B\)</span> results from the pressure of the outside air on the balloon skin. It is the small difference in density between the inside and outside air that allows a buoyant force, lifting the balloon itself along with its cargo. Thus, the FBD for the balloon looks like</p>
+<div class="figure align-default" id="id19">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L17_Fig01_FBD_small.png"><img alt="../_images/INT_AY21_L17_Fig01_FBD_small.png" src="../_images/INT_AY21_L17_Fig01_FBD_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.17 </span><span class="caption-text">FBD for the balloon</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<p>Starting from Newton’s 2nd law</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = F_B - F_{g, cargo} - F_{g, skin} - F_{g, in} = m_{tot} a_y
+\]</div>
+<p>we use the gravitational and buoyant force equations as appropriate:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sum F_y = \rho_{out} g V - m_{cargo} g - m_{skin} g - \rho_{in} g V = m_{tot} a_y
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(V\)</span> is the volume of the spherical balloon. The volume of a sphere of radius <span class="math notranslate nohighlight">\(R\)</span> given by <span class="math notranslate nohighlight">\((4/3) \pi R^3\)</span>, and the radius <span class="math notranslate nohighlight">\(R = 2.40\)</span> m is half the diameter. Thus, the volume here is <span class="math notranslate nohighlight">\(V = 57.9\)</span> m<span class="math notranslate nohighlight">\(^3\)</span>. The balloon will rise into the air only if <span class="math notranslate nohighlight">\(a_y \ge 0\)</span>. Thus, we need to find the cargo mass <span class="math notranslate nohighlight">\(m_{cargo}\)</span> that gives</p>
+<div class="math notranslate nohighlight">
+\[
+    \rho_{out} g V - m_{cargo} g - m_{skin} g - \rho_{in} g V \ge 0
+\]</div>
+<p>Dividing by <span class="math notranslate nohighlight">\(g\)</span> does not change this inequality; solving for the cargo mass gives</p>
+<div class="math notranslate nohighlight">
+\[
+    m_{cargo} \le (\rho_{out} - \rho_{in}) V - m_{skin}
+\]</div>
+<p>The maximum cargo mass is <em>equal</em> to the right-hand side, i.e. when the inequality becomes an equality. Plugging in the numbers gives <span class="math notranslate nohighlight">\(m_{cargo, max}\)</span> = 1.24 kg.</p>
+</div>
+<div class="section" id="floating-objects">
+<h3><span class="section-number">15.6.2. </span>Floating objects<a class="headerlink" href="#floating-objects" title="Permalink to this headline">¶</a></h3>
+<p>Obviously, one important application for Archimedes’ principle in the sea services is making sure that ships remain afloat (and submarines can maintain cruising depth). In this case, the net force on the ship must be zero, which means that the buoyant force is the same as the ship’s weight.</p>
+<div class="figure align-default" id="id20">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L08_Fig04_Floating_block_small.png"><img alt="../_images/INT_AY20_MP2_L08_Fig04_Floating_block_small.png" src="../_images/INT_AY20_MP2_L08_Fig04_Floating_block_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.18 </span><span class="caption-text">Forces acting on a floating object</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<p>For this to happen, the floating object is in equilibrium, so forces balance:</p>
+<div class="math notranslate nohighlight">
+\[
+    F_b = F_{g, obj.}
+\]</div>
+<p>By Archimedes’ principle, the buoyant force is equal to the weight of the displaced fluid:</p>
+<div class="math notranslate nohighlight">
+\[
+    F_b = F_{g, fluid}
+\]</div>
+<p>Putting these equations together gives for a <em>floating</em> object that</p>
+<div class="math notranslate nohighlight">
+\[
+    F_{g, obj} = F_{g, fluid}
+\]</div>
+<p>Thus, a floating ship must displace exactly its weight in water in order to stay on the surface. This is why, instead of giving the ship’s mass, this statistic is listed as the ship’s “displacement” (in tons, usually). For submarines, you may see two different displacements – surface and submerged. The first, like that of the ship, gives the amount of water equivalent to the sub’s <em>mass</em>; the second gives the amount of water with the same <em>volume</em> as the sub. Which would you expect to be bigger?</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two identical blocks are floating in two separate aquariums. Aquarium A is filled with alcohol (<span class="math notranslate nohighlight">\(\rho\)</span> = 789 kg/m<span class="math notranslate nohighlight">\(^3\)</span>), while aquarium B is filled with pure water. Which has the greater buoyant force acting on it?</p>
+<ol class="simple">
+<li><p>The block floating in alcohol</p></li>
+<li><p>The block floating in pure water</p></li>
+<li><p>They both have the same buoyant force</p></li>
+<li><p>Cannot determine without the density of the blocks</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The key word here is <em>floating</em>. Since both blocks are floating, then the buoyant force acting on each is equal to each block’s weight. Since the blocks are identical, the two buoyant forces must be the same! However, the block in alcohol will float deeper in the fluid to get the same buoyant force; this is the only different between the two situations.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are shopping online for a new barge at <a class="reference external" href="http://www.mcdonoughmarine.com/ocean-barges.html">McDonough Marine Services</a>, and settle on a 140’ <span class="math notranslate nohighlight">\(\times\)</span> 40’ <span class="math notranslate nohighlight">\(\times\)</span> 9’ 6’’ size barge. First, some helpful information. The <em>freeboard</em> is the distance from the deck of the barge down to the water line. The <em>loadline</em> is the freeboard when the maximum safe cargo is placed on the barge, so that it is the highest water line for safe operations. A <em>metric ton</em> (mt) is 1000 kg.</p>
+<div class="figure align-default" id="id21">
+<a class="reference internal image-reference" href="../_images/Barge.png"><img alt="../_images/Barge.png" src="../_images/Barge.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.19 </span><span class="caption-text">The <em>Occitania</em> and a 2,500-ton barge carrying a load of coal destined for a thermal power plant (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Barge_%C3%A0_charbon.jpg">source</a>)</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Looking on the website, you see that the you can load 965 mt of cargo when the water is at the loadline; the following table gives the safe amount of cargo for various values of the freeboard.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Freeboard</p></th>
+<th class="head"><p>Cargo (mt)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3’</p></td>
+<td><p>820</p></td>
+</tr>
+<tr class="row-odd"><td><p>4’</p></td>
+<td><p>660</p></td>
+</tr>
+<tr class="row-even"><td><p>5’</p></td>
+<td><p>550</p></td>
+</tr>
+<tr class="row-odd"><td><p>6’</p></td>
+<td><p>340</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="simple">
+<li><p>What is the mass of the barge in metric tons? Use a density of 1010 kg/m<span class="math notranslate nohighlight">\(^3\)</span> for sea water.</p></li>
+<li><p>Where is the loadline located on the barge? Give the distance in cm from the barge deck.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 220 mt; 63.6 cm, or just under 2’ 11”</p>
+</div>
+<p>Here’s another example to work through. Suppose you have a cone with a given density <span class="math notranslate nohighlight">\(\rho_{cone}\)</span>; the top of the cone is a circle with a radius <span class="math notranslate nohighlight">\(r\)</span>, and the cone has a total height <span class="math notranslate nohighlight">\(h\)</span>. You place the cone in a fluid of density <span class="math notranslate nohighlight">\(\rho_{fl}\)</span>, and it floats. How far down into the fluid does the cone sink before coming to rest? First, we need to know the volume of a cone, which is</p>
+<div class="math notranslate nohighlight">
+\[
+    V_{cone} = \frac{1}{3} \pi r^2 h
+\]</div>
+<p>It is important to note that the amount of fluid displaced by the cone when it is a depth <span class="math notranslate nohighlight">\(h_{fl}\)</span> in the fluid is proportional to this. Hopefully it is clear from the picture below that the ratio of the total radius <span class="math notranslate nohighlight">\(r\)</span> and height <span class="math notranslate nohighlight">\(h\)</span> of the cone is the same as the radius of the cone <span class="math notranslate nohighlight">\(r_{fl}\)</span> and the height of the cone <span class="math notranslate nohighlight">\(h_{fl}\)</span> that is immersed in the fluid. In other words,</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{r}{h} = \frac{r_{fl}}{h_{fl}}
+\]</div>
+<div class="figure align-default" id="id22">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L17_Fig02_Cone_relations.png"><img alt="../_images/INT_AY21_L17_Fig02_Cone_relations.png" src="../_images/INT_AY21_L17_Fig02_Cone_relations.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.20 </span><span class="caption-text">The radii and heights for the floating cone</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, let’s use these facts to find out where the “water line” of the cone is, i.e. what depth <span class="math notranslate nohighlight">\(h_{fl}\)</span> is immersed in the fluid. Since the cone is floating, then <span class="math notranslate nohighlight">\(F_{g, cone} = F_B\)</span>. Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+    m_{cone} g = \rho_{fl} g V_{disp}
+\]</div>
+<p>The mass of the cone is given by the density of the <em>cone</em> times its total volume; the volume displaced is given by the volume of the cone under the water line, which is a distance <span class="math notranslate nohighlight">\(h_{fl}\)</span> from the cone’s tip. Substituting these into the force equation above,</p>
+<div class="math notranslate nohighlight">
+\[
+    \rho_{cone} g \biggl( \frac{1}{3} \pi r^2 h \biggr) = \rho_{fl} g \biggl( \frac{1}{3} \pi r_{fl} ^2 h_{fl} \biggr)
+\]</div>
+<p>We can cancel out some common factors here. We can also use the fact that <span class="math notranslate nohighlight">\(r_{fl} = (h_{fl} / h) r\)</span> to eliminate the radius <span class="math notranslate nohighlight">\(r_{fl}\)</span>; this substitution will also allow us to cancel out <span class="math notranslate nohighlight">\(r\)</span>. Putting all of this together, we have that the depth <span class="math notranslate nohighlight">\(h_{fl}\)</span> of the cone in the fluid depends only on the total cone height <span class="math notranslate nohighlight">\(h\)</span>, and the ratio of the fluid and cone densities:</p>
+<div class="math notranslate nohighlight">
+\[
+    h_{fl} = \biggl( \frac{\rho_{cone}}{\rho_{fl}} \biggr)^{1/3} h
+\]</div>
+<p>Obviously, this is sensible, as we can see with two test cases. If the two densities are the same, then the cone will be completely immersed in the fluid. For the opposite case, as the cone density gets very small, then very little of the cone will be immersed in the fluid. In between, most of the cone’s volume is away from the tip and towards the base. This means that, for example, if the cone has half the density of the fluid, then almost 80% of the the cone must be in the fluid! There is very little cone volume near the tip, so the cone must be more than halfway in the fluid to get the forces to balance out.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>An iceberg has a density of 917 kg / m<span class="math notranslate nohighlight">\(^3\)</span> and is floating in sea water (<span class="math notranslate nohighlight">\(\rho = 1025\)</span> kg / m<span class="math notranslate nohighlight">\(^3\)</span>). What fraction <span class="math notranslate nohighlight">\(V_{sub} / V_{tot}\)</span> of the iceberg is submerged in the sea water?</p>
+<div class="figure align-default" id="id23">
+<a class="reference internal image-reference" href="../_images/Iceberg.png"><img alt="../_images/Iceberg.png" src="../_images/Iceberg.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15.21 </span><span class="caption-text">An iceberg in the Arctic Ocean (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Iceberg_in_the_Arctic_with_its_underside_exposed.jpg">source</a>)</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 0.895</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">15.7. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Fluids are an important topic for those in the sea services. It can also be challenging to think through some of the puzzles you encounter with buoyancy. To emphasize the point: this is one of those topics where you really need to think through the consequences of the definitions and Archimedes’ principle. Some of these consequences may be counterintuitive!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Define pressure, and identify its units (SI and otherwise).</p></li>
+<li><p>Use the definition of pressure to find an unknown force or area.</p></li>
+<li><p>Define atmospheric and gauge pressures.</p></li>
+<li><p>Find the pressure on an object at a certain depth inside of a fluid</p></li>
+<li><p>Use Pascal’s principle and the relation for pressure at a given depth in a fluid to find the height or density of a fluid in a U-tube.</p></li>
+<li><p>Describe the relationship between the portion of an object’s volume in a fluid, and the amount of fluid displaced by that object.</p></li>
+<li><p>State Archimedes’ principle.</p></li>
+<li><p>Use Archimedes’ principle to find the amount of an object that is immersed in a fluid.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L14_Inclined_planes.html" title="previous page"><span class="section-number">14. </span>Inclined planes</a>
+    <a class='right-next' id="next-link" href="L16_Circular_motion.html" title="next page"><span class="section-number">16. </span>Circular motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

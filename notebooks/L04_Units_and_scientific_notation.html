@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Units and scientific notation &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Acceleration and free fall" href="L05_Acceleration_and_free_fall.html" />
+    <link rel="prev" title="3. Velocity and the Euler method" href="L03_Velocity_and_Euler_method.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L04_Units_and_scientific_notation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L04_Units_and_scientific_notation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   4.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#si-units-and-prefixes">
+   4.2. SI units and prefixes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-si-units-scientific-notation-and-significant-figures">
+   4.3. Non-SI units, scientific notation and significant figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   4.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="units-and-scientific-notation">
+<h1><span class="section-number">4. </span>Units and scientific notation<a class="headerlink" href="#units-and-scientific-notation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it is the most ordinary things that can be important. One of these are the units you will use to explain what a given number means. If I tell you the distance is “5”, what does that mean: 5 centimeters? 5 kilometers? 5 light-years? Those are very different measures of a length – the first would be the life’s journey of a tiny bacteria, the second a nice run for the day, and the last is roughly the distance from the Sun to the nearest star system.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/Mars_Climate_Orbiter_2.jpg"><img alt="../_images/Mars_Climate_Orbiter_2.jpg" src="../_images/Mars_Climate_Orbiter_2.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">An artist’s impression of the Mars Climate Orbiter (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Mars_Climate_Orbiter_2.jpg">source</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In 1999 the Mars Climate Orbiter is believed to have either disintegrated in Mars’ atmosphere, or bounced off into deep space, due to improper software code. One of the craft’s programs output impulse measurements in “ft lbs” instead of the metric standard “N s”. Physics teachers around the country are grateful that NASA spent $327 million for this shining example of why you should always watch your units!</p>
+<p>This lesson goes through the basics of units, along with some related topics: prefixes and scientific notation. You should use this lesson as a reference through the course, since I often see students get lax with their units by the end of the year, and make some rookie mistakes! If you crash another multi-million dollar probe, I will use your picture to show why you need to know your units.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>List the basic SI units for distance, mass and time.</p></li>
+<li><p>List all prefixes to be used in intermediate physics, along with the power of ten associated with them.</p></li>
+<li><p>Convert between a base unit and a unit of the same type with a prefix, or units of the same type with different prefixes.</p></li>
+<li><p>Convert between a number in decimal form and one in scientific notation.</p></li>
+<li><p>Convert between non-SI units and the appropriate SI unit.</p></li>
+<li><p>State the definitions of average and instantaneous velocity.</p></li>
+<li><p>Describe how the graphs of position vs. time and velocity vs. time for an object are related.</p></li>
+</ul>
+</div>
+<div class="section" id="si-units-and-prefixes">
+<h2><span class="section-number">4.2. </span>SI units and prefixes<a class="headerlink" href="#si-units-and-prefixes" title="Permalink to this headline">¶</a></h2>
+<p><strong>SI units</strong> (“SI” for the French “Systeme International”) are a system of units designed to simplify the process of measurement as much as possible. These units, also known as “metric units”, were first developed during the French Revolution, but have come to be a system used globally. They are convenient, since conversions between many units for the same type of quantity use a power of 10. Here is a table of the <strong>base</strong> units we will use this year. <strong>Dimension</strong> is the basic physical quantity that is being measured, while the <strong>unit</strong> is how the dimension is measured.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dimension</p></th>
+<th class="head"><p>SI unit (abbrev.)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>length</p></td>
+<td><p>meter (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p>mass</p></td>
+<td><p>kilogram (kg)</p></td>
+</tr>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>second (s)</p></td>
+</tr>
+<tr class="row-odd"><td><p>electric current</p></td>
+<td><p>ampere (A)</p></td>
+</tr>
+</tbody>
+</table>
+<p>To understand the difference between dimension and unit, notice that I can measure the same <em>dimension</em> in different <em>units</em> – time can be measured in seconds, hours, or years. In addition, we will later built up other units from combinations of these basic units (for example, velocity is measured in meters per second).</p>
+<p>Hopefully, you have a good sense of what a second is, but maybe not the same intuition for a meter or a kilogram. My height is a little bit less than two meters; this is roughly the same as the distance from fingertip to fingertip when I fully stretch out my arms. A two liter bottle of soda has a mass of two kilograms. Notice that the base unit of mass is the <em>kilogram</em>, not the gram! The original definition started with the gram, but then it was decided to be too small of a unit, so they made the kilogram the base unit. Interestingly enough, the definitions of all the base SI units was recently changed, to make them more accurate as well as more accesible to scientists around the world; you can find out more at the <a class="reference external" href="https://www.nist.gov/si-redefinition">SI units page</a> created by the National Institute of Standards and Technology.</p>
+<p>However, these units are not always so useful. For example, what is the typical diameter of an atom? What is the mass of a new Ford-class aircraft carrier? The diameter would be a really <em>small</em> number, and the mass a very <em>large</em> one. To built up better units, we can glue a <strong>prefix</strong> onto the front of the basic unit. Some common prefixes are listed in the table below; this list – with the power, prefix, and abbrevation, must be <em>memorized</em>!</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Power</p></th>
+<th class="head"><p>Prefix</p></th>
+<th class="head"><p>Abbreviation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10^{-9}\)</span></p></td>
+<td><p>nano</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span></p></td>
+<td><p>micro</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10^{-3}\)</span></p></td>
+<td><p>milli</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(10^{-2}\)</span></p></td>
+<td><p>centi</p></td>
+<td><p>c</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10^3\)</span></p></td>
+<td><p>kilo</p></td>
+<td><p>k</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(10^6\)</span></p></td>
+<td><p>mega</p></td>
+<td><p>M</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(10^9\)</span></p></td>
+<td><p>giga</p></td>
+<td><p>G</p></td>
+</tr>
+</tbody>
+</table>
+<p>Thus, we can see that it may be more appropriate to use nanometers (instead of meters) for the size of an atom, or gigagrams (instead of kilograms) for the aircraft carrier’s mass.</p>
+<div class="warning admonition">
+<p class="admonition-title">Don’t make prefixes difficult</p>
+<p>The one error I see students make over and over is to use the prefix table above incorrectly. Often they try to “think too much” about it, and thus flip the sign of the exponent in the power of ten. Here’s how you should think of this: <em>the prefix is the same as the power of ten</em>. In other words, you can replace one with the other, and not change anything. Thus, for example,</p>
+<p>1 milligram = <span class="math notranslate nohighlight">\(10^{-3}\)</span> grams</p>
+<p>So, the “milli” is replaced by “<span class="math notranslate nohighlight">\(10^{-3}\)</span>” to get an equivalent amount.</p>
+</div>
+<p>To convert between one such unit to another, it is very helpul to use the method of <em>railroad tracks</em>. This method does a lot of the thinking for you. I often see students try to do something different, and it usually ends up in a mess. Railroad tracks are your friend!</p>
+<p>So how do they work? Suppose we want to find out how many kiloseconds there are in one microsecond. Our process is the following. Write our given amount and unit in the numerator and 1 in the denominator. When converting between two units that both have metric prefixes, convert to the base unit first. Next, add another “track” which takes us from the base unit to the final unit. Multiply all of the numerators together and write the result (including unit), then repeat for the denominators. Evaluate your new fraction and write the final result, including unit. Thus, the result would look something like</p>
+<p><img alt="Unit conversion between microseconds to kiloseconds" src="../_images/INT_AY20_MP1_L01_Fig01-Unit_conversion_small.png" /></p>
+<p>As emphasized above, in each of the conversions, the prefix is <em>replaced</em> by the power of ten: 1 microsecond is the same as <span class="math notranslate nohighlight">\(10^{-6}\)</span> seconds, 1 kilosecond is the same as <span class="math notranslate nohighlight">\(10^3\)</span> seconds. In other words, where the prefix is on one side is replaced by the number on the other. Also, note the “one with the prefix” is not always on the top or the bottom, it is where it needs to be to cancel out other units, or to give the desired unit at the end. The second part has microseconds in the bottom, to cancel the first one in the top; the third part has kiloseconds in the top, since that is what we want at the end!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How many megameters are in one meter? Choose the correct answer below.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(10^{-9}\)</span> megameters</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^{-6}\)</span> megameters</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^6\)</span> megameters</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^9\)</span> megameters</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(10^{-6}\)</span> megameters</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How many milligrams are in one kilogram? Choose the correct answer below.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(10^{-9}\)</span> milligrams</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^{-3}\)</span> milligrams</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^3\)</span> milligrams</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^6\)</span> milligrams</p></li>
+<li><p><span class="math notranslate nohighlight">\(10^9\)</span> milligrams</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(10^6\)</span> milligrams</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How many kiloseconds are in one microsecond?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(10^{-9}\)</span> kiloseconds</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python function <code class="docutils literal notranslate"><span class="pre">microToCenti()</span></code> that converts distances in micrometers into distances in centimeters. The function takes the argument <code class="docutils literal notranslate"><span class="pre">dist_in_micro</span></code> for the distance in micrometers, and returns the equivalent distance in centimeters. In Python, powers of ten are given using the letter <code class="docutils literal notranslate"><span class="pre">E</span></code>; for example, <span class="math notranslate nohighlight">\(10^4\)</span> can be written in Python as <code class="docutils literal notranslate"><span class="pre">1E4</span></code>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">microToCenti</span><span class="p">(</span><span class="n">dist_in_micro</span><span class="p">):</span>
+
+    <span class="c1"># Convert micrometers -&gt; meters -&gt; cm</span>
+
+    <span class="n">dist_in_meters</span> <span class="o">=</span> <span class="mf">1E-6</span> <span class="o">*</span> <span class="n">dist_in_micro</span>    <span class="c1"># 1 micrometer = 1E-6 m</span>
+    <span class="n">dist_in_cm</span> <span class="o">=</span> <span class="n">dist_in_meters</span> <span class="o">/</span> <span class="mf">1E-2</span>       <span class="c1"># 1 cm = 1E-2 m</span>
+
+    <span class="c1"># Return converted distance</span>
+
+    <span class="k">return</span> <span class="n">dist_in_cm</span>
+</pre></div>
+</div>
+</div>
+<p>Did you try those last problems? Get out a pencil, paper, and a calculator, and give them a go. I’ll wait.</p>
+</div>
+<div class="section" id="non-si-units-scientific-notation-and-significant-figures">
+<h2><span class="section-number">4.3. </span>Non-SI units, scientific notation and significant figures<a class="headerlink" href="#non-si-units-scientific-notation-and-significant-figures" title="Permalink to this headline">¶</a></h2>
+<p>Above, I mentioned finding the mass of a Ford-class aircraft carrier. Suppose I really want to measure this mass in <em>grams</em> – what would I get? If you go to the <a class="reference external" href="https://www.navy.mil/navydata/fact_display.asp?cid=4200&amp;tid=200&amp;ct=4">appropriate US Navy website</a>, you will see the displacement listed as “87,996.9 metric tons”. When we get to <a class="reference internal" href="L15_Fluids.html#fluids-buoy"><span class="std std-ref">Lesson 15 (buoyancy)</span></a>, you will learn that this is the mass of the water displaced (or pushed aside) by the ship. If the ship is floating (hopefully!), this is equal to the mass of the ship itself. So we need to convert this into grams.</p>
+<p>This gets us into how to convert using non-SI units. You will use the “railroad track” method just like you do for metric to metric conversions. Remember, within a single track column, the top and bottom must be equivalent. For example, saying that 1 inch is the same as 2.54 centimeters means that part of your railroad track can look like</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{\text{1 in}}{\text{2.54 cm}}
+\]</div>
+<p>Since the top and bottom are equivalent, it is like multiplying by 1!</p>
+<p>Looking up the definition of a metric ton (abbreviation “t”), we find out that it is the same as 1,000 kilograms. So, we need to convert metric tons to kilograms, and then kilograms to grams:</p>
+<p><img alt="Unit conversion between metric tons and grams" src="../_images/Carrier-mass-unit-conversion_small.png" /></p>
+<p>These ships have a mass of 87,996,900,000 grams – remember that one gram is about the mass of a paper clip; that’s a lot of office supplies in one ship! Other than the new type of conversion factor (metric tons to kilograms), this is very similar to what you did before.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Convert 3,450 m to miles. Where can you find the appropriate conversion factor?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 2.14 mi</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Nijat Rahimov of Kazakhstan won the men’s 77 kg weightlifting gold at the 2016 Olympics. He lifted 165 kg in the “snatch” and a record-breaking 214 kg in the “clean and jerk” for a total of 379 kg. What was the total amount of weight he lifted, in pounds? Where can you find the appropriate conversion factor?</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/215px-Nijat_Rahimov.jpg"><img alt="../_images/215px-Nijat_Rahimov.jpg" src="../_images/215px-Nijat_Rahimov.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Nijat Rahimov at the XXXI Olympic Games in Rio de Janeiro in 2016 (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Nijat_Rahimov.jpg">source</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 834 lbs</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python function <code class="docutils literal notranslate"><span class="pre">yardsToMeters()</span></code> that converts a distance in yards into the appropriate number of meters. The argument of the function should be <code class="docutils literal notranslate"><span class="pre">dist_in_yards</span></code>, the number of yards for a given distance, and the function should return the equivalent number of meters. Where can you find the necessary unit conversions?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> From the equation sheet, you have that one foot is 3.281 meters. This is utilized in the following program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">yardsToMeters</span><span class="p">(</span><span class="n">dist_in_yards</span><span class="p">):</span>
+
+    <span class="c1"># Convert yards -&gt; feet -&gt; meters</span>
+
+    <span class="n">dist_in_feet</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">dist_in_yards</span>         <span class="c1"># 1 yd = 3 ft</span>
+    <span class="n">dist_in_meters</span> <span class="o">=</span> <span class="n">dist_in_feet</span> <span class="o">/</span> <span class="mf">3.281</span>    <span class="c1"># 1 m = 3.281 ft</span>
+        
+    <span class="c1"># Return converted distance</span>
+    
+    <span class="k">return</span> <span class="n">dist_in_meters</span>
+</pre></div>
+</div>
+</div>
+<p>Is there a more efficient way of writing the carrier’s mass than 87,996,900,000 grams? That’s where <strong>scientific notation</strong> comes into play. <strong>Proper scientific notation</strong> writes a number in the form <span class="math notranslate nohighlight">\(a \times 10^b\)</span>, where <span class="math notranslate nohighlight">\(a\)</span> is a number between 1 and 10, and it is multiplied by the appropriate power of ten, or <span class="math notranslate nohighlight">\(10^b\)</span>. You can also think of this as moving the decimal point. Every time you move the point to the left, you gain a power of ten, and to the right, you lose one. Thus, the mass of the carrier would be <span class="math notranslate nohighlight">\(8.79969 \times 10^{10}\)</span> grams. The decimal point started to the right of the last zero in 87,996,900,000; I had to move it to the right ten times to get it just to the right of the “8”, which gives me a number 8.79969 between 1 and 10, multiplied by ten to the tenth power, for the ten places I moved the decimal.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How would you write 6,370,000 in proper scientific notation? Choose the correct choice below.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(6,370 \times 10^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(63.7 \times 10^5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(6.37 \times 10^6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0.637 \times 10^7\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(6.37 \times 10^6\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The number <span class="math notranslate nohighlight">\(1.98 \times 10^{-4}\)</span> is equivalent to which of the following choices?</p>
+<ol class="simple">
+<li><p>0.0000198</p></li>
+<li><p>0.000198</p></li>
+<li><p>0.00198</p></li>
+<li><p>19,800</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 0.000198</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How would you write 6.00 <span class="math notranslate nohighlight">\(\mu\)</span>m in terms of meters and in scientific notation? Choose the correct choice below.</p>
+<ol class="simple">
+<li><p>0.000006 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(6.00 \times 10^{-9}\)</span> m</p></li>
+<li><p><span class="math notranslate nohighlight">\(6.00 \times 10^{-6}\)</span> m</p></li>
+<li><p><span class="math notranslate nohighlight">\(6.00 \times 10^{-3}\)</span> m</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(6.00 \times 10^{-6}\)</span> m</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Your friend is stationed in San Diego, which is 4,794 km from Newport.</p>
+<ol class="simple">
+<li><p>How many megameters away is that?</p></li>
+<li><p>How many micrometers away is it? Write in scientific notation.</p></li>
+<li><p>Providence is only 55.33 km from Newport.  Driving to San Diego would be like making how many trips from Newport to Providence?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 4.794 Mm; <span class="math notranslate nohighlight">\(4.794 \times 10^{12}\)</span> <span class="math notranslate nohighlight">\(\mu\)</span>m; 86.64 trips</p>
+</div>
+<p>This gives the standard scientific notation. However, there is an alternative format, known as <strong>engineering notation</strong>, that is useful for converting from numbers with base SI units into units with prefixes. The idea is to write the number as you would with ordinary scientific notation, but use only a multiple of three as the exponent for the power of ten. Thus, the number out front has to be something between 1 and 1000. For example, if I take the carrier’s mass, then</p>
+<div class="math notranslate nohighlight">
+\[
+    87,996,900,000 = 8.7996 \times 10^{10} = 8.7996 \times (10^1 \times 10^9) = (8.7996 \times 10^1) \times 10^9= 87.996 \times 10^9
+\]</div>
+<p>The advantage to engineering notation is that you can now directly read off the proper prefix for the base units grams. Since <span class="math notranslate nohighlight">\(10^9\)</span> is the prefix “giga” (G), then the carrier has a mass of 87.996 Gg. Just to be clear, though, when I say “scientific notation”, I am still referring to the standard version! I will come back to this point later.</p>
+<p>By the way, you may still have a question about the ship’s mass quoted above. Why do I need all of those numbers in <span class="math notranslate nohighlight">\(8.79969 \times 10^{10}\)</span> grams? It’s pretty close to <span class="math notranslate nohighlight">\(9 \times 10^{10}\)</span> grams, so can’t I use that? Well, what it means is that the US Navy has a very precise measurement of the mass of the carrier. This is reflected in the number of <strong>significant figures</strong> reported in their data. Physically, significant figures (or “sig figs”) depend on how precisely you can measure a quantity. How many sig figs should you use for each of the rulers shown in the figure?</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/FND_AY19_MP1_L03_Fig01-Two-different-rulers_small.png"><img alt="../_images/FND_AY19_MP1_L03_Fig01-Two-different-rulers_small.png" src="../_images/FND_AY19_MP1_L03_Fig01-Two-different-rulers_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Comparing the accuracy of two different rulers</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>The ruler on the left has widely spaced markings, so you could only measure a length to one digit (“1” or “2”). The one on the right has more markings, and therefore you can measure to two digits (“1.1” or “1.2”). Thus, the left ruler can give 1 sig fig, while the right ruler can give two. A greater number of significant figures means the number has been measured to a higher precision.</p>
+<p>A good rule of thumb to use to find the number of sig figs a number has is to think about whether the number had to be written, or whether it is acting as a “placeholder” such as zero often does. To spell this out, here are some guidelines:</p>
+<ul class="simple">
+<li><p>All non-zero digits are significant: 3.1415 has 5 sig figs, while 3.1 has only 2.</p></li>
+<li><p>Zeros between non-zero digits are significant: 50009 has 5 sig figs, and 1.01 has 3.</p></li>
+<li><p>Leading zeros (left of the first non-zero digits) are <em>not</em> significant: 0.0999 and 0.0102 both have 3 sig figs. These are only placeholders, meant to indicate that the “1” in the last number, for example, is in the hundreths place, not the tenths.</p></li>
+<li><p>Trailing zeros when no decimal place is present are not <em>necessarily</em> significant: 330 may have 2 or 3 sig figs, while 590,100 has 4, 5, or 6.</p></li>
+<li><p>They <em>are</em> significant if a decimal place is written: 330. has 3 sig figs, and 590,100. has 6.</p></li>
+</ul>
+<p>The latter two points are why (proper) scientific notation is a good way of writing numbers, to be sure of the number of significant figures. I can write <span class="math notranslate nohighlight">\(5.9010 \times 10^5\)</span>, and know the number has 5 sig figs – I didn’t have to write the last zero, so its inclusion means it is significant.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>How many sig figs does the number 0.010200 have?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The number 0.010200 has five significant figures.</p>
+</div>
+<p>One good guideline when doing numerical calculations is to keep the numbers in the intermediate steps to one <em>more</em> sig fig than you need for the actual answer, then you would round the number at the end. This typically gives you more accuracy from the calculation.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>All of the numbers below are given with 4 significant figures. Write down each number to only three sig figs.</p>
+<ol class="simple">
+<li><p>1.432</p></li>
+<li><p>17.09</p></li>
+<li><p><span class="math notranslate nohighlight">\(5.267 \times 10^{-7}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(9.996 \times 10^4\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 1.43; 17.1; <span class="math notranslate nohighlight">\(5.27 \times 10^{-7}\)</span>; <span class="math notranslate nohighlight">\(1.00 \times 10^5\)</span></p>
+</div>
+<p>So, why is engineering notation not the best? Suppose I have a length of <span class="math notranslate nohighlight">\(3.0 \times 10^{-4}\)</span> m; you can easily see in scientific notation that this number has two sig figs. However, if I convert it to engineering notation, then it becomes <span class="math notranslate nohighlight">\(300 \times 10^{-6}\)</span> m, or 300 <span class="math notranslate nohighlight">\(\mu\)</span>m. How many sig figs does it have now? The answer is unclear, since we can’t easily identify it as “two” like we did in the standard notation. This is why we will stick to the standard notation, but you should be aware of engineering notation, and its strengths and weaknesses.</p>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">4.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This lesson dealt with the SI system of units, and dealt with building up derived units with prefixes, and converting between two different units. Along the way, we also talked about scientific notation and significant digits. We will be using all of these concepts throughout the year, so you need to maintain a solid grasp of using them. Remember to periodically review this material when it gets fuzzy!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Convert between different types of units, including SI and non-SI units, as well as units with prefixes.</p></li>
+<li><p>Write a number in proper scientific notation, with the correct number of signficant figures.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L03_Velocity_and_Euler_method.html" title="previous page"><span class="section-number">3. </span>Velocity and the Euler method</a>
+    <a class='right-next' id="next-link" href="L05_Acceleration_and_free_fall.html" title="next page"><span class="section-number">5. </span>Acceleration and free fall</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

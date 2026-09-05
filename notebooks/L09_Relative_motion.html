@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Relative motion &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Linear momentum and Newton’s laws of motion" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html" />
+    <link rel="prev" title="8. Projectile motion" href="L08_Projectile_motion.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L09_Relative_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L09_Relative_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   9.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   9.2. Relative motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-relative-motion-in-vpython">
+   9.3. 1D relative motion in vPython
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-the-scene">
+     9.3.1. Creating the scene
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-viewpoint-of-the-red-sphere">
+     9.3.2. The viewpoint of the red sphere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-viewpoint-of-the-blue-sphere">
+   9.4. The viewpoint of the blue sphere
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#d-relative-motion">
+   9.5. 2D relative motion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crossing-a-river">
+     9.5.1. Crossing a river
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-general-2d-relative-motion">
+     9.5.2. More general 2D relative motion
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   9.6. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="relative-motion">
+<span id="rel-mot"></span><h1><span class="section-number">9. </span>Relative motion<a class="headerlink" href="#relative-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#d-rel-mot"><span class="std std-ref">1D relative motion</span></a></p></li>
+<li><p><a class="reference internal" href="#river-rel-mot"><span class="std std-ref">Crossing a river</span></a></p></li>
+<li><p><a class="reference internal" href="#id2"><span class="std std-ref">2D relative motion</span></a></p></li>
+</ol>
+<p>You probably have a good sense of what relative motion is already. For example, if you are driving down the road in a car, everything going on inside the car will usually appear to be at rest. This is because everything in the car has the same velocity that you do, so your “relative” velocities are zero. On the other hand, you will see the cars going in the opposite direction at a really high speed. It is not that they are actually moving this fast (at least according to a bystander on the ground!), but the cars’ velocities combine together to produce the high velocity you see. Relative motion deals with how moving objects appear to each other. Vectors will be important here, since the direction of the objects’ velocities can change the resulting relative motion. In fact, such ideas are used in ship navigation, where a maneuvering board (or “moboard”) provides a convenient way of doing relative motion vector calculations. Although they are slower than electronic means, it is always <a class="reference external" href="https://www.usni.org/magazines/proceedings/2019/april/moboards-will-never-be-obsolete">a good idea</a> to know what your equipment is doing, so you can evaluate it properly.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/USS_Truxtun_moboard.jpg"><img alt="../_images/USS_Truxtun_moboard.jpg" src="../_images/USS_Truxtun_moboard.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Sailors plot ship positions on a maneuvering board on the bridge of the guided-missile destroyer USS Truxtun (DDG 103) during a divisional tactics exercise. Truxtun is deployed as part of the George H.W. Bush Carrier Strike Group supporting maritime security operations and theater security cooperation efforts in the U.S. 5th and 6th Fleet areas of responsibility. (U.S. Navy photo by Mass Communication Specialist 3rd Class Kevin J. Steinberg/Released) (<a class="reference external" href="https://www.flickr.com/photos/usnavy/5782136258/">source</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the relative motion equation relating velocities.</p></li>
+<li><p>Calculate the velocity of one object, moving relative to a stationary observer, as seen by another object moving relative to the stationary observer.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">9.2. </span>Relative motion<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Relative motion is when two or more objects are moving in relation to each other, and need to calculate the velocity of one object as seen by the other. The important part of doing this correctly is to be particular about who is seeing what! This is done by ensuring we define our quantities, and being careful to use these definitions.</p>
+<p>First, we define</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec v}_{AB} = \textrm{velocity of object $A$ as seen by object $B$}
+\]</div>
+<p>The order is important! If I am moving northward as seen by <em>you</em>, then <em>you</em> are seen by me as moving with the same speed but southward. This means that</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec v}_{AB} = -{\vec v}_{BA}
+\]</div>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png" src="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Watching someone on a moving sidewalk</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Suppose you are on the ground watching another person walking on a moving sidewalk, with the person (P) on the moving sidewalk (S), and you on the ground (G). The velocity <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span> of the person as seen by you is the sum of the person’s velocity on the sidewalk added (as a vector!) to the velocity of the sidewalk as seen by the ground, or</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{PG} = {\vec v}_{PS} + {\vec v}_{SG}
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">A word of caution</p>
+<p>These two equations are all you need to do <em>any</em> relative motion problem. It is important to make sure you understand that all of your intuition about relative motion are in these equations, as long as you remember to use <em>vectors</em> and not magnitudes. One thing I have noticed students do is they try to second-guess these equations – for example, by changing the signs in the second equation to match which way an object is moving according to an observer. Don’t do this! The hard part of relative motion is finding the vectors for each of the object velocities; once you have done this, the relative motion equations do all of the work for me – don’t overthink them!</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are walking at 2.00 m/s due west on the moving sidewalk, which is moving at 2.50 m/s due east. What does a stationary security guard see as your velocity? Select the best choice below.</p>
+<ol class="simple">
+<li><p>4.50 m/s due west</p></li>
+<li><p>2.00 m/s due west</p></li>
+<li><p>50.0 cm/s due east</p></li>
+<li><p>2.00 m/s due east</p></li>
+<li><p>4.50 m/s due east</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Let “<span class="math notranslate nohighlight">\(Y\)</span>” represent your reference, “<span class="math notranslate nohighlight">\(G\)</span>” for the guard/ground, and “<span class="math notranslate nohighlight">\(S\)</span>” for the moving sidewalk. Then, if</p>
+<div class="math notranslate nohighlight">
+\[
+     {\vec v}_{YG} = {\vec v}_{YS} + {\vec v}_{SG}
+\]</div>
+<p>giving</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{YG} = (-2.00 \textrm{ m/s}) {\hat x} + (+2.50 \textrm{ m/s}) {\hat x}
+\]</div>
+<p>Thus, the guard sees you moving at 50.0 cm/s due east.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Building off the last question, you <em>stand in place</em> on the moving sidewalk, which is still moving at 2.50 m/s due east. If the guard is walking 2.00 m/s due east, what does the guard see as your velocity? Choose the best answer.</p>
+<ol class="simple">
+<li><p>4.5 m/s due west</p></li>
+<li><p>2.0 m/s due west</p></li>
+<li><p>0.5 m/s due east</p></li>
+<li><p>2.0 m/s due east</p></li>
+<li><p>4.5 m/s due east</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Let “<span class="math notranslate nohighlight">\(Y\)</span>” represent your reference (the same as the sidewalk), “<span class="math notranslate nohighlight">\(G\)</span>” for the guard, and “<span class="math notranslate nohighlight">\(F\)</span>” for the floor. Our equation is now</p>
+<div class="math notranslate nohighlight">
+\[
+     {\vec v}_{YG} = {\vec v}_{YF} + {\vec v}_{FG} = {\vec v}_{YF} - {\vec v}_{GF}
+\]</div>
+<p>where we had to write it in terms of the guard’s velocity according to the floor in the last step. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{YG} = (+2.50 \textrm{ m/s}) {\hat x} - (+2.00 \textrm{ m/s}) {\hat x}
+\]</div>
+<p>Thus, the guard sees you moving at 50.0 cm/s due east; the answer is the same as above, but due to a different set of motions.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you are standing on the ground (G) along a train track while a train (T) moves to the right at 15.0 m/s. On the train is a person (P) who is moving left <em>on the train</em> at 1.20 m/s.</p>
+<ol class="simple">
+<li><p>What is the velocity (magnitude in m/s) of the person as seen by you? In other words, what is <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span>?</p></li>
+<li><p>Suppose the person switches directions, and walks to the right, but at the same speed. What is <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span> now (magnitude in m/s)?</p></li>
+</ol>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png" src="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Watch a hobo pass by on a moving train</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 13.8 m/s, to the right; 16.2 m/s, to the right</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Three cars, A, B, and C, are moving along a straight section of a highway, taken as the <span class="math notranslate nohighlight">\(x\)</span> axis. The velocity of A as seen by B is <span class="math notranslate nohighlight">\({\vec v_{AB}}\)</span>, the velocity of A seen by C is <span class="math notranslate nohighlight">\({\vec v_{AC}}\)</span>, and the velocity of C seen by B is <span class="math notranslate nohighlight">\({\vec v_{CB}}\)</span>. Fill in the missing <span class="math notranslate nohighlight">\(x\)</span> velocity components in the table below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(v_{AB, x}\)</span> (m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{AC, x}\)</span> (m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{CB, x}\)</span> (m/s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(+40.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+30.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(+50.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-20.0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(+60.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-20.0\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-50.0\)</span></p></td>
+<td><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(+10.0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You need to complete the table using the vector equation</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{AB} = {\vec v}_{AC} + {\vec v}_{CB}
+\]</div>
+<p>Specifically, you just use the <span class="math notranslate nohighlight">\(x\)</span> components of this equation. This gives the results shown below.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(v_{AB, x}\)</span> (m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{AC, x}\)</span> (m/s)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{CB, x}\)</span> (m/s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(+70.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+40.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+30.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(+30.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+50.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-20.0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(+60.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-20.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+80.0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-50.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-60.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(+10.0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="d-relative-motion-in-vpython">
+<h2><span class="section-number">9.3. </span>1D relative motion in vPython<a class="headerlink" href="#d-relative-motion-in-vpython" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-the-scene">
+<h3><span class="section-number">9.3.1. </span>Creating the scene<a class="headerlink" href="#creating-the-scene" title="Permalink to this headline">¶</a></h3>
+<p>To help you get a better feeling of relative motion, we will go through some examples in vPython. There will be different perspectives on the same motion; changing which viewpoint you see the motion from will change how it appears. The first case you will look at is two objects moving along the <span class="math notranslate nohighlight">\(x\)</span> axis. There will be objects R (red sphere) and B (blue sphere), both in motion on top of a green box, the ground (G).</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Autoscaling</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">canvas(autoscale</span> <span class="pre">=</span> <span class="pre">False)</span></code> is there to avoid the perspective shown from moving, when the objects move in the simulation. By default, vPython automatically scales the scene to keep things in the picture; this command stops that scaling feature.</p>
+</div>
+<p>Most of the code in the program below should be familiar to you, but it is worthwhile to go through the parts before we get to what is different than previous cases. It is probably helpful before you run the program below to look through the code as you read through the description given next.</p>
+<p>As always, the code starts with defining time related variables <code class="docutils literal notranslate"><span class="pre">MAX_TIME</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code> and <code class="docutils literal notranslate"><span class="pre">DT</span></code>. After that, there are three objects created: two spheres, a red sphere <code class="docutils literal notranslate"><span class="pre">objR</span></code> (object R) and a blue sphere <code class="docutils literal notranslate"><span class="pre">objB</span></code> (object B). Both of these spheres are on top of a third object, a green box <code class="docutils literal notranslate"><span class="pre">ground</span></code>(object G). The only extra piece here is that the objects R and B create a <em>trail</em>, which means there is a line indicating the path of each object. You will see that these trails look different, depending on which object’s perspective we are using. At the start, it will be how all objects move as seen by the ground. At the end of the code, there is the usual <code class="docutils literal notranslate"><span class="pre">while</span></code> to update the positions of R, B and G.</p>
+<p>What is new about the code are the velocities. It is important to realize that there are <em>two</em> velocities that are important for each object. The first velocities defined are the velocities <code class="docutils literal notranslate"><span class="pre">velRG</span></code>, <code class="docutils literal notranslate"><span class="pre">velBG</span></code> and <code class="docutils literal notranslate"><span class="pre">velGG</span></code>. These are the velocities of the objects as seen by the ground G – in other words, the vectors <span class="math notranslate nohighlight">\({\vec v}_{RG}, {\vec v}_{BG}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{GG}\)</span>. Since the ground is not moving relative to itself, obviously <span class="math notranslate nohighlight">\({\vec v}_{GG} = 0\)</span>!</p>
+<p>The second set of velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> tell the computer what motion to show when the program is run. This is <em>not</em> necessarily the same as the velocities of the objects as seen by the ground, since we can take the perspective of a different object, as we will do later.</p>
+<p>Run the program now, and see how objects R and B move relative to the ground.</p>
+<p id="d-rel-mot"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/81fe304f8a?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>The velocity <code class="docutils literal notranslate"><span class="pre">velRG</span></code> was chosen so that the red sphere R moves to the right, while <code class="docutils literal notranslate"><span class="pre">velBG</span></code> was chosen so that the blue sphere B moves at a faster rate to the left. The two objects start at opposite sides of the ground, and pass each other about halfway along.</p>
+</div>
+<div class="section" id="the-viewpoint-of-the-red-sphere">
+<h3><span class="section-number">9.3.2. </span>The viewpoint of the red sphere<a class="headerlink" href="#the-viewpoint-of-the-red-sphere" title="Permalink to this headline">¶</a></h3>
+<p>Next we change the viewpoint, so it is how things are seen by object R. To do this, we will keep the three velocities <code class="docutils literal notranslate"><span class="pre">velRG</span></code>, <code class="docutils literal notranslate"><span class="pre">velBG</span></code> and <code class="docutils literal notranslate"><span class="pre">velGG</span></code> the same, and use them to change the velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> the computer uses to show the motion. Since we are using the perspective of object R, we need these velocities to be <span class="math notranslate nohighlight">\({\vec v}_{RR}\)</span> (the velocity of R as seen by itself) and <span class="math notranslate nohighlight">\({\vec v}_{BR}, {\vec v}_{GR}\)</span> (the velocities of B and the ground as seen by R).</p>
+<p>To think about how to change the code in the orogram above, we go back to the relative motion equation, and look at the velocity of the blue sphere B. The velocity <span class="math notranslate nohighlight">\({\vec v}_{BR}\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{BR} = {\vec v}_{BG} + {\vec v}_{GR}
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\({\vec v}_{GR}\)</span> (the velocity of the ground as seen by object R) is equal to <span class="math notranslate nohighlight">\(-{\vec v}_{RG}\)</span> (the velocity of R as seen by the ground), then</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{BR} = {\vec v}_{BG} - {\vec v}_{RG}
+\]</div>
+<p>If it is helpful, you can also start with the motion of B as seen by ground,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{BG} = {\vec v}_{BR} + {\vec v}_{RG}
+\]</div>
+<p>and subtract the vector <span class="math notranslate nohighlight">\({\vec v}_{RG}\)</span> from both sides to get the same equation.</p>
+<p>So, with this in mind, to animate the velocity of object B as seen by object R properly, you need to change the definition of <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> in the program above so it now says</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objB</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velBG</span> <span class="o">-</span> <span class="n">velRG</span>
+</pre></div>
+</div>
+<p>Because object R is moving with respect to the ground, the ground appears to be moving according to object R. Thus, you need to change <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code>, too. You could use the fact that <span class="math notranslate nohighlight">\({\vec v}_{GR} = - {\vec v}_{RG}\)</span>, but we will use something more sophisticated to get the same result. Starting from</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{GR} = {\vec v}_{GG} + {\vec v}_{GR}
+\]</div>
+<p>similar to what we did above, <span class="math notranslate nohighlight">\({\vec v}_{GR} = - {\vec v}_{RG}\)</span>, so that the end result is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{GR} = {\vec v}_{GG} - {\vec v}_{RG}
+\]</div>
+<p>Note that <span class="math notranslate nohighlight">\({\vec v}_{GG} = 0\)</span>, so this is a long-winded way of saying <span class="math notranslate nohighlight">\({\vec v}_{GR} = - {\vec v}_{RG}\)</span>! The reason for this method will be explained in a moment, but first, you need to change the line defining <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ground</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velGG</span> <span class="o">-</span> <span class="n">velRG</span>
+</pre></div>
+</div>
+<p>Why are we doing it this odd way? Hopefully you are picking up on the pattern – for both object B and the ground, you are starting with their velocities as seen by the <em>ground</em>, and subtracting <span class="math notranslate nohighlight">\({\vec v}_{RG}\)</span> from both to get their velocities as seen by <em>object R</em>.</p>
+<p>In fact, we can keep going in order to change <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>. Since we want to show the velocity of R as seen by R, then by the same logic as above,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{RR} = {\vec v}_{RG} - {\vec v}_{RG}
+\]</div>
+<p>In the original program above, change <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code> so that it reads</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objR</span><span class="o">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="n">velRG</span> <span class="o">-</span> <span class="n">velRG</span>
+</pre></div>
+</div>
+<p>Since <span class="math notranslate nohighlight">\({\vec v}_{RG} - {\vec v}_{RG} = 0\)</span>, then <span class="math notranslate nohighlight">\({\vec v}_{RR} = 0\)</span> – the red sphere is not moving according to itself (as expected!). After you have changed the definitions of the three velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code>, run the program and see how the animation has changed.</p>
+<p>Does the motion of all three objects make sense from the perspective of object R? You should see the following:</p>
+<ol class="simple">
+<li><p>The red sphere R does not appear to move, and leaves no trail. You are viewing the system from the perspective of object R.</p></li>
+<li><p>The ground G is now moving to the left. Remember this is the same as saying that the red sphere R is moving to the right according to the ground.</p></li>
+<li><p>The blue sphere B is moving to the left still, but is now moving faster, and leaves a long trail. Object B is moving faster according to the red sphere R than it is according to the ground G, since R and B are moving in opposite directions.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="the-viewpoint-of-the-blue-sphere">
+<h2><span class="section-number">9.4. </span>The viewpoint of the blue sphere<a class="headerlink" href="#the-viewpoint-of-the-blue-sphere" title="Permalink to this headline">¶</a></h2>
+<p>Next, you will change the program above so that it shows the viewpoint of the blue sphere, object B. Again, the only changes you will need to make are in defining <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code>. Just like before, you will subtract the <em>same</em> vector from <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code>, and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> to get the new velocities as seen by object B. See if you can figure out what this vector is, make the needed changes, and then run the program again.</p>
+<p>If you have edited the code correctly, you should see the following in the new animation:</p>
+<ol class="simple">
+<li><p>The blue sphere B does not appear to move, and leaves no trail. You are viewing the system from the perspective of object B.</p></li>
+<li><p>The ground G is now moving to the right. Remember this is the same as saying that the blue sphere B is moving to the left according to the ground. The ground should also have moved further to the right than it did when viewed from R’s perspective! This is because the velocity of object B according to the ground is faster than A’s velocity seen by the ground.</p></li>
+<li><p>The red sphere R is still moving to the right, but faster according to B than it was according to the ground.</p></li>
+<li><p>The displacement the red sphere R travels according to the blue sphere B is the same size but opposite direction to the displacement of the blue sphere B as seen by R. You can see this by the fact that R’s trail here is the same length as B’s trail was when seen by the red sphere. Again, <span class="math notranslate nohighlight">\({\vec v}_{RG} = - {\vec v}_{GR}\)</span>, so they see each other with the same speed, but moving in opposite directions!</p></li>
+</ol>
+<p>The final step for one-dimensional motion will be to change the starting positions and velocities of objects R and B, and then see what the motion looks like according to (1) the ground, (2) object R, and (3) object B. Change the starting positions of the red and blue spheres so that <code class="docutils literal notranslate"><span class="pre">objR.pos</span> <span class="pre">=</span> <span class="pre">vector(-5,</span> <span class="pre">-1,</span> <span class="pre">0)</span></code> and <code class="docutils literal notranslate"><span class="pre">objB.pos</span> <span class="pre">=</span> <span class="pre">vector(-5,</span> <span class="pre">1,</span> <span class="pre">0)</span></code>. Then change <code class="docutils literal notranslate"><span class="pre">velBG</span></code> so that <code class="docutils literal notranslate"><span class="pre">velBG</span> <span class="pre">=</span> <span class="pre">vector(2,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>.</p>
+<p>Modify the code so that it is seen from the viewpoint of the ground and then run the program. You will see the red and blue spheres start at the left side of the ground and move to the right, with the blue sphere moving faster. Then change the code so that the animation is seen from first R’s perspective, and then from B’s perspective. Are the results what you expect?</p>
+</div>
+<div class="section" id="d-relative-motion">
+<h2><span class="section-number">9.5. </span>2D relative motion<a class="headerlink" href="#d-relative-motion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="crossing-a-river">
+<h3><span class="section-number">9.5.1. </span>Crossing a river<a class="headerlink" href="#crossing-a-river" title="Permalink to this headline">¶</a></h3>
+<p>The next scenario you will work on is the case of an object crossing a moving river. It will be your goal to get the object to cross directly across the river. This will involve doing some calculations with two-dimensional relative motion.</p>
+<p>Suppose you are driving an assault amphibious vehicle (AAV), which can travel both on ground and across water. There are three frames of reference here: the vehicle V, the water W of the river, and the ground G. The river’s current is <span class="math notranslate nohighlight">\({\vec v}_{WG}\)</span>, the velocity of the water as seen by the ground. When the AAV is traveling on the water, the motor of the AAV causes it to move with a set velocity with respect to the surface of the water. This velocity is <span class="math notranslate nohighlight">\({\vec v}_{VW}\)</span>. The current of the water the AAV is moving on will change the velocity of the vehicle as seen by someone standing on the ground, or <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span>. So <span class="math notranslate nohighlight">\({\vec v}_{VW}\)</span>, the vehicle’s water speed, is constant, but the vehicle’s speed according to the ground, <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span>, will vary depending on the current.</p>
+<p>As the 1D case, it is probably helpful to read through the explanation of the code given next before you run the program below, since there are a few added parts. The first is that three objects – <code class="docutils literal notranslate"><span class="pre">shoreNorth</span></code>, <code class="docutils literal notranslate"><span class="pre">shoreSouth</span></code> and <code class="docutils literal notranslate"><span class="pre">river</span></code> – are created, and then combined using the <code class="docutils literal notranslate"><span class="pre">compound</span></code> module into a single object <code class="docutils literal notranslate"><span class="pre">ground</span></code>. From this point on, this will be the reference frame <code class="docutils literal notranslate"><span class="pre">ground</span></code> (G) used in the code, i.e. not the individual objects. After this, a <code class="docutils literal notranslate"><span class="pre">vehicle</span></code> object is created.</p>
+<p>The next new part is dealing with the velocity of the AAV. First, a velocity vector <code class="docutils literal notranslate"><span class="pre">velV</span></code> is defined. This is the velocity of the vehicle on <em>whatever</em> surface it is on at the moment. If the AAV is driving on the ground, then its velocity <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span> is given by <code class="docutils literal notranslate"><span class="pre">velV</span></code>. On the other hand, if the AAV is on water, then <code class="docutils literal notranslate"><span class="pre">velV</span></code> is now the velocity <span class="math notranslate nohighlight">\({\vec v}_{VW}\)</span> of the AAV on the <em>water</em>, not the ground.</p>
+<p>Finally, the ground is shown as stationary in the animation, so the velocity <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span> of the vehicle as seen by the ground must be determined for all cases. The code needs to check whether the AAV is on the water or on the ground in order to give it the correct velocity. If the AAV is on the ground, then it simply moves with its velocity <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span> (which is <code class="docutils literal notranslate"><span class="pre">velV</span></code>) from the ground’s viewpoint. However, when the vehicle is on the water, we know both <span class="math notranslate nohighlight">\({\vec v}_{VW}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{WG}\)</span>, and so the velocity of the AAV in the ground’s viewpoint is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{VG} = {\vec v}_{VW} + {\vec v}_{WG}
+\]</div>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, there is an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to figure out which of the two velocities to use. Since the AAV is moving in the <span class="math notranslate nohighlight">\(+y\)</span> direction, the test is whether <code>vehicle.pos</code> is within the <span class="math notranslate nohighlight">\(y\)</span> boundaries of the river, which are <span class="math notranslate nohighlight">\(y = +2\)</span> and <span class="math notranslate nohighlight">\(y = -2\)</span>.</p>
+<p>Now run the program below, and make sure the motion matches what you would expect. The movement of the AAV on the ground and the water is determined by <code class="docutils literal notranslate"><span class="pre">velV</span></code> and <code class="docutils literal notranslate"><span class="pre">velWG</span></code>.</p>
+<p id="river-rel-mot"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/43f17ef625?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>When you run the program above, you will see the white box representing the AAV move towards the top of the window when it is moving on the green ground. However, when the vehicle is on the blue water, it is carried downstream to the left at the same time it is moving upwards – its motion on the water is a combination of the two. The AAV lands on the upper bank downstream from where it entered the water. The relationship between the three velocity vectors is shown in the figure below.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png"><img alt="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png" src="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">Relative motion vectors for the AAV carried downstream</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>From the definitions of <code class="docutils literal notranslate"><span class="pre">velV</span></code> and <code class="docutils literal notranslate"><span class="pre">velWG</span></code>, you can see that the speed of the vehicle on the water <span class="math notranslate nohighlight">\(v_{VW} = 2\)</span>, while the speed of the current <span class="math notranslate nohighlight">\(v_{WG} = 1.5\)</span>. From this and the triangle above, you can calculate the speed <span class="math notranslate nohighlight">\(v_{VG}\)</span> of the AAV as it is seen from the ground.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Calculate this speed <span class="math notranslate nohighlight">\(v_{VG}\)</span>. Remember that there is a <span class="math notranslate nohighlight">\(90^\circ\)</span> angle between the vectors <span class="math notranslate nohighlight">\({\vec v}_{WG}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{VW}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since the two vectors are perpendicular, you can use the Pythagorean theorem to find the magnitude of the AAV’s velocity while on the water. This gives 2.50 m/s.</p>
+</div>
+<p>If we want the AAV to land on the opposite shore directly across from where it went into the water, then the appropriate diagram should be more like the one below. Take some time to see how the triangle given is different than the previous one. Note that the speed of the current <span class="math notranslate nohighlight">\(v_{WG}\)</span> is still the same as above, but the direction the AAV is moving relative to the water must change. This ensures the vehicle lands directly across the river, as seen by the ground. The AAV needs to point upstream, so that the net result is a velocity <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span> is exactly in the <span class="math notranslate nohighlight">\(+y\)</span> direction.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png"><img alt="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png" src="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Relative motion vectors for the AAV aiming upstream</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the same values as before for <span class="math notranslate nohighlight">\(v_{VW}\)</span> and <span class="math notranslate nohighlight">\(v_{WG}\)</span>, calculate the angle the AAV would have to point upstream (<span class="math notranslate nohighlight">\(\theta\)</span> in the diagram above) so that it moves directly across the river. Now the <span class="math notranslate nohighlight">\(90^\circ\)</span> angle is between <span class="math notranslate nohighlight">\({\vec v}_{WG}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Now the hypotenuse is 2.00 m/s, not one of the sides. Using the inverse sine function, you get <span class="math notranslate nohighlight">\(\theta = 48.6^\circ\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Calculate the new speed <span class="math notranslate nohighlight">\(v_{VG}\)</span> as it moves across the water in this case. Is it faster or slower than before?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Using the Pythagorean theorem (or one of the inverse trignometric functions), the speed <span class="math notranslate nohighlight">\(v_{VG}\)</span> is 1.32 m/s. The AAV is moving slower, since some of its velocity is “canceled” by the river current.</p>
+</div>
+<p>To check your answer, change the velocity <code class="docutils literal notranslate"><span class="pre">velV</span></code> in the program above so that the AAV moves up the screen when it is on the water. <em>Hint:</em> Remember that the new velocity has to cancel out the effect of the river current. If you think about what this means, then you can find the new <code class="docutils literal notranslate"><span class="pre">velV</span></code> in unit vector notation without any calculation! Run the program and verify that your answer is correct.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You want to cross a river at a point where the water is moving due east at 8.00 km/h. When you put your boat in the water, it can travel 15.0 km/h (relative to the water).</p>
+<ol class="simple">
+<li><p>Which way (in degrees NSEW) would you have to point the boat so it travels southward directly across to the other bank?</p></li>
+<li><p>How fast will you travel (in km/h) according to your friend on the riverbank?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 32.3<span class="math notranslate nohighlight">\(^\circ\)</span> west of south; 12.7 km/h</p>
+</div>
+</div>
+<div class="section" id="more-general-2d-relative-motion">
+<h3><span class="section-number">9.5.2. </span>More general 2D relative motion<a class="headerlink" href="#more-general-2d-relative-motion" title="Permalink to this headline">¶</a></h3>
+<p>In the first vPython example you looked at, there was a red sphere and a blue sphere moving along a line in opposite directions. Now we go back to these objects, but now the blue sphere is traveling in the <span class="math notranslate nohighlight">\(-y\)</span> direction, while the red sphere is still traveling in the <span class="math notranslate nohighlight">\(+x\)</span> direction. Run the program below to see what the basic scenario looks like.</p>
+<p id="id2"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/d7b7588498?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Next you will alter the definitions of the velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code>, and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> so that the motion is seen from the viewpoint of the blue sphere B. Remember from the first example you will have to subtract the same velocity from all three of <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code>, and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code>. Run the code and verify the motion looks like what you would expect. The ground now appears to be moving towards the top of the screen, while the red object R appears to move both to the right and towards to top of the screen.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the velocity <span class="math notranslate nohighlight">\({\vec v}_{RB}\)</span> of the red sphere R as seen by the blue sphere B? Find the direction in degrees counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis (to the right of the screen). You will need to get the appropriate information from the code to solve for this velocity.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Let <span class="math notranslate nohighlight">\(R\)</span> be the perspective of the red ball, <span class="math notranslate nohighlight">\(B\)</span> the blue ball, and <span class="math notranslate nohighlight">\(G\)</span> the ground. Then, from the code, we have that <span class="math notranslate nohighlight">\({\vec v}_{RG} = (+1.50 \textrm{ m/s}) {\hat x}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{BG} = (-1.00 \textrm{ m/s}) {\hat y}\)</span>. Using the relative motion equations,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{RB} = {\vec v}_{RG} + {\vec v}_{GB} = {\vec v}_{RG} - {\vec v}_{BG}
+\]</div>
+<p>This gives that <span class="math notranslate nohighlight">\({\vec v}_{RB} = (+1.50 \textrm{ m/s}) {\hat x} + (+1.00 \textrm{ m/s}) {\hat x}\)</span>. Solving for the angle using the inverse tangent function, we get 33.7<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis.</p>
+</div>
+<p>Finally, change the definitions of the velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code>, and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> so that the motion is seen from the viewpoint of the red sphere R. Run your code after you have done this, and verify that the motion appears correct. Note that the motion of B as seen by R is exactly the opposite direction but same distance traveled as the motion of R as seen by B.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the velocity <span class="math notranslate nohighlight">\({\vec v}_{BR}\)</span> of the blue sphere B as seen by the red sphere R? Find the direction in degrees counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis (to the right of the screen). You will need to get the appropriate information from the code to solve for this velocity. How does this velocity <span class="math notranslate nohighlight">\({\vec v}_{BR}\)</span> compare to your answer for <span class="math notranslate nohighlight">\({\vec v}_{RB}\)</span>?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The easiest way to do this is to use the fact that <span class="math notranslate nohighlight">\({\vec v}_{BR} = -{\vec v}_{RB}\)</span>. So, the direction of <span class="math notranslate nohighlight">\({\vec v}_{BR}\)</span> is 180.<span class="math notranslate nohighlight">\(^\circ\)</span> flipped from that of <span class="math notranslate nohighlight">\({\vec v}_{RB}\)</span>. This gives a direction of 214<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Pranksters from NAPS have stolen the Coast Guard cutters JUNIPER and WILLOW from Naval Station Newport! They leave Newport harbor at the same time, with the JUNIPER traveling at 10.0 m/s with a bearing of 30<span class="math notranslate nohighlight">\(^\circ\)</span> west of south, and the WILLOW moving at 12.0 m/s at 20<span class="math notranslate nohighlight">\(^\circ\)</span> south of east. What is the velocity of CGC WILLOW (magnitude in m/s, with NSEW direction), as seen by CGC JUNIPER?</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png" src="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Velocities of the JUNIPER and WILLOW, seen by an observer in Newport</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 16.9 m/s, 15.6<span class="math notranslate nohighlight">\(^\circ\)</span> north of west</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">9.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Relative motion is the description of how moving objects view each other. It plays a key role in the sea services, whether you are on a submarine, ship, or aircraft. We have seen here the defining vector equations used to study relative motion, and shown how these work in both one- and two-dimensional motion. This includes programming such motion into vPython, and viewing a scene from the standpoint of various moving objects. Relative motion also allows us to generalize the notion of collisions in the center of mass reference frame to any general situation, with an arbitrary value of the system’s momentum.</p>
+<p>After this lesson you should be able to:</p>
+<ul class="simple">
+<li><p>Find the velocity of one moving object as seen by another moving observer.</p></li>
+<li><p>Use relative motion to find the final velocities in a generic 1D collision.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L08_Projectile_motion.html" title="previous page"><span class="section-number">8. </span>Projectile motion</a>
+    <a class='right-next' id="next-link" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html" title="next page"><span class="section-number">10. </span>Linear momentum and Newton’s laws of motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24. Coulomb’s law &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="25. Electric fields" href="L25_Electric_fields.html" />
+    <link rel="prev" title="23. Kepler’s laws of planetary motion" href="L23_Kepler%27s_laws.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L24_Coulomb's_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L24_Coulomb's_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   24.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electric-charge">
+   24.2. Electric charge
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   24.3. Coulomb’s law
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-return-of-the-equilateral-triangle">
+     24.3.1. Example: Return of the equilateral triangle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   24.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="coulomb-s-law">
+<span id="electrostatic-force"></span><h1><span class="section-number">24. </span>Coulomb’s law<a class="headerlink" href="#coulomb-s-law" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">24.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Our current understanding of how physics works at a fundamental level is that there are four distinct interactions that explain all phenomena. Two of these operate only at the subatomic level, so we don’t have direct experience with them. These are the weak nuclear force – the reason that radioactive nuclei decay – and the strong nuclear force – which is why nuclei stay together the rest of the time! However, these forces act over distances of <span class="math notranslate nohighlight">\(10^{-15}\)</span> m or less, so we only see their effects only indirectly.</p>
+<p>On the other hand, we will study two fundamental interactions that can act over any distance, because they are represented by inverse square laws. The first of these, gravitation, we looked at in <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>. We now turn to the second, the electrostatic force, as given by Coulomb’s law. Much like gravity, the force between stationary electric chargess varies as <span class="math notranslate nohighlight">\(1/r^2\)</span>. So while it does decrease with larger distance, the force never goes exactly to zero. However, unlike the masses of gravitation, electric charges come in positive and negative varieties. Thus, in most practical applications, the equal number of positive and negative charges in most matter reduces the size of the electrostatic force.</p>
+<p>You may wonder why I keep using “electrostatic” as the name of the force, rather than “electric”. It turns out that when the electric charges are moving, the situation gets more complicated. First, a moving electric charge will create magnetic effects as well. However, the electric effects of the charge do not go away! To treat problems like this properly, one needs to combine both electricity and magnetism into an electromagnetic effect. It was James Clerk Maxwell, a Scottish physicist, who first worked out how to do so towards the end of the 19th century. So, I should really be calling this fundamental interaction “eletromagnetism”, rather than splitting off the electrostatic force by itself. However, treating elecromagnetism as a whole makes it more complicated! For now, we look at the simpler case of stationary electric charges.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State Coulomb’s law.</p></li>
+<li><p>State the direction of the electrostatic force on a charge to due to like or opposite charges.</p></li>
+<li><p>Given a situation with two or more charges, find the electrostatic force on each of the charges.</p></li>
+</ul>
+</div>
+<div class="section" id="electric-charge">
+<h2><span class="section-number">24.2. </span>Electric charge<a class="headerlink" href="#electric-charge" title="Permalink to this headline">¶</a></h2>
+<p>When we talked about the universal law of gravitation, we saw that there were two different types of constants involved:</p>
+<ol class="simple">
+<li><p>The constant <span class="math notranslate nohighlight">\(G\)</span> gives the strength of the gravitational interaction between <em>any</em> two masses in the Universe. Making this number bigger or smaller would change the force of gravity between all pairs of objects exactly the same.</p></li>
+<li><p>For a <em>given</em> object, its mass <span class="math notranslate nohighlight">\(m\)</span> describes how it is affected by the gravitational fields of all other objects. Unlike <span class="math notranslate nohighlight">\(G\)</span>, we can change the mass of a single object, without affecting the masses of any other objects. Changing the mass of an object only changes the magnitude of the gravitational force on it.</p></li>
+</ol>
+<p>When we talk about the electrostatic force, we will see this same type of structure. For now, let’s just focus on the electric analogue of the mass. This is known as the <strong>charge</strong> of an object. The charge <span class="math notranslate nohighlight">\(q\)</span> of an object is a measure of how that object is affected by the electrostatic force on the object, due to all other charges. Charge has units of coulombs (C).</p>
+<p>As far as we can tell, all charges in the universe are multiples of a single value, <span class="math notranslate nohighlight">\(e\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[
+    e = 1.609 \times 10^{-19} \textrm{ C}
+\]</div>
+<p>This is a <em>magnitude</em> of charge, so it means that a proton has a charge <span class="math notranslate nohighlight">\(+e\)</span>, while an electron has a charge <span class="math notranslate nohighlight">\(-e\)</span>. Thus, the size of a coulomb’s worth of charge is actually a large number of electrons; 1.00 C of charge is the charge of <span class="math notranslate nohighlight">\(1/e = 6.22 \times 10^{18}\)</span> electrons. The average lightning bolt has about a few tens of coulombs of charge. So, unlike the kilogram, the coulomb is actually a large unit!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A system is made of exactly 1525 particles, each of which is either a proton or an electron. If the net charge of the system is <span class="math notranslate nohighlight">\(-5.456 \times 10^{-17}\)</span> C, how many electrons are in this system? <strong>Hint:</strong> Write down two equations for the number of electrons <span class="math notranslate nohighlight">\(n_e\)</span> and protons <span class="math notranslate nohighlight">\(n_p\)</span> in the system, in terms of the total number <span class="math notranslate nohighlight">\(N\)</span> of particles and the total charge <span class="math notranslate nohighlight">\(Q\)</span>, then solve for <span class="math notranslate nohighlight">\(n_e\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 933 electrons</p>
+</div>
+<p>The fact that all observable particles in the Universe have a charge that is an integer multiple of <span class="math notranslate nohighlight">\(e\)</span> is known as <strong>charge quantization</strong>. This is not an obvious fact, and it is unknown why it is true, although physicists have a few ideas.</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">24.3. </span>Coulomb’s law<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The equation for the electrostatic force is known as <strong>Coulomb’s law</strong>, and is in a similar form to that of Newton’s law of universal gravitation. We will again use the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> as in <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>, now defined based on the positions of the interacting charges <span class="math notranslate nohighlight">\(q_i\)</span> and <span class="math notranslate nohighlight">\(q_j\)</span>. Remember we start from the relative position vectors,</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec r}_{12} = {\vec r}_1 - {\vec r}_2 \qquad
+	{\vec r}_{21} = {\vec r}_2 - {\vec r}_1 
+\]</div>
+<p>and then define the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r}_{ij} = \frac{{\vec r}_{ij}}{r_{ij}}
+\]</div>
+<p>Each unit vector <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> has its tail <em>at</em> object <span class="math notranslate nohighlight">\(i\)</span>, and pointing <em>away</em> from object <span class="math notranslate nohighlight">\(j\)</span>. This is shown in the diagram below, along with the position vectors, locating each charge relative to the origin. The unit vectors will give the line along which the electrostatic force points. Depending on the values of the charges <span class="math notranslate nohighlight">\(q_i\)</span> and <span class="math notranslate nohighlight">\(q_j\)</span>, the force may point in the same direction as <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span>, or in the opposite direction.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L24_Fig01_Rel_pos_vec.png"><img alt="../_images/INT_AY22_L24_Fig01_Rel_pos_vec.png" src="../_images/INT_AY22_L24_Fig01_Rel_pos_vec.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24.1 </span><span class="caption-text">The unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let’s now get into the force equation. The electrostatic force on charge <span class="math notranslate nohighlight">\(q_i\)</span> due to charge <span class="math notranslate nohighlight">\(q_j\)</span> a distance <span class="math notranslate nohighlight">\(r_{ij}\)</span> away is stated mathematically as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{elec, ij} = \biggl( \frac{k q_i q_j}{r^2 _{ij}} \biggr) {\hat r}_{ij}
+\]</div>
+<p>with the constant <span class="math notranslate nohighlight">\(k = 8.99 \times 10^9\)</span> N<span class="math notranslate nohighlight">\(\cdot\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>/C<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="warning admonition">
+<p class="admonition-title">The direction of the electrostatic force</p>
+<p>There is no minus sign out in front, unlike the gravitational force equation! The minus sign in front of the gravitational force equation meant that force was <em>always</em> attractive, since the masses were positive. Here with Coulomb’s law, the direction of the electrostatic force is determined by the product of the charges. If <span class="math notranslate nohighlight">\(q_i q_j &lt; 0\)</span>, then the force is attractive. This gives the same overall minus sign we had with the gravitational force. If the product <span class="math notranslate nohighlight">\(q_i q_j\)</span> &gt; 0 (i.e. both positive or both negative charges), then the force is repulsive. The force on the charge <span class="math notranslate nohighlight">\(q_i\)</span> points in the same direction as <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span>, i.e. away from the other charge <span class="math notranslate nohighlight">\(q_j\)</span>.</p>
+</div>
+<p>Here are some other properties of note. As with the universal law of gravitation, the electrostatic force also obeys Newton’s third law – if you flip the locations of the labels <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> in the equation, you get the same magnitude, just the opposite direction (since <span class="math notranslate nohighlight">\({\hat r}_{ji} = -{\hat r}_{ij}\)</span>). In addition, Coulomb’s law is also an inverse-square law, depending on the distance <span class="math notranslate nohighlight">\(r_{ij}\)</span> between the charges as <span class="math notranslate nohighlight">\(1/r_{ij} ^2\)</span>.</p>
+<p>You can experiment with the magnitude and direction of the electrostatic force, using the PhET application “Coulomb’s Law”. Clicking on “Macro Scale” uses distances of centimeters, and charges of microcoulombs; “Atomic Scale” uses distances of picometers and charges in multiples of <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/coulombs-law/latest/coulombs-law_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two identical point charges in free space are connected by a string 7.60 cm long. The tension in the string is 210. mN. What is the magnitude of the charge (in nC) on each of the point charges?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 367 nC</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>At what separation (in m) does the electrostatic force between <span class="math notranslate nohighlight">\(+11.2\ \mu\)</span>C and <span class="math notranslate nohighlight">\(+29.1\ \mu\)</span>C point charges have a magnitude of 1.57 N?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 1.37 m</p>
+</div>
+<div class="section" id="example-return-of-the-equilateral-triangle">
+<span id="electrostatic-force-example"></span><h3><span class="section-number">24.3.1. </span>Example: Return of the equilateral triangle<a class="headerlink" href="#example-return-of-the-equilateral-triangle" title="Permalink to this headline">¶</a></h3>
+<p>In <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>, there was an example of the gravitational force on a mass at one corner of an equilateral triangle, due to masses at the other two corners. Let’s use the same triangle, but put charges on each of the particles. Then we will find the net electrostatic force on one of the charges. In some ways, this will be the same process as what we did with gravitation, but the effect of the charges will have an influence as well. I have used both positive and negative charges in this example, so you see how this affects the forces.</p>
+<p>In the figure below, three charges are held in place at the corners of an equilateral triangle, again with sides <span class="math notranslate nohighlight">\(d\)</span> of 7.00 m. Here, we use charges <span class="math notranslate nohighlight">\(q_1 = +2.00 \ \mu C\)</span>, <span class="math notranslate nohighlight">\(q_2 = -4.00 \ \mu C\)</span>, and <span class="math notranslate nohighlight">\(q_3 = +3.00 \ \mu C\)</span>. Note that the relative sizes of these charges are the same as the masses in the gravitation example of Lesson 21; however, we have changed the units from kg to <span class="math notranslate nohighlight">\(\mu C\)</span>, and added in both positive and negative signs! Notice that I use the color coding of red as positive, and green as negative. We will now find the net electrostatic force on <span class="math notranslate nohighlight">\(q_1\)</span>.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L28_Fig01_Charge_triangle_small.png"><img alt="../_images/INT_AY21_L28_Fig01_Charge_triangle_small.png" src="../_images/INT_AY21_L28_Fig01_Charge_triangle_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24.2 </span><span class="caption-text">Three charges fixed at the corners of an equilateral triangle</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Notice that, because the <em>geometry</em> of the problem is the same as before, the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span> and <span class="math notranslate nohighlight">\({\hat r}_{13}\)</span> are exactly the same as the previous example. The <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span> will always be the same, regardless of whether you are working with gravitational or electrostatic forces. Remember these unit vectors have a tail at the object of interest, and point away from the object exerting a force on it.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r}_{12} = (\cos \theta) {\hat x} + (\sin \theta) {\hat y} \qquad
+    {\hat r}_{13} = (-\cos \theta) {\hat x} + (\sin \theta) {\hat y}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta = 60.0^\circ\)</span>. When these are drawn, they look like the figure below – <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span> is in the first quadrant, while <span class="math notranslate nohighlight">\({\hat r}_{13}\)</span> is in the second.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L28_Fig02_Unit_vectors_small.png"><img alt="../_images/INT_AY21_L28_Fig02_Unit_vectors_small.png" src="../_images/INT_AY21_L28_Fig02_Unit_vectors_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24.3 </span><span class="caption-text">Unit vectors <span class="math notranslate nohighlight">\({\hat r}_{12}\)</span> and <span class="math notranslate nohighlight">\({\hat r}_{13}\)</span></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, the directions of the actual <em>forces</em> are not the same as the gravitational case, because of the signs of the charges. In particular, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span> will <em>repel</em> each other, since they are both positive, while <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> will <em>attract</em> each other, due to their opposite signs. This gives a different FBD that the gravitation example, so the signs of the charges <span class="math notranslate nohighlight">\(q_i\)</span> make a difference.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L28_Fig03_FBD_small.png"><img alt="../_images/INT_AY21_L28_Fig03_FBD_small.png" src="../_images/INT_AY21_L28_Fig03_FBD_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 24.4 </span><span class="caption-text">FBD for charge <span class="math notranslate nohighlight">\(q_1\)</span></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Remember that we only care about the forces acting <em>on</em> <span class="math notranslate nohighlight">\(q_1\)</span>; in particular, the force between <span class="math notranslate nohighlight">\(q_2\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span> is irrelevant for what we are trying to do here. Remember Newton’s zeroth law!</p>
+<p>Getting back to our problem, why do we have this difference between the directions of the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{12}, {\hat r}_{13}\)</span> and the forces <span class="math notranslate nohighlight">\({\vec F}_{12}, {\vec F}_{13}\)</span>? Let’s work out what is happening for each force vector. The electrostatic force between charges <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{12} = \biggl( \frac{k q_1 q_2}{r^2 _{12}} \biggr) {\hat r}_{12} = \biggl(\frac{k q_1 q_2}{d^2} \biggr) [(\cos \theta) {\hat x} + (\sin \theta)]
+\]</div>
+<p>On the face of it, this force is in the first quadrant. However, remember that <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> are of opposite signs, so that the product <span class="math notranslate nohighlight">\(q_1 q_2 &lt; 0\)</span>. Thus, this vector is actually in the third quadrant, matching our FBD! Thus, this vector points in the second quadrant. Unlike the gravitational case, the number inside the parentheses is not always positive, so it can change the direction of the electrostatic force. The situation is different for <span class="math notranslate nohighlight">\({\vec F}_{13}\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{13} = \biggl( \frac{k q_1 q_3}{r^2 _{13}} \biggr) {\hat r}_{13} = \biggl(\frac{k q_1 q_3}{d^2} \biggr) [(-\cos \theta) {\hat x} + (\sin \theta)]
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span> have the same signs, so that <span class="math notranslate nohighlight">\(q_1 q_3 &gt; 0\)</span>. If we compute the individual force vectors, we have that</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{12} = (-7.340 \times 10^{-4} \textrm{ N}) {\hat x} + (-1.271 \times 10^{-3} \textrm{ N}) {\hat y}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{13} = (-5.505 \times 10^{-4} \textrm{ N}) {\hat x} + (9.535 \times 10^{-4} \textrm{ N}) {\hat y}
+\]</div>
+<p>Notice that the force components are much larger than those for the gravitational example, even though the charges “look smaller” than the masses did. The electrostatic force between two charges with roughly a coulomb of charge is much greater than the gravitational force between two kilogram-size masses. This is a result of the large size difference between the Coulomb constant <span class="math notranslate nohighlight">\(k\)</span> and the gravitational constant <span class="math notranslate nohighlight">\(G\)</span>. Finding the total force gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_1 = (-1.284 \times 10^{-3} \textrm{ N}) {\hat x} + (-3.175 \times 10^{-4} \textrm{ N}) {\hat y}
+\]</div>
+<p>Using the Pythagorean theorem and the inverse tangent, this force has a magnitude of 1.32 mN and a direction of 194<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis.</p>
+<p>It is interesting to see how the direction has changed, relative to the gravitational example of Lesson 21. In that problem, since <span class="math notranslate nohighlight">\(m_1\)</span> is attracted to both <span class="math notranslate nohighlight">\(m_2\)</span> and <span class="math notranslate nohighlight">\(m_3\)</span>, the net gravitational force on <span class="math notranslate nohighlight">\(m_1\)</span> was towards them, more or less along the <span class="math notranslate nohighlight">\(-y\)</span> axis. Here, though, <span class="math notranslate nohighlight">\(q_1\)</span> is repelled by <span class="math notranslate nohighlight">\(q_3\)</span>, even though it is attracted to <span class="math notranslate nohighlight">\(q_2\)</span>. Thus, the net force is roughly along the <span class="math notranslate nohighlight">\(-x\)</span> axis. The fact that the net electrostatic force includes both attraction and repulsion gives more variety in the magnitude and direction.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the same situation as above, find the net electrostatic force on <span class="math notranslate nohighlight">\(q_3\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec F}_3 = (-1.651 \times 10^{-3} \textrm{ N}) {\hat x} + (-9.533 \times 10^{-4} \textrm{ N}) {\hat y}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">netElectroForce()</span></code> that finds the net electrostatic force on a charge, due to a collection of other charges. The arguments of this function should be the charge <code class="docutils literal notranslate"><span class="pre">obj</span></code>, and the list <code class="docutils literal notranslate"><span class="pre">objList</span></code>, a list of sphere objects with <code class="docutils literal notranslate"><span class="pre">pos</span></code> and <code class="docutils literal notranslate"><span class="pre">charge</span></code> attributes. Notice this is just the electrostatic version of the example program in <a class="reference internal" href="L21_Universal_gravitation.html#grav-ex"><span class="std std-ref">Lesson 21</span></a>, so you can use that program for guidance. Check the accuracy of your program by verifying the net forces on <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span>, as shown above.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a sample program to solve the problem. The additional code at the end is what is needed to define the charges, and then find the net electrostatic force on <span class="math notranslate nohighlight">\(q_1\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">netElectroForce</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">objList</span><span class="p">):</span>
+
+    <span class="c1"># Definitions</span>
+
+    <span class="n">k</span> <span class="o">=</span> <span class="mf">8.99E9</span>                    <span class="c1"># Coulomb&#39;s constant (N m^2 / kg^2)</span>
+    <span class="n">netForce</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>    <span class="c1"># Initialize net force</span>
+
+    <span class="c1"># Go through objects in objList, and</span>
+    <span class="c1"># add its contribution to the net</span>
+    <span class="c1"># electrostatic force on obj</span>
+
+    <span class="k">for</span> <span class="n">otherObj</span> <span class="ow">in</span> <span class="n">objList</span><span class="p">:</span>
+
+        <span class="c1"># Find relation position vector r_ij</span>
+
+        <span class="n">rVec</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">pos</span> <span class="o">-</span> <span class="n">otherObj</span><span class="o">.</span><span class="n">pos</span>
+
+        <span class="c1"># Find unit vector, distance between charges</span>
+
+        <span class="n">rHat</span> <span class="o">=</span> <span class="n">hat</span><span class="p">(</span><span class="n">rVec</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">mag</span><span class="p">(</span><span class="n">rVec</span><span class="p">)</span>
+
+        <span class="c1"># Find each electrostatic force vector</span>
+
+        <span class="n">netForce</span> <span class="o">+=</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">obj</span><span class="o">.</span><span class="n">charge</span> <span class="o">*</span> <span class="n">otherObj</span><span class="o">.</span><span class="n">charge</span> <span class="o">/</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">rHat</span>
+
+    <span class="c1"># Return final net force vector</span>
+
+    <span class="k">return</span> <span class="n">netForce</span>
+    
+<span class="c1"># Definitions</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="mf">7.00</span>                 <span class="c1"># Triangle sides (m)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>          <span class="c1"># Triangle angles (rad)</span>
+
+<span class="c1"># Create charges</span>
+
+<span class="n">q1</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">d</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="n">cos</span><span class="p">(</span><span class="n">Q</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">Q</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> \
+            <span class="n">charge</span> <span class="o">=</span> <span class="mf">2E-6</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> \
+            <span class="n">radius</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">charge</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4E-6</span><span class="p">,</span> \
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">charge</span> <span class="o">=</span> <span class="mf">3E-6</span><span class="p">,</span> \
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Find net force on q1, due to q2, q3</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">netElectroForce</span><span class="p">(</span><span class="n">q1</span><span class="p">,</span> <span class="p">[</span><span class="n">q2</span><span class="p">,</span> <span class="n">q3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net electrostatic force on q1 =&#39;</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Challenge</p>
+<p>Create a procedure <code class="docutils literal notranslate"><span class="pre">forceMagDir()</span></code> that prints out the magnitude and direction of the net electrostatic force. This procedure should use the same arguments as <code class="docutils literal notranslate"><span class="pre">netElectroForce()</span></code>, and you can use that function to find the net force in unit vector form. You will need to test which quadrant the net force is in, to give the correct direction.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one possible solution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">forceMagDir</span><span class="p">(</span><span class="n">charge</span><span class="p">,</span> <span class="n">chargeList</span><span class="p">):</span>
+
+    <span class="c1"># Get net force in unit vector form</span>
+    
+    <span class="n">forceResult</span> <span class="o">=</span> <span class="n">netElectroForce</span><span class="p">(</span><span class="n">charge</span><span class="p">,</span> <span class="n">chargeList</span><span class="p">)</span>
+    
+    <span class="c1"># Find magnitude of net force, print it out</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force magnitude =&#39;</span><span class="p">,</span> <span class="n">mag</span><span class="p">(</span><span class="n">forceResult</span><span class="p">),</span> <span class="s1">&#39; N&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Find direction by finding which quadrant</span>
+    <span class="c1"># the net force is in, then finding appropriate</span>
+    <span class="c1"># angle CCW from +x axis</span>
+    
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">(</span><span class="n">atan</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">forceResult</span><span class="o">.</span><span class="n">y</span> <span class="o">/</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">x</span><span class="p">)))</span>
+    
+    <span class="k">if</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force dir. =&#39;</span><span class="p">,</span> <span class="n">angle</span><span class="p">,</span> <span class="s1">&#39; deg CCW from +x axis&#39;</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force dir. =&#39;</span><span class="p">,</span> <span class="mi">180</span> <span class="o">-</span> <span class="n">angle</span><span class="p">,</span> <span class="s1">&#39; deg CCW from +x axis&#39;</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force dir. =&#39;</span><span class="p">,</span> <span class="mi">180</span> <span class="o">+</span> <span class="n">angle</span><span class="p">,</span> <span class="s1">&#39; deg CCW from +x axis&#39;</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">forceResult</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net force dir. =&#39;</span><span class="p">,</span> <span class="mi">360</span> <span class="o">-</span> <span class="n">angle</span><span class="p">,</span> <span class="s1">&#39; deg CCW from +x axis&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">24.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We have now discussed two of the long-range fundamental forces in the Universe: gravitation and the electrostatic force. They are similar in form and both rely on the unit vectors <span class="math notranslate nohighlight">\({\hat r}_{ij}\)</span>. However, there is an important difference between the possible directions of the two forces, due to the positive and negative signs of electric charges, as opposed to mass always being positive. The force of gravity is always attractive, while the electrostatic force can be repulsive or attractive.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>State the value of <span class="math notranslate nohighlight">\(e\)</span>.</p></li>
+<li><p>Calculate the electrostatic force on a charge due to surrounding charges.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L23_Kepler%27s_laws.html" title="previous page"><span class="section-number">23. </span>Kepler’s laws of planetary motion</a>
+    <a class='right-next' id="next-link" href="L25_Electric_fields.html" title="next page"><span class="section-number">25. </span>Electric fields</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

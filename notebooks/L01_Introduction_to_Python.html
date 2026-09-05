@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Introduction to Python &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Vectors and vPython" href="L02_Vectors_and_vPython.html" />
+    <link rel="prev" title="NAPS Intermediate Physics" href="../README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L01_Introduction_to_Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L01_Introduction_to_Python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   1.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-print-command">
+   1.2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     print
+    </span>
+   </code>
+   command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-and-mathematical-operators">
+   1.3. Variables and mathematical operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statements">
+   1.4.
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+   statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loops-and-lists">
+   1.5. Loops and lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedures-and-functions">
+   1.6. Procedures and functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-calculating-square-roots">
+   1.7. Example: Calculating square roots
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   1.8. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-python">
+<span id="intro-py"></span><h1><span class="section-number">1. </span>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#hello-world"><span class="std std-ref">‘Hello world!’</span></a></p></li>
+<li><p><a class="reference internal" href="#def-var"><span class="std std-ref">Defining variables</span></a></p></li>
+<li><p><a class="reference internal" href="#if-stat"><span class="std std-ref">If statements</span></a></p></li>
+<li><p><a class="reference internal" href="#while-loop"><span class="std std-ref">While loops</span></a></p></li>
+<li><p><a class="reference internal" href="#for-loop-range"><span class="std std-ref">For loops and range()</span></a></p></li>
+<li><p><a class="reference internal" href="#for-loop-list"><span class="std std-ref">For loops and lists</span></a></p></li>
+<li><p><a class="reference internal" href="#five-mult"><span class="std std-ref">firstFiveMultOfSeven()</span></a></p></li>
+<li><p><a class="reference internal" href="#mult-sum"><span class="std std-ref">multipleSum()</span></a></p></li>
+<li><p><a class="reference internal" href="#heron"><span class="std std-ref">Heron’s method</span></a></p></li>
+<li><p><a class="reference internal" href="#sqrt"><span class="std std-ref">squareRoot()</span></a></p></li>
+</ol>
+<p>In this lesson, you will learn the basics of the Python programming language. You will use this in subsequent lessons to explore some of the foundations of physics; I hope you have fun creating these simulations on your computer! Python was invented in 1990 by Guido van Rossem, a Dutch computer scientist. Python is a modern, object-oriented language which is easy to learn. All of the instructions you give the computer will be in the Python programming language. These instructions are collectively called <strong>code</strong>.</p>
+<p>Why are we doing this?</p>
+<ul class="simple">
+<li><p>Physics uses tools from many other different areas – writing, mathematics, and more recently, computer programming. Nowadays, any working scientist, mathematician, or engineer should know at least the basics of writing a computer program.</p></li>
+<li><p>In Python, we can create simulations that illustrate what is happening in physical situations. This helps to understand aspects of physics that are difficult to see using other methods.</p></li>
+<li><p>Both physics and computer programming involve thinking logically about a problem, and solving it in a methodical way. In particular, you must understand the physics concepts yourself before you can explain it clearly and precisely to a computer!</p></li>
+<li><p>An important skill in programming is learning how to <em>debug</em> a program – figuring out where in the program code a mistake has been made, and fixing it. Sometimes this can take a while! A similar skill is very useful in finding the error in a physics problem solution.</p></li>
+</ul>
+<p>Why Python?</p>
+<ul class="simple">
+<li><p>Python is very common language that is relatively easy to learn, but has lots of add-ons for powerful applications.</p></li>
+<li><p>There are several physics classes across the country that use Python programs in their class.</p></li>
+<li><p>We will often use the vPython package, which allows us to easily create 3D visuals.</p></li>
+</ul>
+<p>This lesson goes through some of the basic concepts and Python commands we will need to study the motion of objects.</p>
+<div class="warning admonition">
+<p class="admonition-title">Trying the code</p>
+<p>The <em>only</em> way to learn anything in life is to try it yourself. Watching another person do something does not teach you anything; you have to do it yourself.</p>
+<p>With this in mind, these lessons are written specifically so that you can work through them interactively when you are using the online version at <a class="reference external" href="https://dcartin.github.io/">https://dcartin.github.io/</a>. As you look through the pages of the online book, you will see programming code embedded on the site, using a website called Trinket (<a class="reference external" href="https://Trinket.io/">https://trinket.io/</a>). When you get to these programs, it is strongly recommended you not only run them, but also modify them to see how they work.</p>
+<p>For this course, you will complete programming assingments based on what is covered in this lesson and the following one (<a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02</span></a>). To do this, you should create an account (for free) on <a class="reference external" href="https://www.glowscript.org/">Glowscript.org</a>. You may want to use your personal email account, so you can modify these programs after you leave NAPS.</p>
+</div>
+<p>As you read through this lesson, you should keep in mind the specific objectives I hope you achieve. Every lesson will have such a list, and these lists also appear in the course syllabus. You should read through the objectives carefully first thing – don’t skip it! Below is your checklist for this lesson, the things you should get out of your reading:</p>
+<ul class="simple">
+<li><p>Print the value of a numerical variable or a string to the screen using the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement.</p></li>
+<li><p>Create a Python program.</p></li>
+<li><p>Define a variable, and state the rules for Python variable names.</p></li>
+<li><p>Add a comment to a program.</p></li>
+<li><p>Update the value of a numerical variable.</p></li>
+<li><p>Use the mathematical operators <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*,</span> <span class="pre">/,</span> <span class="pre">%</span></code> to calculate the new value of a variable.</p></li>
+<li><p>Use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to check whether a logical condition is true.</p></li>
+<li><p>Use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop to implement statements until a logical condition is false.</p></li>
+<li><p>Create a list of values.</p></li>
+<li><p>Select a specific value from an existing list.</p></li>
+<li><p>Create a function with specified arguments that returns a desired quantity.</p></li>
+</ul>
+<p>There are a lot here, but most are relatively short. This lesson is also an important foundation for <em>all</em> of the Python we will use in the course, so I put it all in one lesson! If you don’t feel you can do these things, you should work at it – did you miss an important definition? Try the problems? Maybe playing around with the code examples more, and thinking of different scenarios will help. Remember, the online version of this textbook at <a class="reference external" href="https://dcartin.github.io/">https://dcartin.github.io/</a> has interactive versions of these programs.</p>
+</div>
+<div class="section" id="the-print-command">
+<h2><span class="section-number">1.2. </span>The <code class="docutils literal notranslate"><span class="pre">print</span></code> command<a class="headerlink" href="#the-print-command" title="Permalink to this headline">¶</a></h2>
+<p>For those learning a new programming language, it is traditional to first learn how to print the statement “Hello world!” This is known as a <strong>string</strong>, as opposed to an <strong>integer</strong> such as 5 or a floating point number (or <strong>float</strong>) such as 3.141592654. Together, these are known as <strong>data types</strong>.</p>
+<p>Below is our first piece of code. On the left, you will see the Python command <code class="docutils literal notranslate"><span class="pre">print()</span></code>, which tells the computer to print whatever is inside the parentheses. In this case, the command will print the string <code class="docutils literal notranslate"><span class="pre">'Hello</span> <span class="pre">world!'</span></code>. Run this short program by clicking on the right-facing arrow in the upper-left corner of the Trinket app window.</p>
+<p id="hello-world"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/71c1cf6f16?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>If the computer prints <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">world!</span></code> in the right-hand window, then congratulations – you’ve just run a Python program!</p>
+<p>If you <em>didn’t</em> try to run this program, try it now! These lessons are meant to be interactive – play around with them, try different possibilities, and see what works and what doesn’t. One advantage of programming is you can <em>see</em> what the consequences are of various choices. What gives you natural looking simulations, and what gives you “bad physics”? <em>You will learn best by trying</em>.</p>
+<p>I will be using these trinket apps a lot over the course of the lessons, so this is a good place to acquaint you with some of the available features. I have highlighted these in <a class="reference internal" href="#trinket-app-guide"><span class="std std-numref">Figure 1.1</span></a> below. Hoepfully, you have already tried the arrow button to run the code. This will run the program code shown on the left-hand side of the app; this code may be long, so you can scroll down this side if necessary. In addition, there is a fullscreen option, which you can find by clicking on the three horizontal lines in the top left corner. On the right, the default will be to show a description, and any instructions, going along with the program. When you run the program, this will shift to the results of the program run. You can always switch back and forth between the results and the instructions by clicking the appropriate tab on the right-hand side. Finally, if you are interested, you can create your own <a class="reference external" href="http://Trinket.io">Trinket.io</a> account; this will allow you to save and modify programs you find throughout the lesson.</p>
+<div class="figure align-default" id="trinket-app-guide">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L01_Fig01_Trinket_guide.png"><img alt="../_images/INT_AY22_L01_Fig01_Trinket_guide.png" src="../_images/INT_AY22_L01_Fig01_Trinket_guide.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Some of the features of the Trinket app</span><a class="headerlink" href="#trinket-app-guide" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, let’s get back to some Python programming. You should be careful what kind of quote marks to use when writing strings. For example, the marks above are those on the right-hand side of the keyboard, <em>not</em> those at the upper left. Try using those, and see what happens. If you change the command in the program above to read</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>print(`Hello world!`)
+</pre></div>
+</div>
+<p>the Trinket app will show an error message at the bottom of the window.</p>
+<p>Note that using double quotes at the beginning and end of the string will also work. Try changing the program above so it reads</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and run the cell again. The reason for this is if you need to use single or double quotes inside the string you want to print. An example would be</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Who says &quot;Hello world!&quot; anymore?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>However, you can’t mix single and double quotes at the beginning and end of the string. If you change the code above to read</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello world!&quot;)</span>
+</pre></div>
+</div>
+<p>you should get an error. Whenever you get an error like this, you can go back and edit the cell so that it works properly.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Try intentionally putting mismatched quotation marks in the code cell above, and run the cell. What happens? Then change the code back to proper format, and run the cell again.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The computer should give you an error message, such as “SyntaxError: bad token on line 1 in <a class="reference external" href="http://main.py">main.py</a>”.</p>
+</div>
+<hr class="docutils" />
+<p>Often, you will notice that, right after a problem, there is a “plus” icon, along with the text “Click to show”. Clicking the icon will show the answer to the problem! Click on the icon again (now a “minus” sign) to hide the answer.</p>
+</div>
+<div class="section" id="variables-and-mathematical-operators">
+<h2><span class="section-number">1.3. </span>Variables and mathematical operators<a class="headerlink" href="#variables-and-mathematical-operators" title="Permalink to this headline">¶</a></h2>
+<p>Many times we need to store numerical values for use later on in the program, and change these values as the program progresses (e.g. think about the position of a moving object). This is done in programming languages by creating a <strong>variable</strong> and setting it equal to the value desired.</p>
+<p>A variable is given a name when it is defined, and every time you want to change or modify the variable, you can do so by using that name. The rules for variable names in Python are</p>
+<ul class="simple">
+<li><p>The variable name must start with either a letter or the underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) character. However, it is probably not a good idea to start with the underscore, since variable names like these are usually reserved for important things that run Python!</p></li>
+<li><p>Variable names cannot start with a number.</p></li>
+<li><p>Variable names are case sensitive, so <code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">Var</span></code>, and <code class="docutils literal notranslate"><span class="pre">VAR</span></code> are three separate variable names.</p></li>
+<li><p>Variable names can only use letters, numbers, and the underscore.</p></li>
+</ul>
+<p>I also use the convention that constants are given names in all capital letters. These will indicate variables that should not be changed anywhere in the code. So, if I want to define the total time a simulation will run, I may call it <code class="docutils literal notranslate"><span class="pre">MAX_TIME</span></code>. On the other hand, the current time could be another variable, such as <code class="docutils literal notranslate"><span class="pre">t</span></code>, which does change. I also tend to put the definitions of all the variables at the top of the program, so I can find them easily if I need to alter their values.</p>
+<p>Here is a Python example, creating the variable <code class="docutils literal notranslate"><span class="pre">position</span></code> and giving it a value of 5. The <code class="docutils literal notranslate"><span class="pre">print</span></code> statement verifies that the variable is set correctly. You will use this program for the rest of this section.</p>
+<p id="def-var"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/95308fd2b8?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>You will notice there are extra pieces to the program above – lines starting with the character <code class="docutils literal notranslate"><span class="pre">#</span></code>, and which are not Python commands. These are known as <strong>comments</strong>. With longer programs, it helps to add in comments in English that the computer does not try to read as commands. For example, with the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># Sets value of the variable &#39;x&#39;</span>
+</pre></div>
+</div>
+<p>the computer will not read anything beyond the <code class="docutils literal notranslate"><span class="pre">#</span></code> symbol. You will see the program above has some comments in it, to explain what is happening in the code. Good code features comments, so that if it is read by someone else (or you, sometime in the future!), there is a lot of explanation of how the program works. This becomes more important as your code gets more complicated. You should get into the habit of including comments to both explain the programming code itself, and as notes to understand the variables. For example, one comment may say a particular part of the code is creating the motion of an object in the simulation; another comment may tell the reader that the SI units for the variable <code class="docutils literal notranslate"><span class="pre">velocity</span></code> are m/s.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What is the result of running the following code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>     <span class="c1"># x = 7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The computer will print the number 5.</p>
+</div>
+<p>Now let’s get back to talking about variables. What happens if we run the statements given below? Change the program above so it looks like this code now.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">position</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+<span class="n">position</span> <span class="o">=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+<p>Is the answer what you expected? The computer will run the statements in order, starting from top to bottom, unless the order is changed by other commands.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Do I have to do it this way?</p>
+<p>This method of printing the value of <code class="docutils literal notranslate"><span class="pre">position</span></code> shows that Python cares about the <strong>type</strong> of the variable; different types will be treated differently. This will be important later, when we start talking about vectors in vPython. Mathematically, vectors are not the same as numbers, and knowing what operations you can use them for will be a crucial skill for this class.</p>
+<p>That being said, there are other ways of printing the values of numerical variables in Python. If you know what they are, great! But what results they give can depend on the version of Python you are using; this is not a critical thing to know, so I don’t want to worry about it too much.</p>
+</div>
+<p>We can also print the name of the variable (as a string) along with the value of the variable. Add the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;position = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">position</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>below the command <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">=</span> <span class="pre">7</span></code>. Notice that two things are going on here: the computer is converting the <em>integer</em> <code class="docutils literal notranslate"><span class="pre">position</span></code> into a <em>string</em>, then it is combining this string with the string <code class="docutils literal notranslate"><span class="pre">'position</span> <span class="pre">=</span> <span class="pre">'</span></code> by “adding” the strings. Putting this together, the computer should print <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">=</span> <span class="pre">7</span></code>, so you can see the name of the variable, along with its value. As we get into more complicated programs, using <code class="docutils literal notranslate"><span class="pre">print</span></code> statements can help debug the program, if something doesn’t go quite right, or you get error messages.</p>
+<p>Now that we have seen we can store numerical values in variables, we can now use mathematical operations on these variables. Below is a list of the common ones.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Python symbol</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>addition</p></td>
+<td><p>+</p></td>
+</tr>
+<tr class="row-odd"><td><p>subtraction</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>multiplication</p></td>
+<td><p>*</p></td>
+</tr>
+<tr class="row-odd"><td><p>division</p></td>
+<td><p>\</p></td>
+</tr>
+<tr class="row-even"><td><p>remainder</p></td>
+<td><p>%</p></td>
+</tr>
+<tr class="row-odd"><td><p>exponentiation</p></td>
+<td><p>**</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">^</span></code> is <em>not</em> a symbol for exponentiation in Python! Thus, if you want to find <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">2</span></code>, then in Python it is <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">3</span></code> and <em>not</em> <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">^</span> <span class="pre">3</span></code>. As an example of a mathematical operation, add the lines given below into the program above, under the appropriate comment. Then run the program to see the result.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In the above program, change the <code class="docutils literal notranslate"><span class="pre">*</span></code> to the other four mathematical operators, and make sure the answer is what you expect.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python program that defines a variable <code class="docutils literal notranslate"><span class="pre">number</span></code>, then prints out the value of three times the original number plus one. Print this new value out.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible program, starting with the number 17.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="if-statements">
+<h2><span class="section-number">1.4. </span><code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h2>
+<p>Our short-term goal is to learn enough Python programming to simulate the motion of an object, such as a ball; you will do this in <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02 (velocity and vPython)</span></a>. Suppose we want to check whether the ball has hit the ground or a wall. In Python, this requires the use of an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. This will check to see if a certain condition is true. If it is, the next indented lines will be executed. Otherwise, the computer will move to the next line that is <em>not</em> indented and continue from there. Consider the code in the cell below; you will use this program for the rest of this section. Notice that the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> is important – it tells the computer the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is done. Again, everything that is <em>indented</em> below the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement will be run if the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is satisfied.</p>
+<p id="if-stat"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/2f4d3d7a49?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>In the program above, change the definition of <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> to 7, then run the code again. What happens?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The computer will produce no output, since the condition <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">&lt;</span> <span class="pre">5</span></code> is not true.</p>
+</div>
+<p>Sometimes we want to do something special if the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is <em>not</em> true. We can do this using an <code class="docutils literal notranslate"><span class="pre">else</span></code> statement, as seen below. Change the program above to match the lines given below, then run the new program.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nextNum</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">nextNum</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nextNum is greater than 5&#39;</span><span class="p">)</span>          <span class="c1"># nextNum is larger than 5</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nextNum is not greater than 5&#39;</span><span class="p">)</span>      <span class="c1"># nextNum is not larger than 5</span>
+</pre></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the definition of <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> to 3 in the cell above, and run the code again. What output do you get? What if <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is changed to 5? Are the results what you expect?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> When <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is changed to <em>either</em> 3 or 5, the output is <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">greater</span> <span class="pre">than</span> <span class="pre">5</span></code>. Note that <span class="math notranslate nohighlight">\(5 &gt; 5\)</span> is not a true mathematical statement!</p>
+</div>
+<p>There are other tests we can do between two numbers:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol</p></th>
+<th class="head"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>greater than</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;=</p></td>
+<td><p>greater than or equal</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>less than</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>less than or equal</p></td>
+</tr>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>not equal to</p></td>
+</tr>
+</tbody>
+</table>
+<p>We can use these to modify the program above. Suppose we don’t want to include the case when <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is equal to 5, but just less than 5. Then we can use an <code class="docutils literal notranslate"><span class="pre">elif</span></code> (short for “else if”), as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nextNum</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">if</span> <span class="n">nextNum</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nextNum is greater than 5&#39;</span><span class="p">)</span>          <span class="c1"># nextNum is larger than 5</span>
+<span class="k">elif</span> <span class="n">nextNum</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nextNum is less than 5&#39;</span><span class="p">)</span>             <span class="c1"># nextNum is less than 5</span>
+</pre></div>
+</div>
+<p>This allows us to be more specific; if you modify the code and run it, the computer will print out something only if <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is not equal to 5.</p>
+<p>Note that there is a difference between setting the value of a variable, and comparing two variables. For example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>sets the variable <code class="docutils literal notranslate"><span class="pre">z</span></code> to an integer value of 3 (<em>defining</em> the variable), while</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="mi">3</span> <span class="n">then</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>checks to see if the variable <code class="docutils literal notranslate"><span class="pre">z</span></code> is equal to 3 (<em>testing</em> the variable). Thus, a single equals sign defines a variable, while a double equals sign checks to see whether something is true. This may be a little confusing, but hopefully you will learn the difference after some practice.</p>
+<p>To look at using these testing operations, take a look at this code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is less than or equal to y&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is greater than y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What would you expect if you ran this code? Make a guess first, then add these lines after the appropriate comment in the program above. If you run this now, what does the computer print out?</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the definition of the variable <code class="docutils literal notranslate"><span class="pre">y</span></code> above, so that <span class="math notranslate nohighlight">\(y = 7\)</span>. What result do you get when you run the cell?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The computer will print out <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">greater</span> <span class="pre">than</span> <span class="pre">y</span></code>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement in the cell above, so it says “<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y:</span></code>”, then run the program. How well does the code work if you change <code class="docutils literal notranslate"><span class="pre">y</span></code> to other numbers?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The output should now be correct for all values of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+</div>
+<p>Writing Python statments like this – where the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks other variables, rather than numbers – can make the code easier to modify if necessary. Going back to constants, I could use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to see if the current time <code class="docutils literal notranslate"><span class="pre">t</span></code> is greater than or equal to the constant <code class="docutils literal notranslate"><span class="pre">MAX_TIME</span></code> I set as the maximum time for the simulation.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python program that defines a variable <code class="docutils literal notranslate"><span class="pre">checkNum</span></code>, then checks to see if the number is zero or positive. If the number is zero, then the computer should print <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">number</span> <span class="pre">is</span> <span class="pre">zero</span></code>; if the number is positive, then print <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">number</span> <span class="pre">is</span> <span class="pre">positive</span></code>. If the number is negative, the computer should not print anything.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible program, starting with the number -3. Note that the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement only checks if <code class="docutils literal notranslate"><span class="pre">checkNum</span></code> is equal to zero, or if it is greater than zero. If <code class="docutils literal notranslate"><span class="pre">checkNum</span></code> is equal to negative (as defined here), neither test is true, and the computer prints nothing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">checkNum</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<span class="k">if</span> <span class="n">checkNum</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is zero&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">checkNum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is positive&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loops-and-lists">
+<span id="intro-py-loop-list"></span><h2><span class="section-number">1.5. </span>Loops and lists<a class="headerlink" href="#loops-and-lists" title="Permalink to this headline">¶</a></h2>
+<p>When writing programs to simulate the motion of objects, we will frequently need to tell the computer to do the same operation repeatedly. For example, suppose we want to show the motion of a falling object. This will involve finding the changes in position and velocity over and over, as time progresses. Thus, we need to <em>loop</em> over the same commands. There are two ways to do this in Python: the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop will execute a series of commands as long as a certain condition is true. This will be very helpful when we are not sure when we want to stop the loop. Suppose we wanted to look at the motion of a projectile launched at some angle, but we included air resistance. How long does it take to reach the ground? It is not easy to tell without running the program! However, we can easily tell the computer to stop the loop when the projectile reaches the ground. This is an example of a condition we use with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+<p>The code cell below shows a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, where the code will (1) print the value of the variable <code class="docutils literal notranslate"><span class="pre">nextNum</span></code>, and then (2) add one to <code class="docutils literal notranslate"><span class="pre">nextNum</span></code>. However, once <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is <em>not</em> less than 5, the loop will stop. This means that 4 is the last number printed. The program will then move on to the next line if there is one. Since there isn’t one here, the computer stops.</p>
+<p id="while-loop"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/2c93f49890?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Just like the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, the colon and indentations are important! The computer needs a way to know what statements are inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Try experimenting with the code above. Here are some things you can try:</p>
+<ul class="simple">
+<li><p>Switch the order of the two commands inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, so that the statement <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code> comes first.</p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">while</span></code> statement so that there is a different number than 5.</p></li>
+<li><p>Change <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code> so that it adds a different number than 1.</p></li>
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement from inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, and put it after the loop. Note this means that it is <em>not</em> indented, and <em>after</em> the statement <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code>. Note that you can use this to print out only the <em>last</em> number, rather than all of the numbers, if you wish.</p></li>
+</ul>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">What this code means</p>
+<p>If you are new to programming, the statement <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code> may look very odd indeed. This does <em>not</em> mean something like <span class="math notranslate nohighlight">\(x = x + 1\)</span>.</p>
+<p>In a Python program (and in many other computer languages), the equal sign means ‘assign a value to this variable’. So the statement <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code> really means: (1) Find the location in memory where the variable <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is stored. (2) Read in this value. (3) Add one to this value. (4) Store the result back in the location in memory where <code class="docutils literal notranslate"><span class="pre">nextNum</span></code> is stored.</p>
+</div>
+<p>In Python, there is a shorthand way of writing code such as <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">=</span> <span class="pre">nextNum</span> <span class="pre">+</span> <span class="pre">1</span></code>. This is given by <code class="docutils literal notranslate"><span class="pre">nextNum</span> <span class="pre">+=</span> <span class="pre">1</span></code>. You can read the symbol <code class="docutils literal notranslate"><span class="pre">+=</span></code> to say “read in the quantity to the left, add to it the quantity to the right, and put that back in the location of the original variable”. Writing it like this saves some room in the code, so try to use it if you can! There are other versions for subtraction, multiplication, and division.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What would your computer print out if you ran the code shown below?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The computer will print out the number 2.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python program that prints out all multiples of seven that are less than 60, starting with 7.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> One way to do this is given by the program below. The variable <code class="docutils literal notranslate"><span class="pre">nextMult</span></code> stores the value of the next multiple to print. Inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, the next multiple is printed, then 7 is added to it, to get the next multiple.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nextMult</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="k">while</span> <span class="n">nextMult</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;nextMult = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">nextMult</span><span class="p">))</span>
+    <span class="n">nextMult</span> <span class="o">+=</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<p>Now let’s come back to loops. A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is a similar idea to a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, but in this case, we have a definite idea of how many steps we are taking. Let’s look at some examples of how this would work. Suppose we want to add up the integers from 0 to 5. We would do this by finding <span class="math notranslate nohighlight">\(0 + 1 + 2 + 3 + 4 + 5\)</span>. Notice that we counted over <em>six</em> numbers total – this will be important in a second. A possible way to do this in Python is to use the code below.</p>
+<p id="for-loop-range"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/a4aa78eff6?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>If you run the code, you should get the result of 15. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop ran over the range of the first <em>six</em> integers, starting from zero. This is why it is <code class="docutils literal notranslate"><span class="pre">range(6)</span></code>, rather than <code class="docutils literal notranslate"><span class="pre">range(5)</span></code>, since the range is over six numbers. Unfortunately, the fact that Python starts with zero can be a little confusing sometimes; it has its advantages as well, but watch out that you don’t make a mistake!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the code above so that the sum is over the first 1500 integers, starting from 0. What is the value of the sum?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You would need to change the code to the following.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>                   <span class="c1"># Variable to store sum of integers</span>
+
+<span class="k">for</span> <span class="n">iii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1500</span><span class="p">):</span>     <span class="c1"># &lt;-- Here is the change</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">iii</span>            <span class="c1"># Add iii to variable total</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should get 1,124,250.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python program that finds the <em>product</em> of the first ten multiples of 13.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one possible program. Notice that the variable <code class="docutils literal notranslate"><span class="pre">product</span></code> used to keep the running value must start as 1, not 0, so you don’t get zero for the final result!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># total product</span>
+<span class="n">nextMult</span> <span class="o">=</span> <span class="mi">13</span>         <span class="c1"># next multiple of 13 to multiply to product</span>
+<span class="n">numMult</span> <span class="o">=</span> <span class="mi">10</span>          <span class="c1"># number of multiples to combine</span>
+
+<span class="k">for</span> <span class="n">iii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numMult</span><span class="p">):</span>
+    <span class="n">product</span> <span class="o">*=</span> <span class="n">nextMult</span>
+    <span class="n">nextMult</span> <span class="o">+=</span> <span class="mi">13</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;product = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">product</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p>Another way to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is to use it with a <strong>list</strong>. A Python list is simply a collection of values, where the order is important. A list is defined by using square brackets, such as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="s2">&quot;I love my list&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This list has four elements, and as you can see, it can store all kinds of values in the same list. You can access the list by giving the index. An <strong>index</strong> is a number giving which element of the list a particular member is at, starting from zero. So, for example, <code class="docutils literal notranslate"><span class="pre">myList[0]</span></code> takes the list <code class="docutils literal notranslate"><span class="pre">myList</span></code> and sees what is at index 0 (i.e. the first value in the list). Thus, if you run</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>the computer will print out 4. However, if you try</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>you will get an error, since the indices of the list run from 0 to 3 (four entries total). The last entry in the list would be <code class="docutils literal notranslate"><span class="pre">myList[3]</span></code> instead.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Negative indices</p>
+<p>Another way to find the entry in a list is to count backwards from the end. Thus, <code class="docutils literal notranslate"><span class="pre">myList[-1]</span></code> is the last entry in the list (namely -7), while <code class="docutils literal notranslate"><span class="pre">myList[-2]</span></code> is the second to last, and so forth.</p>
+</div>
+<p>You can create a list either by just typing it in, as we did with <code class="docutils literal notranslate"><span class="pre">myList</span></code> above, or by creating it from scratch. Let’s use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop like we did above to do this. The code below will create a list of the first six integers. It does this by first telling the computer that <code class="docutils literal notranslate"><span class="pre">intList</span></code> will be a list. Remember to do this! The computer doesn’t know that <code class="docutils literal notranslate"><span class="pre">intList</span></code> is a list until you tell it; it could be a string, or an integer, or anything else. Then, we add values to the <em>end</em> of the list using the <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator. Notice that what are adding <code class="docutils literal notranslate"><span class="pre">[iii]</span></code> to the list – the square brackets match up with the fact <code class="docutils literal notranslate"><span class="pre">intList</span></code> is a list. You can see this when the list is printed out at the end.</p>
+<p id="for-loop-list"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/a129cb837f?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>We introduced lists as another way of using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Instead of using <code class="docutils literal notranslate"><span class="pre">range</span></code> as above, we can also create a list with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, then use a <em>second</em> such loop to print out the results. Thus, instead of using the <code class="docutils literal notranslate"><span class="pre">print</span></code> statement, we could have used</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">intList</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">iii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">intList</span> <span class="o">+=</span> <span class="p">[</span><span class="n">iii</span><span class="p">]</span>
+    
+<span class="k">for</span> <span class="n">jjj</span> <span class="ow">in</span> <span class="n">intList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">jjj</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The second <code class="docutils literal notranslate"><span class="pre">for</span></code> loop now prints out the values in <code class="docutils literal notranslate"><span class="pre">intList</span></code>, only one at a time. Thus, you have now seen two different ways to set up a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop: either using the <code class="docutils literal notranslate"><span class="pre">range()</span></code> over a fixed number of integers, or by using the values of a list.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Define a list that includes all of the personnel in your chain of command, starting with the most senior and working your way down. Do this by typing in the entries by hand into the list, in between square brackets, to create the list. Then print out each of these people, one per line, in the order given in the list.</p>
+<p><strong>Hint:</strong> Your list is bound to get long, so you probably want to write it on more than one line. However, Python needs to know that you are doing this! To do so, you can add a <code class="docutils literal notranslate"><span class="pre">\</span></code> (backslash, not a forward slash) at the end of each line, which tells Python to keep reading the code as one single command. For example, you can change</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sampleList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;really long string&#39;</span><span class="p">,</span> <span class="s1">&#39;another really long string&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>into</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sampleList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;really long string&#39;</span><span class="p">,</span> \
+              <span class="s1">&#39;another really long string&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a program that creates a list, then prints out, my own chain of command when I first reported to NAPS.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chainList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;President George W. Bush&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Secretary of Defense Donald Rumsfeld&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Secretary of the Navy Hansford T. Johnson (acting)&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Chief of Naval Operations Admiral Vern Clark, USN&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Superintendent Admiral Rodney P. Rempt, USN&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Captain Bruce Bole, USN&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Lieutenant Colonel Danny Ray, USMC&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Dean Stephen Arendt&#39;</span><span class="p">,</span> \
+            <span class="s1">&#39;Professor Clarice Anderes&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">chainList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="procedures-and-functions">
+<h2><span class="section-number">1.6. </span>Procedures and functions<a class="headerlink" href="#procedures-and-functions" title="Permalink to this headline">¶</a></h2>
+<p>We have now gone through essentially all of the Python commands you will use for this course. In <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02</span></a>, we will introduce some special commands that help us create simulations, with the vPython module. However, before we get to that, there is one last aspect of Python programming to learn. This is not a new command, but instead is a different way of packaging what we have already done.</p>
+<p>As programs become longer and more complicated, it can be difficult to understand what the program is actually doing. Thus, what programmers will do is take pieces of code, and “call” these pieces in the main program when they need them. In other words, the steps that the program is to execute are divided into smaller bits, which are easier to understand and fix if something goes wrong. These pieces are known as <strong>procedures</strong> and <strong>functions</strong>. There is a slight difference between the two, which I will explain later, but they basically do the same thing.</p>
+<div class="warning admonition">
+<p class="admonition-title">Functions and your homework</p>
+<p>When you create programs for homework assignments, you will use functions to do so, so make sure you understand everything in this section!</p>
+</div>
+<p>Let’s start with a simple example. Suppose you wanted to find the sum of the multiples of some number, up to a maximum value. To make it definite, let’s say you want the sum of the first <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code> of a number <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>. You could create a program with variables <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code> and <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>. I put these variable names in capital letters, because they are not going to be changed in the program. This would look something like the program below; you will later add some code to this program.</p>
+<p id="five-mult"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/b50c1124f1?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Let’s walk through this code, to make sure you understand what it does. First, we define <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> to be the number we are finding the multiples of, then <code class="docutils literal notranslate"><span class="pre">total</span></code> will be the variable where we store our values as the program runs. We count the number of times we have added a multiple to the sum as the variable <code class="docutils literal notranslate"><span class="pre">numMultiples</span></code>, and set the maximum number of such additions as <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code>. Inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, we increase the number of multiples by one everytime we add a multiple of <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> to <code class="docutils literal notranslate"><span class="pre">total</span></code>. When we have gone over the number of multiples we want, we quit the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, and print out the final answer. Since this sum is <span class="math notranslate nohighlight">\(7 + 14 + 21 + 28 + 35\)</span>, then the answer is 105.</p>
+<p>The example code above would then give you the sum of the first five multiples of 7. Now, suppose you want to calculate this number repeatedly in your program. You could copy the code over and over, but that is a pain. Instead, we create a procedure <code class="docutils literal notranslate"><span class="pre">firstFiveMultOfSeven()</span></code>, which every time we run it, it goes through the same code and prints out the result. This is given by the code below; notice that it is not very different from the program above, except for the first line. The <code class="docutils literal notranslate"><span class="pre">def</span></code> command tells Python to create the procedure with our given name <code class="docutils literal notranslate"><span class="pre">firstFiveMultOfSeven()</span></code>. By the way, I will often put parentheses after the name of a procedure or function when I describe it, so you know it is not a variable.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">firstFiveMultOfSeven</span><span class="p">():</span>
+    <span class="n">NUMBER</span> <span class="o">=</span> <span class="mi">7</span>                     <span class="c1"># Number to find the multiples of</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>                      <span class="c1"># Sum of all the multiples of NUMBER</span>
+    
+    <span class="n">numMultiples</span> <span class="o">=</span> <span class="mi">0</span>               <span class="c1"># Keep track of the number of multiples summed so far</span>
+    <span class="n">MAX_NUM_MULTIPLES</span> <span class="o">=</span> <span class="mi">5</span>          <span class="c1"># Maximum number of multiples to sum</span>
+    
+    <span class="k">while</span> <span class="n">numMultiples</span> <span class="o">&lt;</span> <span class="n">MAX_NUM_MULTIPLES</span><span class="p">:</span>
+
+        <span class="n">numMultiples</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">numMultiples</span> <span class="o">*</span> <span class="n">NUMBER</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>                   <span class="c1"># Print sum</span>
+</pre></div>
+</div>
+<p>Modify the program in the Trinket app, so it looks like the procedure <code class="docutils literal notranslate"><span class="pre">firstFiveMultOfSeven()</span></code> given directly above. Then run the program. Nothing will apparently happen! The computer now knows what to do when you ask it to use this procedure.</p>
+<p>Once you run the cell above, you can call on the procedure anytime you want. Run the cell below now to see it in action. To do this, uncomment the line</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">firstFiveMultOfSeven</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>and run the program again. It should print out 105.</p>
+<p>However, if I want the first eight multiples of 15 instead, I’d have to go back to the code, and change both the variables <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code>. Now, for this case, that’s not really <em>too</em> hard, but hopefully you can imagine with more complicated code, this becomes a hassle. Indeed, suppose you are write a program, and want to improve how the program works. Having that piece of the algorithm in its own procedure makes it much easier to change, if you need to.</p>
+<p>So, let’s create a procedure that prints out the first <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code> of <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>. To do this, I will call it <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code>, and use the <code class="docutils literal notranslate"><span class="pre">def</span></code> command to create this procedure. This is done in the program below. The code in the procedure <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> is very similar to what was given above. The only difference comes from since <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> takes two arguments. An <strong>argument</strong> is something I pass to the function or procedure for its use. This can be a variable, a list, or some other possibilities we will not worry about. The arguments are defined outside the function or procedure, which can perform operations on these quantities. Getting back to our procedure, the two arguments of <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> are the values <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code>. Every time we call this procedure, we can specify the values of these variables, without having to change any code! At the end, it prints out the result <code class="docutils literal notranslate"><span class="pre">total</span></code>.</p>
+<p id="mult-sum"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/6073b807cb?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>To find the first five multiples of seven, you now need to <em>call</em> the procedure. You do this by writing the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multipleSum</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notice the order – this defines <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> as 7, and <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code> as 5, since the numbers are matched with the variable names in the procedure code. Running the program, the computer should print out 105 again.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What would you expect to be printed out if you write <code class="docutils literal notranslate"><span class="pre">multipleSum(5,</span> <span class="pre">7)</span></code> instead? Calculate the answer first, then run the command with the arguments flipped to check your answer.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> to find the first eight multiples of 15. Type in the appropriate code in the Trinket app above.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You can get the answer using the function <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> by running</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">multipleSum</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should get 540.</p>
+</div>
+<p>So a procedure executes some code, which can be called on later (and mulitple times!) by the main program. A function is slightly different, in that it <strong>returns</strong> information to the main program. Specifically, suppose instead of printing the first <code class="docutils literal notranslate"><span class="pre">MAX_NUM_MULTIPLES</span></code> of <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, we want to use this information to define another variable, say <code class="docutils literal notranslate"><span class="pre">result</span></code>. We couldn’t do that with the procedure above. This is a case where we want to write a <strong>function</strong>. The crucial change with a function is that there is a command <code class="docutils literal notranslate"><span class="pre">return</span></code> that “passes” the computed value <code class="docutils literal notranslate"><span class="pre">total</span></code>, and can be used later.</p>
+<p>As an example, we could define a function <code class="docutils literal notranslate"><span class="pre">add()</span></code> that adds together two numbers <code class="docutils literal notranslate"><span class="pre">num1</span></code> and <code class="docutils literal notranslate"><span class="pre">num2</span></code>, as follows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">return</span></code> statement means that the result of this function is similar to how a variable is defined. If you write <code class="docutils literal notranslate"><span class="pre">add(firstNum,</span> <span class="pre">secondNum)</span></code>, then the computer will associate a value <code class="docutils literal notranslate"><span class="pre">firstNum</span> <span class="pre">+</span> <span class="pre">secondNum</span></code> to it. Then this could be used in another place in the program:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">thirdNum</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">firstNum</span><span class="p">,</span> <span class="n">secondNum</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We couldn’t do this with our procedures from before, since they just printed out the result. Also, notice the variable names when the function (or procedure) is <em>used</em> do not have to be the same as those in the code for the function itself, but they do have to be in the same, matching order!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the procedure <code class="docutils literal notranslate"><span class="pre">multipleSum()</span></code> in the cell above so that it returns the value <code class="docutils literal notranslate"><span class="pre">total</span></code>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Your code should look like the following, with the only change on the last line:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multipleSum</span><span class="p">(</span><span class="n">NUMBER</span><span class="p">,</span> <span class="n">MAX_NUM_MULTIPLES</span><span class="p">):</span>
+    
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">numMultiples</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">numMultiples</span> <span class="o">&lt;</span> <span class="n">MAX_NUM_MULTIPLES</span><span class="p">:</span>
+        <span class="n">numMultiples</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">numMultiples</span> <span class="o">*</span> <span class="n">NUMBER</span>
+        
+    <span class="k">return</span> <span class="n">total</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a Python function <code class="docutils literal notranslate"><span class="pre">multipleProduct()</span></code> that find the product of all integers from 1 to a given number. The argument of the function <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> is the final integer you will multiply in the product. If <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> is less than or equal to zero, then have the program print out “Must use positive numbers”, and return the value zero. <strong>Note:</strong> In mathematics, this is also known as the factorial, with the notation that the factorial of the number <span class="math notranslate nohighlight">\(n\)</span> is <span class="math notranslate nohighlight">\(n!\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible program to create <code class="docutils literal notranslate"><span class="pre">multipleProduct()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multipleProduct</span><span class="p">(</span><span class="n">NUMBER</span><span class="p">):</span>
+
+    <span class="c1"># Check if NUMBER is positive</span>
+    
+    <span class="k">if</span> <span class="n">NUMBER</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Must use positive numbers&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
+        
+    <span class="n">product</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1"># Starting value of product</span>
+    <span class="n">nextNum</span> <span class="o">=</span> <span class="mi">1</span>              <span class="c1"># Next number to multiply in product</span>
+    
+    <span class="k">while</span> <span class="n">nextNum</span> <span class="o">&lt;</span> <span class="n">NUMBER</span><span class="p">:</span>
+        <span class="n">nextNum</span> <span class="o">+=</span> <span class="mi">1</span>         <span class="c1"># Increase nextNum to nextInteger</span>
+        <span class="n">product</span> <span class="o">*=</span> <span class="n">nextNum</span>   <span class="c1"># Multiply next integer and product</span>
+        
+    <span class="c1"># Return product</span>
+    
+    <span class="k">return</span> <span class="n">product</span>
+</pre></div>
+</div>
+<p>Notice that the order of the statements inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is important; switching this order will lead to the last integer not being included in the product.</p>
+</div>
+</div>
+<div class="section" id="example-calculating-square-roots">
+<h2><span class="section-number">1.7. </span>Example: Calculating square roots<a class="headerlink" href="#example-calculating-square-roots" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title">Can’t the computer find this?</p>
+<p>You may wonder why we just can’t ask the computer to do this calculation. Well, first, it’s good to know what your computer is actually doing! Plus this is good practice for applying the methods of this lesson. Finally, there is a way to find the square root, but it is not automatically included in Python. Instead, it is part of the <code class="docutils literal notranslate"><span class="pre">math</span></code> module of Python. I will introduce modules in <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02</span></a>.</p>
+</div>
+<p>Now I will go through an example that brings together a lot of what is covered in the lesson. By the end, we will have a function that calculates the square root of a given positive number. The method used here is known as “Heron’s method”, after the 1st century AD Greek mathematician Heron of Alexandria. It is also known as “the Babylonian method”, since it is believed (but not proven) that the ancient Babylonians were also aware of this method. Although there are now more sophisticated means of finding roots, this will give you some idea of how your calculator gets the number!</p>
+<p>Here is the basic idea. Suppose we want to know the square root of the number <span class="math notranslate nohighlight">\(c\)</span>. Thus, we are trying to solve the equation <span class="math notranslate nohighlight">\(x^2 - c = 0\)</span>. We can make a guess <span class="math notranslate nohighlight">\(g\)</span> for what the square root is; for example, we can guess that the square root of two is <span class="math notranslate nohighlight">\(g = 1\)</span>. Obviously, this is wrong, so there is some error <span class="math notranslate nohighlight">\(e\)</span> that our guess is off by. This means that we have <span class="math notranslate nohighlight">\((g + e)^2 = c\)</span>. Let’s solve this equation for <span class="math notranslate nohighlight">\(e\)</span>; if we expand it out, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    g^2 + 2g e + e^2 = c \Rightarrow e = \frac{c - g^2}{2g + e}
+\]</div>
+<p>Now, let’s use the fact that (hopefully) our error <span class="math notranslate nohighlight">\(e\)</span> is smaller than <span class="math notranslate nohighlight">\(2g\)</span>, so we approximate the above equation by</p>
+<div class="math notranslate nohighlight">
+\[
+    e \simeq \frac{c - g^2}{2g}
+\]</div>
+<p>Note that the symbol “<span class="math notranslate nohighlight">\(\simeq\)</span>” means “approximately equal to”. This means our new guess <span class="math notranslate nohighlight">\(g'\)</span> for the square root of <span class="math notranslate nohighlight">\(c\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    g' = g + e = g + \frac{c - g^2}{2g} = \frac{g^2 + c}{2g} = \frac{g + c/g}{2}
+\]</div>
+<p>We can then use this new guess <span class="math notranslate nohighlight">\(g'\)</span>, and find <em>its</em> error away from the real value. Repeating this process over and over gets our guess closer to the actual value. Notice that our new guess <span class="math notranslate nohighlight">\(g'\)</span> is simply the average of our original guess <span class="math notranslate nohighlight">\(g\)</span>, and the number <span class="math notranslate nohighlight">\(c\)</span> we are trying to find the square root of divided by <span class="math notranslate nohighlight">\(g\)</span>. One of these numbers will be <em>greater</em> than the real root, while the other will be <em>smaller</em>. This is why the average of the two will get us closer to the actual root.</p>
+<p>The code below shows how to find <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. Notice that it only takes a few steps to get a really good value!</p>
+<p id="heron"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/f5db76f718?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Obviously, this is great for printing out <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, but suppose we want to use it to define a variable? Or find the square root of another number? Then we need to write a function for this. This is done in the program given further below, where a function <code class="docutils literal notranslate"><span class="pre">squareRoot()</span></code> is defined, with two arguments <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> and <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code>. These are the two constant values from the previous cell, so it is natural they are what we input when using the function.</p>
+<p>A few notes about this function. First, I removed the print statements, but you can always put them back if you want to see how the method is progressing. I also have included what is known as a <strong>docstring</strong> (short for <strong>documentation string</strong>) at the beginning of the function, in between the triple single quotes (you can also use double quotes, if you wish). This provides a place for the programmer to document their code for other users. These are read in Python like a comment, but without having to put a <code class="docutils literal notranslate"><span class="pre">#</span></code> at the beginning of every line. This is good practice, to explain to anyone reading the code what it is trying to do, and how.</p>
+<p>Finally, notice that I have assigned a value to <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code>. What does this mean? This is a default value for the number of steps of the function. Run this code now, then we can come back to this point.</p>
+<p id="sqrt"><a class="reference internal" href="#intro-py"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/python/8179a6f36a?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>By the way, notice that we cannot use the <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator for <code class="docutils literal notranslate"><span class="pre">guess</span></code> inside the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, since we are <em>not</em> simply adding a number to <code class="docutils literal notranslate"><span class="pre">guess</span></code>, but we are doing something more complicated.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Add the appropriate command to the program above to print out the results of the function <code class="docutils literal notranslate"><span class="pre">squareRoot()</span></code>, when finding the square root of 2 using seven steps.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Using <code class="docutils literal notranslate"><span class="pre">squareRoot(2,</span> <span class="pre">7)</span></code> will run the function, to find the square root of 2 with seven steps. However, it will not print out the value it found. Thus, you must use the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">squareRoot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This should print out the value 1.41421356237.</p>
+</div>
+<p>For the above, I put the two arguments <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> and <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code> as 2 and 7, respectively. But what if I don’t care how many steps the method takes? This is why I put a default value. If I only put one argument, then Python will assign its value to <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, and automatically take <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code> to be 5. Add the line</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">squareRoot</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>and run the program. This uses five steps to find <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, since we did not specify <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Find the square root of your favorite number. See many steps does it take to match what your calculator says if you use it instead.</p>
+</div>
+<p>You may have caught it already, but there are several issues with this method, as written in our function. The first question is how do we deal with negative numbers? It’s probably good policy to just not deal with those! So, go back to the original function, and add the following <code class="docutils literal notranslate"><span class="pre">if</span></code> statement just before the definition of <code class="docutils literal notranslate"><span class="pre">guess</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">NUMBER</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We only find the square roots of positive numbers.&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>This will print a warning, then return the value 0.</p>
+<p>The second issue is that our original guess is really bad! We can do much better than that. One way to improve our guess is to start a variable <code class="docutils literal notranslate"><span class="pre">guess</span></code> with value 1, and see if squaring this number gives a value greater than <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>. If not, we can increase <code class="docutils literal notranslate"><span class="pre">guess</span></code> by one, and see if its square is greater than <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>. Eventually, it will be, so we use this value as the start for Heron’s method. Notice we don’t care if we go over the value of <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, since the method uses <code class="docutils literal notranslate"><span class="pre">NUMBER</span> <span class="pre">/</span> <span class="pre">guess</span></code> (which will be lower than the number we want the root of) in the average to find the next guess. To implement this, <em>after</em> the definition of <code class="docutils literal notranslate"><span class="pre">guess</span></code>, but <em>before</em> the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, type in the code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">guess</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">NUMBER</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Now run the improved procedure with different values of <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, and see how it does. You should get much better results than before.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You can modify the method given above to find the cube root of a number. Suppose we want to find the cube root of <span class="math notranslate nohighlight">\(c\)</span>, i.e. find the value <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(x^3 - c = 0\)</span>. If we make a guess <span class="math notranslate nohighlight">\(x = g\)</span> with an integer <span class="math notranslate nohighlight">\(g\)</span>, then in general this will be off by some error <span class="math notranslate nohighlight">\(e\)</span>, such that <span class="math notranslate nohighlight">\((g + e)^3 = c\)</span>. Multiplying this out, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    g^3 + 3 g^2 e + 3 g e^2 + e^3 = c
+\]</div>
+<p>Like before, we assume that <span class="math notranslate nohighlight">\(e\)</span> is small, and approximate this equation by dropping both the <span class="math notranslate nohighlight">\(e^2\)</span> and <span class="math notranslate nohighlight">\(e^3\)</span> terms. Then, solving for our next guess <span class="math notranslate nohighlight">\(g'\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    g' = g + e = \frac{1}{3} \biggl(\frac{c}{g^2} + 2g \biggr)
+\]</div>
+<p>Using this method, write a Python function <code class="docutils literal notranslate"><span class="pre">cubeRoot()</span></code> that calculates the cube root of a given number. The function should have two arguments: <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code>, the number to take the cube root of, and <code class="docutils literal notranslate"><span class="pre">NUM_STEPS</span></code>, the number of steps to use in the algorithm. What would be a way of getting a good first guess for the cube root?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one possible program. The initial guess uses the same method as above, by finding the integer whose cube is the lowest one above the given number.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cubeRoot</span><span class="p">(</span><span class="n">NUMBER</span><span class="p">,</span> <span class="n">NUM_STEPS</span> <span class="o">=</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Find the cube root of a number</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="n">guess</span> <span class="o">=</span> <span class="mi">1</span>        <span class="c1"># Starting guess for the root</span>
+
+    <span class="k">while</span> <span class="n">guess</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="n">NUMBER</span><span class="p">:</span>
+        <span class="n">guess</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">iii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NUM_STEPS</span><span class="p">):</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="p">(</span><span class="n">NUMBER</span> <span class="o">/</span> <span class="n">guess</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">guess</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+    
+    <span class="k">return</span> <span class="n">guess</span>     <span class="c1"># Final value of method</span>
+</pre></div>
+</div>
+<p>Notice we don’t have to worry about whether the original number is positive or negative, since you can take the cube root of a negative number!</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">1.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This lesson covers a lot of the Python ideas and commands you will use in other lessons. In particular, it covers variables, mathematical operations, <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">if</span></code> statements, lists, logical tests, and functions and procedures. It may seem like a lot, but with practice, you will get used to it all. You should review this lesson every once in a while, to make sure you haven’t forgotten anything, or if you need a reminder of how a particular command works. Note that this is a rather simplified version of Python – there are many other commands that we will not use in these lessons. However, it does give you a basic familiarity with the language. If you are interested in learning more, there are <em>many</em> resources on-line, since Python is a very popular language. If you sign up for a free Trinket account, you can find some helpful introductions on the Home page of your account, under “Featured Courses”. Two other sites I find nice are <a class="reference external" href="https://www.w3schools.com/python/">w3schools.com</a> and <a class="reference external" href="http://easypythondocs.com/">Easy Python Docs</a>; just realize they feature the <em>entire</em> language!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Create numerical variables, and print the values of these variables</p></li>
+<li><p>Use mathematical operators to change the value of a variable</p></li>
+<li><p>Use an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to make a logical test</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">while</span></code> or <code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p></li>
+<li><p>Create a list</p></li>
+<li><p>Create a procedure or function with arguments</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">NAPS Intermediate Physics</a>
+    <a class='right-next' id="next-link" href="L02_Vectors_and_vPython.html" title="next page"><span class="section-number">2. </span>Vectors and vPython</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

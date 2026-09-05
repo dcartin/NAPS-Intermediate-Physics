@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Kinematic equations &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Vector magnitude and direction" href="L07_Vector_magnitude_and_direction.html" />
+    <link rel="prev" title="5. Acceleration and free fall" href="L05_Acceleration_and_free_fall.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L06_Kinematic_equations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L06_Kinematic_equations.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   6.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector-kinematic-equations">
+   6.2. Vector kinematic equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example-free-fall">
+   6.3. An example: free fall
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   6.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kinematic-equations">
+<span id="kin-eqns"></span><h1><span class="section-number">6. </span>Kinematic equations<a class="headerlink" href="#kinematic-equations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">6.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>We now have the definitions of average velocity and acceleration from previous lessons. Taking the limit <span class="math notranslate nohighlight">\(\Delta t \to 0\)</span> gives the instantaneous velocity and acceleration; in graph terms, this would be the slope at a particular time on a position vs. time or velocity vs. time graph, respectively. Up until now, we have focused more on understanding what velocity and acceleration mean, and how to code them into a computer simulation.</p>
+<p>Our next step is to view these quantities from a more mathematical side. Building from the basic definitions, we will see that there are equations that relate them to each other. Specifically, we will assume constant acceleration, and see where that takes us. In particular, we will go through the important examplem of free fall, where an object is moving along a vertical line due to the gravitational field. You have seen how to simulate this in vPython in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05</span></a>; in this lesson, we will focus more on the calculational side. Then, if we wish, we can use the kinematic equations to verify the results we obtain in our simulations.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the kinematic equations, and explain when they are valid.</p></li>
+<li><p>Calculate an unknown vector quantity (position, velocity or acceleration) using the vector kinematic equations.</p></li>
+<li><p>Calculate an unknown vector component using the appropriate scalar kinematic equation.</p></li>
+</ul>
+</div>
+<div class="section" id="vector-kinematic-equations">
+<h2><span class="section-number">6.2. </span>Vector kinematic equations<a class="headerlink" href="#vector-kinematic-equations" title="Permalink to this headline">¶</a></h2>
+<p>For now, we assume the acceleration of the object is <em>constant</em>. This will allow us to derive a set of equations to use to solve for an unknown quantity. Later we will explore non-constant accelerations, using vPython programming and numerically calculating velocity and position. I emphasize the later point because, as a general rule, it is important to know when a particular equation “breaks”. In other words, just like an engineer must find the safety margins for a particular structure or piece of equipment, you should know when an equation is valid or not. So, our key assumption here, to repeat, is that</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec a} = {\vec a}_{avg} = \textrm{constant}
+\]</div>
+<p>Later, in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 07 (projectile motion)</span></a>, we will explore what happens when this assumption is <em>not</em> true, specifically when air resistance is present.</p>
+<p>We can build up all the kinematic equations from this one assumption, and the definitions of average velocity and acceleration. Starting from the definition of acceleration, we get our first equation; we will also use the symbol <span class="math notranslate nohighlight">\(t\)</span> to represent <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec a} = \frac{\Delta {\vec v}}{\Delta t} = \frac{{\vec v}_f - {\vec v}_i}{t}
+\]</div>
+<p>This gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_f = {\vec v}_i + {\vec a} t
+\]</div>
+<p>Note this <em>vector</em> equation is the same as an equation for <em>each</em> of the vector components:</p>
+<div class="math notranslate nohighlight">
+\[
+v_{f, x} = v_{i, x} + a_x t \qquad
+v_{f, y} = v_{i, y} + a_y t \qquad
+v_{f, z} = v_{i, z} + a_z t
+\]</div>
+<p>It is simpler to write the vector equation (three equations for the price of one!), but realize that it means the equation must be satisfied in each of the coordinate directions.</p>
+<p>Another point is that we have been using this kinematic equation already when updating the velocity of an object in vPython. In <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 04</span></a>, when we found the final velocity <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> of an object <code class="docutils literal notranslate"><span class="pre">ball</span></code> at the end of a time step <code class="docutils literal notranslate"><span class="pre">DT</span></code>, with acceleration <code class="docutils literal notranslate"><span class="pre">ball.accel</span></code>, then</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">ball</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+=</span> <span class="n">ball</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+</pre></div>
+</div>
+<p>So hopefully you see the relationship between physics and computing when we construct simulations. However, we can go further in the simulations, even when the acceleration is <em>not</em> constant. In a case like that, the new velocity would be just an estimate, since the kinematic equation is no longer exactly accurate, and there would be some error in our computations. Reducing that error as much as possible is a key pursuit in computational physics.</p>
+<p>For the next problem, one of the givens is not provided explicitly in the statement, but you need it to do the calculation. Think about what is happening when you reach the time you are solving for. Often, there are such implicit numbers necessary in solving the problem. We will see this more as we go through free fall and, later, projectile motion in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 07</span></a>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A rabbit runs across a meadow. A scientist watching the rabbit through a surveillance camera sees the following motion:</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/Run-rabbit-run-graph_small.png"><img alt="../_images/Run-rabbit-run-graph_small.png" src="../_images/Run-rabbit-run-graph_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The motion of a rabbit</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The velocity of the rabbit at <span class="math notranslate nohighlight">\(t = 0\)</span> is <span class="math notranslate nohighlight">\((-9.10 \ \text{m/s}) {\hat x} + (7.20 \ \text{m/s}) {\hat y}\)</span>, and the rabbit’s acceleration is <span class="math notranslate nohighlight">\((43.6 \ \text{cm/s}^2) {\hat x} + (-62.0 \ \text{cm/s}^2) {\hat y}\)</span>. At what time (in s) does the rabbit momentarily stop in the <span class="math notranslate nohighlight">\(y\)</span> direction? Note that the rabbit is still moving in the <span class="math notranslate nohighlight">\(x\)</span> direction!</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 11.6 s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">rabbitStop()</span></code> that finds the time when the rabbit’s motion switches directions in the <span class="math notranslate nohighlight">\(y\)</span> direction. Assume, as in the problem above, that the rabbit has a constant acceleration, and that the initial <span class="math notranslate nohighlight">\(y\)</span> velocity component of the rabbit is positive. The arguments of the function are two vPython vectors: <code class="docutils literal notranslate"><span class="pre">init_vel</span></code>, the rabbit’s initial velocity, and <code class="docutils literal notranslate"><span class="pre">accel</span></code>, the acceleration. The function should output the time when <span class="math notranslate nohighlight">\(v_y\)</span> goes from positive to negative. You should check your results using the numbers from the previous problem.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one possible program to simulate the rabbit.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rabbitStop</span><span class="p">(</span><span class="n">init_vel</span><span class="p">,</span> <span class="n">accel</span><span class="p">):</span>
+
+    <span class="c1"># Create spherical rabbit</span>
+    
+    <span class="n">rabbit</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">velocity</span> <span class="o">=</span> <span class="n">init_vel</span><span class="p">,</span> \
+                    <span class="n">accel</span> <span class="o">=</span> <span class="n">accel</span><span class="p">)</span>
+
+    <span class="c1"># Time definitions (in seconds)</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">DT</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+    <span class="c1"># Evolution loop</span>
+
+    <span class="k">while</span> <span class="n">rabbit</span><span class="o">.</span><span class="n">velocity</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    
+        <span class="c1"># Update rabbit position, velocity</span>
+        
+        <span class="n">rabbit</span><span class="o">.</span><span class="n">velocity</span> <span class="o">+=</span> <span class="n">rabbit</span><span class="o">.</span><span class="n">accel</span> <span class="o">*</span> <span class="n">DT</span>
+        <span class="n">rabbit</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="n">rabbit</span><span class="o">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="n">DT</span>
+        
+        <span class="c1"># Update time</span>
+        
+        <span class="n">t</span> <span class="o">+=</span> <span class="n">DT</span>
+        
+    <span class="c1"># Return time to switch v_y sign</span>
+        
+    <span class="k">return</span> <span class="n">t</span>
+</pre></div>
+</div>
+<p>You can check your results against the problem above by running the commands</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">rabbitStop</span><span class="p">(</span><span class="n">vector</span><span class="p">(</span><span class="o">-</span><span class="mf">9.10</span><span class="p">,</span> <span class="mf">7.20</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">vector</span><span class="p">(</span><span class="mf">0.436</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.620</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Our next equation is going to give a relation between the displacement <span class="math notranslate nohighlight">\(\Delta {\vec r} = {\vec r}_f - {\vec r}_i\)</span>, the time interval <span class="math notranslate nohighlight">\(t\)</span>, and the initial and final velocities <span class="math notranslate nohighlight">\({\vec v}_i\)</span> and <span class="math notranslate nohighlight">\({\vec v}_f\)</span>. Let’s show this by reviewing some graph skills; we will specifically use the motion in the <span class="math notranslate nohighlight">\(x\)</span> direction, but this argument works for the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions as well. If we graph <span class="math notranslate nohighlight">\(v_x\)</span> versus time for a constant acceleration, our graph looks like the one below.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L05_Fig01-Vel-vs-t-graph_small.png"><img alt="../_images/INT_AY21_L05_Fig01-Vel-vs-t-graph_small.png" src="../_images/INT_AY21_L05_Fig01-Vel-vs-t-graph_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text"><span class="math notranslate nohighlight">\(x\)</span> velocity vs. time graph for an object with a <em>constant</em> <span class="math notranslate nohighlight">\(a_x\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>I know that <span class="math notranslate nohighlight">\(a_x\)</span> is constant, because the graph has a constant slope. To find the displacement, I need to find the area of the shaded region, defined by the time interval <span class="math notranslate nohighlight">\(t\)</span>. Note that I am finding the exact area here, unlike in Lesson 04, since we assume we know the acceleration is constant. This can be divided into a rectangle and a triangle, so the area is</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_x = v_{i, x} t + \frac{1}{2} (v_{f, x} - v_{i, x}) t = \frac{1}{2}(v_{i, x} + v_{f, x}) t
+\]</div>
+<p>Performing the same derivation for the other two directions, I can write this as a vector equation, namely,</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec r} = \frac{1}{2} ({\vec v}_i + {\vec v}_f) t
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A flock of Canadian geese leave Newport for the winter, and head due south 150 km over the course of two hours. If their final velocity is 17.8 m/s southward and 4.92 m/s eastward, find the initial velocity of the geese (in m/s) at the beginning of the time period. Write your answer in unit vector notation, with <span class="math notranslate nohighlight">\(+x\)</span> pointing eastward, and <span class="math notranslate nohighlight">\(+y\)</span> pointing northward.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer</em>: <span class="math notranslate nohighlight">\({\vec v}_i = (-4.92 \textrm{ m/s}) {\hat x} + (59.5 \textrm{ m/s}) {\hat y}\)</span></p>
+</div>
+<p>Remember that the average velocity is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{\Delta {\vec r}}{\Delta t}
+\]</div>
+<p>so combining the last two equations gives (for constant acceleration)</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{1}{2} ({\vec v}_i + {\vec v}_f)
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you are given a graph of the <span class="math notranslate nohighlight">\(x\)</span> velocity vs. time for an object, as shown below. The acceleration is no longer constant, since the slope changes with time.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L05_Fig02-Vel-vs-t-graph_small.png"><img alt="../_images/INT_AY21_L05_Fig02-Vel-vs-t-graph_small.png" src="../_images/INT_AY21_L05_Fig02-Vel-vs-t-graph_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text"><span class="math notranslate nohighlight">\(x\)</span> velocity vs. time graph for an object with <em>changing</em> <span class="math notranslate nohighlight">\(a_x\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>If you use the above equation to find the average velocity during time interval <span class="math notranslate nohighlight">\(t_1\)</span> (i.e. with initial and final velocities <span class="math notranslate nohighlight">\(v_{1, x}\)</span> and <span class="math notranslate nohighlight">\(v_{2, x}\)</span>), would your answer be too big, too small, or exactly right?</p></li>
+<li><p>What if you tried the same calculation for the average velocity during time interval <span class="math notranslate nohighlight">\(t_2\)</span>, with initial and final velocities <span class="math notranslate nohighlight">\(v_{3, x}\)</span> and <span class="math notranslate nohighlight">\(v_{4, x}\)</span>?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Remember that the average velocity over a time interval is given by the displacement divided by the change in time. In particular, the displacement <span class="math notranslate nohighlight">\(\Delta r_x\)</span> in the <span class="math notranslate nohighlight">\(x\)</span> direction here is the area under the curve, so the question is whether using the “average area” equation</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_x = \frac{1}{2} (v_{1, x} + v_{2, x}) t_1
+\]</div>
+<p>for the first interval, for example, is the right size. This is just the area of a trapezoid on its side, i.e. where its “height” is <span class="math notranslate nohighlight">\(t_1\)</span>, and its two “bases” are <span class="math notranslate nohighlight">\(v_{1, x}\)</span> and <span class="math notranslate nohighlight">\(v_{2, x}\)</span>. Thus, we need to see if this trapezoid matches the shaded areas. If you draw the appropriate lines to finish the trapezoids, you will see that the trapezoid is too small for time interval <span class="math notranslate nohighlight">\(t_1\)</span>, and too large for <span class="math notranslate nohighlight">\(t_2\)</span>. Thus, the “average” velocity calculated using the equation given above the problem is too small for the first interval, and too large for the second.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Why is the equation</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_{avg} = \frac{1}{2} ({\vec v}_i + {\vec v}_f)
+\]</div>
+<p>incorrect with a <em>non-constant</em> acceleration? In other words, what goes wrong when the slope of the <span class="math notranslate nohighlight">\(v_x\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> graph is not constant?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The basic issue is that the equation assumes a constant rate of change from <span class="math notranslate nohighlight">\({\vec v}_i\)</span> to <span class="math notranslate nohighlight">\({\vec v}_f\)</span>. For example, this means that the graph of <span class="math notranslate nohighlight">\(v_x\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> is a straight-line between <span class="math notranslate nohighlight">\(v_{i, x}\)</span> and <span class="math notranslate nohighlight">\(v_{f, x}\)</span>. As you saw in the solution for the last problem, this can over- or underestimate the true displacement <span class="math notranslate nohighlight">\(\Delta r_x\)</span> if there is a non-constant acceleration.</p>
+</div>
+<p>To get our last vector kinematic equation, we can use our equation <span class="math notranslate nohighlight">\({\vec v}_f = {\vec v}_i + {\vec a} t\)</span> from above. Thinking in graph terms, this is the same as using the slope and the initial velocity to write down the final velocity. If we do this, then using <span class="math notranslate nohighlight">\({\vec v}_f = {\vec v}_i + {\vec a} t\)</span> along with our equation for <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> from above gives</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec r} = {\vec v}_i t + \frac{1}{2} {\vec a} t^2
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">calcDisp()</span></code> that calculates the displacement of an object undergoing a constant acceleration over a given time. The arguments of this function are vPython vectors <code class="docutils literal notranslate"><span class="pre">v_i</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code>, representing the initial velocity (in m/s) and acceleration (in m/s<span class="math notranslate nohighlight">\(^2)\)</span>, respectively, and a scalar <code class="docutils literal notranslate"><span class="pre">t</span></code> giving the time interval (in s). The function should then return the displacement (in m) as a vPython vector.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is one solution to the problem; make sure you see what parts of the vector kinematic equation above match the vpython code below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcDisp</span><span class="p">(</span><span class="n">v_i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calculate the displacement of an object</span>
+<span class="sd">    with a given initial velocity, and</span>
+<span class="sd">    undergoing a constant acceleration over</span>
+<span class="sd">    a time interval.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">return</span> <span class="n">v_t</span> <span class="o">*</span> <span class="n">t</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">t</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>While coming in to land on a strange new planet, an astronaut has initial velocity of 8.75 m/s downward, 14.5 cm/s westward and 7.96 cm/s northward. After traveling for 2.15 minutes, the astronaut’s space vehicle lands on the planet. During this time, the lander’s vehicle had a displacement of 2.21 km westward, 1.18 km southward and 45.0 km downward. Find the acceleration of the lander (in m/s<span class="math notranslate nohighlight">\(^2\)</span>).</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec a} = (-0.263 \textrm{ m/s}^2) {\hat x} + (-0.143 \textrm{ m/s}^2) {\hat y} + (-5.27 \textrm{ m/s}^2) {\hat z}\)</span></p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A sailboat is coasting on Narragansett Bay when the pilot realizes they are about to get hit by a large freighter. She turns on the boat’s motor, which accelerates the craft at 7.50 cm/s<span class="math notranslate nohighlight">\(^2\)</span> westward for 1/3rd of a minute. This moves the sailboat 50.0 m westward, and out of danger. What is the final velocity (in m/s) of the sailboat?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer</em>: 3.25 m/s, westward</p>
+</div>
+</div>
+<div class="section" id="an-example-free-fall">
+<h2><span class="section-number">6.3. </span>An example: free fall<a class="headerlink" href="#an-example-free-fall" title="Permalink to this headline">¶</a></h2>
+<p>As we saw in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05</span></a>, a key case for one-dimensional motion is that of an object in a gravitational field. Obviously, this is something we deal with every day, so you should have some intuition about what results to expect. Let’s now go through such a problem, and see how the kinematic equations can be used to solve for quantities of interest. Consider the following.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A man, at the top of a 34.5 m tall cliff, throws a ball straight up with an initial velocity of 29.4 m/s.</p>
+<ol class="simple">
+<li><p>How long (in s) does it take the ball to reach its maximum height?</p></li>
+<li><p>How high (in m) is the maximum height above the ground?</p></li>
+<li><p>How much time (in s)will it take for the ball to hit the ground?</p></li>
+<li><p>What is the speed (in m/s) of the ball when it hits the ground at the bottom of the cliff?</p></li>
+</ol>
+</div>
+<p>If it is helpful, you can list your givens and unknowns in a table, as shown below. We are working in the vertical direction, so we use the <span class="math notranslate nohighlight">\(y\)</span> axis, with the <span class="math notranslate nohighlight">\(+y\)</span> direction pointing upwards. The subscript <span class="math notranslate nohighlight">\(f\)</span> is when the ball reaches the ground, while <span class="math notranslate nohighlight">\(max\)</span> is when the ball is at its maximum height. For convenience, we have made the ground to be <span class="math notranslate nohighlight">\(r_y = 0.00\)</span>; then, when we calculate the maximum height above the ground, we do not have to add or subtract any extra number.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec r}_i\)</span></p></td>
+<td><p>34.5 m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec r}_{max}\)</span></p></td>
+<td><p>? m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec r}_f\)</span></p></td>
+<td><p>0.00 m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec v}_i\)</span></p></td>
+<td><p>29.4 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec v}_{max}\)</span></p></td>
+<td><p>0.00 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec v}_f\)</span></p></td>
+<td><p>? m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec a}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-9.81\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(t_{max}\)</span></p></td>
+<td><p>? s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(t_f\)</span></p></td>
+<td><p>? s</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notice that the problem has a special position, known as the <strong>maximum height</strong>. This can be called the “peak”, the “highest point”, or other such terms. What is happening at this point is that the object stops moving upwards, and starts moving downward – it is turning around in the <span class="math notranslate nohighlight">\(y\)</span> direction. If you think about what this means, it requires the projectile to <em>momentarily</em> stop vertically. This is why the velocity <span class="math notranslate nohighlight">\(v_{max, y} = 0.00\)</span> m/s in the table.</p>
+<p>So let’s start with finding the time to reach the maximum height, from its starting point. We have the vertical velocities at both of these points, and the vertical acceleration, so we can use</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{max, y} = v_{i, y} + a_y t_{max} \Rightarrow t_{max} = \frac{-v_{i, y}}{a_y}
+\]</div>
+<p>since <span class="math notranslate nohighlight">\(v_{max, y} = 0\)</span>. You may find it odd that there is a minus sign in front of the right-hand side of this equation. However, this is exactly what we need to get a positive time, since <span class="math notranslate nohighlight">\(a_y &lt; 0\)</span>. This is why you need to watch your signs when writing down your givens – if you choose them correctly, then in general, the calculation will automatically give you the right direction for your final answer. Plugging in the values from the test gives that <span class="math notranslate nohighlight">\(t_{max} = 3.00\)</span> s.</p>
+<p>Next, we find how the maximum distance above the ground the ball reaches. Since all of the equations deal with displacement <span class="math notranslate nohighlight">\(\Delta r_y\)</span> from the initial point, then we can find this value, then use</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_y = r_{max, y} - r_{i, y} \Rightarrow r_{max, y} = r_{i, y} + \Delta r_y
+\]</div>
+<p>since all positions <span class="math notranslate nohighlight">\(r_y\)</span> are given in terms of the ground <span class="math notranslate nohighlight">\(r_y = 0\)</span>. One way to solve this is using</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_y = \frac{1}{2} (v_{i, y} + v_{max, y}) t_{max} \Rightarrow r_{max, y} = r_{i, y} + \frac{v_{i, y} t_{max}}{2}
+\]</div>
+<p>Substituting into this last equation gives <span class="math notranslate nohighlight">\(r_{max, y} = 78.6\)</span> m.</p>
+<p>We go through a similar process for finding the time to reach the ground, and the final velocity at that point.</p>
+<div class="warning admonition">
+<p class="admonition-title">When the motion ends</p>
+<p>The velocity when an object hits the ground is not zero! If you think about why things stop when they hit the ground, it is because there is an extra acceleration (the “ground force”) acting. Remember you saw this in your graph of <span class="math notranslate nohighlight">\(a_y\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> at the end of <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel-vpy-freefall"><span class="std std-ref">Lesson 05</span></a>. This is <em>not</em> included in the gravitational field, so we cannot use <span class="math notranslate nohighlight">\(a_y = -g\)</span> to solve for this. If it helps, think about questions like these as asking for the velocity (or time, or…) just before it hits the ground, when the motion is entirely due to only the gravitational field.</p>
+</div>
+<p>To find the time to reach the ground, without knowing the final velocity, I can start with</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_y = v_{i, y} t + \frac{1}{2} a_y t^2
+\]</div>
+<p>However, there are two terms which have a time <span class="math notranslate nohighlight">\(t\)</span> in them, so it is not a simple matter of solving for one of these terms, and then dividing; this method will not have a time only on one side of the equation, but both! Thus, you need something slightly more sophisticated – here, you need to use the quadratic formula. Thus, you need to get the equation above into the standard form</p>
+<div class="math notranslate nohighlight">
+\[
+	0 = \frac{1}{2} a_y t^2 + v_{i, y} t - \Delta r_y
+\]</div>
+<p>and then solve for <span class="math notranslate nohighlight">\(t\)</span>. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+		t = \frac{-v_{i, y} \pm \sqrt{v_{i, y} ^2 + 2 a_y \Delta r_y}}{a_y}
+\]</div>
+<p>Now, there is one last step, to write out <span class="math notranslate nohighlight">\(\Delta r_y\)</span> in terms of <span class="math notranslate nohighlight">\(r_{i, y}\)</span> and <span class="math notranslate nohighlight">\(r_{f, y}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+		t = \frac{-v_{i, y} \pm \sqrt{v_{i, y} ^2 + 2 a_y (r_{f, y} - r_{i, y})}}{a_y}
+\]</div>
+<p>Notice this means <span class="math notranslate nohighlight">\(\Delta r_y &lt; 0\)</span>! If you used the height of 39.4 m when substituting in, you would get a different answer. It is important to watch your signs! When you put everything in correctly, you should get <span class="math notranslate nohighlight">\(t_f = 7.00\)</span> s.</p>
+<div class="warning admonition">
+<p class="admonition-title">Work in one step</p>
+<p>Notice that we don’t have to “break up” the motion into pieces! We can find the total time of flight, without worry about how long it takes to get to the highest point, for example. It is much simpler to do it this way, and the physics equations “know” what the one, true trajectory is for the ball.</p>
+</div>
+<p>Finally, knowing as much as we do now, there are several choices for getting the final vertical velocity. Let’s stay simple, and use</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, y} = v_{i, y} + a_y t_f
+\]</div>
+<p>As noted before, if you put in your values with the correct signs, you automatically get a <em>downward</em> (negative) velocity of <span class="math notranslate nohighlight">\(v_{f, y} = -39.3\)</span> m/s. Since <em>speed</em> is the magnitude of the velocity, the ball’s speed if 39.3 m/s when it hits the ground.</p>
+<p>However, there is one extra nugget we can get from this problem. Specifically, we can discover an additional set of kinematic equations. Although they may look like it, these next equations cannot be written as a single vector equation, but there is one for each of the three coordinate axes <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>. I will call these the <strong>scalar kinematic equations</strong>.</p>
+<p>Suppose we knew the final velocity of the ball in this problem, and wanted to find the time of flight. Taking the same equation we just used, but now solving for <span class="math notranslate nohighlight">\(t_f\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    t_f = \frac{v_{f, y} - v_{i, y}}{a_y}
+\]</div>
+<p>This looks a lot like</p>
+<div class="math notranslate nohighlight">
+\[
+	t_f = \frac{-v_{i, y} \pm \sqrt{v_{i, y} ^2 + 2 a_y (r_{f, y} - r_{i, y})}}{a_y}
+\]</div>
+<p>These equations match up (and we don’t have to worry about the <span class="math notranslate nohighlight">\(\pm\)</span> sign) if</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, x} ^2 = v_{i, x} ^2 + 2 a_x \Delta r_x
+\]</div>
+<p>Note these are the <span class="math notranslate nohighlight">\(y\)</span> components of the vector, not the magnitudes; the same idea works for the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components as well.</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, x} ^2 = v_{i, x} ^2 + 2 a_x \Delta r_x \qquad
+    v_{f, z} ^2 = v_{i, z} ^2 + 2 a_z \Delta r_z
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>You are walking out the door of Ripley Hall when you realize you don’t have your cover. You see your roommate in your room window and yell up for them to throw your cover downward to you. Use the information given in the vertical velocity vs. time graph shown below to answer the following questions, and remember you know what the slope of this graph is!</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L03_Fig11_vy_v_time_graph.png"><img alt="../_images/INT_AY22_L03_Fig11_vy_v_time_graph.png" src="../_images/INT_AY22_L03_Fig11_vy_v_time_graph.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Vertical velocity component vs. time for a falling cover</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>How long (is s) does it take for your cover to reach your hands? In other words, what is the value of <span class="math notranslate nohighlight">\(T\)</span>?</p></li>
+<li><p>How high (in m) is your window above your hands?</p></li>
+<li><p>Suppose your roommate instead threw your cover upward with a speed of 1.96 m/s. How long (in s) would it take to reach your hands now?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 1.22 s; 11.0 m; 1.77 s</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">6.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This lesson expanded our mathematical tool kit to include the vector and scalar kinematic equations. For completeness, let’s list them all here.</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec v}_f = {\vec v}_i + {\vec a} t \qquad
+    \Delta {\vec r} = \frac{1}{2} ({\vec v}_i + {\vec v}_f) t \qquad
+    \Delta {\vec r} = {\vec v}_i t + \frac{1}{2} {\vec a} t^2
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, x} ^2 = v_{i, x} ^2 + 2 a_x \Delta r_x \qquad
+    v_{f, y} ^2 = v_{i, y} ^2 + 2 a_y \Delta r_y \qquad
+    v_{f, z} ^2 = v_{i, z} ^2 + 2 a_z \Delta r_z
+\]</div>
+<p>These are exact when the acceleration of an object is constant. Even when the acceleration is <em>not</em> constant, these kinematic equations are the basis for everything we will be doing in computational physics. You have already seen how the first two allow us to update the position and velocity of a moving object. Later in the course, in Lesson 20, you will see how the last three provide a helpful window into the idea of work and energy. Understanding how to use these in various applications will be very important for you!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Explain when to use a particular vector or scalar kinematic equation</p></li>
+<li><p>Use the vector and scalar kinematic equations to solve a motion problem</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L05_Acceleration_and_free_fall.html" title="previous page"><span class="section-number">5. </span>Acceleration and free fall</a>
+    <a class='right-next' id="next-link" href="L07_Vector_magnitude_and_direction.html" title="next page"><span class="section-number">7. </span>Vector magnitude and direction</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

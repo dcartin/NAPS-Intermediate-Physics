@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8. Projectile motion &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Relative motion" href="L09_Relative_motion.html" />
+    <link rel="prev" title="7. Vector magnitude and direction" href="L07_Vector_magnitude_and_direction.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L08_Projectile_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L08_Projectile_motion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   8.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independence-of-motion">
+   8.2. Independence of motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphing-projectile-motion">
+   8.3. Graphing projectile motion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-launch-angle">
+   8.4. General launch angle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-firing-a-cannonball">
+   8.5. Example: firing a cannonball
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   8.6. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="projectile-motion">
+<span id="proj-mot"></span><h1><span class="section-number">8. </span>Projectile motion<a class="headerlink" href="#projectile-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#x-y-comps"><span class="std std-ref">x and y motion components</span></a></p></li>
+<li><p><a class="reference internal" href="#proj-mot-graphs"><span class="std std-ref">Projectile motion graphs</span></a></p></li>
+</ol>
+<p>This lesson combines together essentially everything you have seen so far in the course. Much like <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05 (acceleration and free-fall)</span></a>, a projectile is an object in a gravitational field, which determines the acceleration of the object. In that lesson, we used a vPython simulation to visualize the projectile’s motion; you will do the same thing here, only now in two dimensions. Not only can the projectile go up and down, but now it can go sideways!</p>
+<p>The object’s constant acceleration can be used in conjunction with the kinematic equations from <a class="reference internal" href="L06_Kinematic_equations.html#kin-eqns"><span class="std std-ref">Lesson 06</span></a> to describe the motion at any time between its start and end. Specifically, this means solving for the position or velocity vectors. To actually calculate for these quantities, we need their vector components; however, in <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir"><span class="std std-ref">Lesson 07 (vector magnitude and direction)</span></a>, you saw how to switch between a description of a vector in terms of components, and one given by magnitude and direction. Also, we can now graph both the position and velocity components in both the horizontal and vertical directions, and see how the constant downward gravitational field results in characteristic shapes for these graphs.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/318px-Tartaglia.jpg"><img alt="../_images/318px-Tartaglia.jpg" src="../_images/318px-Tartaglia.jpg" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Niccolo Fontana Tartaglia (<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Portret_van_Niccolo_Tartaglia_Nicolavs_Tartaglia_Brixianvs_(titel_op_object)_Portretten_van_beroemde_Europese_geleerden_(serietitel)_Virorum_doctorum_de_Disciplinis_benemerentium_effigies_(serietitel),_RP-P-1909-4459.jpg">source</a>)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The first systematic and mathematical examination of the path of a projectile was undertaken by Niccolo Fontana in the <em>Nova Scientia</em> (1537). He is better known as “Tartaglia” (the Stammerer) from injuries suffered when a French soldier sliced his jaw and palate with a saber, leaving him unable to speak without difficulty. He never shaved after that, in order to hide the scars. Tartaglia is also well-known for his feud with the mathematician Girolano Cardano and others, about who had first developed a method for solving cubic equations, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+			x^3 + ax^2 + bx + c = 0
+\]</div>
+<p>This led to several public duels, where each side would give the other problems to solve! Although his ideas on ballistics were superceded by Galileo’s <em>Two New Sciences</em> (1638), his book was still cited well into the seventeenth century by gunners.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Explain qualitatively the horizontal and vertical motion of a projectile.</p></li>
+<li><p>Given a projectile initially moving with any launch angle, find the position or velocity at a given time.</p></li>
+<li><p>Calculate the speed and direction (relative to the horizontal) of a projectile at a particular time.</p></li>
+<li><p>Use the quadratic formula to find the time of flight for a projectile.</p></li>
+<li><p>Given a graph of a position, velocity or acceleration component of a projectile versus time, use the graph to determine information needed to solve a projectile motion problem.</p></li>
+</ul>
+</div>
+<div class="section" id="independence-of-motion">
+<h2><span class="section-number">8.2. </span>Independence of motion<a class="headerlink" href="#independence-of-motion" title="Permalink to this headline">¶</a></h2>
+<p>A good place to start studying projectile motion is to create a simulation of it. The program further down in this section creates a vPython animation of a ball moving in projectile motion as it falls to the ground. The <strong>launch angle</strong> is set to be zero – this is the angle between the initial velocity (i.e. at <span class="math notranslate nohighlight">\(t = 0\)</span>) and the horizontal (here, the <span class="math notranslate nohighlight">\(+x\)</span> axis). In the simulation, for every <em>tenth</em> time step, a small ball is created to mark its position, as well as the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of that position.</p>
+<p>Now, before you run the program, look through the code that creates the simulation. Again, the gravitational field is defined to be a downward pointing vector with a magnitude of 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GRAV_FIELD</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since gravity is the only force acting on the projectile, this means the <em>only</em> acceleration is downward (in the <span class="math notranslate nohighlight">\(-y\)</span> direction); there is no acceleration along the horizontal <span class="math notranslate nohighlight">\(x\)</span> axis! This is what we mean by <strong>projectile motion</strong> – the same thing as the free-fall we studied earlier, but now with the freedom for the projectile to move horizontally <em>and</em> vertically.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What do you expect the spacing of the spheres marking the <span class="math notranslate nohighlight">\(x\)</span> position component to look like? The <span class="math notranslate nohighlight">\(y\)</span> component position? Make a prediction before going further.</p>
+</div>
+<p>Run the program below, and see if your answers were correct.</p>
+<p id="x-y-comps"><a class="reference internal" href="#proj-mot"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/e8fc77cf06?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>When you run the simulation, you should notice the following consequences of the constant downward acceleration. First, the spheres marking the <span class="math notranslate nohighlight">\(x\)</span> motion of the ball are evenly spaced. Remember in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05</span></a>, we saw this represents a constant velocity component in that direction. Since <span class="math notranslate nohighlight">\(a_x = 0\)</span>, then <span class="math notranslate nohighlight">\(v_x\)</span> is constant. However, the spheres marking the ball’s <span class="math notranslate nohighlight">\(y\)</span> motion get further apart as they move downward towards the ground. This reflects the downward velocity component getting larger, as the ball travels a further distance every time interval. With <span class="math notranslate nohighlight">\(a_y \ne 0\)</span>, <span class="math notranslate nohighlight">\(v_y\)</span> is constantly changing, with this change pointing downward since the acceleration does as well.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Change the definition of the initial velocity <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> so that it has an upward (<span class="math notranslate nohighlight">\(y\)</span>) component. Does the basic behavior of the marked points change? What if the initial velocity has a downward component?</p>
+</div>
+<p>These basic properties of projectile motion are called the <strong>independence of motion</strong> in the vertical and horizontal directions. When we neglect air resistance, and only include the effect of gravity, the downward acceleration of the ball does not have any effect on the horizontal motion. Said differently, the motion of the projectile is the combination of (1) an object falling straight downward, plus (2) an object moving horizontally at a constant speed. These two motions are marked in the simulation by the spheres for the separate <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> motions. This fact actually remains true for high-speed objects, such as a bullet; the next cell has a link to a video clip from a MythBusters episode demonstrating this.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/tF_zv3TCT1U?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Because of the independence of motion, the only quantity that the horizontal and vertical motions have in common is the <strong>time of flight</strong>, the time from the start to just before the projectile hits the ground. Whatever the projectile does in the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions, it has to do it in the same time! This will be an important idea – if we can find the time of flight in one direction, we can use it to get information about the perpendicular direction.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Identical toy trucks roll off the ends of tables. The heights of the tables and speeds of the trucks are given in the figure. Compare these trucks on how long the trucks are in the air; which choice below is correct?</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L13_Fig03-Two-trucks-same-speed_small.png"><img alt="../_images/INT_AY20_MP1_L13_Fig03-Two-trucks-same-speed_small.png" src="../_images/INT_AY20_MP1_L13_Fig03-Two-trucks-same-speed_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.2 </span><span class="caption-text">Two trucks roll off a table with the same speed</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Truck A will be in the air longer than truck B</p></li>
+<li><p>Truck A will be in the air shorter than truck B</p></li>
+<li><p>Both trucks are in the air the same time</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer</em>: Truck A is in the air a shorter time, since it has to fall a shorter vertical distance. The time of flight only depends on the vertical motion of the truck.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Identical toy trucks roll off the ends of tables. The heights of the tables and speeds of the trucks are given in the figure. Compare these trucks on how long the trucks are in the air; which choice below is correct?</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L13_Fig04-Two-trucks-same-height_small.png"><img alt="../_images/INT_AY20_MP1_L13_Fig04-Two-trucks-same-height_small.png" src="../_images/INT_AY20_MP1_L13_Fig04-Two-trucks-same-height_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.3 </span><span class="caption-text">Two trucks roll off a table from the same height</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Truck A will be in the air longer than truck B</p></li>
+<li><p>Truck A will be in the air shorter than truck B</p></li>
+<li><p>Both trucks are in the air the same time</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer</em>: Both trucks are in the air the same amount of time, since they have exactly the same vertical motion. Truck B will travel a farther <em>horizontal</em> distance, since it has a larger horizontal velocity component.</p>
+</div>
+<p>For the following two problems, use the vertical motion of the projectile to find the time, and then use that information for solve for the rest of the motion.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A child rolls a toy car straight off a shelf with a height of 4.00 ft. The initial speed of the car is 55.0 cm/s.</p>
+<ol class="simple">
+<li><p>How long is the car in the air (in ms)?</p></li>
+<li><p>How far from the base of the shelf does the car land (in cm)?</p></li>
+<li><p>What is the speed of the car (in m/s) when it hits the floor?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers</em>: 499 ms; 67.0 cm; 4.93 m/s</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The NAVY’s new Electromagnetic Aircraft Launch System (EMALS) launch system uses a linear motor drive (vice a steam piston) to launch carrier-base aircraft off the deck. EMALS can get the aircraft to obtain a take-off speed of 240 km/h. After the problem is a video where you can see a test of the EMALS in action.</p>
+<p>The flight deck of the carrier is 18.0 m above the water. Assume air resistance is not a factor.</p>
+<ol class="simple">
+<li><p>How long is the cart in the air (in s)?</p></li>
+<li><p>How far away from the end of the carrier deck does the cart land (in m)?</p></li>
+<li><p>What speed and direction does the cart hit the water at? Give the speed in m/s and the direction in terms of degrees below the horizontal.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers</em>: 1.92 s; 128 m; 69.3 m/s, 15.7<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal</p>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/rOijb3JPCe4?mute=1"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="graphing-projectile-motion">
+<h2><span class="section-number">8.3. </span>Graphing projectile motion<a class="headerlink" href="#graphing-projectile-motion" title="Permalink to this headline">¶</a></h2>
+<p>As another way to study projectile motion, we now construct graphs of the velocity components as a function of time. The code below will produce two graphs, one for the position components of the ball, and the other for the velocity components. Each graph will have two lines – the red line for the respective <span class="math notranslate nohighlight">\(x\)</span> component, and the blue line for the <span class="math notranslate nohighlight">\(y\)</span> component. In this case, the initial velocity is horizontal, so there is a zero launch angle.</p>
+<p id="proj-mot-graphs"><a class="reference internal" href="#proj-mot"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/9f7c3c8262?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What happens to the graphs if the initial velocity has an upward <span class="math notranslate nohighlight">\(x\)</span> component? A downward <span class="math notranslate nohighlight">\(x\)</span> component? What aspects of the graphs change – the slope? the value at <span class="math notranslate nohighlight">\(t = 0\)</span>?</p>
+</div>
+<p>We can use graphs such as these to obtain necessary information to solve a problem; remember you did something similar at the end of <a class="reference internal" href="L06_Kinematic_equations.html#kin-eqns"><span class="std std-ref">Lesson 06 (kinematic equations)</span></a>. For all situations, the slope of the <span class="math notranslate nohighlight">\(y\)</span> velocity component vs. time will give the gravitational field in the <span class="math notranslate nohighlight">\(y\)</span> direction, i.e. the value of <span class="math notranslate nohighlight">\(a_y = -g\)</span>. If the projectile is initially traveling upward, it will reach a maximum height. This point can be seen in the <span class="math notranslate nohighlight">\(r_y\)</span> as its largest value (the “peak” of the curve). As we will talk more about below, the max height is also the point in the <span class="math notranslate nohighlight">\(v_y\)</span> vs. <span class="math notranslate nohighlight">\(t\)</span> graph when <span class="math notranslate nohighlight">\(v_y = 0\)</span>, so the line crosses the time axis. The vector components of the projectile’s total displacement is given in the differences in each of the position components <span class="math notranslate nohighlight">\(r_x\)</span> and <span class="math notranslate nohighlight">\(r_y\)</span> over the entire time of flight. Thinking in terms like these will help you when you need to get your givens from a graph.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A tennis ball is fired off the roof of a building and lands on the ground below at time <span class="math notranslate nohighlight">\(T\)</span>. The following two graphs show the horizontal and vertical components of the ball’s velocity as it falls, between the start of its trajectory up to just <em>before</em> the impact.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L14_Fig01-Vel-vs-t-graphs_small.png"><img alt="../_images/INT_AY20_MP1_L14_Fig01-Vel-vs-t-graphs_small.png" src="../_images/INT_AY20_MP1_L14_Fig01-Vel-vs-t-graphs_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.4 </span><span class="caption-text">Velocity component vs. time graphs for a tennis ball</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>How long does it take (in s) for the tennis ball to hit the ground (i.e. what is the time <span class="math notranslate nohighlight">\(T\)</span>)?</p></li>
+<li><p>How high is the building (in m)?</p></li>
+<li><p>How far horizontally does the ball travel (in m)?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 2.55 s; 31.9 m; 38.2 m</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Civilization has collapsed, and you are spending yet another day firing cannonballs horizontally off the wall of your post-apocalyptic fortress at incoming zombies. The graphs below show the horizontal and vertical position of one cannonball as a function of time. Your cannonball hits your target zombie at time <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L14_Fig02-Pos-vs-t-graphs_small.png"><img alt="../_images/INT_AY20_MP1_L14_Fig02-Pos-vs-t-graphs_small.png" src="../_images/INT_AY20_MP1_L14_Fig02-Pos-vs-t-graphs_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.5 </span><span class="caption-text">Position component vs. time graphs for a cannonball</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>How long does it take (in s) for the cannonball to hit the ground (i.e. what is the time <span class="math notranslate nohighlight">\(T\)</span>)?</p></li>
+<li><p>What is the final vertical velocity component of the cannonball (in m/s)?</p></li>
+<li><p>What is the horizontal velocity component (in m/s)?</p></li>
+<li><p>What is the speed (in m/s) and direction (in degrees below the horizontal) of the cannonball, just as it hits a zombie?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 1.43 s; 14.0 m/s; 11.2 m/s; 17.9 m/s, 51.3<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal</p>
+</div>
+</div>
+<div class="section" id="general-launch-angle">
+<h2><span class="section-number">8.4. </span>General launch angle<a class="headerlink" href="#general-launch-angle" title="Permalink to this headline">¶</a></h2>
+<p>Up until now, we have only talked primarly about zero launch angle. In other words, the projectile starts off moving only horizontally, so <span class="math notranslate nohighlight">\(v_{i, x} = 0\)</span>. Now let’s look at the general case, for any launch angle. Here, both <span class="math notranslate nohighlight">\(v_{i, x}\)</span> and <span class="math notranslate nohighlight">\(v_{i, y}\)</span> will be non-zero. So suppose that we are given an initial speed and some launch angle away from the horizontal – how does that change things? We still have the same acceleration, due solely to the gravitational field. Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+    a_x = 0 \qquad a_y = -g
+\]</div>
+<p>In addition, since the initial velocity <span class="math notranslate nohighlight">\({\vec v}_i\)</span> is no longer horizontal, an early step will be to split <span class="math notranslate nohighlight">\({\vec v}_i\)</span> into <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components using the trig functions. For the launch angle <span class="math notranslate nohighlight">\(\theta\)</span> measured from the horizontal,</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{i, x} = v_i \cos \theta \qquad
+    v_{i, y} = v_i \sin \theta
+\]</div>
+<p>Remember to draw the vector diagram for <span class="math notranslate nohighlight">\({\vec v}_i\)</span> to help you choose the signs for these values!</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L07_Fig01-Init-vel-vec-diag_small.png"><img alt="../_images/INT_AY21_L07_Fig01-Init-vel-vec-diag_small.png" src="../_images/INT_AY21_L07_Fig01-Init-vel-vec-diag_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.6 </span><span class="caption-text">Vector diagram for the initial velocity of a projectile</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you keep the initial speed the same but vary the launch angle, it will affect the <strong>range</strong>, or the horizontal displacement component <span class="math notranslate nohighlight">\(\Delta r_x\)</span>. When the projectile is launched at the same height it lands at (i.e. <span class="math notranslate nohighlight">\(\Delta r_y = 0\)</span> for the path) and air resistance is negligible, then a <span class="math notranslate nohighlight">\(45.0^\circ\)</span> launch angle produces the greatest range. For other choices, complementary angles will give the same range. For example, in the figure below, both <span class="math notranslate nohighlight">\(30.0^\circ\)</span> and <span class="math notranslate nohighlight">\(60.0^\circ\)</span> give the same range.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L07_Fig03-Range-vs-angle_small.png"><img alt="../_images/INT_AY21_L07_Fig03-Range-vs-angle_small.png" src="../_images/INT_AY21_L07_Fig03-Range-vs-angle_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.7 </span><span class="caption-text">Range of a projectile as a function of angle; note that this assumes $\Delta r_y = 0 for the entire trajectory</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>As we talked about in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05 (acceleration and free fall)</span></a>, if the projectile is launched <em>above</em> the horizontal, then there is a special point in the trajectory, the maximum height. This is the height where the projectile stops moving vertically for an instant, as it switches direction. From the independence of motion idea, however, this says nothing about the horizontal motion! In fact, since there is no horizontal acceleration in projectile motion, the horizontal velocity component will stay the same through the motion. So, at the maximum height, in general the components of the velocity <span class="math notranslate nohighlight">\({\vec v}_{max}\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{max, x} = v_{i, x} \qquad v_{max, y} = 0
+\]</div>
+<p>This highest point will be halfway along the horizontal motion of the object <em>only</em> if the vertical displacement is zero. Otherwise, you would have to solve for the time to reach max height.</p>
+<p>One fact that <em>is</em> always true for projectile motion is that the object has the same speed at the same height. In other words, for a given height above the starting point, for example, the projectile will have the same speed going down as it did going up at that height. Note this is <em>not</em> the same as having the same <em>velocity</em>. Because the velocity will be pointing in different directions, the vector is not the same. However, the magnitude of the vector is the same. To explain this, remember that <span class="math notranslate nohighlight">\(a_x = 0\)</span> tells you the <span class="math notranslate nohighlight">\(x\)</span> component of the velocity is constant. The vertical component, on the other hand, will be pointed in the opposite direction when it is pointing upward as when it is pointing downward.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L07_Fig04-Vel-comps-proj-motion_small.png"><img alt="../_images/INT_AY21_L07_Fig04-Vel-comps-proj-motion_small.png" src="../_images/INT_AY21_L07_Fig04-Vel-comps-proj-motion_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.8 </span><span class="caption-text">The change in the velocity’s vector components at different points of the trajectory</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>The app below features projectile motion, with a range of initial heights, speeds and angles, along with the possibility of adding air resistance. Note that you can see the components of both the velocity and the acceleration as the projectile moves along its flight.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="800"
+    height="600"
+    src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>If a projectile is launched with an initial velocity of 25.0 m/s at an angle of 35.0<span class="math notranslate nohighlight">\(^\circ\)</span> from the horizontal, which choice gives the magnitude of the projectile’s horizontal velocity?</p>
+<ol class="simple">
+<li><p>0.00 m/s</p></li>
+<li><p>12.5 m/s</p></li>
+<li><p>14.3 m/s</p></li>
+<li><p>17.7 m/s</p></li>
+<li><p>20.5 m/s</p></li>
+<li><p>25.0 m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The projectile’s horizontal velocity component is <span class="math notranslate nohighlight">\(v_i \cos \theta = (25.0 \textrm{ m/s}) \cos 35.0^\circ = 20.5\)</span> m/s.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>If a projectile is launched with an initial velocity of 25.0 m/s at an angle of 35.0<span class="math notranslate nohighlight">\(^\circ\)</span> from the horizontal, which choice gives the projectile’s speed at its maximum height?</p>
+<ol class="simple">
+<li><p>0.00 m/s</p></li>
+<li><p>12.5 m/s</p></li>
+<li><p>14.3 m/s</p></li>
+<li><p>17.7 m/s</p></li>
+<li><p>20.5 m/s</p></li>
+<li><p>25.0 m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> At its maximum height, the projectile will be moving horizontally, so the speed at this point is the same as the horizontal velocity component of 20.5 m/s.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>As shown below, a cruiser simultaneously fires two shells with the same initial speed at enemy ships. The shells follow the parabolic trajectories shown in the figure below. Which trajectory corresponds to the shell fired with the higher initial <em>vertical</em> velocity component?</p>
+<div class="figure align-default" id="cruiser-fire-01">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L18_Fig02-Two-ships_small.png"><img alt="../_images/INT_AY20_MP1_L18_Fig02-Two-ships_small.png" src="../_images/INT_AY20_MP1_L18_Fig02-Two-ships_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.9 </span><span class="caption-text">A cruiser fires at two ships</span><a class="headerlink" href="#cruiser-fire-01" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Trajectory A</p></li>
+<li><p>Trajectory B</p></li>
+<li><p>Both trajectories are the same</p></li>
+<li><p>Cannot tell without more information</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Both shells have the same vertical acceleration, and their vertical velocity components at max height <span class="math notranslate nohighlight">\(v_y = 0\)</span>. Thus, the shell traveling higher will have the larger initial vertical velocity component. In this case, it is trajectory A.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A cruiser simultaneously fires two shells with the same initial speed at enemy ships. The shells follow the parabolic trajectories shown in <a class="reference internal" href="#cruiser-fire-01"><span class="std std-numref">Figure 8.9</span></a> above. Which ship gets hit first?</p>
+<ol class="simple">
+<li><p>Ship A</p></li>
+<li><p>Ship B</p></li>
+<li><p>Both have the same</p></li>
+<li><p>Cannot tell without more information</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Because trajectory B has a smaller initial height, and the same vertical acceleration, it will have a smaller time of flight than trajectory A. Thus, ship B will be hit first.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>As shown below, a cruiser simultaneously fires two shells with <em>different</em> speeds at enemy ships. If the shells follow the parabolic trajectories with the same maximum height as shown below, which ship gets hit first?</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L18_Fig03-Two-ships_small.png"><img alt="../_images/INT_AY20_MP1_L18_Fig03-Two-ships_small.png" src="../_images/INT_AY20_MP1_L18_Fig03-Two-ships_small.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.10 </span><span class="caption-text">A cruiser fires a second salvo at the two ships</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Ship A</p></li>
+<li><p>Ship B</p></li>
+<li><p>Both get hit at the same time</p></li>
+<li><p>Cannot tell without more information</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The shell trajectories have exactly the same <em>vertical</em> motion, so they will take the same amount of time to reach their targets. Thus, both ships get hit at the same time.</p>
+</div>
+</div>
+<div class="section" id="example-firing-a-cannonball">
+<h2><span class="section-number">8.5. </span>Example: firing a cannonball<a class="headerlink" href="#example-firing-a-cannonball" title="Permalink to this headline">¶</a></h2>
+<p>When working through a projectile motion problem with general launch angle, there are several issues where you have to be careful. I will use the following problem as an example, to point out these potential pitfalls.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A cannonball is fired off a cliff with a speed of 50.0 m/s and an angle of 35.0<span class="math notranslate nohighlight">\(^\circ\)</span> above the horizontal. The projectile hits the ground 175 yd horizontally from where it was launched.</p>
+<ol class="simple">
+<li><p>What is the speed (in m/s) of the football at the maximum height?</p></li>
+<li><p>What is the height of the cliff above the ground below (in m)?</p></li>
+<li><p>What is the maximum height (in m) the cannonball reaches above the ground?</p></li>
+<li><p>What is the velocity of the cannonball just before it hits the ground? Find the speed in m/s and the direction in degrees below the horizontal.</p></li>
+</ol>
+</div>
+<p>The big change from a zero launch angle problem is that there is a new first step you have to take: draw a vector diagram for <span class="math notranslate nohighlight">\({\vec v}_i\)</span>,</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L08_Fig01_vi_vec_diag.png"><img alt="../_images/INT_AY22_L08_Fig01_vi_vec_diag.png" src="../_images/INT_AY22_L08_Fig01_vi_vec_diag.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.11 </span><span class="caption-text">Vector diagram for the cannonball’s initial velocity</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>then find its vector components. So, since we know the initial speed <span class="math notranslate nohighlight">\(v_i\)</span> is 50.0 m/s, and the launch angle is <span class="math notranslate nohighlight">\(\theta = 35.0^\circ\)</span>, then the initial velocity components are</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{i, x} = v_i \cos \theta = 41.0 \textrm{ m/s} \qquad
+    v_{i, y} = v_i \sin \theta = 28.7 \textrm{ m/s}
+\]</div>
+<p>At this point, we can list our givens and unknowns for the problem in tabular form. The initial position <span class="math notranslate nohighlight">\({\vec r}_i\)</span> is where the cannonball is launched, the max height is given by the vector <span class="math notranslate nohighlight">\({\vec r}_{max}\)</span>, and the ball hits the ground below at position <span class="math notranslate nohighlight">\({\vec r}_f\)</span>. Note that we have already used the fact that <span class="math notranslate nohighlight">\(a_x = 0\)</span> to give <span class="math notranslate nohighlight">\(v_{i, x} = v_{max, x} = v_{f, x}\)</span> in the table. We also know that the maximum height is when the ball stops moving upward, and starting moving downward; this means that <span class="math notranslate nohighlight">\(v_y = 0\)</span> at this point.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec r}_i\)</span></p></td>
+<td><p>0.00 m</p></td>
+<td><p>0.00 m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec r}_{max}\)</span></p></td>
+<td><p>? m</p></td>
+<td><p>? m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec r}_f\)</span></p></td>
+<td><p>350. yd</p></td>
+<td><p>? m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec v}_i\)</span></p></td>
+<td><p>41.0 m/s</p></td>
+<td><p>28.7 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec v}_{max}\)</span></p></td>
+<td><p>41.0 m/s</p></td>
+<td><p>0.00 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\({\vec v}_f\)</span></p></td>
+<td><p>41.0 m/s</p></td>
+<td><p>? m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\({\vec a}\)</span></p></td>
+<td><p>0.00 m/s<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+<td><p>-9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Convert 350. yd into meters.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 320 meters</p>
+</div>
+<p>So we can already answer the first question – at the highest point, the projectile has <span class="math notranslate nohighlight">\(v_x = 41.0\)</span> m/s and <span class="math notranslate nohighlight">\(v_y = 0.00\)</span> m/s, giving a magnitude of 41.0 m/s.</p>
+<p>Now, let’s find the vertical displacement of the cannonball over its entire trajectory. To start, I don’t know enough on the <span class="math notranslate nohighlight">\(y\)</span> side to find out what <span class="math notranslate nohighlight">\(\Delta r_y\)</span> is. This means I need to see if I have more information on the <span class="math notranslate nohighlight">\(x\)</span> side; if I can find the time of flight for the projectile, I can use that to find <span class="math notranslate nohighlight">\(\Delta r_y\)</span>. It turns out this is the case here! We know how far the ball has traveled horizontally, and we know how fast it is moving along the <span class="math notranslate nohighlight">\(x\)</span> axis. Then we can find the time of flight for the ball. Once we have that, we can use this time back in the vertical direction to find out how high it is vertically. To put this into practice, we have a few options for the kinematic equation to choose. Let’s go with</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_x = v_{i, x} t + \frac{1}{2} a_x t^2 \Rightarrow t = \frac{\Delta r_x}{v_{i, x}}
+\]</div>
+<p>where this simplification happens since <span class="math notranslate nohighlight">\(a_x = 0\)</span>. Using the known values in the second equation above gives a time of flight <span class="math notranslate nohighlight">\(t = 7.81\)</span> s. Now, moving to the <span class="math notranslate nohighlight">\(y\)</span> side of things, with the same base kinematic equation,</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta r_y = v_{i, y} t + \frac{1}{2} a_y t^2
+\]</div>
+<p>we get the vertical displacement for the entire path from start to finish is <span class="math notranslate nohighlight">\(\Delta r_y = -75.0\)</span> m.</p>
+<div class="warning admonition">
+<p class="admonition-title">Watch your signs</p>
+<p>When I say “change in height”, I am talking about a <em>scalar</em> quantity. However, <span class="math notranslate nohighlight">\(\Delta r_y\)</span> is actually a <em>vector</em> component, so I am really finding <span class="math notranslate nohighlight">\(h = |\Delta r_y|\)</span>, the size of this component. So I say the change in height is 75.0 m. Make sure you understand the difference between the scalar height <span class="math notranslate nohighlight">\(h\)</span> and the vector displacement <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span>. As you will see later, not watching your signs may cause problems if you are not careful!</p>
+</div>
+<p>Let’s now find the max height above the ground; we will do this by finding the height above the launch point, and just add the 75.0 m height of the cliff to get the total. To do this, we know that <span class="math notranslate nohighlight">\(v_{max, y} = 0\)</span> – the projectile has stopped its vertical motion at its highest point, and is turning around at that instant. So we can use the equation</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{max, y} ^2 = v_{i, y} ^2 + 2 a_y \Delta r_y \Rightarrow \Delta r_y = -\frac{v_{i, y} ^2}{2 a_y}
+\]</div>
+<p>to find the displacement from launch to max height is 42.0 m, and the total height above the ground is 117 m.</p>
+<p>Finally, we can find the final velocity of the ball, just as it lands on the ground. Remember, this is <em>not</em> <span class="math notranslate nohighlight">\({\vec v}_f = 0\)</span>, because we are only taking the effects of the gravitational field into account. We need to find the final <span class="math notranslate nohighlight">\(y\)</span> velocity component (we already know <span class="math notranslate nohighlight">\(v_{f, x}\)</span>, since it is constant). This can be done with</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, y} = v_{i, y} + a_y t
+\]</div>
+<p>to give <span class="math notranslate nohighlight">\(v_{f, y} = -47.9\)</span> m/s. It is <em>negative</em> since the ball is heading downward at this point; it has moved past its highest point. This is why the last part of the question asks to find the direction as an angle <em>below</em> the horizontal. Drawing another vector diagram for the final velocity <span class="math notranslate nohighlight">\({\vec v}_f\)</span>,</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L08_Fig02_vf_vec_diag.png"><img alt="../_images/INT_AY22_L08_Fig02_vf_vec_diag.png" src="../_images/INT_AY22_L08_Fig02_vf_vec_diag.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.12 </span><span class="caption-text">Vector diagram for the cannonball’s final velocity</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>and using the Pythagorean theorem and inverse tangent to find magnitude and direction, we have</p>
+<div class="math notranslate nohighlight">
+\[
+    v_f = \sqrt{v_{f, x} ^2 + v_{f, y} ^2} = 63.1 \textrm{ m/s} \qquad
+    \theta = \tan^{-1} \biggl( \biggl| \frac{v_{f, y}}{v_{f, x}} \biggr| \biggr) = 49.4^\circ
+\]</div>
+<p>Thus, the cannonball is moving at 63.1 m/s, 49.4<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal, when it is just about to hit the ground.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Sketch the horizontal and vertical position graphs for the cannonball during its flight. Mark the initial and final points, and the highest point, on each of the graphs.</p>
+</div>
+<p>Let’s go back to the issue of signs. For all of the calculations above, once we chose the sign for our givens, the signs for the results were fixed. However, there <em>is</em> one additional place where you have to choose the sign. We’ll see this by noticing there was another option to find <span class="math notranslate nohighlight">\(v_{f, y}\)</span>, specifically the kinematic equation</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, y} ^2 = v_{i, y} ^2 + 2 a_y \Delta r_y
+\]</div>
+<p>If you use this to find <span class="math notranslate nohighlight">\(v_{f, y}\)</span>, you would take the square root of both sides. How many solutions would you then get? You would have <em>two</em> solutions, since both the positive and negative square root are valid:</p>
+<div class="math notranslate nohighlight">
+\[
+    v_{f, y} = \pm \sqrt{v_{i, y} ^2 + 2 a_y \Delta r_y}
+\]</div>
+<p>So which solution is correct? The cannonball is moving <em>downward</em> when it is about to hit the ground, so you should choose the negative sign.</p>
+<div class="warning admonition">
+<p class="admonition-title">Signs in the kinematic equations</p>
+<p>The <em>only</em> time you choose the signs when using the kinematic equations is (1) when writing down the original givens, and (2) choosing which square root to use in the above equation. For the rest, the signs should come out naturally.</p>
+</div>
+<p>This issue of signs is important for what we are about to do. To show this, use the equation just above for <span class="math notranslate nohighlight">\(v_{f, y}\)</span> and plug in <span class="math notranslate nohighlight">\(v_{i, y} = 28.7\)</span> m/s, <span class="math notranslate nohighlight">\(a_y = -9.81\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>, and <span class="math notranslate nohighlight">\(\Delta r_y = 75.0\)</span> m into your calculator, to see what happens. You should get a domain error! Why is this? The values that I just listed were not correct, since I didn’t put the negative sign for <span class="math notranslate nohighlight">\(\Delta r_y\)</span>. Make sure you watch your signs! When you use <span class="math notranslate nohighlight">\(\Delta r_y = -75.0\)</span> m, you should get the same answer as before, or <span class="math notranslate nohighlight">\(v_{f, y} = -47.9\)</span> m/s.</p>
+<p>Now it’s your turn to practice, with the following problems.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A quarterback throws a football towards a wide receiver with an initial velocity of 12.5 m/s at an angle of 50.0<span class="math notranslate nohighlight">\(^\circ\)</span> above the horizontal. The wide receiver is 16.0 yards away from the quarterback.</p>
+<ol class="simple">
+<li><p>What is the speed (in m/s) of the football at the maximum height?</p></li>
+<li><p>How high (in m) does the football get above its starting point at its highest position?</p></li>
+<li><p>If the quarterback and the wide receiver are about the same height, how high (in m) would the receiver have to jump to catch the ball?</p></li>
+<li><p>What is the velocity of the ball when it is caught? Find the speed in m/s, and the direction in degrees below the horizontal.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 8.03 m/s; 4.67 m; 1.17 m; 11.5 m/s, 45.9<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A catapult on a cliff launches a large round rock towards a ship on the ocean below with a speed <span class="math notranslate nohighlight">\(v_i\)</span> m/s at an angle <span class="math notranslate nohighlight">\(\theta\)</span>. The rock leaves the catapult from a height <span class="math notranslate nohighlight">\(h\)</span> (in meters) above the ship.  It hits the ship <span class="math notranslate nohighlight">\(t\)</span> (in s) after launch.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L17_Fig01-Ship-and-catapult_small.png"><img alt="../_images/INT_AY20_MP1_L17_Fig01-Ship-and-catapult_small.png" src="../_images/INT_AY20_MP1_L17_Fig01-Ship-and-catapult_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.13 </span><span class="caption-text">Launching a rock at a ship below using a catapult on a cliff</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>Assume that the initial speed, angle, initial height, and time of flight are given numbers, represented by Python variables <code class="docutils literal notranslate"><span class="pre">v_i</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>, and <code class="docutils literal notranslate"><span class="pre">t</span></code>, respectively. You will write three vPython functions, as described below. You can test your functions with the given values of <span class="math notranslate nohighlight">\(v_i = 36.0\)</span> m/s, <span class="math notranslate nohighlight">\(\theta = 41.0^\circ\)</span>, <span class="math notranslate nohighlight">\(h = 34.9\)</span> m, and <span class="math notranslate nohighlight">\(t = 6.00\)</span> s. <strong>Hint:</strong> you may not need all four given values for each function, and remember that in vPython, <code class="docutils literal notranslate"><span class="pre">sin</span></code> and <code class="docutils literal notranslate"><span class="pre">cos</span></code> take their angles in radians, not degrees!</p>
+<ol class="simple">
+<li><p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">projRange(v_i,</span> <span class="pre">Q,</span> <span class="pre">h,</span> <span class="pre">t)</span></code> that calculates the range, and returns its value in meters. With the test values, your function should return a range of 163 m.</p></li>
+<li><p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">finalVelocity(v_i,</span> <span class="pre">Q,</span> <span class="pre">h,</span> <span class="pre">t)</span></code> that returns the final velocity of the projectile, just as it hits the ship, as a vPython vector. The test values should result in a final velocity of <span class="math notranslate nohighlight">\((27.2 \textrm{ m/s}) {\hat x} + (-35.2 \textrm{ m/s}) {\hat y}\)</span>.</p></li>
+<li><p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">maxHeight(v_i,</span> <span class="pre">Q,</span> <span class="pre">h,</span> <span class="pre">t)</span></code> computing the maximum height above the <em>ship</em> (not the launch point!), and returns its value in meters. With the test values, your function should return a maximum height of 63.3 m above the ship.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> Here are some possible solutions to these questions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">projRange</span><span class="p">(</span><span class="n">v_i</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+
+    <span class="c1"># Find x component of initial velocity</span>
+    
+    <span class="n">v_ix</span> <span class="o">=</span> <span class="n">v_i</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span>
+    
+    <span class="c1"># Return Dr_x using constant velocity eqn</span>
+    <span class="c1"># in x direction (since a_x = 0)</span>
+    
+    <span class="k">return</span> <span class="n">v_ix</span> <span class="o">*</span> <span class="n">t</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">finalVelocity</span><span class="p">(</span><span class="n">v_i</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+
+    <span class="c1"># Define initial velocity in unit vector form</span>
+    
+    <span class="n">vel_i</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">v_i</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">)),</span> <span class="n">v_i</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Define const acceleration of projectile</span>
+    
+    <span class="n">a</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>          <span class="c1"># in m/s^2</span>
+    
+    <span class="c1"># Return v_f using v_f = v_i + a t</span>
+    
+    <span class="k">return</span> <span class="n">vel_i</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">t</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maxHeight</span><span class="p">(</span><span class="n">v_i</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+
+    <span class="c1"># Define y component of initial velocity</span>
+    
+    <span class="n">v_iy</span> <span class="o">=</span> <span class="n">v_i</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">))</span>
+
+    <span class="c1"># Define y component of acceleration</span>
+    
+    <span class="n">a_y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9.81</span>          <span class="c1"># in m/s^2</span>
+
+    <span class="c1"># Find height above starting point</span>
+    
+    <span class="n">Dr_y</span> <span class="o">=</span> <span class="o">-</span> <span class="p">(</span><span class="n">v_iy</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a_y</span><span class="p">)</span>
+    
+    <span class="c1"># Return total height above ship,</span>
+    <span class="c1"># including initial height h</span>
+    
+    <span class="k">return</span> <span class="n">h</span> <span class="o">+</span> <span class="n">Dr_y</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Imagine you fired a mortar at a target <span class="math notranslate nohighlight">\(A\)</span> with a speed <span class="math notranslate nohighlight">\(v_i = 39.0\)</span> m/s at <span class="math notranslate nohighlight">\(\theta = 60.0^{\circ}\)</span> above the horizontal, as shown in the figure below.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L18_Fig01-Mortar-trajectory_small.png"><img alt="../_images/INT_AY20_MP1_L18_Fig01-Mortar-trajectory_small.png" src="../_images/INT_AY20_MP1_L18_Fig01-Mortar-trajectory_small.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.14 </span><span class="caption-text">Firing at a target up on a cliff</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Use the quadratic formula to find the time it takes (in s) for the mortar round to hit the target (<span class="math notranslate nohighlight">\(h = 44.8\)</span> m).</p></li>
+<li><p>Find the maximum height (in m) above the ground reached by the round.</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> 5.08 s; 58.1 m</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">8.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Projectile motion provides a good summary of everything you have done in the course so far. You must use the kinematic equations to solve for the position and velocity vectors, based on the given acceleration. Hopefully you have also seen how graphs can be informative, especially when trying to find specific points of the trajectory, such as the maximum height.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Solve a projectile motion problem for any value of launch angle.</p></li>
+<li><p>Given a vertical velocity vs. time graph, find the acceleration or time of flight.</p></li>
+<li><p>Given a horizontal velocity vs. time graph, find the horizontal displacement.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L07_Vector_magnitude_and_direction.html" title="previous page"><span class="section-number">7. </span>Vector magnitude and direction</a>
+    <a class='right-next' id="next-link" href="L09_Relative_motion.html" title="next page"><span class="section-number">9. </span>Relative motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

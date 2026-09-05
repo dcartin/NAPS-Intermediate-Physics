@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Vector magnitude and direction &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Projectile motion" href="L08_Projectile_motion.html" />
+    <link rel="prev" title="6. Kinematic equations" href="L06_Kinematic_equations.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L07_Vector_magnitude_and_direction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L07_Vector_magnitude_and_direction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   7.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vector-magnitudes">
+   7.2. Vector magnitudes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unit-vectors">
+   7.3. Unit vectors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finding-vector-components">
+   7.4. Finding vector components
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-inverse-trigonometric-functions">
+   7.5. The inverse trigonometric functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#from-components-to-magnitude-direction">
+   7.6. From components to magnitude, direction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finding-vector-components-in-vpython">
+   7.7. Finding vector components in vPython
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   7.8. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vector-magnitude-and-direction">
+<span id="vec-mag-dir"></span><h1><span class="section-number">7. </span>Vector magnitude and direction<a class="headerlink" href="#vector-magnitude-and-direction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#d-comps"><span class="std std-ref">3D vector components</span></a></p></li>
+<li><p><a class="reference internal" href="#mag-dir-arr"><span class="std std-ref">Vector magnitude and direction</span></a></p></li>
+</ol>
+<p>Over the past few lessons, you have seen how vectors are important when studying the motion of an object. The fundamental properties of motion – position, velocity, and acceleration – are all vectors. Thus, both their definitions, and the mathematical relationships between them, are vector equations. Even with the scalar kinematic equations, the vectors components of these quantities are used.</p>
+<p>However, up to this point, we have only worked with components of vectors. For eample, in the last lesson, free fall only dealt with motion along the <span class="math notranslate nohighlight">\(y\)</span> axis. Suppose instead you are given the size and direction of a vector? An example would be saying the speed of a ship is 15.0 knots, and it is moving 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> north of west. How can we write this in terms of components? Or, if we go the other way around, if I know the components of an acceleration, how can I find the magnitude and direction of this vector?</p>
+<p>This is the purpose of this lesson – to learn how to go back and forth between writing a vector in terms of components, and using magnitude and direction to describe the vector. This will use the mathematics of trigonometry heavily, so it is important you get a good grasp on how this process works. After this lesson, you should have all the basic relations needed to go from one description of a vector to another. Along the way, you will learn more about unit vectors. In particular, you will see how to find a unit vector pointing in the same direction as any given vector. Once we have this down, we can move on to projectile motion in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 08</span></a>.</p>
+<p>One important thing to remember is the components of a vector are the sizes of the vector along <em>perpendicular</em> directions (recall the streets and avenues of Manhattan in <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02</span></a>). This is why we use <em>right triangle</em> trigonometry, because the components are always going to be perpendicular. (You can be brave and use the law of cosines or sines if you know them, but you will quickly get bogged down by the time you try to add three vectors!)</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>Given the magnitude and direction of a 2D vector, find its <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components.</p></li>
+<li><p>Given the components of a 2D vector, find its magnitude and direction.</p></li>
+<li><p>Find the magnitude of a 3D vector.</p></li>
+<li><p>Given a vector, find the unit vector in the same direction.</p></li>
+</ul>
+</div>
+<div class="section" id="vector-magnitudes">
+<h2><span class="section-number">7.2. </span>Vector magnitudes<a class="headerlink" href="#vector-magnitudes" title="Permalink to this headline">¶</a></h2>
+<p>You are probably familiar with the Pythagorean theorem for right triangles, as shown below.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L12_Fig01-Pyth-thm-2D_small.png"><img alt="../_images/INT_AY20_MP1_L12_Fig01-Pyth-thm-2D_small.png" src="../_images/INT_AY20_MP1_L12_Fig01-Pyth-thm-2D_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">The Pythagorean theorem for a right triangle formed by a vector <span class="math notranslate nohighlight">\({\vec R}\)</span></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="math notranslate nohighlight">
+\[
+    R^2 = R_x ^2 + R_y ^2 \Rightarrow R = \sqrt{R_x ^2 + R_y ^2}
+\]</div>
+<p>If we have a two-dimensional vector (i.e. one with only two non-zero components), then we can use this version to find the magnitude (or size) of the vector, since the two legs are perpendicular to each other. How do we extend this to vectors with three non-zero components?</p>
+<div class="figure align-default" id="py-thm-3d">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L12-Fig02-Pyth-thm-3D_small.png"><img alt="../_images/INT_AY20_MP1_L12-Fig02-Pyth-thm-3D_small.png" src="../_images/INT_AY20_MP1_L12-Fig02-Pyth-thm-3D_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.2 </span><span class="caption-text">The Pythagorean theorem for a three-dimensional vector</span><a class="headerlink" href="#py-thm-3d" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you want a three-dimensional version of this picture, which you can move around, run the following program to see the same thing in vPython. I have added labels for each of the individual vector pieces, as well as the total (or <em>resultant</em>) vector <span class="math notranslate nohighlight">\({\vec A}\)</span>. You can see the code by clicking on the pencil icon at the top left of the app.</p>
+<div class="warning admonition">
+<p class="admonition-title">Coordinate axes in vPython</p>
+<p>The coordinate axes are different in vPython – the <span class="math notranslate nohighlight">\(+z\)</span> direction points out of the screen by default, while the <span class="math notranslate nohighlight">\(+y\)</span> direction points upwards – so the picture and the vPython view are not exactly the same! However, it does give you an idea of what the two-dimensional illustration above is trying to convey.</p>
+</div>
+<p id="d-comps"><a class="reference internal" href="#vec-mag-dir"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/15ebf892cd?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Back to <a class="reference internal" href="#py-thm-3d"><span class="std std-numref">Figure 7.2</span></a> above, let’s figure out how to find the magnitude of a three-dimensional vecor. First, we find the magnitude of the vector <span class="math notranslate nohighlight">\({\vec R} = A_x {\hat x} + A_z {\hat z}\)</span> in the <span class="math notranslate nohighlight">\(x-z\)</span> plane, using the 2D Pythagorean theorem (this is the length of the green arrow in the figure). This gives the relation</p>
+<div class="math notranslate nohighlight">
+\[
+    R = \sqrt{A_x ^2 + A_z ^2}
+\]</div>
+<p>This new vector now forms one of the legs of the full vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, made of all three components. Using the 2D Pythagorean theorem again for this new triangle gives the magnitude of the vector <span class="math notranslate nohighlight">\({\vec A}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    A = \sqrt{R^2 + A_y ^2}
+\]</div>
+<p>Finally, substituting in the length <span class="math notranslate nohighlight">\(R\)</span> from before gives the final answer in terms of the three components <span class="math notranslate nohighlight">\(A_x, A_y\)</span>, and <span class="math notranslate nohighlight">\(A_z\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+   A = \sqrt{A_x ^2 + A_y ^2 + A_z ^ 2}
+\]</div>
+<p>So, the 3D Pythagorean theorem is built up from using the 2D version twice; if you feel motivated, you can keep going into higher dimensions!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Find the magnitude of the following vectors, with the appropriate units.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\vec C} = (15.0 \ \textrm{m/s}) {\hat x} + (7.66 \ \textrm{m/s}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec D} = (-4.09 \ \textrm{km}) {\hat x} + (8.32 \ \textrm{km}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec E} = (11.0 \ \textrm{N}) {\hat x} + (8.75 \ \textrm{N}) {\hat y} + (-17.2 \ \textrm{N}) {\hat z}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\vec F} = (20.6 \ \textrm{kg m/s}) {\hat x} + (-13.2 \ \textrm{kg m/s}) {\hat y} + (-18.4 \ \textrm{kg m/s}) {\hat z}\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(C = 16.8\)</span> m/s; <span class="math notranslate nohighlight">\(D = 9.27\)</span> km; <span class="math notranslate nohighlight">\(E = 22.2\)</span> N; <span class="math notranslate nohighlight">\(F = 30.6\)</span> kg m/s</p>
+</div>
+</div>
+<div class="section" id="unit-vectors">
+<span id="vec-mag-dir-unit-vec"></span><h2><span class="section-number">7.3. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this headline">¶</a></h2>
+<p>When we introduced vectors and vector components, we saw how any vector can be divided up into three pieces – the vectors describing how much of the vector is along each of the three coordinate axes <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>. For example, any vector <span class="math notranslate nohighlight">\({\vec A}\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+	{\vec A} = A_x {\hat x} + A_y {\hat y} + A_z {\hat z}
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(A_x, A_y\)</span>, and <span class="math notranslate nohighlight">\(A_z\)</span> are the components of the vector, while <span class="math notranslate nohighlight">\({\hat x}, {\hat y}\)</span>, and <span class="math notranslate nohighlight">\({\hat z}\)</span> are the three unit vectors. Recall that a unit vector has <i>unit</i> size (i.e. length of one); the unit vector <span class="math notranslate nohighlight">\({\hat x}\)</span> has length of one and points in the <span class="math notranslate nohighlight">\(+x\)</span> direction. So, if we were to define these as vectors in vPython, then the three unit vectors <code class="docutils literal notranslate"><span class="pre">xUnit</span></code>, <code class="docutils literal notranslate"><span class="pre">yUnit</span></code>, and <code class="docutils literal notranslate"><span class="pre">zUnit</span></code> would be</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xUnit</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">yUnit</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">zUnit</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This way of writing <span class="math notranslate nohighlight">\({\vec A}\)</span> as the sum of three vectors, one along each coordinate axis, is shown below.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L15_Fig02-Unit_vector_decomp_small.png"><img alt="../_images/INT_AY20_MP1_L15_Fig02-Unit_vector_decomp_small.png" src="../_images/INT_AY20_MP1_L15_Fig02-Unit_vector_decomp_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.3 </span><span class="caption-text">Decomposition of a vector <span class="math notranslate nohighlight">\({\vec A}\)</span> using unit vectors <span class="math notranslate nohighlight">\({\hat x}, {\hat y},\)</span> and <span class="math notranslate nohighlight">\({\hat z}\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>However, there is no reason to have unit vectors only along the coordinate axes. In fact, we can find a unit vector that points in the same direction as <em>any</em> vector. This has various applications, but most of them boil down to the need to separate the <em>magnitude</em> of a vector from its <em>direction</em>; the unit vector encodes the direction, and it is multiplied by a scalar to give the magnitude. You will see this next in Lesson 07 (projectile motion), when we consider air resistance, but it pops up in such disparate places as collisions in two dimensions, the universal force of gravitation, and electric fields.</p>
+<p>To do this, we can take an arbitrary vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, and divide it by its magnitude <span class="math notranslate nohighlight">\(A\)</span>. Since this is just scalar multiplication of a vector, this gives a new vector; because we are dividing the vector by its magnitude, the new vector will have length of one. This gives us the definition of a <strong>unit vector</strong> <span class="math notranslate nohighlight">\({\hat A}\)</span> as the vector pointing in the same direction as an arbitrary vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, but with a magnitude of 1. In math terms, this means</p>
+<div class="math notranslate nohighlight">
+\[
+	{\hat A} = \frac{{\vec A}}{A}
+\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For the vector <span class="math notranslate nohighlight">\({\vec A} = 12 {\hat x} - 20 {\hat y} + 9 {\hat z}\)</span>, find the unit vector <span class="math notranslate nohighlight">\({\hat A}\)</span> pointing in the same direction as <span class="math notranslate nohighlight">\({\vec A}\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\hat A} = 0.480 {\hat x} - 0.800 {\hat y} + 0.360 {\hat z}\)</span></p>
+</div>
+<p>Remember not to confuse the different quantities, which are denoted by the symbol going along with it (or lack of one!): <span class="math notranslate nohighlight">\({\vec A}\)</span> is a vector, <span class="math notranslate nohighlight">\(A\)</span> (no symbol on top) is the magnitude of <span class="math notranslate nohighlight">\({\vec A}\)</span>, and <span class="math notranslate nohighlight">\({\hat A}\)</span> is a unit vector pointing in the same direction as the vector <span class="math notranslate nohighlight">\({\vec A}\)</span>. The figure below shows both <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\hat A}\)</span>; both vectors start at the marked point.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L15_Fig03-Unit-vector-def.png"><img alt="../_images/INT_AY20_MP1_L15_Fig03-Unit-vector-def.png" src="../_images/INT_AY20_MP1_L15_Fig03-Unit-vector-def.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.4 </span><span class="caption-text">Defining a unit vector <span class="math notranslate nohighlight">\({\hat A}\)</span> from a given vector <span class="math notranslate nohighlight">\({\vec A}\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Conveniently for us, vPython has commands that find both the magnitude of a vector, and find the unit vector in the same direction as another vector. The first is done with the <strong>mag</strong> module, the second uses the <strong>norm</strong> module. If we define the vector <span class="math notranslate nohighlight">\({\vec A}\)</span> by using the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>then we can find the magnitude of this vector in vPython by using the command</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mag</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In addition, we could get a unit vector by using the defining equation</p>
+<div class="math notranslate nohighlight">
+\[
+	{\hat A} = \frac{{\vec A}}{A}
+\]</div>
+<p>This is done using another vPython command,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which directly takes a vector and finds the unit vector. Try this in a vPython program, using Trinket or Glowscript. Using either method, you should get the vector <code class="docutils literal notranslate"><span class="pre">&lt;0.48,</span> <span class="pre">-0.8,</span> <span class="pre">0.36&gt;</span></code>, which in unit vector notation would be <span class="math notranslate nohighlight">\((0.48) {\hat x} + (-0.8) {\hat y} + (0.36) {\hat z}\)</span>. So we now have the new vPython commands</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mag(A)</span></code>: Find the magnitude of a vector <code class="docutils literal notranslate"><span class="pre">A</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">norm(A)</span></code>: Find a unit vector in the same direction as vector <code class="docutils literal notranslate"><span class="pre">A</span></code></p></li>
+</ul>
+<p>The command <code class="docutils literal notranslate"><span class="pre">hat(A)</span></code> will also find the unit vector in the same direction as the vector <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</div>
+<div class="section" id="finding-vector-components">
+<h2><span class="section-number">7.4. </span>Finding vector components<a class="headerlink" href="#finding-vector-components" title="Permalink to this headline">¶</a></h2>
+<p>Hopefully, you have seen the trigonometric functions before sometime in your academic career. Here is a quick summary to remind you of their properties.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L12-Fig03-Right_triangle_small.png"><img alt="../_images/INT_AY20_MP1_L12-Fig03-Right_triangle_small.png" src="../_images/INT_AY20_MP1_L12-Fig03-Right_triangle_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.5 </span><span class="caption-text">Right triangle with sides labeled based on the location of the angle <span class="math notranslate nohighlight">\(\theta\)</span></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>The <em>(S)ine</em> function of an angle <span class="math notranslate nohighlight">\(\theta\)</span> is found by the ratio of the side (O)pposite the angle over the (H)ypotenuse, or SOH:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \sin \theta = \frac{\text{opposite}}{\text{hypotenuse}}
+\]</div>
+<ul class="simple">
+<li><p>The <em>(C)osine</em> function of the angle is given by the ratio of the (A)djacent side over the (H)ypotenuse, or CAH:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \cos \theta = \frac{\text{adjacent}}{\text{hypotenuse}}
+\]</div>
+<ul class="simple">
+<li><p>The <em>(T)angent</em> function of <span class="math notranslate nohighlight">\(\theta\)</span> is given by the ratio of the (O)ppsite side to the (A)djacent side, or TOA:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+	\tan \theta = \frac{\text{opposite}}{\text{adjacent}}
+\]</div>
+<p>You may have heard of the mnemonic “SOHCAHTOA” to keep track of which trig function goes with which sides of the triangle. Remember, though, that the sides are <em>relative</em> to the position of the angle – if you look at the other angle in the triangle, that switches which side is the opposite, and which is the adjacent.</p>
+<p>The application below looks at the relationship between the angle, the trigonometric functions, and the unit circle. It is a good review if you are feeling shaky on these equations; you need to get good at them!</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>As long as you know one angle (other than the right angle) and one side, you should be able to find the other two sides. The next problem gives you practice in using the trig functions to solve for an unknown side of a right triangle, using another side and an angle.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For each of the following, find <span class="math notranslate nohighlight">\(x\)</span> to <em>three sig figs</em>.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L12-Fig04-Find_the_missing_side_small.png"><img alt="../_images/INT_AY20_MP1_L12-Fig04-Find_the_missing_side_small.png" src="../_images/INT_AY20_MP1_L12-Fig04-Find_the_missing_side_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.6 </span><span class="caption-text">Finding the length of the missing side <span class="math notranslate nohighlight">\(x\)</span>, based on the given side and angle</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> The answers are shown for each triangle in the graphic below.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L12-Fig06-Find_the_missing_side_ans.png"><img alt="../_images/INT_AY20_MP1_L12-Fig06-Find_the_missing_side_ans.png" src="../_images/INT_AY20_MP1_L12-Fig06-Find_the_missing_side_ans.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.7 </span><span class="caption-text">The missing sides <span class="math notranslate nohighlight">\(x\)</span>, based on the given side and angle</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<p>Now we have the mathematical framework to find the components of a vector, if we know the magnitude and direction of the vector. In other words, if we form a right triangle, with the hypotenuse given by the magnitude, and one of the angles coming from the vector direction, the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of the vector will be the two sides of the right triangle. Before we go through that, though, we should talk about how directions are specified for vectors. There are a few ways you might see this. The first is to give an angle <span class="math notranslate nohighlight">\(\theta\)</span> between <span class="math notranslate nohighlight">\(0^\circ\)</span> and <span class="math notranslate nohighlight">\(360^\circ\)</span>, and say the vector points at “<span class="math notranslate nohighlight">\(\theta\)</span> degrees counterclockwise (or CCW) from the <span class="math notranslate nohighlight">\(+x\)</span> axis”. This is often how you see angles given in math class, for example. However, you need to use this to create a right triangle, so you need to find an angle between <span class="math notranslate nohighlight">\(0^\circ\)</span> and <span class="math notranslate nohighlight">\(90^\circ\)</span>. This is where drawing a vector diagram is helpful, to figure out this angle. The process is shown in the figure below, for a vector pointing <span class="math notranslate nohighlight">\(240.^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis. Since the <span class="math notranslate nohighlight">\(-y\)</span> axis is 270.<span class="math notranslate nohighlight">\(^\circ\)</span>, and “too far CCW around the circle”, we have to subtract <span class="math notranslate nohighlight">\(270.^\circ - 240.^\circ\)</span> to get the remaining angle <span class="math notranslate nohighlight">\(\theta\)</span>. This gives the angle of <span class="math notranslate nohighlight">\(\theta = 30.0^\circ\)</span> in the vector diagram on the right hand side.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L06_Fig01_Math_angle_to_VD_small.png"><img alt="../_images/INT_AY21_L06_Fig01_Math_angle_to_VD_small.png" src="../_images/INT_AY21_L06_Fig01_Math_angle_to_VD_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.8 </span><span class="caption-text">Going from the math notation for an angle to the vector diagram</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Another way to give the direction of a vector is in terms of the cardinal directions: north, south, east and west (NSEW). Here, one would say something like “<span class="math notranslate nohighlight">\(30.0^\circ\)</span> west of south”. Notice the way this is given – as a <em>turn from the start</em>. You start pointing south, then turn <span class="math notranslate nohighlight">\(30.0^\circ\)</span> westward. This gives exactly the same vector diagram before, it is just phrased in a difference way. You should be careful, though – <span class="math notranslate nohighlight">\(30.0^\circ\)</span> west of south is <em>not</em> the same thing as <span class="math notranslate nohighlight">\(30.0^\circ\)</span> south of west!</p>
+<div class="warning admonition">
+<p class="admonition-title">Give the right directions</p>
+<p>Whenever you work through a problem, and need to report the direction of a vector, you answer should match the format the problem is given in. If you have vectors in NSEW format, then your vector direction should be written in the same way. But if you are only given an angle CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis, your resulting vector should be reported in math notation as well. Don’t switch formats!</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Which description below gives the best correct direction for the red vector shown in the picture below?</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L06_Fig02_Example_vec_dir_small.png"><img alt="../_images/INT_AY21_L06_Fig02_Example_vec_dir_small.png" src="../_images/INT_AY21_L06_Fig02_Example_vec_dir_small.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.9 </span><span class="caption-text">Example of a vector direction</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(12.0^\circ\)</span> counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis</p></li>
+<li><p><span class="math notranslate nohighlight">\(12.0^\circ\)</span> east of south</p></li>
+<li><p><span class="math notranslate nohighlight">\(78.0^\circ\)</span> east of south</p></li>
+<li><p><span class="math notranslate nohighlight">\(78.0^\circ\)</span> south of east</p></li>
+<li><p><span class="math notranslate nohighlight">\(348^\circ\)</span> counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The vector is defined using the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> coordinate axes; there are no NSEW directions involved, so these should not be used. Using the usual math convention, this vector would be described as “<span class="math notranslate nohighlight">\(348^\circ\)</span> counterclockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis”.</p>
+</div>
+<p>Now let’s get into how to go from magnitude and direction to vector components. Suppose we are given that a person’s velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> is 8.00 m/s at 40.0<span class="math notranslate nohighlight">\(^\circ\)</span> south of west, and we want to express this 2D vector in vector components. Any 2D vector can be drawn in terms of a right triangle, where the hypotenuse is the magnitude of the vector, and the two sides are the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> compnents of the vector.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L06_Fig01_Find_vec_comps.png"><img alt="../_images/INT_AY22_L06_Fig01_Find_vec_comps.png" src="../_images/INT_AY22_L06_Fig01_Find_vec_comps.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.10 </span><span class="caption-text">Using right angle trigonometry to find vector components</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Here are the individual steps I used when going through the work in the figure above, starting from the velocity vector given. Draw a diagram of the vector pointing in its <em>actual</em> direction. From the starting point (the “tail”), ask yourself “which way do I need to move horizontally to go from tail to tip?” Then ask “Which way do I need to move vertically to get to the tip?” Notice in these last two steps, we are using our <em>graphical vector addition</em> skill to draw the vector. Make sure you construct a proper right triangle! This is my <strong>vector diagram</strong>: a drawing of a vector, and its vector components, using graphical vector addition, along with the correct labels for each of the three arrows and the appropriate angle. You should get into the habit of always drawing such a diagram, to avoid making silly mistakes! Apply your right triangle mathematics (SOHCAHTOA) to determine the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of the vector (<em>including</em> signs!). This gives an answer of <span class="math notranslate nohighlight">\(v_x = - v \cos \theta = -6.13\)</span> m/s and <span class="math notranslate nohighlight">\(v_y = -v \sin \theta = -5.14\)</span> m/s. Both are negative, since the vector <span class="math notranslate nohighlight">\({\vec v}\)</span> lies in the third quadrant.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Which of the following components correctly describe a velocity of 10.5 m/s, 105<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the positive <span class="math notranslate nohighlight">\(x\)</span> axis?</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_x = -2.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = -10.1\)</span> m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x = -2.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = +10.1\)</span> m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x = -1.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = +10.4\)</span> m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x = +2.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = -10.1\)</span> m/s</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x = +2.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = +10.1\)</span> m/s</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since the angle is 105<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the positive <span class="math notranslate nohighlight">\(x\)</span> axis, the vector is in the second quadrant, so <span class="math notranslate nohighlight">\(v_x &lt; 0, v_y &gt; 0\)</span>. This eliminates all but two choices. Drawing the correct triangle gives that <span class="math notranslate nohighlight">\(v_x = -2.72\)</span> m/s, <span class="math notranslate nohighlight">\(v_y = +10.1\)</span> m/s.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Find the unit vector notation for the following vectors, with the appropriate units.</p>
+<ol class="simple">
+<li><p>7.26 m at 37.4<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis</p></li>
+<li><p>14.1 m/s at 208<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis</p></li>
+<li><p>8.09 N at 335<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis</p></li>
+<li><p>4.83 kg m/s at 27.5<span class="math notranslate nohighlight">\(^\circ\)</span> north of west</p></li>
+<li><p>2.46 km at 75.3<span class="math notranslate nohighlight">\(^\circ\)</span> east of south</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em></p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\((5.77 \ \textrm{m}) {\hat x} + (4.41 \ \textrm{m}) {\hat y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((-12.4 \ \textrm{m/s}) {\hat x} + (-6.62 \ \textrm{m/s}) {\hat y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((7.33 \ \textrm{N}) {\hat x} + (-3.42 \ \textrm{N}) {\hat y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((-4.28 \ \textrm{kg m/s}) {\hat x} + (2.23 \ \textrm{kg m/s}) {\hat y}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2.38 \ \textrm{km}) {\hat x} + (-0.624 \ \textrm{km}) {\hat y}\)</span></p></li>
+</ol>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">calcComps()</span></code> that calculates the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of a vector, given its magnitude and direction. The arguments of this function are the magnitude <code class="docutils literal notranslate"><span class="pre">V</span></code> and direction angle <code class="docutils literal notranslate"><span class="pre">Q</span></code> (in degrees CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis) of a two-dimensional vector <span class="math notranslate nohighlight">\({\vec v}\)</span>; you can assume that <span class="math notranslate nohighlight">\(v_z = 0\)</span>. The function will return a list <code class="docutils literal notranslate"><span class="pre">[Vx,</span> <span class="pre">Vy]</span></code> of the two non-zero components <code class="docutils literal notranslate"><span class="pre">Vx</span></code> and <code class="docutils literal notranslate"><span class="pre">Vy</span></code> of the vector. Remember that the vPython functions <code class="docutils literal notranslate"><span class="pre">sin()</span></code> and <code class="docutils literal notranslate"><span class="pre">cos()</span></code> take angles in radians, not degrees!</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible solution.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcComps</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">Q</span><span class="p">):</span>
+
+    <span class="c1"># Convert angle from degrees to radians</span>
+    
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+    
+    <span class="c1"># Find components; notice that the</span>
+    <span class="c1"># functions sin, cos will give the</span>
+    <span class="c1"># correct sign as well, so no need to</span>
+    <span class="c1"># check further</span>
+    
+    <span class="n">Vx</span> <span class="o">=</span> <span class="n">V</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+    <span class="n">Vy</span> <span class="o">=</span> <span class="n">V</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+    
+    <span class="c1"># Return results as list</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">Vx</span><span class="p">,</span> <span class="n">Vy</span><span class="p">]</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-inverse-trigonometric-functions">
+<h2><span class="section-number">7.5. </span>The inverse trigonometric functions<a class="headerlink" href="#the-inverse-trigonometric-functions" title="Permalink to this headline">¶</a></h2>
+<p>The inverse trigonometric functions are often confusing to students. Part of the reason is that the notation does not mean what you may think it means! Often, this is because you are used to only using multiplication and division, addition and subtraction. So let’s start with these operations, and then talk about “taking the inverse”.</p>
+<p>When I want to “undo” multiplication, I can use the division operation. For example, if I have <span class="math notranslate nohighlight">\(ab = c\)</span>, and I want to solve for <span class="math notranslate nohighlight">\(a\)</span>, then I divide by <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    ab = c \Rightarrow \frac{(ab)}{b} = \frac{c}{b} \Rightarrow a = \frac{c}{b}
+\]</div>
+<p>In the original equation, <span class="math notranslate nohighlight">\(a\)</span> was multiplied by <span class="math notranslate nohighlight">\(b\)</span>, so to undo this, and get <span class="math notranslate nohighlight">\(a\)</span> by itself, I had to <em>divide</em> by <span class="math notranslate nohighlight">\(b\)</span>. This is what “inverse” means to a mathematician – what operation “undoes” another? Whenever you see the <span class="math notranslate nohighlight">\(( )^{-1}\)</span>, this means we are taking the inverse of whatever is inside the parentheses. Said another way, if I do a mathematical operation, and then perform its inverse, I should get back to where I started!</p>
+<p>So, now we have the trigonometric functions, which take an angle <span class="math notranslate nohighlight">\(\theta\)</span> and give you a ratio (which one depends on which function!). Taking the inverse would reverse the process: start with a ratio, and give the angle <span class="math notranslate nohighlight">\(\theta\)</span>. So, for example, taking the inverse sine of the sine function should get me back to the angle:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sin^{-1} (\sin \theta) = \theta
+\]</div>
+<p>Thus, the <em>inverse</em> trigonometric functions are great when you only know the sides of the triangle, and want to find the angle. Using the inverse sine on both sides of the original definition of sine, we get</p>
+<div class="math notranslate nohighlight">
+\[
+	\sin \theta = \frac{O}{H} \Rightarrow \sin^{-1} (\sin \theta) = \sin^{-1} \biggl( \frac{O}{H} \biggr) \Rightarrow \theta = \sin^{-1} \biggl( \frac{O}{H} \biggr)
+\]</div>
+<div class="warning admonition">
+<p class="admonition-title">Inverse trig functions are not division</p>
+<p><span class="math notranslate nohighlight">\(\sin^{-1} (O/H)\)</span> is <em>not</em> the same thing as <span class="math notranslate nohighlight">\(1/\sin (O/H)\)</span>! The trigonometric functions are quite complicated functions when you write them out in terms of <span class="math notranslate nohighlight">\(\theta\)</span>; their inverses are just as complicated. This is why we use the shorthand <span class="math notranslate nohighlight">\(\sin^{-1}\)</span>, etc. for these functions. Taking the inverse sine of both sides of an equation is <em>very</em> different from dividing both sides by the sine function.</p>
+</div>
+<p>Going through the same process for the other two trig functions gives something similar. Therefore, the angle can be found by using any of the inverse trig functions. From the sine function, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    \theta = \sin^{-1} \biggl( \frac{\text{opposite}}{\text{hypotenuse}} \biggr)
+\]</div>
+<p>while from the cosine function,</p>
+<div class="math notranslate nohighlight">
+\[
+	\theta = \cos^{-1} \biggl( \frac{\text{adjacent}}{\text{hypotenuse}} \biggr)
+\]</div>
+<p>and from the tangent function,</p>
+<div class="math notranslate nohighlight">
+\[
+	\theta = \tan^{-1} \biggl( \frac{\text{opposite}}{\text{adjacent}} \biggr)
+\]</div>
+<p>These functions are sometimes known as “arc sine”, “arc cosine”, and “arc tangent”.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>For each triangle below, find <span class="math notranslate nohighlight">\(\theta\)</span> to <em>three sig figs</em>.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L13_Fig01-Find-missing-angle_small.png"><img alt="../_images/INT_AY20_MP1_L13_Fig01-Find-missing-angle_small.png" src="../_images/INT_AY20_MP1_L13_Fig01-Find-missing-angle_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.11 </span><span class="caption-text">Find the angle from the two given sides</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers</em>: The missing angles for each triangle are given in the graphic below.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L13-Fig05-Find_missing_angle_ans.png"><img alt="../_images/INT_AY20_MP1_L13-Fig05-Find_missing_angle_ans.png" src="../_images/INT_AY20_MP1_L13-Fig05-Find_missing_angle_ans.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.12 </span><span class="caption-text">The missing angles</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="from-components-to-magnitude-direction">
+<h2><span class="section-number">7.6. </span>From components to magnitude, direction<a class="headerlink" href="#from-components-to-magnitude-direction" title="Permalink to this headline">¶</a></h2>
+<p>Let’s recap where we are. From the Pythagorean theorem (either 2D or 3D), I can find the magnitude of a vector if I know all of its components. Now, with the inverse trigonometric functions, if I know two sides of a right triangle, I can find either of the remaining two angles. This is enough to go from the vector component description of a vector, to get to its magnitude and direction. As an example, start with a vector given in components,</p>
+<div class="math notranslate nohighlight">
+\[
+	a_x = +3.00\ \textrm{m/s}^2 \qquad a_y = +4.00\ \textrm{m/s}^2
+\]</div>
+<p>Below is the vector diagram for the vector <span class="math notranslate nohighlight">\({\vec a}\)</span>.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L06_Fig02_Find_mag_dir.png"><img alt="../_images/INT_AY22_L06_Fig02_Find_mag_dir.png" src="../_images/INT_AY22_L06_Fig02_Find_mag_dir.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.13 </span><span class="caption-text">Find the magnitude and direction of a vector from its components</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>I can now find the magnitude and direction, by using the process outlined above: Pythagoran theorem and inverse trig functions. Here are the specific steps I used to get the numbers in the figure above. Draw the <span class="math notranslate nohighlight">\(x\)</span> component; be sure to draw in direction matching its sign! At the end of the <span class="math notranslate nohighlight">\(x\)</span> component, draw the <span class="math notranslate nohighlight">\(y\)</span> component (“tip-to-tail” graphical vector addition). Again, the last two steps are to draw the relevant <em>vector diagram</em>. Where you originally started, begin a vector, then draw the vector to where you ended to create a right triangle. Use Pythagorean theorem for magnitude, and the inverse tangent for direction: 5.00 m/s<span class="math notranslate nohighlight">\(^2\)</span> at 53.1<span class="math notranslate nohighlight">\(^\circ\)</span> counter-clockwise from <span class="math notranslate nohighlight">\(+x\)</span> axis.</p>
+<div class="warning admonition">
+<p class="admonition-title">The triangle is a vector sum</p>
+<p>Notice that I did not go <em>back</em> to the origin when drawing the final vector, based on its components! We are always drawing vectors “tip-to-tail”. This is a common mistake students make, and leads them to finding the wrong final angle. This diagram represents the sum of total vector as component vectors, using graphical vector addition.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Chris walks from the CVS to the library by first traveling two blocks west, then one block north. What is the magnitude and direction of the trip?</p>
+<ol class="simple">
+<li><p>2.24 blocks, 26.6<span class="math notranslate nohighlight">\(^\circ\)</span> north of west</p></li>
+<li><p>2.24 blocks, 26.6<span class="math notranslate nohighlight">\(^\circ\)</span> west of north</p></li>
+<li><p>3.00 blocks, 26.6<span class="math notranslate nohighlight">\(^\circ\)</span> north of west</p></li>
+<li><p>3.00 blocks, 26.6<span class="math notranslate nohighlight">\(^\circ\)</span> west of north</p></li>
+<li><p>5.00 blocks, northwest</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The magnitude is 2.24 blocks, and the direction is 26.6<span class="math notranslate nohighlight">\(^\circ\)</span> north of west. Notice that, since the <span class="math notranslate nohighlight">\(x\)</span> (or westward) component is twice as large as the <span class="math notranslate nohighlight">\(y\)</span> (or northward) component, the vector is closer to the <span class="math notranslate nohighlight">\(x\)</span> axis.</p>
+</div>
+</div>
+<div class="section" id="finding-vector-components-in-vpython">
+<h2><span class="section-number">7.7. </span>Finding vector components in vPython<a class="headerlink" href="#finding-vector-components-in-vpython" title="Permalink to this headline">¶</a></h2>
+<p>We saw earlier how to take a vector in vPython, and find its magnitude. Let’s now reverse the process, and start from a magnitude and direction, then find the corresponding vPython vector. To do this, we need to import the trigonometric functions in vPython; these are the modules <code class="docutils literal notranslate"><span class="pre">sin</span></code> and <code class="docutils literal notranslate"><span class="pre">cos</span></code>. However, vPython does not use degrees as a unit of angle; instead, it uses <strong>radians</strong>. If you have never seen these before, it is an alternate (and probably more sensible!) angular unit, with one complete turn around the circumference defined as <span class="math notranslate nohighlight">\(2 \pi\)</span> radians. This means the conversion factor between degrees and radians is</p>
+<div class="math notranslate nohighlight">
+\[
+    1 \textrm{ radian} = \bigg( \frac{180}{\pi} \biggr) \textrm{ degrees}
+\]</div>
+<p>We can get vPython to do the conversion for us – if <code class="docutils literal notranslate"><span class="pre">Q</span></code> is the angle in degrees, <code class="docutils literal notranslate"><span class="pre">radians(Q)</span></code> will be the corresponding radians measurement. If you go back to the ‘Trig Tour’ application given previously in this lesson, you can change the angle measurement back and forth between degrees and radians, and see what the relationship is for the unit circle, and all of the trig functions.</p>
+<p>Now, let’s create a vector <code class="docutils literal notranslate"><span class="pre">bVec</span></code> of a certain length and direction. The variable <code class="docutils literal notranslate"><span class="pre">B</span></code> will represent its magnitude, while <code class="docutils literal notranslate"><span class="pre">Q</span></code> will be its angle counter-clockwise from the <span class="math notranslate nohighlight">\(+x\)</span> axis; we will keep our vectors in the <span class="math notranslate nohighlight">\(x-y\)</span> plane, to stay simple. The program below includes two curves <code class="docutils literal notranslate"><span class="pre">xAxis</span></code> and <code class="docutils literal notranslate"><span class="pre">yAxis</span></code>, to show the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes of the coordinate system. They also have labels <code class="docutils literal notranslate"><span class="pre">xLabel</span></code> and <code class="docutils literal notranslate"><span class="pre">yLabel</span></code> to show which one is which. Then, the magnitude <code class="docutils literal notranslate"><span class="pre">B</span></code> and direction <code class="docutils literal notranslate"><span class="pre">Q</span></code> (in degrees!) are defined, and a green arrow is created to show the vector <span class="math notranslate nohighlight">\({\vec B}\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Based on the choice of <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> in the code below, what do you expect the arrow to look like? Which quadrant is it in? Run the program, and see if your guess is correct.</p>
+</div>
+<p id="mag-dir-arr"><a class="reference internal" href="#vec-mag-dir"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/eaf9ffb89d?showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Change the values of <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">Q_B</span></code>, and see how it affects the size and direction of the arrow.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Add a second arrow <code class="docutils literal notranslate"><span class="pre">cVec</span></code> to the cell above, to show a second vector <span class="math notranslate nohighlight">\({\vec C}\)</span>. Define its magnitude <code class="docutils literal notranslate"><span class="pre">C</span></code> and direction <code class="docutils literal notranslate"><span class="pre">Q_C</span></code> in the appropriate place, and give the arrow a different color.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Your code should mirror what was done above for the vector <span class="math notranslate nohighlight">\({\vec B}\)</span>; replace all the definitions for <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">Q_B</span></code> with similar definitions for <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">Q_C</span></code>. The code would look like the following, using the color yellow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cVec</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">yellow</span><span class="p">,</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> \
+             <span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">C</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q_C</span><span class="p">)),</span> <span class="n">C</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q_C</span><span class="p">)),</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose you wanted to define a unit vector <span class="math notranslate nohighlight">\({\hat B}\)</span> pointing in the same direction as the vector <span class="math notranslate nohighlight">\({\vec B}\)</span>. What would be the mathematical equation for the components of this vector? How would you program this into vPython?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> One way to do this is to use the <code class="docutils literal notranslate"><span class="pre">norm()</span></code> command on the previously defined vPython vector <code class="docutils literal notranslate"><span class="pre">B</span></code>. However, an easier way to do this is note that the unit vector has a magnitude of 1, so we divide by <code class="docutils literal notranslate"><span class="pre">B</span></code>. This just gives the vector</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bHat</span> <span class="o">=</span> <span class="n">arrow</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> <span class="n">shaftwidth</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span> \
+             <span class="n">axis</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q_B</span><span class="p">)),</span> <span class="n">sin</span><span class="p">(</span><span class="n">radians</span><span class="p">(</span><span class="n">Q_B</span><span class="p">)),</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The magnitudes were removed from the definition of <code class="docutils literal notranslate"><span class="pre">bHat.axis</span></code>, since they cancel out when dividing by <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Challenge</p>
+<p>Can you describe a three-dimensional vector in terms of a magnitude and direction? How many angles would you need to specify the direction? Remember, you can check the equations for your three vector components by using the 3D Pythagorean theorem, which should give you your original magnitude back.</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">7.8. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>You have now learned everything you need to know about vectors. In <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy"><span class="std std-ref">Lesson 02 (introduction to vectors)</span></a>], you learned about graphical vector addition, vector components and unit vector notation, and how to add vectors using components. Now, in this lesson, you practiced finding the components from the magnitude and direction of a vector, and vice versa. You also saw the definition of a unit vector; we will periodically use this concept, starting with <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 07 (projectile motion)</span></a>. Since we will frequently use vectors in this class, you should use this lesson, and Lesson 02, as references whenever you need to refresh your memory about particular ideas.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Use the trigonometric functions to find the unknown side or angle in a triangle.</p></li>
+<li><p>Use the 3D Pythagorean theorem to find the magnitude of a given vector.</p></li>
+<li><p>Given the magnitude and direction of a vector, find its <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components.</p></li>
+<li><p>Given the components of a vector, find its magnitude and direction.</p></li>
+<li><p>Given an arbitrary vector, find the unit vector pointing in the same direction.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L06_Kinematic_equations.html" title="previous page"><span class="section-number">6. </span>Kinematic equations</a>
+    <a class='right-next' id="next-link" href="L08_Projectile_motion.html" title="next page"><span class="section-number">8. </span>Projectile motion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

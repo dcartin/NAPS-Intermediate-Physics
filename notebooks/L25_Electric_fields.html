@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25. Electric fields &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="26. Magnetic fields and forces" href="L26_Magnetic_fields_and_forces.html" />
+    <link rel="prev" title="24. Coulomb’s law" href="L24_Coulomb%27s_law.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L25_Electric_fields.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L25_Electric_fields.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   25.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   25.2. Electric fields
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#electric-fields-of-point-charges">
+   25.3. Electric fields of point charges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-equilateral-triangle-again">
+   25.4. Example: Equilateral triangle, again
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#field-lines">
+   25.5. Field lines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gravitational-field-lines">
+     25.5.1. Gravitational field lines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electric-field-lines">
+     25.5.2. Electric field lines
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   25.6. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="electric-fields">
+<span id="elec-field"></span><h1><span class="section-number">25. </span>Electric fields<a class="headerlink" href="#electric-fields" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">25.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#net-elec-field"><span class="std std-ref">Find the net electric field</span></a></p></li>
+<li><p><a class="reference internal" href="#const-grav-field"><span class="std std-ref">Motion in a constant gravitational field</span></a></p></li>
+</ol>
+<p>The physicist of today is well versed in the use of Newton’s second law and forces acting on an object. However, these methods are restricted to physical objects (balls rolling down ramps), and do not map over to other situations. In fact, it is much easier to deal with electricity and magnetism when using a more general idea, known as a <em>field</em>. It was this conceptual leap in the mid-19th century that eventually set the stage for the quantum mechanical revolution of the early 20th century. Thus, the fundamental theories of physics are written as quantum field theories (and not “force theories”!).</p>
+<p>The concept of a field was developed by two great scientists – the experimentalist Michael Faraday, and the theoretical physicist James Clerk Maxwell. Faraday, a self-taught physicist, was the first to lay out a vision of electric and magnetic phenomena arising from ‘’lines of force’’ – physical tubes forming space and affecting the motion of charged particles moving through space. This was more of a philosophical viewpoint on experimental results, rather than a systematic picture. Then, Maxwell developed a more mathematical framework, writing down what are now known as Maxwell’s equations for the electric and magnetic fields. These equations were the inspiration for much of modern physics, including Einstein’s theory of special relativity, and the quantum field theories used to explain interactions at the subatomic scale.</p>
+<p>We have already seen the gravitational field, as a different way of describing the influence of gravity on the motion of an object. In this lesson, we do the same thing for charged objects, developing the electric field from the electrostatic force.</p>
+<p>Since electric fields are something that many do not have a good intuitive feel for, it may be helpful here to remember what the idea of a field is. I like to do this with the following analogy. Suppose you need to buy some bread, in order to make sandwiches. You go to the store, and see that loaves of bread are on sale for $2 per loaf. This will be the price that everyone agrees on (no haggling allowed!). So how many loaves are you buying? If you are making sandwiches just for yourself, one loaf will probably last you the week; you will have to spend $2. However, if you need to feed the entire battalion, you may need to buy 100 loaves, and use $200 to do so. The <em>price</em> you pay for the bread is different if you get different amounts, but the <em>price per loaf</em> always stays the same! This is the idea behind a field. Everyone agrees on the size of the gravitational field (force per kilogram – same as the price per loaf), but different objects have different forces (total price), since they have different masses. We will see the same idea carries over to electric fields, which will be force per charge, instead of per mass.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the definition of the electric field in terms of the electrostatic force on a test charge, and identify its units.</p></li>
+<li><p>Describe the relationship between the direction of the electric field and the direction of the electric force on a point charge.</p></li>
+<li><p>State the equation for the electric field created by a point charge.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">25.2. </span>Electric fields<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Throughout this lesson, we will use the gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span> as a stepping stone to understanding the electric field <span class="math notranslate nohighlight">\({\vec E}\)</span>. It may help to go back to gravitational fields in <a class="reference internal" href="L21_Universal_gravitation.html#grav-field"><span class="std std-ref">Lesson 21</span></a> where we talked about <span class="math notranslate nohighlight">\({\vec g}\)</span> in some detail. Remember that the gravitational field is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec g} = \frac{{\vec F}_g}{m}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m\)</span> is the <em>test mass</em> used to measure the gravitational field at its location. The gravitational field at this location gives a measure of the influence at that point of all the surrounding masses. The idea is to “factor out” the size of the test mass, so that we are only measuring the gravitational effects of all these other masses around the test mass’ location. Note that the gravitational <em>force</em> <span class="math notranslate nohighlight">\({\vec F}_g\)</span> and the gravitational <em>field</em> <span class="math notranslate nohighlight">\({\vec g}\)</span> always point in the same direction, since the mass <span class="math notranslate nohighlight">\(m &gt; 0\)</span> for all objects.</p>
+<p>We can now define the <strong>electric field</strong> in the same way, by analogy – using a <strong>test charge</strong> <span class="math notranslate nohighlight">\(q\)</span> instead of mass <span class="math notranslate nohighlight">\(m\)</span>, and electrostatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> instead of gravitational force <span class="math notranslate nohighlight">\({\vec F}_g\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> electric field</p></li>
+<li><p><strong>Symbol:</strong> <span class="math notranslate nohighlight">\({\vec E}\)</span></p></li>
+<li><p><strong>Definition:</strong> The electric field at a given location is found by dividing the electrostatic force on a test charge at that location by the test charge.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E} = \frac{{\vec F}_e}{q}
+\]</div>
+<ul class="simple">
+<li><p><strong>SI units:</strong> newtons per coloumb (or N/C)</p></li>
+</ul>
+<p>It helps to think conceptually about what we are doing: we want to find a quantity <span class="math notranslate nohighlight">\({\vec E}\)</span> that gives the influence of a collection of charges at a particular point <span class="math notranslate nohighlight">\(P\)</span>, so we place a test charge <span class="math notranslate nohighlight">\(q\)</span> at this point <span class="math notranslate nohighlight">\(P\)</span>. However, we want our answer <span class="math notranslate nohighlight">\({\vec E}\)</span> not to depend on what test charge we use, so we “factor out” the size of the charge <span class="math notranslate nohighlight">\(q\)</span> from the electrostatic force. Thus, if you use a large, positive test charge, and I use a small, negative test charge, the electrostatic forces on our charges will be different, but the electric field <span class="math notranslate nohighlight">\({\vec E}\)</span> we measure will be exactly the <em>same</em>!</p>
+<p>Let’s talk about the direction of the electric field first. We can use the definition of the electric field to find the direction of the electric field, due to a single charge <span class="math notranslate nohighlight">\(Q\)</span>. In particular, suppose there is a charge <span class="math notranslate nohighlight">\(Q &gt; 0\)</span> creating an electric field we want to measure. You use your positive test charge <span class="math notranslate nohighlight">\(q_+\)</span> to find the electrostatic force on your charge, as seen in the picture below. Since both charges are positive, the test charge is repelled from the charge <span class="math notranslate nohighlight">\(Q\)</span>. Then you divide the electrostatic force <span class="math notranslate nohighlight">\(F_e\)</span> on <span class="math notranslate nohighlight">\(q_+\)</span> by the charge <span class="math notranslate nohighlight">\(q_+\)</span> (using the definition of electric field above) to get the electric field at the point you placed the test charge. Because <span class="math notranslate nohighlight">\(q_+ &gt; 0\)</span>, the electrstatic force <span class="math notranslate nohighlight">\({\vec F}_e\)</span> and the electric field <span class="math notranslate nohighlight">\({\vec E}\)</span> point in the same direction – away from <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig03_Pos_test_charge.png"><img alt="../_images/INT_AY21_L29_Fig03_Pos_test_charge.png" src="../_images/INT_AY21_L29_Fig03_Pos_test_charge.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.1 </span><span class="caption-text">Using a positive test charge <span class="math notranslate nohighlight">\(q_+\)</span> to measure the electric field due to charge <span class="math notranslate nohighlight">\(Q\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>After you do that, I decide to check your answer by using my negative test charge <span class="math notranslate nohighlight">\(q_-\)</span>. Again, I find the electrostatic force on <span class="math notranslate nohighlight">\(q_-\)</span> due to <span class="math notranslate nohighlight">\(Q\)</span>, and then divide out by <span class="math notranslate nohighlight">\(q_-\)</span> to get <span class="math notranslate nohighlight">\({\vec E}\)</span>. Since <span class="math notranslate nohighlight">\(q_- &lt; 0\)</span>, the two charges now attract, but dividing the force vector by a negative number gives an electric field that points in the opposite direction. But this is the same direction that you found with your positive test charge! Everyone agrees on the size and direction of the electric field, regardless of what test charge they use to measure it.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig04_Neg_test_charge.png"><img alt="../_images/INT_AY21_L29_Fig04_Neg_test_charge.png" src="../_images/INT_AY21_L29_Fig04_Neg_test_charge.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.2 </span><span class="caption-text">Using a negative test charge <span class="math notranslate nohighlight">\(q_-\)</span> to measure the electric field due to charge <span class="math notranslate nohighlight">\(Q\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Following this logic, we can now find the direction of the electric field due to a single charge <span class="math notranslate nohighlight">\(Q\)</span>:</p>
+<ul class="simple">
+<li><p>The electric field created by a positive charge points <em>away</em> from that charge.</p></li>
+<li><p>The electric field created by a negative charge points <em>towards</em> from that charge.</p></li>
+</ul>
+<div class="warning admonition">
+<p class="admonition-title">Rule of thumb for electric field direction</p>
+<p>Since the electric field always points in the same direction as the electrostatic force on a positive test charge, you can just ask yourself which way the force is on a positive test charge placed at the point of interest, in order to get the direction of the electric field at that point.</p>
+</div>
+<p>If you use the PhET below, you can play around with the electric fields due to collections of positive and negative charges. The PhET app will show you the total electric field vectors at a grid of points. This <span class="math notranslate nohighlight">\({\vec E}_{net}\)</span> is the vector sum of all the individual electric fields, so its direction can change depending on the size and sign of the individual charges creating the net field.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_en.html"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="electric-fields-of-point-charges">
+<h2><span class="section-number">25.3. </span>Electric fields of point charges<a class="headerlink" href="#electric-fields-of-point-charges" title="Permalink to this headline">¶</a></h2>
+<p>Now let’s talk about an important special case. The definition given above for the electric field works for <em>any</em> situation, such as an extended charge (such as a charged disk or rod). Frequently, however, we will only need to find the electric field due to one or more point charges <span class="math notranslate nohighlight">\(Q\)</span>. Thus, we can start with Coulomb’s law for the electrostatic force between two charges. We will find the field a distance <span class="math notranslate nohighlight">\(d\)</span> away from charge <span class="math notranslate nohighlight">\(Q\)</span> by placing a test charge <span class="math notranslate nohighlight">\(q\)</span> there, at a point I will call <span class="math notranslate nohighlight">\(P\)</span>, and find the electrostatic force on it. I use <span class="math notranslate nohighlight">\(d\)</span> instead of <span class="math notranslate nohighlight">\(r\)</span> for the distance, so we do not confuse it with the unit vector <span class="math notranslate nohighlight">\({\hat r}_{PQ}\)</span>. The situation is shown in the diagram below.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig09_Field_at_point.png"><img alt="../_images/INT_AY21_L29_Fig09_Field_at_point.png" src="../_images/INT_AY21_L29_Fig09_Field_at_point.png" style="height: 150px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.3 </span><span class="caption-text">Finding the electric field <span class="math notranslate nohighlight">\({\vec E}_P\)</span> at point <span class="math notranslate nohighlight">\(P\)</span>, due to a charge <span class="math notranslate nohighlight">\(Q\)</span></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>From Coulomb’s law, this would be</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_e = \biggl( \frac{kqQ}{d^2} \biggr) {\hat r}_{PQ}
+\]</div>
+<p>Here, the unit vector <span class="math notranslate nohighlight">\({\hat r}_{PQ}\)</span> is <em>at</em> the point <span class="math notranslate nohighlight">\(P\)</span>, and points <em>away</em> from the charge <span class="math notranslate nohighlight">\(Q\)</span>. Thus, if we now use the definition of electric field we find that dividing by <span class="math notranslate nohighlight">\(q\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E} = \biggl( \frac{kQ}{d^2} \biggr) {\hat r}_{PQ}
+\]</div>
+<p>Notice what happens here – since <span class="math notranslate nohighlight">\({\hat r}_{PQ}\)</span> points away from the charge <span class="math notranslate nohighlight">\(Q\)</span>, if that charge is <em>positive</em>, then the electric field at point <span class="math notranslate nohighlight">\(P\)</span> due to charge <span class="math notranslate nohighlight">\(Q\)</span> <em>also</em> points away from <span class="math notranslate nohighlight">\(Q\)</span>. On the other hand, if <span class="math notranslate nohighlight">\(Q\)</span> is a negative charge, the electric field points <em>towards</em> <span class="math notranslate nohighlight">\(Q\)</span>. This matches what I said earlier about the directions, so everything works out!</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two identical positive charges are shown in the figure below. Which direction is the electric field at point <span class="math notranslate nohighlight">\(P\)</span> due to these two charges? Choose the appropriate number for the direction, or ‘0’ if the field is zero.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig05_Field_from_two_pos_charges_small.png"><img alt="../_images/INT_AY21_L29_Fig05_Field_from_two_pos_charges_small.png" src="../_images/INT_AY21_L29_Fig05_Field_from_two_pos_charges_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.4 </span><span class="caption-text">Electric field from two identical positive charges</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The electric fields due to the individual positive charges are both away from the charge. Thus, the vector sum of the fields is to the right, or choice 8.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A positive charge (at top) and a negative charge (at bottom) of identical size are shown below. Which direction is the electric field at point <span class="math notranslate nohighlight">\(P\)</span> due to these two charges? Choose the appropriate number for the direction, or ‘0’ if the field is zero.</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig06_Field_from_dipole_small.png"><img alt="../_images/INT_AY21_L29_Fig06_Field_from_dipole_small.png" src="../_images/INT_AY21_L29_Fig06_Field_from_dipole_small.png" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.5 </span><span class="caption-text">Electric field from positive and negative charges</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The electric field due to the positive charge is away from it, while the electric field due to the negative charge is towards it. The vector sum of these fields is towards the bottom of the page/screen, or choice 6.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two identical positive charges are shown in the figure below. Which direction is the electric field at point <span class="math notranslate nohighlight">\(P\)</span> due to these two charges? Choose the appropriate number for the direction, or ‘0’ if the field is zero.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig07_Field_from_two_pos_charges_small.png"><img alt="../_images/INT_AY21_L29_Fig07_Field_from_two_pos_charges_small.png" src="../_images/INT_AY21_L29_Fig07_Field_from_two_pos_charges_small.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.6 </span><span class="caption-text">Electric field in between two identical positive charges</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Since the two charges are both equal in size and positive, and the same distance from the point, their electric fields are equal in magnitude, but opposite directions (away from each charge). Thus, the two fields cancel out, and the net electric field is zero.</p>
+</div>
+<p>We now have an equation for the electric field at some point <span class="math notranslate nohighlight">\(P\)</span> a distance <span class="math notranslate nohighlight">\(d\)</span> away from a charge <span class="math notranslate nohighlight">\(Q\)</span>. We use this in an example in the next section.</p>
+</div>
+<div class="section" id="example-equilateral-triangle-again">
+<h2><span class="section-number">25.4. </span>Example: Equilateral triangle, again<a class="headerlink" href="#example-equilateral-triangle-again" title="Permalink to this headline">¶</a></h2>
+<p>Let’s see how the electric field captures the influence of charges, for any test charge used, by returning to the example from <a class="reference internal" href="L24_Coulomb%27s_law.html#electrostatic-force-example"><span class="std std-ref">Lesson 24 (Coulomb’s law)</span></a> with charges on the corners of an equilateral triangle. Much of the notation we use below will be the same as that example, so it may be helpful to go back to it and review it.</p>
+<p>For now, let’s only put two charges on the triangle, and leave the third corner empty. We will now find the electric field at this empty corner <span class="math notranslate nohighlight">\(C\)</span>. Remember that the two charges were <span class="math notranslate nohighlight">\(q_2 = -4.00 \ \mu C, q_3 = +3.00 \ \mu C\)</span>, and the side lengths were <span class="math notranslate nohighlight">\(d = 7.00\)</span> m.</p>
+<div class="figure align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig08_Field_at_triangle_corner_small.png"><img alt="../_images/INT_AY21_L29_Fig08_Field_at_triangle_corner_small.png" src="../_images/INT_AY21_L29_Fig08_Field_at_triangle_corner_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.7 </span><span class="caption-text">Find the electric field at point <span class="math notranslate nohighlight">\(C\)</span> due to the two charges <span class="math notranslate nohighlight">\(q_2, q_3\)</span></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>We now find the electric field <span class="math notranslate nohighlight">\({\vec E}_2\)</span> at point <span class="math notranslate nohighlight">\(C\)</span> due to charge <span class="math notranslate nohighlight">\(q_2\)</span>, and similiarly <span class="math notranslate nohighlight">\({\vec E}_3\)</span> at <span class="math notranslate nohighlight">\(C\)</span> due to <span class="math notranslate nohighlight">\(q_3\)</span>. Based on the directions we talked about in the last section, <span class="math notranslate nohighlight">\({\vec E}_2\)</span> will point <em>towards</em> <span class="math notranslate nohighlight">\(q_2\)</span>, since it is a negative charge, while <span class="math notranslate nohighlight">\({\vec E}_3\)</span> will point <em>away</em> from <span class="math notranslate nohighlight">\(q_3\)</span>. To flesh this out, remember that the unit vectors at point <span class="math notranslate nohighlight">\(C\)</span> are given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\hat r}_{C2} = (\cos \theta) {\hat x} + (\sin \theta) {\hat y} \qquad
+    {\hat r}_{C3} = (-\cos \theta) {\hat x} + (\sin \theta) {\hat y}
+\]</div>
+<p>We can use these to find the electric fields. Much like we drew a FBD for forces, we will do something similiar with electric fields, by drawing an <strong>electric field diagram</strong> (or EFD) to show all of the individual electric field vectors at a particular point. For this situation, at point <span class="math notranslate nohighlight">\(C\)</span>, the EFD would look like the picture below, since the field <span class="math notranslate nohighlight">\({\vec E}_2\)</span> points <em>towards</em> the negative charge <span class="math notranslate nohighlight">\(q_2\)</span>, while the field <span class="math notranslate nohighlight">\({\vec E}_3\)</span> points <em>away</em> from the positive charge <span class="math notranslate nohighlight">\(q_3\)</span>.</p>
+<div class="figure align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L25_Fig01_EFD.png"><img alt="../_images/INT_AY22_L25_Fig01_EFD.png" src="../_images/INT_AY22_L25_Fig01_EFD.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.8 </span><span class="caption-text">Electric field diagram at the point <span class="math notranslate nohighlight">\(C\)</span></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>The electric field <span class="math notranslate nohighlight">\({\vec E}_2\)</span> at point <span class="math notranslate nohighlight">\(C\)</span>, due to charge <span class="math notranslate nohighlight">\(q_2\)</span>, is then</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_2 = \biggl( \frac{kq_2}{d^2} \biggr) [(\cos \theta) {\hat x} + (\sin \theta) {\hat y}]
+\]</div>
+<p>and the electric field <span class="math notranslate nohighlight">\({\vec E}_3\)</span> because of charge <span class="math notranslate nohighlight">\(q_3\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_3 = \biggl( \frac{kq_3}{d^2} \biggr) [(-\cos \theta) {\hat x} + (\sin \theta) {\hat y}]
+\]</div>
+<p>Plugging in the numbers (with <span class="math notranslate nohighlight">\(\theta = 60.0^\circ\)</span>) gives</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_2 = (-366.9 \textrm{ N/C}) {\hat x} + (-635.6 \textrm{ N/C}) {\hat y}
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_3 = (-275.2 \textrm{ N/C}) {\hat x} + (476.7 \textrm{ N/C}) {\hat y}
+\]</div>
+<p>As expected, these vectors match those we put into the EFD above. Thus, the total electric field at point <span class="math notranslate nohighlight">\(C\)</span> due to the two charges at the other corners is</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_{net} = (-642.1 \textrm{ N/C}) {\hat x} + (-158.9 \textrm{ N/C}) {\hat y}
+\]</div>
+<p>Now, let’s talk about the benefit of using the electric field. This field <span class="math notranslate nohighlight">\({\vec E}_{net}\)</span> is the same, regardless of what charge is placed there. This provides a quick way of finding the electrostatic force acting on a charge <span class="math notranslate nohighlight">\(q_1\)</span> placed at the corner <span class="math notranslate nohighlight">\(C\)</span>. To show this, we can quickly compute the force on the charge <span class="math notranslate nohighlight">\(q_1 = +2.00 \ \mu C\)</span> we used in the Lesson 24 example. Then, from the definition of electric field, the net force <span class="math notranslate nohighlight">\({\vec F}_1\)</span> on charge <span class="math notranslate nohighlight">\(q_1\)</span> is just</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_1 = q_1 {\vec E}_{net}
+\]</div>
+<p>and you can quickly verify that this gives the same answer we found in Lesson 24.</p>
+<div class="warning admonition">
+<p class="admonition-title">Forces and fields</p>
+<p>If you know one of either the electric field at a point, or the electrostatic force on a charge at the same point, and are asked to find the other, don’t solve from scratch! It is much easier to use the definition of the electric field to simplify the calculation.</p>
+</div>
+<p>To emphasize the point, as one example we can see that the electric field due to charge <span class="math notranslate nohighlight">\(q_2\)</span> is “inside” the electrostatic force between charges <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{12} = \biggl(\frac{k q_1 q_2}{d^2} \biggr) [(\cos \theta) {\hat x} + (\sin \theta)] = q_1 {\vec E}_2
+\]</div>
+<p>Because of the form of Coulomb’s law, the charge at the point in question will always factor out like this, and the remainder of the equation will be exactly the electric field due to the other point charge.</p>
+<p>As we did in the last lesson, we can write a vPython function that finds the electric field at a point, due to a list of other charges. Because we “divide out” by the test charge, then we only need the location to find the field, and the charges creating the field. This is done by the function <code class="docutils literal notranslate"><span class="pre">netElecField()</span></code> in the Trinket app below.</p>
+<p id="net-elec-field"><a class="reference internal" href="#elec-field"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="600"
+    src="https://trinket.io/embed/glowscript/2a78baedc8?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Let’s briefly talk about the heart of the function <code class="docutils literal notranslate"><span class="pre">netElecField()</span></code>; this is very similar to what we did with the function <code class="docutils literal notranslate"><span class="pre">netElectroForce()</span></code> in Lesson 24. The important command in the function here is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">netField</span> <span class="o">+=</span> <span class="p">(</span><span class="n">k</span> <span class="o">*</span> <span class="n">otherObj</span><span class="o">.</span><span class="n">charge</span> <span class="o">/</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">rHat</span>
+</pre></div>
+</div>
+<p>This matches with the physics equation</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec E}_{Pj} = \biggl( \frac{k q_j}{r^2 _{Pj}} \biggr) {\hat r}_{Pj}
+\]</div>
+<p>As in Lesson 24, the point charge <span class="math notranslate nohighlight">\(q_j\)</span> is given in vPython as <code class="docutils literal notranslate"><span class="pre">otherObj.charge</span></code>. The vPython vector <code class="docutils literal notranslate"><span class="pre">rVec</span></code> gives the relative position of the point <span class="math notranslate nohighlight">\(P\)</span> as seen by the charge <span class="math notranslate nohighlight">\(q_j\)</span>, i.e. the vector <span class="math notranslate nohighlight">\({\vec r}_{Pj}\)</span>. Finding the unit vector in the same direction as <span class="math notranslate nohighlight">\({\vec r}_{Pj}\)</span>, by using <code class="docutils literal notranslate"><span class="pre">hat(rVec)</span></code>, gives the vector <span class="math notranslate nohighlight">\({\hat r}_{Pj}\)</span>. The magnitude <span class="math notranslate nohighlight">\(r\)</span> of <span class="math notranslate nohighlight">\({\vec r}_{Pj}\)</span> is found with the command <code class="docutils literal notranslate"><span class="pre">mag(rVec)</span></code>. Just like the electrostatic force, everything in the parentheses is a scalar, so the fact that <code class="docutils literal notranslate"><span class="pre">netField</span></code> is a vector comes solely from the unit vector <code class="docutils literal notranslate"><span class="pre">rHat</span></code>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Three charged particles are located on the corners of a rectangle, as shown below, with <span class="math notranslate nohighlight">\(x = 7.50\)</span> cm and <span class="math notranslate nohighlight">\(y = 5.00\)</span> cm. The charges are <span class="math notranslate nohighlight">\(q_1 = +3.30 \ \mu\)</span>C, <span class="math notranslate nohighlight">\(q_2 = -7.89 \ \mu\)</span>C, and <span class="math notranslate nohighlight">\(q_3 = +4.25 \ \mu\)</span>C. Find the net electric field at the fourth corner, marked by the point <span class="math notranslate nohighlight">\(P\)</span>. Give the magnitude in MN/C, and the direction in degrees CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis.</p>
+<div class="figure align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L29-Fig01_Charges_on_rect.png"><img alt="../_images/INT_AY22_L29-Fig01_Charges_on_rect.png" src="../_images/INT_AY22_L29-Fig01_Charges_on_rect.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.9 </span><span class="caption-text">Find the net electric field at the marked point <span class="math notranslate nohighlight">\(P\)</span></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec E}_P = 7.04\)</span> MN/C at 86.2<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from the <span class="math notranslate nohighlight">\(+x\)</span> axis</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the program above, and the function <code class="docutils literal notranslate"><span class="pre">netElecField()</span></code>, to check your answer for the previous question.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> To carry this out, you need to change the commands after the definition of the function <code class="docutils literal notranslate"><span class="pre">netElecField()</span></code> to read the following. This will give the vector in unit vector form, which you can find the magnitude and direction of, either by direction calculation, or else using a vPython program similar to that given at the end of Lesson 24.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definitions</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">0.0750</span>               <span class="c1"># Horiz. rectangle side (m)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">0.0500</span>               <span class="c1"># Vert. rectangle side (m)</span>
+
+<span class="c1"># Create point P, charges</span>
+
+<span class="n">point</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">white</span><span class="p">,</span> \
+               <span class="n">radius</span> <span class="o">=</span> <span class="mf">5E-3</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">charge</span> <span class="o">=</span> <span class="mf">3.30E-6</span><span class="p">,</span> \
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">5E-3</span><span class="p">)</span>
+<span class="n">q2</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">charge</span> <span class="o">=</span> <span class="o">-</span><span class="mf">7.89E-6</span><span class="p">,</span> \
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">green</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">5E-3</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span> <span class="n">sphere</span><span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="n">vector</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">charge</span> <span class="o">=</span> <span class="mf">4.25E-6</span><span class="p">,</span> \
+            <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="n">radius</span> <span class="o">=</span> <span class="mf">5E-3</span><span class="p">)</span>
+
+<span class="c1"># Find net electric field at P, due to charges</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">netElecField</span><span class="p">(</span><span class="n">point</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="p">[</span><span class="n">q1</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">q3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Net electrostatic field at P =&#39;</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="s1">&#39; N/C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="field-lines">
+<h2><span class="section-number">25.5. </span>Field lines<a class="headerlink" href="#field-lines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gravitational-field-lines">
+<h3><span class="section-number">25.5.1. </span>Gravitational field lines<a class="headerlink" href="#gravitational-field-lines" title="Permalink to this headline">¶</a></h3>
+<p>A very helpful way of showing the strength and direction of the electric field in a region of space is by drawing the <strong>field lines</strong>. These are a pictorial representation of the electric field, much like a contour map shows the altitude of a surface. Using electric field lines is helpful is gauging both the direction of the field, as well as the relative strength of the field, at various locations. To start, it may be helpful to think of this first in terms of the gravitational field, something we are more familiar with, so I will use this as an example to build up to electric field lines.</p>
+<p>As we all learned in the cradle, the gravitational field near the surface of the Earth is 9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span> pointing downward (there are actually small variations, but we will ignore those). What this means is that if I throw a test mass into the air anywhere on the Earth’s surface, then ignoring air resistance, the acceleration of that mass will be downward. If I have a bunch of such test masses, and I draw arrows showing the gravitational field at each of them, it would look like the picture below.</p>
+<div class="figure align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig01_Grav_field_vectors_small.png"><img alt="../_images/INT_AY21_L29_Fig01_Grav_field_vectors_small.png" src="../_images/INT_AY21_L29_Fig01_Grav_field_vectors_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.10 </span><span class="caption-text">Gravitational field vectors for a group of test masses near the surface of the Earth</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>It starts being messy to draw both the objects and the fields, so what we do is connect the field vectors to give lines, in such a way that at every point on the line, the gravitational field vector is tangent to the line. This acts like a “contour map” of the gravitational field near the ground. Taking the picture above, this would give the gravitational field lines shown below.</p>
+<div class="figure align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/INT_AY21_L29_Fig02_Grav_field_lines_small.png"><img alt="../_images/INT_AY21_L29_Fig02_Grav_field_lines_small.png" src="../_images/INT_AY21_L29_Fig02_Grav_field_lines_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.11 </span><span class="caption-text">Gravitational field lines near the surface of the Earth</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>Already, we can easily see the direction of the gravitational field, pointing downward towards the surface. In addition, the fact that the field lines are the same distance apart actually tells us that the gravitational field has a constant magnitude in this representation. We will talk more about this further on.</p>
+<div class="warning admonition">
+<p class="admonition-title">Field lines are not trajectories</p>
+<p>It is important to note that the field lines shown above do <em>not</em> represent the motion of a mass in the gravitational field. Instead, they give the direction of the gravitational field, which in turn tells you about the acceleration of the object. You can see that by running the program below. The cyan arrows represent the constant gravitational field lines near the ground. On the ball itself, the magenta arrow shows the ball’s velocity, and the white arrow its acceleration. The white arrow will always match the field at that location, but the trajectory of the ball is not straight down because of its non-zero <span class="math notranslate nohighlight">\(v_x\)</span> component.</p>
+</div>
+<p>The Trinket app below shows the relation between the gravitational field lines, and the motion of a projectile. We have seen this case in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel-vpy-freefall"><span class="std std-ref">Lesson 04</span></a>, when we considered projectile motion. Near the surface of the Earth, the gravitational field is constant, which tells us the <em>acceleration</em> of a ball, but not the <em>velocity</em>. Thus, if you run the simulation below, you will see that the ball does not move directly along the gravitational field vectors, but instead those vectors give the direction of the ball’s acceleration.</p>
+<p id="const-grav-field"><a class="reference internal" href="#elec-field"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="500"
+    src="https://trinket.io/embed/glowscript/a2e6ca37ba?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="electric-field-lines">
+<h3><span class="section-number">25.5.2. </span>Electric field lines<a class="headerlink" href="#electric-field-lines" title="Permalink to this headline">¶</a></h3>
+<p>Now we turn to drawing the electric field lines due to various charges. The logic is the same as for the gravitational field lines given above – we imagine placing test charges at many locations in space, and uses the electric field vectors at each of these locations to map out the continuous electric field lines. If we do this around a single positive charge, and then a single negative charge, the resulting electric field lines look like the two figures below.</p>
+<div class="figure align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L03_Fig01-Electric_field_lines_of_pt_charges_small.png"><img alt="../_images/INT_AY20_MP3_L03_Fig01-Electric_field_lines_of_pt_charges_small.png" src="../_images/INT_AY20_MP3_L03_Fig01-Electric_field_lines_of_pt_charges_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.12 </span><span class="caption-text">Electric field lines around single point charges</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>First, the direction of the field lines is the same as what we said earlier: towards a negative charge, and away from a positive charge. In addition, the field lines get further apart as you move away from each charge. Remember that the electric field is an inverse square law, so that the magnitude <span class="math notranslate nohighlight">\(E \sim 1/r^2\)</span>. Thus, the fact that the field lines spread apart is a visual indication that the electric field magnitude is getting <em>smaller</em> with <em>increasing</em> distance <span class="math notranslate nohighlight">\(r\)</span>. Finally, since the electric field measured by a test charge placed at a particular point can only point in a single direction, that will be the direction of the electric field line going through the same point. In other words, electric field lines cannot cross, since this uniqueness would be violated.</p>
+<div class="warning admonition">
+<p class="admonition-title">Properties of electric field lines</p>
+<ol class="simple">
+<li><p>Electric field lines start at negative charges and end at positive charges.</p></li>
+<li><p>The electric field is stronger when the electric field lines are closer together, and weaker when they are farther apart.</p></li>
+<li><p>Electric field lines never cross.</p></li>
+</ol>
+</div>
+<p>The next two problems show how you can use the electric field lines around point charges in order to ascertain properties of these charges.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>What are the signs of the charges whose electric fields are shown below?</p>
+<div class="figure align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L03_Fig02-E-field-lines-of-two-charges_small.png"><img alt="../_images/INT_AY20_MP3_L03_Fig02-E-field-lines-of-two-charges_small.png" src="../_images/INT_AY20_MP3_L03_Fig02-E-field-lines-of-two-charges_small.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.13 </span><span class="caption-text">Electric field lines of two charges</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The blue charge is negative, the orange charge is positive.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Using the same picture as the previous problem, which of the two charges has the greater magnitude?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> If you count the number of electric field lines incident on each charge, there are two more touching the orange charge than the blue. Thus, the density of field lines is greater around the orange charge, implying it has the greater size of charge.</p>
+</div>
+<p>The final problem uses many of the ideas of this lesson – namely the definition of the electric field itself, and of electric field lines.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A <span class="math notranslate nohighlight">\(+4.00\)</span> C charge is placed in a uniform electric field, and it feels an electrostatic force of magnitude 12.0 N. If this charge is removed and a <span class="math notranslate nohighlight">\(+6.00\)</span> C charge is placed at the same point, what force will it feel?</p>
+<div class="figure align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L03_Fig03-Charge-in-uniform-E-field_small.png"><img alt="../_images/INT_AY20_MP3_L03_Fig03-Charge-in-uniform-E-field_small.png" src="../_images/INT_AY20_MP3_L03_Fig03-Charge-in-uniform-E-field_small.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 25.14 </span><span class="caption-text">Charge placed in a uniform electric field</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> 18.0 N/C, to the right</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">25.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>As stated in the introduction of this lesson, the concept of fields is the basis of much of modern physics. We had previously seen the gravitational field. The “9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>” you have memorized is just the magnitude of the Earth’s gravitational field near its surface; however, such fields are present everywhere in the Universe. Now we have a similar idea for the electric field. Because most things do not have a net charge, electric fields are not as ubiquitous as the gravitational variety. However, for a great range of technological devices, it is important to know something about these fields. For example, in some applications, you want to shield your electronics from too large of a field, to avoid failure; in other places, you are interested in creating as large a field as possible, to increase the signal strength for your communications or detection devices.</p>
+<p>Yet we are really only talking about one aspect of the combination “electromagnetism”, where both electric and magnetic fields are used together. We have already seen electric fields, and built up some intuition about them, starting from our everyday experience with the gravitational field. We will now complete this picture by introducing magnetic fields in the next lesson.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>State the direction of the electric field due to a point charge.</p></li>
+<li><p>Calculate the electric field at a specified point due to a collection of charges.</p></li>
+<li><p>Interpret the electric field lines of a given situation.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L24_Coulomb%27s_law.html" title="previous page"><span class="section-number">24. </span>Coulomb’s law</a>
+    <a class='right-next' id="next-link" href="L26_Magnetic_fields_and_forces.html" title="next page"><span class="section-number">26. </span>Magnetic fields and forces</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>

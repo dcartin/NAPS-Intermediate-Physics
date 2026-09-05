@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>27. Biot-Savart law &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="28. Electromagnetic radiation" href="L28_EM_radiation.html" />
+    <link rel="prev" title="26. Magnetic fields and forces" href="L26_Magnetic_fields_and_forces.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L12_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L15_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L16_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L21_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L22_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L27_Biot-Savart_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L27_Biot-Savart_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   27.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#long-straight-wires">
+   27.2. Long, straight wires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-biot-savart-law">
+   27.3. The Biot-Savart law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-field-at-center-of-a-circular-wire">
+   27.4. Magnetic field at center of a circular wire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-field-due-to-a-long-straight-wire">
+   27.5. Magnetic field due to a long, straight wire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   27.6. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="biot-savart-law">
+<span id="biot-savart"></span><h1><span class="section-number">27. </span>Biot-Savart law<a class="headerlink" href="#biot-savart-law" title="Permalink to this headline">¶</a></h1>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#mag-field-wire"><span class="std std-ref">Magnetic field of a long, straight wire</span></a></p></li>
+<li><p><a class="reference internal" href="#biot-savart-vec"><span class="std std-ref">The vectors of the Biot-Savart law</span></a></p></li>
+</ol>
+<p>What we now call “electricity” and “magnetism” have been familiar to many for over two thousand years. However, for much of that time, they were interesting effects, and not much else; there was no theory behind the existence of electric and magnetic properties. In fact, although some had suspected a relationship between them, nothing definite was known. This began to change in the 18th and 19th centuries, as technology advanced to the point where they could be studied. In particular, with the development of the electric battery by Volta in 1800, a continuous electric current was possible.</p>
+<p>A bridge between electricity and magnetism was first built by the efforts of the Danish physicist and chemist Hans Christian Oersted, who did the necessary experiments around 1820. In these, he showed that a constant electric current through a wire produced a magnetic field. Again, it is useful to take a moment and think how important this result was. Although electric and magnetic fields have some similarities (as discussed in <a class="reference internal" href="L26_Magnetic_fields_and_forces.html#mag-field"><span class="std std-ref">Lesson 34</span></a>), this does not necessarily mean they are one and the same phenomenon. However, it was the results of Oersted, and many others in the next few years, who conclusively showed that we should not think of “electricity” and “magnetism” separately, but instead to put it into “electromagnetism”.</p>
+<p>Although we will not get into this further in this course, the unification of electricity and magnetism was an important event in the history of physics. Over the next 175 years or so, the main course of theoretical physics was a similar path of unification, using many mathematical ideas first developed for electromagnetism. The fruits of this are in what is known as the Standard Model of particle physics, joining electromagnetism together with the strong nuclear force (keeping nuclei together) and the weak nuclear force (responsible for radioactive decay). The Standard Model uses the idea of fields as a basic component, and represents our best current knowledge of how fundamental physics works.</p>
+<p>In this lesson, we will answer a basic question: where do magnetic fields come from? Shortly after Oersted published his experiments, a key part of the answer was found by two physicists, Jean-Baptiste Biot and Felix Savart, building off the idea of the motion of electric charge in a current giving a magnetic field. We will explore their results in this lesson.</p>
+<div class="section" id="overview">
+<h2><span class="section-number">27.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the Biot-Savart law</p></li>
+<li><p>Find the magnetic field at a given distance away from a long, straight wire.</p></li>
+<li><p>Calculate the magnetic field due to a current of a given shape.</p></li>
+</ul>
+</div>
+<div class="section" id="long-straight-wires">
+<h2><span class="section-number">27.2. </span>Long, straight wires<a class="headerlink" href="#long-straight-wires" title="Permalink to this headline">¶</a></h2>
+<p>Before we state the Biot-Savart law, let’s first talk about what Oersted found in his experiments. Suppose we have a long, straight wire; basically, we are considering a straight wire whose length is much greater than its radius (or thickness). Oersted sent a current through such a wire, and saw that a nearby compass changed its direction every time he did this. When he turned off the current, the compass returned to its original orientation. Oersted grasped that this was because the current in the wire was creating a magnetic field of its own! After some confusion about the direction of this field, Oersted finally realized that the magnetic field around the wire is circular. In other words, we would say that the magnetic field lines are circles, with their center at the wire itself. You can see a reproduction of Oersted’s experiment in the video given below (<a class="reference external" href="https://commons.wikimedia.org/w/index.php?title=File%3A17._%D0%95%D1%81%D1%82%D0%B5%D1%80%D0%B4%D0%BE%D0%B2_%D0%B5%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82.ogv">source</a>). When there is no current through the wire, the compass points in the direction of the Earth’s magnetic field. However, when the voltage source is turned on, and current flows through the wire, the compass shifts to point in the direction of the much stronger magnetic field of the wire.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://commons.wikimedia.org/wiki/File:17._%D0%95%D1%81%D1%82%D0%B5%D1%80%D0%B4%D0%BE%D0%B2_%D0%B5%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82.ogv?embedplayer=yes"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>In order to see the magnetic field more clearly, you can run the vPython program below. This shows the magnetic field vectors at various points around a long, straight wire. These vectors form circles, with the wire at its center.</p>
+<p id="mag-field-wire"><a class="reference internal" href="#biot-savart"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="400"
+    src="https://trinket.io/embed/glowscript/8757cfd61c?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Notice the relationship between the direction of the current <span class="math notranslate nohighlight">\(I\)</span> through the wire, and the circular magnetic field lines around the wire. This is given by a version of the right-hand rule. Imagine that you are grabbing the wire with your right hand. When you point the thumb of your right hand in the direction of the wire’s current, your fingers will naturally curl in the direction of the magnetic field lines. For example, if you see the current moving upward, then with your right thumb pointing upward as well, your fingers will go right to left <em>behind</em> the wire, and left to right <em>in front of</em> the wire. We will see later in this lesson how to relate this to the right-hand rule we saw in Lesson 34 for the magnetic force.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A positive charge moves parallel to a wire. If a current is suddenly turned on, in which direction will the magnetic force act on the charge?</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L26_Fig01_Charge_and_wire.png"><img alt="../_images/INT_AY20_MP3_L26_Fig01_Charge_and_wire.png" src="../_images/INT_AY20_MP3_L26_Fig01_Charge_and_wire.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.1 </span><span class="caption-text">Positive charge moving along a current-carrying wire</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(+z\)</span> (out of page)</p></li>
+<li><p><span class="math notranslate nohighlight">\(-z\)</span> (into page)</p></li>
+<li><p><span class="math notranslate nohighlight">\(+x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-y\)</span></p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> You can use the right-hand rule described above to find the direction of the magnetic field due to the wire. At the location of the positive charge <span class="math notranslate nohighlight">\(q\)</span>, this field <span class="math notranslate nohighlight">\({\vec B}\)</span> points in the <span class="math notranslate nohighlight">\(+z\)</span> direction. Then, using either the vector product, or the right-hand rule, to find the direction of the magnetic force <span class="math notranslate nohighlight">\({\vec F}_{mag}\)</span>, this gives the force points in the <span class="math notranslate nohighlight">\(+x\)</span> direction, or toward the wire.</p>
+</div>
+<p>Soon after Oersted announced his discovery, the French scientist Andre-Marie Ampere (whom the unit of current was named after) studied the effects of current-carrying wires on each other. Because each wire produces its own magnetic field, the field due to one wire will create a force on the other. This leads to the wires attracting or repelling each other, depending on the current through each.</p>
+<p>Let’s see how this works, by first seeing how a magnetic field affects a wire with a current passing through it. This will built on the previous problem. From the last lesson, we have that the magnetic force <span class="math notranslate nohighlight">\({\vec F}_{mag}\)</span> on a single charge <span class="math notranslate nohighlight">\(q\)</span>, resulting from placing the charge in a magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span>, is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{mag} = q {\vec v} \times {\vec B}
+\]</div>
+<p>Now, a current <span class="math notranslate nohighlight">\(I\)</span> is simply a collection of charges <span class="math notranslate nohighlight">\(\Delta Q\)</span> moving past a given point within a time interval <span class="math notranslate nohighlight">\(\Delta t\)</span>, with <span class="math notranslate nohighlight">\(I = \Delta Q / \Delta t\)</span>. Suppose the charges are moving down a wire with a displacement <span class="math notranslate nohighlight">\({\vec \ell}\)</span>; I am using a little different notation here, to avoid confusing symbols when we get to the Biot-Savart law. With a velocity <span class="math notranslate nohighlight">\({\vec v} = {\vec \ell} / \Delta t\)</span>, then we have that</p>
+<div class="math notranslate nohighlight">
+\[
+    (\Delta q) {\vec v} = (\Delta q) \biggl( \frac{{\vec \ell}}{\Delta t} \biggr) = \biggl( \frac{\Delta q}{\Delta t} \biggr) {\vec \ell} = I {\vec \ell}
+\]</div>
+<p>Thus, for a collection of charges <span class="math notranslate nohighlight">\(\Delta q\)</span>, we can replace <span class="math notranslate nohighlight">\((\Delta q) {\vec v}\)</span> in the magnetic force equation with <span class="math notranslate nohighlight">\(I {\vec \ell}\)</span>, resulting in the magnetic force on a current-carrying wire as</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec F}_{mag} = I {\vec \ell} \times {\vec B}
+\]</div>
+<p>Again, <span class="math notranslate nohighlight">\(I\)</span> is the current through the wire, whose length and direction are given by the vector <span class="math notranslate nohighlight">\({\vec \ell}\)</span>.</p>
+<p>Notice that the force on the <em>wire</em> points in the same direction as the force on the individual <em>charges</em>. Hopefully this is a sensible result! But it also allows us to predict the results of Ampere’s experiments on the forces between wires. For now, we will only find the direction of this force. After we talk about the Biot-Savart law, we will return to this force, and calculate the magnitude as well.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two straight wires run parallel to each other, carrying currents in the directions shown. The two wires experience a force in which direction?</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L26_Fig02_Two_wires.png"><img alt="../_images/INT_AY20_MP3_L26_Fig02_Two_wires.png" src="../_images/INT_AY20_MP3_L26_Fig02_Two_wires.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.2 </span><span class="caption-text">Two parallel current-carrying wires</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>away from each other</p></li>
+<li><p>towards each other</p></li>
+<li><p>there is no force</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Remember that current is <em>conventional</em> current, i.e. considered as the flow of positive charges. Thus, you can use the same steps as the previous problem to find the force on the left-hand wire due to the magnetic field from the right-hand wire. The left-hand wire will be attracted to the right-hand wire.</p>
+<p>We can do the same thing for the right-hand wire, thinking of the current as the flow of positive charges towards the top of the page/screen. At this wire, the magnetic field due to the left-hand wire will be into the page/screen. Using the right-hand rule gives that the force on this current is to the left.</p>
+<p>Thus, the two wires will be attracted to each other, due to the magnetic forces on each from the magnetic field of the other wire.</p>
+</div>
+</div>
+<div class="section" id="the-biot-savart-law">
+<h2><span class="section-number">27.3. </span>The Biot-Savart law<a class="headerlink" href="#the-biot-savart-law" title="Permalink to this headline">¶</a></h2>
+<p>As we saw, Oersted found that the magnetic field lines around a long, straight wire are circles centered on the wire. So how can we extend this to more complicated wires? We will follow a similar path to what we have done with previous fields: build up the complicated cases as a sum of a lot of simple cases. In particular, imagine that we have a small bit of wire; this is represented by the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, where <span class="math notranslate nohighlight">\(\Delta \ell\)</span> is a small length. Flowing through this wire is a current <span class="math notranslate nohighlight">\(I\)</span>. The direction of the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> gives the direction of this (conventional) current.</p>
+<p>Now, imagine that we want to find the magnetic field vector at a point <span class="math notranslate nohighlight">\(P\)</span>. To do this, we need the position vector of <span class="math notranslate nohighlight">\(P\)</span> relative to the wire. This is given by <span class="math notranslate nohighlight">\({\vec r}\)</span> – this vector <em>starts</em> at the center of the wire <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, and points <em>towards</em> the point <span class="math notranslate nohighlight">\(P\)</span>. To see this set-up, run the program below. The green cylinder is the wire, with the current shown by the white arrow inside of it. The position vector <span class="math notranslate nohighlight">\({\vec r}\)</span> is the yellow arrow from the wire to the point <span class="math notranslate nohighlight">\(P\)</span> to the left of the screen.</p>
+<p id="biot-savart-vec"><a class="reference internal" href="#biot-savart"><span class="std std-ref">Back to program list</span></a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="400"
+    src="https://trinket.io/embed/glowscript/75e33686c5?toggleCode=true&showInstructions=true"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<p>Now, according to Biot and Savart, the current in the wire will then produce a magnetic field <span class="math notranslate nohighlight">\(\Delta {\vec B}\)</span> at the point <span class="math notranslate nohighlight">\(P\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec B} = \frac{\mu_0}{4\pi} \frac{I \Delta {\vec \ell} \times {\hat r}}{r^2}
+\]</div>
+<p>There is a lot we have seen before here, but let’s break it down, since it is put together differently than the corresponding equations for the gravitational and electric fields. As Oersted saw, the magnetic field size depends on the value of the current, so it is appropriate it appears in the numerator. In the denominator, we also see the usual <span class="math notranslate nohighlight">\(r^2\)</span> distance dependence we would expect from an inverse-square law. Finally, we also have a new physical constant, the <strong>vacuum permeability</strong> <span class="math notranslate nohighlight">\(\mu_0\)</span>, given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \mu_0 = 1.25663706212 \times 10^{-6} \textrm{ N/m}
+\]</div>
+<p>This constant gives the relationship between the sources of a magnetic field, and the size of the field created by that field. A fun fact: this constant used to be defined as <em>exactly</em> <span class="math notranslate nohighlight">\(4\pi \times 10^{-7}\)</span> N/m, but after the SI unit system was redefined in 2019, this is no longer true. However, it is <em>awfully</em> close, so I will often pretend that this definition still holds.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>If I use <span class="math notranslate nohighlight">\(\mu_0 = 4\pi \times 10^{-7}\)</span> N/m, what is the error, compared to the actual defined value <span class="math notranslate nohighlight">\(\mu_0\)</span> given above?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The error is given by <span class="math notranslate nohighlight">\(\mu_0/(4\pi \times 10^{-7}) - 1 = 5.44 \times 10^{-10}\)</span>. Good enough!</p>
+</div>
+<p>Oersted also saw that the magnetic field lines were circles – how do we get that from the vector product above? Well, remember that the vector product <span class="math notranslate nohighlight">\({\vec A} \times {\vec B}\)</span> is always perpendicular to the plane defined by the vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>. This is what we get here. In the program above, the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> along the wire points in the <span class="math notranslate nohighlight">\(+y\)</span> direction. The position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, from the wire to the point <span class="math notranslate nohighlight">\(P\)</span>, is in the <span class="math notranslate nohighlight">\(-x\)</span> direction, which means that the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span> points in the same direction. So, using the right-hand rule with the vector product <span class="math notranslate nohighlight">\(\Delta {\vec \ell} \times {\hat r}\)</span> give that it points in the <span class="math notranslate nohighlight">\(+z\)</span> axis. Notice that this is exactly what I said earlier with the “right-hand rule” using currents and the circular magnetic fields! Point your thumb in the direction of the current (<span class="math notranslate nohighlight">\(+y\)</span>), and your fingers will naturally point towards you on the left side of the wire.</p>
+</div>
+<div class="section" id="magnetic-field-at-center-of-a-circular-wire">
+<span id="biot-savart-circ-loop"></span><h2><span class="section-number">27.4. </span>Magnetic field at center of a circular wire<a class="headerlink" href="#magnetic-field-at-center-of-a-circular-wire" title="Permalink to this headline">¶</a></h2>
+<p>Let’s now go through our first example of using the Biot-Savart law: finding the magnetic field at the center of a circular wire with a current through it. You might be surprised that we are not finding the field at some point near a long, straight wire, but it turns out the circular loop of wire is actually an easier place to start! Imagine we have a circular loop with a radius <span class="math notranslate nohighlight">\(R\)</span> and a current <span class="math notranslate nohighlight">\(I\)</span> flowing through it. We want to find the total magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> at the point <span class="math notranslate nohighlight">\(P\)</span>, at the center of the circular wire. To do this, we can pretend that the circle is a regular polygon with a large number of sides <span class="math notranslate nohighlight">\(N\)</span>, and add up the contributions from the current flowing through each of these sides. Then, making <span class="math notranslate nohighlight">\(N\)</span> larger and larger will get us closer to the final answer.</p>
+<p>The picture below shows the basic set-up for approximating the circle by a polygon. The green sides represent the polygon (here with <span class="math notranslate nohighlight">\(N = 12\)</span> sides), while the dotted line is the circle the polygon is used to estimate. We will need to find algebraic expressions for the vectors <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, for a given angle <span class="math notranslate nohighlight">\(\theta\)</span>, in order to find the magnetic field at the center point <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L35-Fig01_Circle_polygon_approx.png"><img alt="../_images/INT_AY22_L35-Fig01_Circle_polygon_approx.png" src="../_images/INT_AY22_L35-Fig01_Circle_polygon_approx.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.3 </span><span class="caption-text">Polygonal approxmation for a circle</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, I have used the “usual” way of defining the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, namely from the point <span class="math notranslate nohighlight">\(C\)</span> to the center of the wire segment <span class="math notranslate nohighlight">\(\Delta \ell\)</span>. But this is actually backwards from how <span class="math notranslate nohighlight">\({\vec r}\)</span> is defined in the Biot-Savart law! Remember that, in that equation, <span class="math notranslate nohighlight">\({\vec r}\)</span> points <em>from</em> the wire segment <em>to</em> the observation point. Since we are more used to working with <span class="math notranslate nohighlight">\({\vec r}\)</span> starting at the origin, I will keep it that way for now, just remember that I will really need <span class="math notranslate nohighlight">\(-{\vec r}\)</span> when I put everything back into the Biot-Savart law.</p>
+<p>Let’s now find the vectors <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>; for each side of our polygon, the length vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> is perpendicular to the radius vector <span class="math notranslate nohighlight">\({\vec r}\)</span> to the center of that side. Thus, if <span class="math notranslate nohighlight">\({\vec r} = (R \cos \theta) {\hat x} + (R \sin \theta) {\hat y}\)</span>, then <span class="math notranslate nohighlight">\(\Delta {\vec \ell} = [-(\Delta \ell) \sin \theta] {\hat x} + [(\Delta \ell) \cos \theta] {\hat y}\)</span>. Notice that I have chosen the direction of <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> so that the current (with <span class="math notranslate nohighlight">\(I &gt; 0\)</span>) flows in the counterclockwise direction, when we look down from the <span class="math notranslate nohighlight">\(+z\)</span> axis.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Use the scalar product to show that the vectors <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> just given are perpendicular for all angles <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+</div>
+<p>I want to flesh out the process for finding the vectors <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> – where do these vectors come from? Remember we want to approximate the circle as a polygon, so we can choose points <em>on</em> the circle as the “corners” of the polygon. Then, each side has a vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> starting at the point <span class="math notranslate nohighlight">\(P_k\)</span>, and ending at the next counterclockwise point <span class="math notranslate nohighlight">\(P_{k + 1}\)</span>. How do we find these points? Since we are dividing the circle into <span class="math notranslate nohighlight">\(N\)</span> parts, each point <span class="math notranslate nohighlight">\(P_k\)</span> is an angle <span class="math notranslate nohighlight">\(2\pi k/N\)</span> along the circle from the <span class="math notranslate nohighlight">\(+x\)</span> axis. This is because we take the total angle <span class="math notranslate nohighlight">\(2 \pi\)</span> (in radians), and divide it into <span class="math notranslate nohighlight">\(N\)</span> pieces. Thus, point <span class="math notranslate nohighlight">\(P_k\)</span> has a position vector</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec r}_k = R \biggl[\cos \biggl( \frac{2 \pi k}{N} \biggr) \biggr] {\hat x} + R \biggl[\sin \biggl( \frac{2 \pi k}{N} \biggr) \biggr] {\hat y}
+\]</div>
+<p>Therefore, the vector along the side from point <span class="math notranslate nohighlight">\(P_k\)</span> to point <span class="math notranslate nohighlight">\(P_{k + 1}\)</span> is simply the vector difference <span class="math notranslate nohighlight">\({\vec r}_{k + 1} - {\vec r}_k\)</span>. The case for <span class="math notranslate nohighlight">\(N = 6\)</span> sides is shown in the picture below, with the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> given for the points <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/INT_AY22_L35-Fig03_Circle_polygon_points.png"><img alt="../_images/INT_AY22_L35-Fig03_Circle_polygon_points.png" src="../_images/INT_AY22_L35-Fig03_Circle_polygon_points.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.4 </span><span class="caption-text">Marked points and difference vectors for hexagon</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Ancient mathematics</p>
+<p>Approximating a circle with a many-sided polygon was actually the first method used to find the value of <span class="math notranslate nohighlight">\(\pi\)</span>! However, doing this by hand takes a really long time; mathematicians sometimes spent years trying to extend the number of known digits of <span class="math notranslate nohighlight">\(\pi\)</span> by calculating the perimeter of a polygon with more sides. It was Isaac Newton, with his development of both integral calculus and the binomial theorem, that pointed to much better methods.</p>
+</div>
+<p>Notice this method gives us a nice way to find the perimeter of any polygon! The next problem lets you try this, as a nice practice exercise. This would be an intermediate step for a final vPython program which calculates the magnetic field at the center of a circular loop.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">polyPerimeter()</span></code> that calculates the perimeter of a polygon with <span class="math notranslate nohighlight">\(N\)</span> sides. Choose the corners of the polygon so that they are on a circle with radius <span class="math notranslate nohighlight">\(R\)</span>, as described above. Add up the magnitudes of the vector differences <span class="math notranslate nohighlight">\({\vec r}_{k + 1} - {\vec r}_k\)</span> to get the total perimeter. Thus, the function <code class="docutils literal notranslate"><span class="pre">polyPerimeter()</span></code> should have two arguments: the number of sides <code class="docutils literal notranslate"><span class="pre">N</span></code> for the polygon, and the radius <code class="docutils literal notranslate"><span class="pre">R</span></code> of the circle where the corners are chosen. The function should return the perimeter of the polygon.</p>
+<p>Show that, as <span class="math notranslate nohighlight">\(N\)</span> gets large, the perimeter of the polygon approaches the value <span class="math notranslate nohighlight">\(2 \pi R\)</span>.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> Here is a possible vPython program to solve the problem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polyPerimeter</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">R</span><span class="p">):</span>
+
+    <span class="c1"># Definitions</span>
+
+    <span class="n">DQ</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span>            <span class="c1"># Angle between adjacent points</span>
+    <span class="n">perimeter</span> <span class="o">=</span> <span class="mi">0</span>                <span class="c1"># Initialize perimeter variable</span>
+    
+    <span class="k">for</span> <span class="n">iii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">vec_diff</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="n">cos</span><span class="p">((</span><span class="n">iii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">DQ</span><span class="p">),</span> <span class="n">sin</span><span class="p">((</span><span class="n">iii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">DQ</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> \
+                    <span class="n">R</span> <span class="o">*</span> <span class="n">vector</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">iii</span> <span class="o">*</span> <span class="n">DQ</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">iii</span> <span class="o">*</span> <span class="n">DQ</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">perimeter</span> <span class="o">+=</span> <span class="n">mag</span><span class="p">(</span><span class="n">vec_diff</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">perimeter</span>
+</pre></div>
+</div>
+</div>
+<p>Now, let’s get back to solving the original problem. We want to use the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span> instead of the position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, so dividing <span class="math notranslate nohighlight">\({\vec r}\)</span> by its magnitude <span class="math notranslate nohighlight">\(R\)</span>, we have <span class="math notranslate nohighlight">\({\hat r} = (\cos \theta) {\hat x} + (\sin \theta) {\hat y}\)</span>. Finally, remember I am using <span class="math notranslate nohighlight">\(-{\hat r}\)</span> instead of <span class="math notranslate nohighlight">\({\hat r}\)</span>, since I defined the original vector <span class="math notranslate nohighlight">\({\vec r}\)</span> backwards. Thus, finding the contribution from a single side with the Biot-Savart law,</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec B} = \frac{\mu_0 I}{4 \pi R^2} \bigl\{ [-(\Delta \ell) \sin \theta] {\hat x} + [(\Delta \ell) \cos \theta] {\hat y} \bigr\} \times \bigl[ (-\cos \theta) {\hat x} + (-\sin \theta) {\hat y} \bigr]
+\]</div>
+<p>With the trigonometric identity <span class="math notranslate nohighlight">\(\sin^2 \theta + \cos^2 \theta = 1\)</span>, this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta {\vec B} = \biggl( \frac{\mu_0 I \Delta \ell}{4 \pi R^2} \biggr) {\hat z}
+\]</div>
+<p>Finally, let’s add up the contributions to get the total magnetic field. As we talked about above, we really want to take the limit with a very large number of sides <span class="math notranslate nohighlight">\(N\)</span>, so</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec B} = \lim_{N \to \infty} \sum \Delta {\vec B}
+\]</div>
+<p>So what does this limit mean? Well, if the number of sides increases, then the sum of all the side lengths <span class="math notranslate nohighlight">\(\sum \Delta \ell\)</span> is going to approach the circumference <span class="math notranslate nohighlight">\(2 \pi R\)</span> of the circular loop! Hopefully you tried this limit when you wrote the vPython function  <code class="docutils literal notranslate"><span class="pre">polyPerimeter()</span></code> in the problem above. This means that when we take the limit,</p>
+<div class="math notranslate nohighlight">
+\[
+    {\vec B} = \lim_{N \to \infty} \sum \biggl( \frac{\mu_0 I \Delta \ell}{4 \pi R^2} \biggr) {\hat z} = \biggl[ \frac{\mu_0 I}{4 \pi R^2} (2 \pi R) \biggr] {\hat z} = \biggl( \frac{\mu_0 I}{2 R} \biggr) {\hat z}
+\]</div>
+<p>This gives us our first magnetic field calculation using the Biot-Savart law.</p>
+<div class="warning admonition">
+<p class="admonition-title">Magnetic field at the center of a circular loop</p>
+<p>For a circular loop with radius <span class="math notranslate nohighlight">\(R\)</span>, and current <span class="math notranslate nohighlight">\(I\)</span> moving through it, the magnitude <span class="math notranslate nohighlight">\(B\)</span> of the magnetic field at the center of the loop is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    B = \frac{\mu_0 I}{2 R}
+\]</div>
+</div>
+<p>Notice that one factor of <span class="math notranslate nohighlight">\(R\)</span> has cancelled out, so the field magnitude depends on <span class="math notranslate nohighlight">\(1/R\)</span>, not <span class="math notranslate nohighlight">\(1/R^2\)</span> – doubling the size of the loop only decreases the magnetic field by one-half, rather than one-fourth, as we might expect from the Biot-Savart law.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Suppose a circular loop of wire is lying in the <span class="math notranslate nohighlight">\(x-y\)</span> plane. It has a radius of 3.00 cm and a current of 1.25 A passing through it, in a clockwise direction as seen by you looking down on the loop from the <span class="math notranslate nohighlight">\(+z\)</span> direction. What is the magnetic field (in <span class="math notranslate nohighlight">\(\mu\)</span>T) at the center of the loop, due to the current?</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec B} = (-1.31 \ \mu\textrm{T}) {\hat z}\)</span></p>
+</div>
+</div>
+<div class="section" id="magnetic-field-due-to-a-long-straight-wire">
+<h2><span class="section-number">27.5. </span>Magnetic field due to a long, straight wire<a class="headerlink" href="#magnetic-field-due-to-a-long-straight-wire" title="Permalink to this headline">¶</a></h2>
+<p>In the last section, we derived the magnetic field at the center of a circular loop, by dividing the loop into small pieces <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, and then adding up the magnetic field contributions <span class="math notranslate nohighlight">\(\Delta {\vec B}\)</span> from each of these pieces. Now we’ll turn to the magnetic field created by a long, straight wire. Here, “long” just means that the total length of the wire is large compared to the radius of the circular wire itself.</p>
+<p>Solving for the magnetic field at a point <span class="math notranslate nohighlight">\(P\)</span> some distance away from a long, straight wire is more complicated than that for the circular loop, so I will just sketch the method you can use here. Much like the circular loop, you can divide the straight wire into smaller segments <span class="math notranslate nohighlight">\(\Delta \ell\)</span>, and find the magnetic field contribution <span class="math notranslate nohighlight">\(\Delta {\vec B}\)</span> from each of these segments. The sum of these would then give the total magnetic field. However, unlike the loop, each of these contributions <span class="math notranslate nohighlight">\(\Delta {\vec B}\)</span> is not the same, for two reasons. First, the distances from the point <span class="math notranslate nohighlight">\(P\)</span> to each segment will be different, as you move further away from <span class="math notranslate nohighlight">\(P\)</span> along the wire. As you do this, you will also have the fact that the vector product <span class="math notranslate nohighlight">\(\Delta {\vec \ell} \times {\hat r}\)</span> is different for different segments; basically, the angle between the two vectors changes at different locations along the wire. Taking care of these aspects requires either a somewhat involved vPython program, or else integral calculus!</p>
+<p>So let’s do this a much easier way – we can guess the form of the final <span class="math notranslate nohighlight">\({\vec B}\)</span> for a long, straight wire, and see why it is true, starting from the Biot-Savart law. This relation tells us that <span class="math notranslate nohighlight">\({\vec B}\)</span> should be proportional to <span class="math notranslate nohighlight">\(\mu_0\)</span> and <span class="math notranslate nohighlight">\(I\)</span>. If we look at the units of the rest, <span class="math notranslate nohighlight">\({\hat r}\)</span> is unitless (remember we divide <span class="math notranslate nohighlight">\({\vec r}\)</span> by its magnitude). The remaining pieces are <span class="math notranslate nohighlight">\(\Delta \ell\)</span> and <span class="math notranslate nohighlight">\(r^2\)</span>, which gives units of 1/length. Since the wire is infinite, the only relevant length is the distance <span class="math notranslate nohighlight">\(R\)</span> between the wire and the observation point <span class="math notranslate nohighlight">\(P\)</span>. Thus, we expect that the magnitude <span class="math notranslate nohighlight">\(B\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    B = k \biggl( \frac{\mu_0 I}{R} \biggr)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is some constant number. Going through the necessary integral calculus, you can show the following.</p>
+<div class="warning admonition">
+<p class="admonition-title">Magnetic field of a long, straight wire</p>
+<p>The magnitude of the magnetic field at a distance <span class="math notranslate nohighlight">\(R\)</span> from a long, straight wire with current <span class="math notranslate nohighlight">\(I\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    B = \frac{\mu_0 I}{2\pi R}
+\]</div>
+</div>
+<p>Be careful! The field for the circular loop looks very similar, but its the one <em>without</em> the <span class="math notranslate nohighlight">\(\pi\)</span>; the long, straight wire is the one <em>with</em> the <span class="math notranslate nohighlight">\(\pi\)</span>. The geometric <span class="math notranslate nohighlight">\(\pi\)</span> coming from the circle cancels the <span class="math notranslate nohighlight">\(\pi\)</span> in the Biot-Savart law, which is why it does not appear in loop field equation.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>A very long wire carries a current of 3.57 A to the right, as shown in the figure below.</p>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L25-Fig01_Current_wire.png"><img alt="../_images/INT_AY20_MP3_L25-Fig01_Current_wire.png" src="../_images/INT_AY20_MP3_L25-Fig01_Current_wire.png" style="height: 100px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.5 </span><span class="caption-text">A current-carrying wire</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>What is the magnitude and direction of the magnetic field at point <span class="math notranslate nohighlight">\(P\)</span>? Give the magnitude in <span class="math notranslate nohighlight">\(\mu\)</span>T.</p></li>
+<li><p>At what distance (in cm) from the wire is the magnetic field strength equal to 5.00 <span class="math notranslate nohighlight">\(\times 10^{-5}\)</span> T?</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answers:</em> <span class="math notranslate nohighlight">\(6.49 \ \mu\)</span>T, into the page; 1.43 cm</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Two straight wires run parallel to each other, carrying currents in the amounts and directions shown. Which choice gives the net magnetic field strength at point <span class="math notranslate nohighlight">\(P\)</span> due to these two current carrying wires?</p>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L25-Fig02_Parallel_wires.png"><img alt="../_images/INT_AY20_MP3_L25-Fig02_Parallel_wires.png" src="../_images/INT_AY20_MP3_L25-Fig02_Parallel_wires.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.6 </span><span class="caption-text">Two parallel current-carrying wires</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(1.09 \times 10^{-7}\)</span> T</p></li>
+<li><p><span class="math notranslate nohighlight">\(2.16 \times 10^{-6}\)</span> T</p></li>
+<li><p><span class="math notranslate nohighlight">\(2.27 \times 10^{-6}\)</span> T</p></li>
+<li><p><span class="math notranslate nohighlight">\(4.44 \times 10^{-6}\)</span> T</p></li>
+<li><p>None of the above</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(1.09 \times 10^{-7}\)</span> T</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>One of the long, straight wires shown below carries a current of 6.20 A in the positive <span class="math notranslate nohighlight">\(y\)</span> direction, and the second has a current of 4.50 A in the positive <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
+<div class="figure align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/INT_AY20_MP3_L25-Fig03_Crossed_wires.png"><img alt="../_images/INT_AY20_MP3_L25-Fig03_Crossed_wires.png" src="../_images/INT_AY20_MP3_L25-Fig03_Crossed_wires.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 27.7 </span><span class="caption-text">Two crossed current-carrying wires</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Calculate the net magnetic fields at points 1 and 2 in unit vector notation, using <span class="math notranslate nohighlight">\(\mu\)</span>T.</p>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\({\vec B_1} = (13.4\ \mu\textrm{T}) {\hat z}\)</span>; <span class="math notranslate nohighlight">\({\vec B_2} = (-2.13\ \mu\textrm{T}) {\hat z}\)</span></p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">27.6. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>We have now talked about the sources of magnetic fields, which are all variations on current-carrying wires. Unlike the electric field (where the sources were just charges), the resulting magnetic fields are more complicated. This comes from the three-dimensional nature of the Biot-Savart law, as opposed to the simpler electric field equation due to a point charge. Hopefully you are getting some good practice with the vector product!</p>
+<p>To emphasize the point, magnetic fields are created by the motion of electric charge: something electric is changing to give something magnetic. This relationship was shown to work both ways, which is why we now think of “electromagnetism”, rather than “electricity” and “magnetism” separately. This deep marriage of the two will continue in the next lesson, where we turn to Faraday’s law. This law relates the change of electric fields in <em>space</em> to produce changes in magnetic fields in <em>time</em>. It is because of such relations that we have light waves!</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>State the magnitude and direction of the magnetic field due to a current-carrying wire.</p></li>
+<li><p>Calculate the magnetic field at the center of a circular loop.</p></li>
+<li><p>Calculate the magnetic field due to a long, straight wire.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L26_Magnetic_fields_and_forces.html" title="previous page"><span class="section-number">26. </span>Magnetic fields and forces</a>
+    <a class='right-next' id="next-link" href="L28_EM_radiation.html" title="next page"><span class="section-number">28. </span>Electromagnetic radiation</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-192017336-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
